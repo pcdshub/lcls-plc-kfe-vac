@@ -19,7 +19,7 @@ dbLoadDatabase("dbd/ads.dbd")
 ads_registerRecordDeviceDriver(pdbbase)
 
 ## LOAD STUFF HERE!!!  DRIVERS FIRST, THEN RECORDS!
-adsAsynPortDriverConfigure("ADS_1","plc-tst-cx2020","5.45.6.154.1.1",851,1000, 0, 0, 500, 1000, 1000, 0)
+adsAsynPortDriverConfigure("ADS_1","plc-tst-cx2020","5.45.6.154.1.1",851,2000, 0, 0, 500, 1000, 1000, 0)
 asynSetTraceMask("ADS_1", -1, 0x41)
 asynSetTraceIOMask("ADS_1", -1, 6)
 asynSetTraceInfoMask("ADS_1", -1, 15)

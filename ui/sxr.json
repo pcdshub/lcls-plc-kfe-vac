@@ -1,0 +1,62 @@
+[
+    {
+        "LABEL": "RTDSK0:VGC:1",
+        "FILE": "VGC.ui",
+        "PREFIX": "RTDSK0:VGC:1"
+    },
+    {
+        "LABEL": "IM2K0:XTES:GPI:1",
+        "FILE": "GPI.ui",
+        "PREFIX": "IM2K0:XTES:GPI:1"
+    },
+    {
+        "LABEL": "TV1K4:GCC:1",
+        "FILE": "GCC.ui",
+        "PREFIX": "TV1K4:GCC:1"
+    },
+    {
+        "LABEL": "PCPM3B:GFS:1",
+        "FILE": "GFS.ui",
+        "PREFIX": "PCPM3B:GFS:1"
+    },
+    {
+        "LABEL": "RTDSK0:PIP:1",
+        "FILE": "PIP.ui",
+        "PREFIX": "RTDSK0:PIP:1"
+    },
+    {
+        "LABEL": "SP1K1:MONO:VGC:2",
+        "FILE": "VGC.ui",
+        "PREFIX": "SP1K1:MONO:VGC:2"
+    },
+    {
+        "LABEL": "TV2K0:GPI:2",
+        "FILE": "GPI.ui",
+        "PREFIX": "TV2K0:GPI:2"
+    },
+    {
+        "LABEL": "TV2K0:GCC:2",
+        "FILE": "GCC.ui",
+        "PREFIX": "TV2K0:GCC:2"
+    },
+    {
+        "LABEL": "RTDSK0:PIP:2",
+        "FILE": "PIP.ui",
+        "PREFIX": "RTDSK0:PIP:2"
+    },
+    {
+        "LABEL": "RTDSK0:PIP:3",
+        "FILE": "PIP.ui",
+        "PREFIX": "RTDSK0:PIP:3"
+    },
+    {
+        "LABEL": "RTDSK0:PIP:4",
+        "FILE": "PIP.ui",
+        "PREFIX": "RTDSK0:PIP:4"
+    },
+    {
+        "LABEL": "RTDSK0:PIP:5",
+        "FILE": "PIP.ui",
+        "PREFIX": "RTDSK0:PIP:5"
+    }
+]

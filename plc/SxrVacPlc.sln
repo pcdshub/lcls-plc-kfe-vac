@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{B1E792BE-AA5F-4E3C-8C82-674BF9C0715B}") = "SxrVacPlc", "SxrVacPlc\SxrVacPlc.tsproj", "{74D3B286-25FF-4952-901C-6B7B8AEA98CF}"
+Project("{B1E792BE-AA5F-4E3C-8C82-674BF9C0715B}") = "plc-kfe-vac", "SxrVacPlc\plc-kfe-vac.tsproj", "{74D3B286-25FF-4952-901C-6B7B8AEA98CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1068,9 +1068,9 @@
 					</TaskPouOids>
 				</Instance>
 			</Project>
-			<Project GUID="{36836A52-FE9B-400F-B351-077BA4A4D3F0}" Name="SxrVacSim" PrjFilePath="SxrVacSim\SxrVacSim.plcproj" TmcFilePath="SxrVacSim\SxrVacSim.tmc" ReloadTmc="true" AmsPort="852" FileArchiveSettings="#x000e" SymbolicMapping="true">
+			<Project GUID="{36836A52-FE9B-400F-B351-077BA4A4D3F0}" Name="plc_kfe_vac_sim" PrjFilePath="plc_kfe_vac_sim\plc_kfe_vac_sim.plcproj" TmcFilePath="plc_kfe_vac_sim\plc_kfe_vac_sim.tmc" ReloadTmc="true" AmsPort="852" FileArchiveSettings="#x000e" SymbolicMapping="true">
 				<Instance Id="#x08502040" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="SxrVacSim\SxrVacSim.tmc">
-					<Name>SxrVacSim Instance</Name>
+					<Name>plc_kfe_vac_sim Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
 						<Name>SimTask Inputs</Name>
@@ -24044,208 +24044,6 @@ Bit1: Value bigger/equal Limit2]]>
 	<Mappings>
 		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030010"/>
 		<MappingInfo Identifier="{00000000-2041-0850-4020-500830000403}" Id="#x02030020"/>
-		<OwnerA Name="TIPC^SxrVacSim^SxrVacSim Instance">
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EL2794_00_03">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_RTDSK0_PIP_1.xOn" VarB="Channel 1^GVL_SXR_VAC.fb_RTDSK0_PIP_1.q_xHVEna_DO"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_RTDSK0_PIP_2.xOn" VarB="Channel 2^GVL_SXR_VAC.fb_RTDSK0_PIP_2.q_xHVEna_DO"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_RTDSK0_PIP_3.xOn" VarB="Channel 3^GVL_SXR_VAC.fb_RTDSK0_PIP_3.q_xHVEna_DO"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_RTDSK0_PIP_4.xOn" VarB="Channel 4^GVL_SXR_VAC.fb_RTDSK0_PIP_4.q_xHVEna_DO"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EL2794_00_06">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_PCPM3B_PIP_1.xOn" VarB="Channel 2^GVL_SXR_VAC.fb_PCPM3B_PIP_1.q_xHVEna_DO"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_RTDSK0_PIP_5.xOn" VarB="Channel 1^GVL_SXR_VAC.fb_RTDSK0_PIP_5.q_xHVEna_DO"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EL2794_00_10">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_MR1K1_BEND_PIP_1.xOn" VarB="Channel 3^GVL_SXR_VAC.fb_MR1K1_BEND_PIP_1.q_xHVEna_DO"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_MR1K3_TXI_PIP_1.xOn" VarB="Channel 4^GVL_SXR_VAC.fb_MR1K3_TXI_PIP_1.q_xHVEna_DO"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_PA1K0_PIP_1.xOn" VarB="Channel 1^GVL_SXR_VAC.fb_PA1K0_PIP_1.q_xHVEna_DO"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EL2794_00_13">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_MR2K3_TXI_PIP_1.xOn" VarB="Channel 1^GVL_SXR_VAC.fb_MR2K3_TXI_PIP_1.q_xHVEna_DO"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_SP1K1_MONO_PIP_1.xOn" VarB="Channel 2^GVL_SXR_VAC.fb_SP1K1_MONO_PIP_1.q_xHVEna_DO"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_SP1K1_MONO_PIP_2.xOn" VarB="Channel 3^GVL_SXR_VAC.fb_SP1K1_MONO_PIP_2.q_xHVEna_DO"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_TV3K0_PIP_1.xOn" VarB="Channel 4^GVL_SXR_VAC.fb_TV3K0_PIP_1.q_xHVEna_DO"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EL2794_15_03">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_MR1K4_SOMS_PIP_1.xOn" VarB="Channel 1^GVL_SXR_VAC.fb_MR1K4_SOMS_PIP_1.q_xHVEna_DO"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_ST1K4_TEST_PIP_1.xOn" VarB="Channel 2^GVL_SXR_VAC.fb_ST1K4_TEST_PIP_1.q_xHVEna_DO"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_ST2K4_BCS_PIP_1.xOn" VarB="Channel 3^GVL_SXR_VAC.fb_ST2K4_BCS_PIP_1.q_xHVEna_DO"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_ST3K4_PPS_PIP_1.xOn" VarB="Channel 4^GVL_SXR_VAC.fb_ST3K4_PPS_PIP_1.q_xHVEna_DO"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EL2794_15_06">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_PC4K4_XTES_PIP_1.xOn" VarB="Channel 1^GVL_SXR_VAC.fb_PC4K4_XTES_PIP_1.q_xHVEna_DO"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EL2798_01_02">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_DMPS_GCC_1.i_xHvOn" VarB="Channel 1^GVL_SXR_VAC.fb_DMPS_GCC_1.q_xHV_DIS"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_IM2K0_XTES_GCC_1.i_xHvOn" VarB="Channel 2^GVL_SXR_VAC.fb_IM2K0_XTES_GCC_1.q_xHV_DIS"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_PCPM3B_GFS_1.i_xHvOn" VarB="Channel 5^GVL_SXR_VAC.fb_PCPM3B_GFS_1.q_xHV_DIS"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_SL1K0_GCC_1.i_xHvOn" VarB="Channel 4^GVL_SXR_VAC.fb_SL1K0_GCC_1.q_xHV_DIS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EL2798_01_06">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_MR1K1_BEND_GCC_1.i_xHvOn" VarB="Channel 5^GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.q_xHV_DIS"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_PA1K0_GCC_1.i_xHvOn" VarB="Channel 4^GVL_SXR_VAC.fb_PA1K0_GCC_1.q_xHV_DIS"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_TV2K0_GCC_1.i_xHvOn" VarB="Channel 1^GVL_SXR_VAC.fb_TV2K0_GCC_1.q_xHV_DIS"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_TV2K0_GCC_2.i_xHvOn" VarB="Channel 2^GVL_SXR_VAC.fb_TV2K0_GCC_2.q_xHV_DIS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2338_04_00">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_EM1K0_XGMD_VGC_1.i_xSol" VarB="Channel 11^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.q_xOPN_DO"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_EM1K0_XGMD_VGC_2.i_xSol" VarB="Channel 15^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.q_xOPN_DO"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_EM1K0_XGMD_VGC_1.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xClsLS"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_EM1K0_XGMD_VGC_1.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xOpnLS"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_EM1K0_XGMD_VGC_2.q_xClsLS" VarB="Channel 6^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xClsLS"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_EM1K0_XGMD_VGC_2.q_xOpnLS" VarB="Channel 5^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xOpnLS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2338_05_00">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_TV2K0_VGC_1.i_xSol" VarB="Channel 11^GVL_SXR_VAC.fb_TV2K0_VGC_1.q_xOPN_DO"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV2K0_VGC_1.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_TV2K0_VGC_1.i_xClsLS"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV2K0_VGC_1.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_TV2K0_VGC_1.i_xOpnLS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2338_06_00">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_MR1K1_BEND_VGC_1.i_xSol" VarB="Channel 11^GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.q_xOPN_DO"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K1_BEND_VGC_1.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.i_xClsLS"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K1_BEND_VGC_1.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.i_xOpnLS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2338_07_00">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_MR1K3_TXI_VGC_1.i_xSol" VarB="Channel 11^GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.q_xOPN_DO"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K3_TXI_VGC_1.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.i_xClsLS"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K3_TXI_VGC_1.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.i_xOpnLS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2338_08_00">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_SP1K1_MONO_VGC_1.i_xSol" VarB="Channel 11^GVL_SXR_VAC.fb_SP1K1_MONO_VGC_1.q_xOPN_DO"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_SP1K1_MONO_VGC_1.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_SP1K1_MONO_VGC_1.i_xClsLS"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_SP1K1_MONO_VGC_1.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_SP1K1_MONO_VGC_1.i_xOpnLS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2338_09_02">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_SP1K1_MONO_VGC_2.i_xSol" VarB="Channel 11^GVL_SXR_VAC.fb_SP1K1_MONO_VGC_2.q_xOPN_DO"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_SP1K1_MONO_VGC_2.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_SP1K1_MONO_VGC_2.i_xClsLS"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_SP1K1_MONO_VGC_2.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_SP1K1_MONO_VGC_2.i_xOpnLS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2338_09_03">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_IM1K2_PPM_VGC_1.i_xSol" VarB="Channel 11^GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.q_xOPN_DO"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_TV3K0_VGC_1.i_xSol" VarB="Channel 15^GVL_SXR_VAC.fb_TV3K0_VGC_1.q_xOPN_DO"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_IM1K2_PPM_VGC_1.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xClsLS"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_IM1K2_PPM_VGC_1.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xOpnLS"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV3K0_VGC_1.q_xClsLS" VarB="Channel 6^GVL_SXR_VAC.fb_TV3K0_VGC_1.i_xClsLS"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV3K0_VGC_1.q_xOpnLS" VarB="Channel 5^GVL_SXR_VAC.fb_TV3K0_VGC_1.i_xOpnLS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2338_10_02">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_MR1K4_SOMS_VGC_1.i_xSol" VarB="Channel 11^GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.q_xOPN_DO"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K4_SOMS_VGC_1.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.i_xClsLS"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K4_SOMS_VGC_1.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.i_xOpnLS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2338_11_02">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_TV1K4_VGC_1.i_xSol" VarB="Channel 11^GVL_SXR_VAC.fb_TV1K4_VGC_1.q_xOPN_DO"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_TV1K4_VGC_2.i_xSol" VarB="Channel 15^GVL_SXR_VAC.fb_TV1K4_VGC_2.q_xOPN_DO"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV1K4_VGC_1.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_TV1K4_VGC_1.i_xClsLS"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV1K4_VGC_1.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_TV1K4_VGC_1.i_xOpnLS"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV1K4_VGC_2.q_xClsLS" VarB="Channel 6^GVL_SXR_VAC.fb_TV1K4_VGC_2.i_xClsLS"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV1K4_VGC_2.q_xOpnLS" VarB="Channel 5^GVL_SXR_VAC.fb_TV1K4_VGC_2.i_xOpnLS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2338_14_00">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_ST3K4_XTES_VGC_1.i_xSol" VarB="Channel 11^GVL_SXR_VAC.fb_ST3K4_XTES_VGC_1.q_xOPN_DO"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_ST3K4_XTES_VGC_1.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_ST3K4_XTES_VGC_1.i_xClsLS"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_ST3K4_XTES_VGC_1.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_ST3K4_XTES_VGC_1.i_xOpnLS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2624_07_02">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_MR1K3_TXI_GCC_1.i_xHvOn" VarB="Channel 1^GVL_SXR_VAC.fb_MR1K3_TXI_GCC_1.q_xHV_DIS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2624_08_02">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_MR2K3_TXI_GCC_1.i_xHvOn" VarB="Channel 1^GVL_SXR_VAC.fb_MR2K3_TXI_GCC_1.q_xHV_DIS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2624_09_01">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_SP1K1_MONO_GCC_1.i_xHvOn" VarB="Channel 1^GVL_SXR_VAC.fb_SP1K1_MONO_GCC_1.q_xHV_DIS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2624_10_01">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_TV3K0_GCC_1.i_xHvOn" VarB="Channel 1^GVL_SXR_VAC.fb_TV3K0_GCC_1.q_xHV_DIS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2624_11_01">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_MR1K4_SOMS_GCC_1.i_xHvOn" VarB="Channel 2^GVL_SXR_VAC.fb_MR1K4_SOMS_GCC_1.q_xHV_DIS"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_TV1K4_GCC_1.i_xHvOn" VarB="Channel 1^GVL_SXR_VAC.fb_TV1K4_GCC_1.q_xHV_DIS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2624_12_01">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_ST1K4_TEST_GCC_1.i_xHvOn" VarB="Channel 1^GVL_SXR_VAC.fb_ST1K4_TEST_GCC_1.q_xHV_DIS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2624_13_01">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_ST2K4_BCS_GCC_1.i_xHvOn" VarB="Channel 1^GVL_SXR_VAC.fb_ST2K4_BCS_GCC_1.q_xHV_DIS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2624_14_02">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_PC4K4_XTES_GCC_1.i_xHvOn" VarB="Channel 1^GVL_SXR_VAC.fb_PC4K4_XTES_GCC_1.q_xHV_DIS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP3174_07_01">
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K3_TXI_GCC_1.q_iRawPress" VarB="AI Standard Channel 2^GVL_SXR_VAC.fb_MR1K3_TXI_GCC_1.i_iPRESS_R"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K3_TXI_GPI_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_MR1K3_TXI_GPI_1.i_iPRESS_R"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP3174_08_01">
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR2K3_TXI_GCC_1.q_iRawPress" VarB="AI Standard Channel 2^GVL_SXR_VAC.fb_MR2K3_TXI_GCC_1.i_iPRESS_R"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR2K3_TXI_GPI_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_MR2K3_TXI_GPI_1.i_iPRESS_R"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP3174_09_00">
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_SP1K1_MONO_GCC_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_SP1K1_MONO_GCC_1.i_iPRESS_R"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_SP1K1_MONO_GPI_1.q_iRawPress" VarB="AI Standard Channel 2^GVL_SXR_VAC.fb_SP1K1_MONO_GPI_1.i_iPRESS_R"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP3174_10_00">
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K4_SOMS_GPI_1.q_iRawPress" VarB="AI Standard Channel 2^GVL_SXR_VAC.fb_MR1K4_SOMS_GPI_1.i_iPRESS_R"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV3K0_GCC_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_TV3K0_GCC_1.i_iPRESS_R"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV3K0_GPI_1.q_iRawPress" VarB="AI Standard Channel 4^GVL_SXR_VAC.fb_TV3K0_GPI_1.i_iPRESS_R"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP3174_11_00">
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K4_SOMS_GCC_1.q_iRawPress" VarB="AI Standard Channel 3^GVL_SXR_VAC.fb_MR1K4_SOMS_GCC_1.i_iPRESS_R"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV1K4_GCC_1.q_iRawPress" VarB="AI Standard Channel 2^GVL_SXR_VAC.fb_TV1K4_GCC_1.i_iPRESS_R"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV1K4_GPI_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_TV1K4_GPI_1.i_iPRESS_R"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP3174_12_00">
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_ST1K4_TEST_GCC_1.q_iRawPress" VarB="AI Standard Channel 2^GVL_SXR_VAC.fb_ST1K4_TEST_GCC_1.i_iPRESS_R"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_ST1K4_TEST_GPI_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_ST1K4_TEST_GPI_1.i_iPRESS_R"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP3174_13_00">
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_ST2K4_BCS_GCC_1.q_iRawPress" VarB="AI Standard Channel 2^GVL_SXR_VAC.fb_ST2K4_BCS_GCC_1.i_iPRESS_R"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_ST2K4_BCS_GPI_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_ST2K4_BCS_GPI_1.i_iPRESS_R"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP3174_14_01">
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_PC4K4_XTES_GCC_1.q_iRawPress" VarB="AI Standard Channel 2^GVL_SXR_VAC.fb_PC4K4_XTES_GCC_1.i_iPRESS_R"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_PC4K4_XTES_GPI_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_PC4K4_XTES_GPI_1.i_iPRESS_R"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-ES1004_03_01">
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_EM1K0_GMD_VGC_1.q_xClsLS" VarB="Channel 4^GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.i_xClsLS"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_EM1K0_GMD_VGC_1.q_xOpnLS" VarB="Channel 3^GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.i_xOpnLS"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_RTDSK0_VGC_1.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_RTDSK0_VGC_1.i_xClsLS"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_RTDSK0_VGC_1.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_RTDSK0_VGC_1.i_xOpnLS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-ES1004_03_04">
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_AT1K0_GAS_VGC_1.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.i_xClsLS"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_AT1K0_GAS_VGC_1.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.i_xOpnLS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-ES2004_03_02">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_EM1K0_GMD_VGC_1.i_xSol" VarB="Channel 3^GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.q_xOPN_DO"/>
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_RTDSK0_VGC_1.i_xSol" VarB="Channel 1^GVL_SXR_VAC.fb_RTDSK0_VGC_1.q_xOPN_DO"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-ES2004_03_03">
-				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_AT1K0_GAS_VGC_1.i_xSol" VarB="Channel 1^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.q_xOPN_DO"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-ES3068_01_01">
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_DMPS_GCC_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_DMPS_GCC_1.i_iPRESS_R"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_DMPS_GPI_1.q_iRawPress" VarB="AI Standard Channel 5^GVL_SXR_VAC.fb_DMPS_GPI_1.i_iPRESS_R"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_IM2K0_XTES_GCC_1.q_iRawPress" VarB="AI Standard Channel 3^GVL_SXR_VAC.fb_IM2K0_XTES_GCC_1.i_iPRESS_R"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_IM2K0_XTES_GPI_1.q_iRawPress" VarB="AI Standard Channel 6^GVL_SXR_VAC.fb_IM2K0_XTES_GPI_1.i_iPRESS_R"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-ES3068_01_04">
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_PCPM3B_GFS_1.q_iRawPress" VarB="AI Standard Channel 3^GVL_SXR_VAC.fb_PCPM3B_GFS_1.i_iPRESS_R"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_SL1K0_GCC_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_SL1K0_GCC_1.i_iPRESS_R"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_SL1K0_GPI_1.q_iRawPress" VarB="AI Standard Channel 5^GVL_SXR_VAC.fb_SL1K0_GPI_1.i_iPRESS_R"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-ES3068_01_05">
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV2K0_GCC_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_TV2K0_GCC_1.i_iPRESS_R"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV2K0_GCC_2.q_iRawPress" VarB="AI Standard Channel 3^GVL_SXR_VAC.fb_TV2K0_GCC_2.i_iPRESS_R"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV2K0_GPI_1.q_iRawPress" VarB="AI Standard Channel 5^GVL_SXR_VAC.fb_TV2K0_GPI_1.i_iPRESS_R"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV2K0_GPI_2.q_iRawPress" VarB="AI Standard Channel 6^GVL_SXR_VAC.fb_TV2K0_GPI_2.i_iPRESS_R"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-ES3068_01_08">
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K1_BEND_GCC_1.q_iRawPress" VarB="AI Standard Channel 3^GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.i_iPRESS_R"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K1_BEND_GPI_1.q_iRawPress" VarB="AI Standard Channel 6^GVL_SXR_VAC.fb_MR1K1_BEND_GPI_1.i_iPRESS_R"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_PA1K0_GCC_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_PA1K0_GCC_1.i_iPRESS_R"/>
-				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_PA1K0_GPI_1.q_iRawPress" VarB="AI Standard Channel 5^GVL_SXR_VAC.fb_PA1K0_GPI_1.i_iPRESS_R"/>
-			</OwnerB>
-		</OwnerA>
 		<OwnerA Name="TIPC^plc_kfe_vac^plc_kfe_vac Instance">
 			<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EK1100_01_00^=+-EL2798_01_02">
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_DMPS_GCC_1.q_xHV_DIS" VarB="Channel 1^GVL_SXR_VAC.fb_DMPS_GCC_1.q_xHV_DIS"/>
@@ -24506,6 +24304,208 @@ Bit1: Value bigger/equal Limit2]]>
 			<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EP3174_14_01">
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_PC4K4_XTES_GCC_1.i_iPRESS_R" VarB="AI Standard Channel 2^GVL_SXR_VAC.fb_PC4K4_XTES_GCC_1.i_iPRESS_R"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_PC4K4_XTES_GPI_1.i_iPRESS_R" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_PC4K4_XTES_GPI_1.i_iPRESS_R"/>
+			</OwnerB>
+		</OwnerA>
+		<OwnerA Name="TIPC^plc_kfe_vac_sim^plc_kfe_vac_sim Instance">
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EL2794_00_03">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_RTDSK0_PIP_1.xOn" VarB="Channel 1^GVL_SXR_VAC.fb_RTDSK0_PIP_1.q_xHVEna_DO"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_RTDSK0_PIP_2.xOn" VarB="Channel 2^GVL_SXR_VAC.fb_RTDSK0_PIP_2.q_xHVEna_DO"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_RTDSK0_PIP_3.xOn" VarB="Channel 3^GVL_SXR_VAC.fb_RTDSK0_PIP_3.q_xHVEna_DO"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_RTDSK0_PIP_4.xOn" VarB="Channel 4^GVL_SXR_VAC.fb_RTDSK0_PIP_4.q_xHVEna_DO"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EL2794_00_06">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_PCPM3B_PIP_1.xOn" VarB="Channel 2^GVL_SXR_VAC.fb_PCPM3B_PIP_1.q_xHVEna_DO"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_RTDSK0_PIP_5.xOn" VarB="Channel 1^GVL_SXR_VAC.fb_RTDSK0_PIP_5.q_xHVEna_DO"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EL2794_00_10">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_MR1K1_BEND_PIP_1.xOn" VarB="Channel 3^GVL_SXR_VAC.fb_MR1K1_BEND_PIP_1.q_xHVEna_DO"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_MR1K3_TXI_PIP_1.xOn" VarB="Channel 4^GVL_SXR_VAC.fb_MR1K3_TXI_PIP_1.q_xHVEna_DO"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_PA1K0_PIP_1.xOn" VarB="Channel 1^GVL_SXR_VAC.fb_PA1K0_PIP_1.q_xHVEna_DO"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EL2794_00_13">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_MR2K3_TXI_PIP_1.xOn" VarB="Channel 1^GVL_SXR_VAC.fb_MR2K3_TXI_PIP_1.q_xHVEna_DO"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_SP1K1_MONO_PIP_1.xOn" VarB="Channel 2^GVL_SXR_VAC.fb_SP1K1_MONO_PIP_1.q_xHVEna_DO"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_SP1K1_MONO_PIP_2.xOn" VarB="Channel 3^GVL_SXR_VAC.fb_SP1K1_MONO_PIP_2.q_xHVEna_DO"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_TV3K0_PIP_1.xOn" VarB="Channel 4^GVL_SXR_VAC.fb_TV3K0_PIP_1.q_xHVEna_DO"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EL2794_15_03">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_MR1K4_SOMS_PIP_1.xOn" VarB="Channel 1^GVL_SXR_VAC.fb_MR1K4_SOMS_PIP_1.q_xHVEna_DO"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_ST1K4_TEST_PIP_1.xOn" VarB="Channel 2^GVL_SXR_VAC.fb_ST1K4_TEST_PIP_1.q_xHVEna_DO"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_ST2K4_BCS_PIP_1.xOn" VarB="Channel 3^GVL_SXR_VAC.fb_ST2K4_BCS_PIP_1.q_xHVEna_DO"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_ST3K4_PPS_PIP_1.xOn" VarB="Channel 4^GVL_SXR_VAC.fb_ST3K4_PPS_PIP_1.q_xHVEna_DO"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EL2794_15_06">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_PC4K4_XTES_PIP_1.xOn" VarB="Channel 1^GVL_SXR_VAC.fb_PC4K4_XTES_PIP_1.q_xHVEna_DO"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EL2798_01_02">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_DMPS_GCC_1.i_xHvOn" VarB="Channel 1^GVL_SXR_VAC.fb_DMPS_GCC_1.q_xHV_DIS"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_IM2K0_XTES_GCC_1.i_xHvOn" VarB="Channel 2^GVL_SXR_VAC.fb_IM2K0_XTES_GCC_1.q_xHV_DIS"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_PCPM3B_GFS_1.i_xHvOn" VarB="Channel 5^GVL_SXR_VAC.fb_PCPM3B_GFS_1.q_xHV_DIS"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_SL1K0_GCC_1.i_xHvOn" VarB="Channel 4^GVL_SXR_VAC.fb_SL1K0_GCC_1.q_xHV_DIS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EL2798_01_06">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_MR1K1_BEND_GCC_1.i_xHvOn" VarB="Channel 5^GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.q_xHV_DIS"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_PA1K0_GCC_1.i_xHvOn" VarB="Channel 4^GVL_SXR_VAC.fb_PA1K0_GCC_1.q_xHV_DIS"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_TV2K0_GCC_1.i_xHvOn" VarB="Channel 1^GVL_SXR_VAC.fb_TV2K0_GCC_1.q_xHV_DIS"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_TV2K0_GCC_2.i_xHvOn" VarB="Channel 2^GVL_SXR_VAC.fb_TV2K0_GCC_2.q_xHV_DIS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2338_04_00">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_EM1K0_XGMD_VGC_1.i_xSol" VarB="Channel 11^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.q_xOPN_DO"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_EM1K0_XGMD_VGC_2.i_xSol" VarB="Channel 15^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.q_xOPN_DO"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_EM1K0_XGMD_VGC_1.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xClsLS"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_EM1K0_XGMD_VGC_1.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xOpnLS"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_EM1K0_XGMD_VGC_2.q_xClsLS" VarB="Channel 6^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xClsLS"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_EM1K0_XGMD_VGC_2.q_xOpnLS" VarB="Channel 5^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xOpnLS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2338_05_00">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_TV2K0_VGC_1.i_xSol" VarB="Channel 11^GVL_SXR_VAC.fb_TV2K0_VGC_1.q_xOPN_DO"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV2K0_VGC_1.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_TV2K0_VGC_1.i_xClsLS"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV2K0_VGC_1.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_TV2K0_VGC_1.i_xOpnLS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2338_06_00">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_MR1K1_BEND_VGC_1.i_xSol" VarB="Channel 11^GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.q_xOPN_DO"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K1_BEND_VGC_1.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.i_xClsLS"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K1_BEND_VGC_1.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.i_xOpnLS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2338_07_00">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_MR1K3_TXI_VGC_1.i_xSol" VarB="Channel 11^GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.q_xOPN_DO"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K3_TXI_VGC_1.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.i_xClsLS"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K3_TXI_VGC_1.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.i_xOpnLS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2338_08_00">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_SP1K1_MONO_VGC_1.i_xSol" VarB="Channel 11^GVL_SXR_VAC.fb_SP1K1_MONO_VGC_1.q_xOPN_DO"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_SP1K1_MONO_VGC_1.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_SP1K1_MONO_VGC_1.i_xClsLS"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_SP1K1_MONO_VGC_1.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_SP1K1_MONO_VGC_1.i_xOpnLS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2338_09_02">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_SP1K1_MONO_VGC_2.i_xSol" VarB="Channel 11^GVL_SXR_VAC.fb_SP1K1_MONO_VGC_2.q_xOPN_DO"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_SP1K1_MONO_VGC_2.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_SP1K1_MONO_VGC_2.i_xClsLS"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_SP1K1_MONO_VGC_2.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_SP1K1_MONO_VGC_2.i_xOpnLS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2338_09_03">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_IM1K2_PPM_VGC_1.i_xSol" VarB="Channel 11^GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.q_xOPN_DO"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_TV3K0_VGC_1.i_xSol" VarB="Channel 15^GVL_SXR_VAC.fb_TV3K0_VGC_1.q_xOPN_DO"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_IM1K2_PPM_VGC_1.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xClsLS"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_IM1K2_PPM_VGC_1.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xOpnLS"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV3K0_VGC_1.q_xClsLS" VarB="Channel 6^GVL_SXR_VAC.fb_TV3K0_VGC_1.i_xClsLS"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV3K0_VGC_1.q_xOpnLS" VarB="Channel 5^GVL_SXR_VAC.fb_TV3K0_VGC_1.i_xOpnLS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2338_10_02">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_MR1K4_SOMS_VGC_1.i_xSol" VarB="Channel 11^GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.q_xOPN_DO"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K4_SOMS_VGC_1.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.i_xClsLS"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K4_SOMS_VGC_1.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.i_xOpnLS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2338_11_02">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_TV1K4_VGC_1.i_xSol" VarB="Channel 11^GVL_SXR_VAC.fb_TV1K4_VGC_1.q_xOPN_DO"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_TV1K4_VGC_2.i_xSol" VarB="Channel 15^GVL_SXR_VAC.fb_TV1K4_VGC_2.q_xOPN_DO"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV1K4_VGC_1.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_TV1K4_VGC_1.i_xClsLS"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV1K4_VGC_1.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_TV1K4_VGC_1.i_xOpnLS"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV1K4_VGC_2.q_xClsLS" VarB="Channel 6^GVL_SXR_VAC.fb_TV1K4_VGC_2.i_xClsLS"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV1K4_VGC_2.q_xOpnLS" VarB="Channel 5^GVL_SXR_VAC.fb_TV1K4_VGC_2.i_xOpnLS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2338_14_00">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_ST3K4_XTES_VGC_1.i_xSol" VarB="Channel 11^GVL_SXR_VAC.fb_ST3K4_XTES_VGC_1.q_xOPN_DO"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_ST3K4_XTES_VGC_1.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_ST3K4_XTES_VGC_1.i_xClsLS"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_ST3K4_XTES_VGC_1.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_ST3K4_XTES_VGC_1.i_xOpnLS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2624_07_02">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_MR1K3_TXI_GCC_1.i_xHvOn" VarB="Channel 1^GVL_SXR_VAC.fb_MR1K3_TXI_GCC_1.q_xHV_DIS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2624_08_02">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_MR2K3_TXI_GCC_1.i_xHvOn" VarB="Channel 1^GVL_SXR_VAC.fb_MR2K3_TXI_GCC_1.q_xHV_DIS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2624_09_01">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_SP1K1_MONO_GCC_1.i_xHvOn" VarB="Channel 1^GVL_SXR_VAC.fb_SP1K1_MONO_GCC_1.q_xHV_DIS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2624_10_01">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_TV3K0_GCC_1.i_xHvOn" VarB="Channel 1^GVL_SXR_VAC.fb_TV3K0_GCC_1.q_xHV_DIS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2624_11_01">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_MR1K4_SOMS_GCC_1.i_xHvOn" VarB="Channel 2^GVL_SXR_VAC.fb_MR1K4_SOMS_GCC_1.q_xHV_DIS"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_TV1K4_GCC_1.i_xHvOn" VarB="Channel 1^GVL_SXR_VAC.fb_TV1K4_GCC_1.q_xHV_DIS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2624_12_01">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_ST1K4_TEST_GCC_1.i_xHvOn" VarB="Channel 1^GVL_SXR_VAC.fb_ST1K4_TEST_GCC_1.q_xHV_DIS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2624_13_01">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_ST2K4_BCS_GCC_1.i_xHvOn" VarB="Channel 1^GVL_SXR_VAC.fb_ST2K4_BCS_GCC_1.q_xHV_DIS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP2624_14_02">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_PC4K4_XTES_GCC_1.i_xHvOn" VarB="Channel 1^GVL_SXR_VAC.fb_PC4K4_XTES_GCC_1.q_xHV_DIS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP3174_07_01">
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K3_TXI_GCC_1.q_iRawPress" VarB="AI Standard Channel 2^GVL_SXR_VAC.fb_MR1K3_TXI_GCC_1.i_iPRESS_R"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K3_TXI_GPI_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_MR1K3_TXI_GPI_1.i_iPRESS_R"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP3174_08_01">
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR2K3_TXI_GCC_1.q_iRawPress" VarB="AI Standard Channel 2^GVL_SXR_VAC.fb_MR2K3_TXI_GCC_1.i_iPRESS_R"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR2K3_TXI_GPI_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_MR2K3_TXI_GPI_1.i_iPRESS_R"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP3174_09_00">
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_SP1K1_MONO_GCC_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_SP1K1_MONO_GCC_1.i_iPRESS_R"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_SP1K1_MONO_GPI_1.q_iRawPress" VarB="AI Standard Channel 2^GVL_SXR_VAC.fb_SP1K1_MONO_GPI_1.i_iPRESS_R"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP3174_10_00">
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K4_SOMS_GPI_1.q_iRawPress" VarB="AI Standard Channel 2^GVL_SXR_VAC.fb_MR1K4_SOMS_GPI_1.i_iPRESS_R"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV3K0_GCC_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_TV3K0_GCC_1.i_iPRESS_R"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV3K0_GPI_1.q_iRawPress" VarB="AI Standard Channel 4^GVL_SXR_VAC.fb_TV3K0_GPI_1.i_iPRESS_R"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP3174_11_00">
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K4_SOMS_GCC_1.q_iRawPress" VarB="AI Standard Channel 3^GVL_SXR_VAC.fb_MR1K4_SOMS_GCC_1.i_iPRESS_R"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV1K4_GCC_1.q_iRawPress" VarB="AI Standard Channel 2^GVL_SXR_VAC.fb_TV1K4_GCC_1.i_iPRESS_R"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV1K4_GPI_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_TV1K4_GPI_1.i_iPRESS_R"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP3174_12_00">
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_ST1K4_TEST_GCC_1.q_iRawPress" VarB="AI Standard Channel 2^GVL_SXR_VAC.fb_ST1K4_TEST_GCC_1.i_iPRESS_R"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_ST1K4_TEST_GPI_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_ST1K4_TEST_GPI_1.i_iPRESS_R"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP3174_13_00">
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_ST2K4_BCS_GCC_1.q_iRawPress" VarB="AI Standard Channel 2^GVL_SXR_VAC.fb_ST2K4_BCS_GCC_1.i_iPRESS_R"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_ST2K4_BCS_GPI_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_ST2K4_BCS_GPI_1.i_iPRESS_R"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-EP3174_14_01">
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_PC4K4_XTES_GCC_1.q_iRawPress" VarB="AI Standard Channel 2^GVL_SXR_VAC.fb_PC4K4_XTES_GCC_1.i_iPRESS_R"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_PC4K4_XTES_GPI_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_PC4K4_XTES_GPI_1.i_iPRESS_R"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-ES1004_03_01">
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_EM1K0_GMD_VGC_1.q_xClsLS" VarB="Channel 4^GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.i_xClsLS"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_EM1K0_GMD_VGC_1.q_xOpnLS" VarB="Channel 3^GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.i_xOpnLS"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_RTDSK0_VGC_1.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_RTDSK0_VGC_1.i_xClsLS"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_RTDSK0_VGC_1.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_RTDSK0_VGC_1.i_xOpnLS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-ES1004_03_04">
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_AT1K0_GAS_VGC_1.q_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.i_xClsLS"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_AT1K0_GAS_VGC_1.q_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.i_xOpnLS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-ES2004_03_02">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_EM1K0_GMD_VGC_1.i_xSol" VarB="Channel 3^GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.q_xOPN_DO"/>
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_RTDSK0_VGC_1.i_xSol" VarB="Channel 1^GVL_SXR_VAC.fb_RTDSK0_VGC_1.q_xOPN_DO"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-ES2004_03_03">
+				<Link VarA="SimTask Inputs^GVL_SXR_VAC.st_AT1K0_GAS_VGC_1.i_xSol" VarB="Channel 1^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.q_xOPN_DO"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-ES3068_01_01">
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_DMPS_GCC_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_DMPS_GCC_1.i_iPRESS_R"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_DMPS_GPI_1.q_iRawPress" VarB="AI Standard Channel 5^GVL_SXR_VAC.fb_DMPS_GPI_1.i_iPRESS_R"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_IM2K0_XTES_GCC_1.q_iRawPress" VarB="AI Standard Channel 3^GVL_SXR_VAC.fb_IM2K0_XTES_GCC_1.i_iPRESS_R"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_IM2K0_XTES_GPI_1.q_iRawPress" VarB="AI Standard Channel 6^GVL_SXR_VAC.fb_IM2K0_XTES_GPI_1.i_iPRESS_R"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-ES3068_01_04">
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_PCPM3B_GFS_1.q_iRawPress" VarB="AI Standard Channel 3^GVL_SXR_VAC.fb_PCPM3B_GFS_1.i_iPRESS_R"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_SL1K0_GCC_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_SL1K0_GCC_1.i_iPRESS_R"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_SL1K0_GPI_1.q_iRawPress" VarB="AI Standard Channel 5^GVL_SXR_VAC.fb_SL1K0_GPI_1.i_iPRESS_R"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-ES3068_01_05">
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV2K0_GCC_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_TV2K0_GCC_1.i_iPRESS_R"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV2K0_GCC_2.q_iRawPress" VarB="AI Standard Channel 3^GVL_SXR_VAC.fb_TV2K0_GCC_2.i_iPRESS_R"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV2K0_GPI_1.q_iRawPress" VarB="AI Standard Channel 5^GVL_SXR_VAC.fb_TV2K0_GPI_1.i_iPRESS_R"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_TV2K0_GPI_2.q_iRawPress" VarB="AI Standard Channel 6^GVL_SXR_VAC.fb_TV2K0_GPI_2.i_iPRESS_R"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SimDevice 2 (EtherCAT Simulation)^=+-ES3068_01_08">
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K1_BEND_GCC_1.q_iRawPress" VarB="AI Standard Channel 3^GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.i_iPRESS_R"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_MR1K1_BEND_GPI_1.q_iRawPress" VarB="AI Standard Channel 6^GVL_SXR_VAC.fb_MR1K1_BEND_GPI_1.i_iPRESS_R"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_PA1K0_GCC_1.q_iRawPress" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_PA1K0_GCC_1.i_iPRESS_R"/>
+				<Link VarA="SimTask Outputs^GVL_SXR_VAC.st_PA1K0_GPI_1.q_iRawPress" VarB="AI Standard Channel 5^GVL_SXR_VAC.fb_PA1K0_GPI_1.i_iPRESS_R"/>
 			</OwnerB>
 		</OwnerA>
 	</Mappings>

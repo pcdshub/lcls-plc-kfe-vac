@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+  <POU Name="MAIN" Id="{c47f9aac-68c3-49c9-9898-0a3b0492dd80}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	
+	x: INT;
+	y: INT;
+	z: INT;
+END_VAR
+
+    ]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF x > y THEN
+	x := z;
+ELSE
+	x := x+1;
+END_IF
+]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="2" Count="0" />
+      <LineId Id="8" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="14" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

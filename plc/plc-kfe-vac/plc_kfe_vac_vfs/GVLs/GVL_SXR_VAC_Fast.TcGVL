@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+  <GVL Name="GVL_SXR_VAC_Fast" Id="{a3e12a1b-9455-4868-895a-287cac51b01a}">
+    <Declaration><![CDATA[
+VAR_GLOBAL
+	
+xSystemOverrideMode : BOOL; (* Global system override for the prototype section*)
+
+fb_TV2K0_VFS_1 : FB_VFS;
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

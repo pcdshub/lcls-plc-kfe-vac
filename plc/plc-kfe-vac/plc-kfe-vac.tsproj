@@ -88,19 +88,23 @@
 	</ImageDatas>
 	<Project ProjectGUID="{D506BFD8-175F-4629-91DD-60162F5FC524}" TargetNetId="5.54.18.118.1.1" ShowHideConfigurations="#x306">
 		<System>
+			<Settings>
+				<Cpu BaseTime="500"/>
+				<IoIdleTask Priority="40"/>
+			</Settings>
 			<Licenses>
 				<Target>
 					<ManualSelect>{D59230D3-7C55-4138-859C-234C1C6CFDA8}</ManualSelect>
 				</Target>
 			</Licenses>
 			<Tasks>
-				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+				<Task Id="3" Priority="41" CycleTime="100000" AmsPort="350" AdtTasks="true">
 					<Name>PlcTask</Name>
 				</Task>
-				<Task Id="4" Priority="21" CycleTime="100000" AmsPort="351" AdtTasks="true">
+				<Task Id="4" Disabled="true" Priority="42" CycleTime="100000" AmsPort="351" AdtTasks="true">
 					<Name>SimTask</Name>
 				</Task>
-				<Task Id="5" Priority="22" CycleTime="10000" AmsPort="352" AdtTasks="true">
+				<Task Id="5" Priority="3" CycleTime="1500" AmsPort="352" AdtTasks="true">
 					<Name>VFSTask</Name>
 				</Task>
 			</Tasks>
@@ -1150,7 +1154,7 @@
 						</Var>
 					</Vars>
 					<TaskPouOids>
-						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+						<TaskPouOid Prio="41" OTCID="#x08502001"/>
 					</TaskPouOids>
 				</Instance>
 			</Project>
@@ -2060,16 +2064,100 @@
 						</Var>
 					</Vars>
 					<TaskPouOids>
-						<TaskPouOid Prio="21" OTCID="#x08502041"/>
+						<TaskPouOid Prio="42" OTCID="#x08502041"/>
 					</TaskPouOids>
 				</Instance>
 			</Project>
 			<Project GUID="{7837A491-D5DD-47AB-BE5B-F5B5ABB1D63F}" Name="plc_kfe_vac_vfs" PrjFilePath="plc_kfe_vac_vfs\plc_kfe_vac_vfs.plcproj" TmcFilePath="plc_kfe_vac_vfs\plc_kfe_vac_vfs.tmc" ReloadTmc="true" AmsPort="853" FileArchiveSettings="#x000e">
-				<Instance Id="#x08502080" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2">
+				<Instance Id="#x08502080" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="plc_kfe_vac_vfs\plc_kfe_vac_vfs.tmc">
 					<Name>plc_kfe_vac_vfs Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Vars VarGrpType="1">
+						<Name>PlcTask Inputs</Name>
+						<Var>
+							<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
+							<Comment>
+								<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
+							</Comment>
+							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+						</Var>
+						<Var>
+							<Name>L2SI_Vacuum_Library.Global_Variables.g_stSystem.I_EcatMaster1</Name>
+							<Comment>
+								<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
+							</Comment>
+							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_Fast.fb_TV2K0_VFS_1.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_Fast.fb_TV2K0_VFS_1.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_Fast.fb_TV2K0_VFS_1.i_xTrigger</Name>
+							<Comment>
+								<![CDATA[ Could be Up to 4]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="2">
+						<Name>PlcTask Outputs</Name>
+						<Var>
+							<Name>GVL_SXR_VAC_Fast.fb_TV2K0_VFS_1.io_fbFFHWO.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_Fast.fb_TV2K0_VFS_1.q_xClose_A</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_Fast.fb_TV2K0_VFS_1.q_xClose_B</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_Fast.fb_TV2K0_VFS_1.q_xClose_C</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_Fast.fb_TV2K0_VFS_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_Fast.fb_TV2K0_VFS_1.xVAC_FAULT_OK</Name>
+							<Comment>
+								<![CDATA[Valve Vacuum OK, is set to Flase when there is Vacuum Fault]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="8">
+						<Name>PlcTask Retains</Name>
+						<Var>
+							<Name>PMPS_GVL.SuccessfulPreemption</Name>
+							<Comment>
+								<![CDATA[ Any time BPTM applies a new BP request which is confirmed]]>
+							</Comment>
+							<Type>ULINT</Type>
+							<InOut>7</InOut>
+						</Var>
+						<Var>
+							<Name>PMPS_GVL.AccumulatedFF</Name>
+							<Comment>
+								<![CDATA[ Any time a FF occurs]]>
+							</Comment>
+							<Type>ULINT</Type>
+							<InOut>7</InOut>
+						</Var>
+					</Vars>
 					<TaskPouOids>
-						<TaskPouOid Prio="22" OTCID="#x08502081"/>
+						<TaskPouOid Prio="3" OTCID="#x08502081"/>
 					</TaskPouOids>
 				</Instance>
 			</Project>
@@ -24137,7 +24225,6 @@ Bit1: Value bigger/equal Limit2]]>
 		</Io>
 	</Project>
 	<Mappings>
-		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030010"/>
 		<OwnerA Name="TIPC^plc_kfe_vac^plc_kfe_vac Instance">
 			<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EK1100_01_00^=+-EL2798_01_02">
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_DMPS_GCC_1.q_xHV_DIS" VarB="Channel 1^GVL_SXR_VAC.fb_DMPS_GCC_1.q_xHV_DIS"/>

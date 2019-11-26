@@ -1277,34 +1277,6 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.st_RTDSK0_PIP_1.xOn</Name>
-							<Comment>
-								<![CDATA[Readback of whether Gamma Ion Pump is turned on or not]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.st_RTDSK0_PIP_2.xOn</Name>
-							<Comment>
-								<![CDATA[Readback of whether Gamma Ion Pump is turned on or not]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.st_RTDSK0_PIP_3.xOn</Name>
-							<Comment>
-								<![CDATA[Readback of whether Gamma Ion Pump is turned on or not]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.st_RTDSK0_PIP_4.xOn</Name>
-							<Comment>
-								<![CDATA[Readback of whether Gamma Ion Pump is turned on or not]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_SXR_VAC.st_DMPS_GCC_1.i_xHvOn</Name>
 							<Comment>
 								<![CDATA[High voltage On to turn on ion gauges]]>
@@ -1357,6 +1329,34 @@
 							<Name>GVL_SXR_VAC.st_MR1K1_BEND_GCC_1.i_xHvOn</Name>
 							<Comment>
 								<![CDATA[High voltage On to turn on ion gauges]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.st_RTDSK0_PIP_1.xOn</Name>
+							<Comment>
+								<![CDATA[Readback of whether Gamma Ion Pump is turned on or not]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.st_RTDSK0_PIP_2.xOn</Name>
+							<Comment>
+								<![CDATA[Readback of whether Gamma Ion Pump is turned on or not]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.st_RTDSK0_PIP_3.xOn</Name>
+							<Comment>
+								<![CDATA[Readback of whether Gamma Ion Pump is turned on or not]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.st_RTDSK0_PIP_4.xOn</Name>
+							<Comment>
+								<![CDATA[Readback of whether Gamma Ion Pump is turned on or not]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -2075,13 +2075,6 @@
 					<Vars VarGrpType="1">
 						<Name>PlcTask Inputs</Name>
 						<Var>
-							<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
-							<Comment>
-								<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
-							</Comment>
-							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
-						</Var>
-						<Var>
 							<Name>L2SI_Vacuum_Library.Global_Variables.g_stSystem.I_EcatMaster1</Name>
 							<Comment>
 								<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
@@ -2089,10 +2082,21 @@
 							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC_Fast.fb_TV2K0_VFS_1.i_xOpnLS</Name>
+							<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
 							<Comment>
-								<![CDATA[IO]]>
+								<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
 							</Comment>
+							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_Fast.fb_TV2K0_VFS_1.i_xPress_OK</Name>
+							<Comment>
+								<![CDATA[To be linked to the Fast sensor structure signal IG.xPRESS_OK, to make sure that the device is connected]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_Fast.fb_TV2K0_VFS_1.i_xOpnLS</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -2130,9 +2134,16 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
+							<Name>GVL_SXR_VAC_Fast.fb_TV2K0_VFS_1.xMPS_OK</Name>
+							<Comment>
+								<![CDATA[MPS Fast OK, is set when the Valve is Open and there is no trigger]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_SXR_VAC_Fast.fb_TV2K0_VFS_1.xVAC_FAULT_OK</Name>
 							<Comment>
-								<![CDATA[Valve Vacuum OK, is set to Flase when there is Vacuum Fault]]>
+								<![CDATA[Valve Vacuum OK, is set to False when there is Vacuum Fault]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>

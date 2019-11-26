@@ -6,7 +6,7 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fb_TV2K0_VFS_1(i_xOverrideMode := False, io_fbFFHWO => );]]></ST>
+      <ST><![CDATA[fb_TV2K0_VFS_1(i_xOverrideMode := False, io_fbFFHWO =>);]]></ST>
     </Implementation>
     <LineIds Name="PRG_VFS">
       <LineId Id="5" Count="0" />

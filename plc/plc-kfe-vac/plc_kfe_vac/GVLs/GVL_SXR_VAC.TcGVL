@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <GVL Name="GVL_SXR_VAC" Id="{d38b3a8d-c2e8-4a67-9aeb-873e21370c76}">
     <Declaration><![CDATA[VAR_GLOBAL
 
@@ -16,14 +16,7 @@ fb_SP1K1_MONO_GPI_1 : FB_MKS275;
 fb_TV3K0_GPI_1 : FB_MKS275;
 {attribute 'pytmc' := ' pv: MR1K4:SOMS:GPI:1 '}
 fb_MR1K4_SOMS_GPI_1 : FB_MKS275;
-{attribute 'pytmc' := ' pv: TV1K4:GPI:1 '}
-fb_TV1K4_GPI_1 : FB_MKS275;
-{attribute 'pytmc' := ' pv: ST1K4:TEST:GPI:1 '}
-fb_ST1K4_TEST_GPI_1 : FB_MKS275;
-{attribute 'pytmc' := ' pv: ST2K4:BCS:GPI:1 '}
-fb_ST2K4_BCS_GPI_1 : FB_MKS275;
-{attribute 'pytmc' := ' pv: PC4K4:XTES:GPI:1 '}
-fb_PC4K4_XTES_GPI_1 : FB_MKS275;
+
 
 // MKS500_EP Gauges
 
@@ -37,14 +30,7 @@ fb_SP1K1_MONO_GCC_1 : FB_MKS500_EP;
 fb_TV3K0_GCC_1 : FB_MKS500_EP;
 {attribute 'pytmc' := ' pv: MR1K4:SOMS:GCC:1 '}
 fb_MR1K4_SOMS_GCC_1 : FB_MKS500_EP;
-{attribute 'pytmc' := ' pv: TV1K4:GCC:1 '}
-fb_TV1K4_GCC_1 : FB_MKS500_EP;
-{attribute 'pytmc' := ' pv: ST1K4:TEST:GCC:1 '}
-fb_ST1K4_TEST_GCC_1 : FB_MKS500_EP;
-{attribute 'pytmc' := ' pv: ST2K4:BCS:GCC:1 '}
-fb_ST2K4_BCS_GCC_1 : FB_MKS500_EP;
-{attribute 'pytmc' := ' pv: PC4K4:XTES:GCC:1 '}
-fb_PC4K4_XTES_GCC_1 : FB_MKS500_EP;
+
 
 // VGC Valves
 
@@ -74,12 +60,6 @@ fb_IM1K2_PPM_VGC_1 : FB_VGC;
 fb_TV3K0_VGC_1 : FB_VGC;
 {attribute 'pytmc' := ' pv: MR1K4:SOMS:VGC:1 '}
 fb_MR1K4_SOMS_VGC_1 : FB_VGC;
-{attribute 'pytmc' := ' pv: TV1K4:VGC:1 '}
-fb_TV1K4_VGC_1 : FB_VGC;
-{attribute 'pytmc' := ' pv: TV1K4:VGC:2 '}
-fb_TV1K4_VGC_2 : FB_VGC;
-{attribute 'pytmc' := ' pv: ST3K4:XTES:VGC:1 '}
-fb_ST3K4_XTES_VGC_1 : FB_VGC;
 
 // PIP_Gamma Pumps
 
@@ -111,16 +91,7 @@ fb_SP1K1_MONO_PIP_1 : FB_PIP_GAMMA;
 fb_SP1K1_MONO_PIP_2 : FB_PIP_GAMMA;
 {attribute 'pytmc' := ' pv: TV3K0:PIP:1 '}
 fb_TV3K0_PIP_1 : FB_PIP_GAMMA;
-{attribute 'pytmc' := ' pv: MR1K4:SOMS:PIP:1 '}
-fb_MR1K4_SOMS_PIP_1 : FB_PIP_GAMMA;
-{attribute 'pytmc' := ' pv: ST1K4:TEST:PIP:1 '}
-fb_ST1K4_TEST_PIP_1 : FB_PIP_GAMMA;
-{attribute 'pytmc' := ' pv: ST2K4:BCS:PIP:1 '}
-fb_ST2K4_BCS_PIP_1 : FB_PIP_GAMMA;
-{attribute 'pytmc' := ' pv: ST3K4:PPS:PIP:1 '}
-fb_ST3K4_PPS_PIP_1 : FB_PIP_GAMMA;
-{attribute 'pytmc' := ' pv: PC4K4:XTES:PIP:1 '}
-fb_PC4K4_XTES_PIP_1 : FB_PIP_GAMMA;
+
 
 // FB_MKS422
 

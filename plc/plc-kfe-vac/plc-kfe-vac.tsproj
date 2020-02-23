@@ -6237,7 +6237,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Box Id="50" BoxType="9099">
 					<Name>=+-EP2338_05_00</Name>
 					<ImageId>1010</ImageId>
-					<EtherCAT SlaveType="1" PdiType="#x0304" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x09224052" RevisionNo="#x00170002" RepeatSupport="true" PortPhys="17" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EP2338-0002 8 Ch. Dig. Input/Output 24V, 0,5A, M12" Desc="EP2338-0002" PortABoxInfo="#x01000031">
+					<EtherCAT SlaveType="1" PdiType="#x0304" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x09224052" RevisionNo="#x00160002" RepeatSupport="true" PortPhys="17" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EP2338-0002 8 Ch. Dig. Input/Output 24V, 0,5A, M12" Desc="EP2338-0002" PortABoxInfo="#x01000031">
 						<SyncMan>000f01004400010003000000010001000100000f44090000</SyncMan>
 						<SyncMan>001001000000010004000000010001000100001000010000</SyncMan>
 						<Fmmu>0000000000000000000f00020100000001000000000000000000000000000000</Fmmu>
@@ -7960,7 +7960,9 @@ Bit1: Value smaller than Limit2]]></Comment>
 						</Pdo>
 					</EtherCAT>
 				</Box>
-				<EtherCAT EnableVirtualSwitch="true" MaxSwitchPorts="5" MaxSwitchFrames="180"/>
+				<EtherCAT EnableVirtualSwitch="true" MaxSwitchPorts="5" MaxSwitchFrames="180">
+					<Redundancy Mode="2" DeviceDesc="PCI\TcI8254x2" Miniport="PCI\TCI8254X2" IpAddress="#xc0a8010a" IpMask="#xc0a8010a" PreviousPort="16777286" Mac="000105320299"/>
+				</EtherCAT>
 			</Device>
 			<Device Id="2" Disabled="true" DevType="144" AmsPort="28674" AmsNetId="10.0.1.49.3.1" RemoteName="SimDevice 2 (EtherCAT Simulation)">
 				<Name>SimDevice 2 (EtherCAT Simulation)</Name>

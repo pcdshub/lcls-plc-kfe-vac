@@ -161,26 +161,6 @@
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_TV1K4_GPI_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_ST1K4_TEST_GPI_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_ST2K4_BCS_GPI_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_PC4K4_XTES_GPI_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
 							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_GCC_1.i_iPRESS_R</Name>
 							<Comment><![CDATA[ Controls and I/Os]]></Comment>
 							<Type>INT</Type>
@@ -202,26 +182,6 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_MR1K4_SOMS_GCC_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ Controls and I/Os]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV1K4_GCC_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ Controls and I/Os]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_ST1K4_TEST_GCC_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ Controls and I/Os]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_ST2K4_BCS_GCC_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ Controls and I/Os]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_PC4K4_XTES_GCC_1.i_iPRESS_R</Name>
 							<Comment><![CDATA[ Controls and I/Os]]></Comment>
 							<Type>INT</Type>
 						</Var>
@@ -340,33 +300,6 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV1K4_VGC_1.i_xOpnLS</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV1K4_VGC_1.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV1K4_VGC_2.i_xOpnLS</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV1K4_VGC_2.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_ST3K4_XTES_VGC_1.i_xOpnLS</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_ST3K4_XTES_VGC_1.i_xClsLS</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -496,51 +429,6 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K4_SOMS_PIP_1.i_iPRESS</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K4_SOMS_PIP_1.i_xSP_DI</Name>
-							<Comment><![CDATA[ NO contact // 'TcLinkTo' (EL1004) ^Input]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_ST1K4_TEST_PIP_1.i_iPRESS</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_ST1K4_TEST_PIP_1.i_xSP_DI</Name>
-							<Comment><![CDATA[ NO contact // 'TcLinkTo' (EL1004) ^Input]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_ST2K4_BCS_PIP_1.i_iPRESS</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_ST2K4_BCS_PIP_1.i_xSP_DI</Name>
-							<Comment><![CDATA[ NO contact // 'TcLinkTo' (EL1004) ^Input]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_ST3K4_PPS_PIP_1.i_iPRESS</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_ST3K4_PPS_PIP_1.i_xSP_DI</Name>
-							<Comment><![CDATA[ NO contact // 'TcLinkTo' (EL1004) ^Input]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_PC4K4_XTES_PIP_1.i_iPRESS</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_PC4K4_XTES_PIP_1.i_xSP_DI</Name>
-							<Comment><![CDATA[ NO contact // 'TcLinkTo' (EL1004) ^Input]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_SXR_VAC.fb_DMPS_GCC_1.i_iPRESS_R</Name>
 							<Comment><![CDATA[ Controls and I/Os]]></Comment>
 							<Type>INT</Type>
@@ -644,26 +532,6 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_TV1K4_GCC_1.q_xHV_DIS</Name>
-							<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_ST1K4_TEST_GCC_1.q_xHV_DIS</Name>
-							<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_ST2K4_BCS_GCC_1.q_xHV_DIS</Name>
-							<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_PC4K4_XTES_GCC_1.q_xHV_DIS</Name>
-							<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_VGC_1.q_xOPN_DO</Name>
 							<Type>BOOL</Type>
 						</Var>
@@ -716,110 +584,73 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_TV1K4_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV1K4_VGC_2.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_ST3K4_XTES_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_PIP_1.q_xHVEna_DO</Name>
-							<Comment><![CDATA[ Enable High Voltage when FALSE // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_PIP_2.q_xHVEna_DO</Name>
-							<Comment><![CDATA[ Enable High Voltage when FALSE // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_PIP_3.q_xHVEna_DO</Name>
-							<Comment><![CDATA[ Enable High Voltage when FALSE // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_PIP_4.q_xHVEna_DO</Name>
-							<Comment><![CDATA[ Enable High Voltage when FALSE // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_PIP_5.q_xHVEna_DO</Name>
-							<Comment><![CDATA[ Enable High Voltage when FALSE // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_PCPM3B_PIP_1.q_xHVEna_DO</Name>
-							<Comment><![CDATA[ Enable High Voltage when FALSE // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_PA1K0_PIP_1.q_xHVEna_DO</Name>
-							<Comment><![CDATA[ Enable High Voltage when FALSE // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_PA1K0.q_xHVEna_DO</Name>
-							<Comment><![CDATA[ Enable High Voltage when FALSE // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_PIP_1.q_xHVEna_DO</Name>
-							<Comment><![CDATA[ Enable High Voltage when FALSE // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_PIP_1.q_xHVEna_DO</Name>
-							<Comment><![CDATA[ Enable High Voltage when FALSE // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_PIP_1.q_xHVEna_DO</Name>
-							<Comment><![CDATA[ Enable High Voltage when FALSE // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_SP1K1_MONO_PIP_1.q_xHVEna_DO</Name>
-							<Comment><![CDATA[ Enable High Voltage when FALSE // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_SP1K1_MONO_PIP_2.q_xHVEna_DO</Name>
-							<Comment><![CDATA[ Enable High Voltage when FALSE // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_TV3K0_PIP_1.q_xHVEna_DO</Name>
-							<Comment><![CDATA[ Enable High Voltage when FALSE // 'TcLinkTo' (EL1124) ^Input]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K4_SOMS_PIP_1.q_xHVEna_DO</Name>
-							<Comment><![CDATA[ Enable High Voltage when FALSE // 'TcLinkTo' (EL1124) ^Input]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_ST1K4_TEST_PIP_1.q_xHVEna_DO</Name>
-							<Comment><![CDATA[ Enable High Voltage when FALSE // 'TcLinkTo' (EL1124) ^Input]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_ST2K4_BCS_PIP_1.q_xHVEna_DO</Name>
-							<Comment><![CDATA[ Enable High Voltage when FALSE // 'TcLinkTo' (EL1124) ^Input]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_ST3K4_PPS_PIP_1.q_xHVEna_DO</Name>
-							<Comment><![CDATA[ Enable High Voltage when FALSE // 'TcLinkTo' (EL1124) ^Input]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_PC4K4_XTES_PIP_1.q_xHVEna_DO</Name>
-							<Comment><![CDATA[ Enable High Voltage when FALSE // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -861,6 +692,25 @@
 							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.q_xHV_DIS</Name>
 							<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>
 							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.g_FastFaultOutputK0.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="8">
+						<Name>PlcTask Retains</Name>
+						<Var>
+							<Name>PMPS_GVL.SuccessfulPreemption</Name>
+							<Comment><![CDATA[ Any time BPTM applies a new BP request which is confirmed]]></Comment>
+							<Type>ULINT</Type>
+							<InOut>7</InOut>
+						</Var>
+						<Var>
+							<Name>PMPS_GVL.AccumulatedFF</Name>
+							<Comment><![CDATA[ Any time a FF occurs]]></Comment>
+							<Type>ULINT</Type>
+							<InOut>7</InOut>
 						</Var>
 					</Vars>
 					<TaskPouOids>
@@ -4514,7 +4364,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 						</EtherCAT>
 					</Box>
 					<Box Id="71" BoxType="9099">
-						<Name>=+-EL2202_01_10</Name>
+						<Name>PMPS_FFO (EL2202)</Name>
 						<ImageId>1002</ImageId>
 						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x089a3052" RevisionNo="#x00130000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2202 2Ch. Dig. Output 24V, 0.5A" Desc="EL2202" PortABoxInfo="#x01000019">
 							<SyncMan>000f01004400010003000000000000000000000f44090000</SyncMan>

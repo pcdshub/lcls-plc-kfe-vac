@@ -1,5 +1,5 @@
 epicsEnvSet("IOC","ioc-plc-kfe-vac")
-epicsEnvSet("TOP","/reg/g/pcds/epics/ioc/common/ads-ioc/R0.1.6")
+epicsEnvSet("TOP","/reg/g/pcds/epics-dev/zlentz/ads-ioc")
 epicsEnvSet("EPICS_SITE_TOP","/reg/g/pcds/epics/")
 epicsEnvSet("EPICS_MODULES","/reg/g/pcds/epics//R7.0.2-2.0/modules")
 epicsEnvSet("AUTOSAVE","/reg/g/pcds/epics//R7.0.2-2.0/modules/autosave/R5.8-2.1.0")
@@ -9,4 +9,4 @@ epicsEnvSet("MOTOR","/reg/g/pcds/epics//R7.0.2-2.0/modules/motor/R6.9-ess-0.0.1"
 epicsEnvSet("ASYN","/reg/g/pcds/epics//R7.0.2-2.0/modules/asyn/R4.35-0.0.1")
 epicsEnvSet("ADS","/reg/g/pcds/epics//R7.0.2-2.0/modules/twincat-ads/R2.0.0-0.0.5")
 epicsEnvSet("EPICS_BASE","/reg/g/pcds/epics//base/R7.0.2-2.0")
-epicsEnvSet("IOC_TOP", "/reg/g/pcds/epics/ioc/plc-kfe-vac/iocBoot/ioc-plc-kfe-vac")
+epicsEnvSet("IOC_TOP","/reg/g/pcds/epics-dev/nwbrown/lcls-plc-kfe-vac/plc/iocBoot/ioc-plc-kfe-vac")

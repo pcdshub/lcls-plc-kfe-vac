@@ -45,7 +45,7 @@
     <string/>
    </property>
    <property name="channelsPrefix" stdset="0">
-    <string>ca://${PIP}</string>
+    <string>ca://${PIP1}</string>
    </property>
   </widget>
   <widget class="ColdCathodeGauge" name="ColdCathodeGauge">
@@ -167,7 +167,7 @@
     <string/>
    </property>
    <property name="channelsPrefix" stdset="0">
-    <string>ca://${PIP}</string>
+    <string>ca://${PIP2}</string>
    </property>
   </widget>
   <widget class="Line" name="line_4">

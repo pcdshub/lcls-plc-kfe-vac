@@ -1,4 +1,4 @@
-#!/reg/g/pcds/epics-dev/zlentz/ads-ioc//bin/rhel7-x86_64/adsIOC
+#!/reg/g/pcds/epics-dev/zlentz/ads-ioc//bin/rhel7-x86_64/adsIoc
 
 < envPaths
 

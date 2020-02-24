@@ -935,8 +935,8 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="IonPump" name="IonPump_7">
        <property name="geometry">
         <rect>
-         <x>1420</x>
-         <y>170</y>
+         <x>1480</x>
+         <y>220</y>
          <width>180</width>
          <height>141</height>
         </rect>
@@ -945,7 +945,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="controlsLocation" stdset="0">
-        <enum>PCDSSymbolBase::Top</enum>
+        <enum>PCDSSymbolBase::Right</enum>
        </property>
        <property name="channelsPrefix" stdset="0">
         <string>ca://PA1K0:PIP:1</string>

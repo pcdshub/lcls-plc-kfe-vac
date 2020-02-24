@@ -63,7 +63,6 @@ Global
 		{36836A52-FE9B-400F-B351-077BA4A4D3F0}.Release|TwinCAT OS (ARMT2).Build.0 = Release|TwinCAT OS (ARMT2)
 		{36836A52-FE9B-400F-B351-077BA4A4D3F0}.Release|TwinCAT RT (x64).ActiveCfg = Release|TwinCAT RT (x64)
 		{36836A52-FE9B-400F-B351-077BA4A4D3F0}.Release|TwinCAT RT (x86).ActiveCfg = Release|TwinCAT RT (x86)
-		{36836A52-FE9B-400F-B351-077BA4A4D3F0}.Release|TwinCAT RT (x86).Build.0 = Release|TwinCAT RT (x86)
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

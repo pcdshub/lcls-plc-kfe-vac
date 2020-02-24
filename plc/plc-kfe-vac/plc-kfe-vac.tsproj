@@ -718,7 +718,7 @@
 					</TaskPouOids>
 				</Instance>
 			</Project>
-			<Project GUID="{36836A52-FE9B-400F-B351-077BA4A4D3F0}" Name="plc_kfe_vac_sim" PrjFilePath="plc_kfe_vac_sim\plc_kfe_vac_sim.plcproj" TmcFilePath="plc_kfe_vac_sim\plc_kfe_vac_sim.tmc" ReloadTmc="true" AmsPort="852" FileArchiveSettings="#x000e" SymbolicMapping="true">
+			<Project Disabled="true" GUID="{36836A52-FE9B-400F-B351-077BA4A4D3F0}" Name="plc_kfe_vac_sim" PrjFilePath="plc_kfe_vac_sim\plc_kfe_vac_sim.plcproj" TmcFilePath="plc_kfe_vac_sim\plc_kfe_vac_sim.tmc" ReloadTmc="true" AmsPort="852" FileArchiveSettings="#x000e" SymbolicMapping="true">
 				<Instance Id="#x08502040" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="plc_kfe_vac_sim\plc_kfe_vac_sim.tmc">
 					<Name>plc_kfe_vac_sim Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
@@ -805,26 +805,6 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.st_RTDSK0_PIP_1.xOn</Name>
-							<Comment><![CDATA[Readback of whether Gamma Ion Pump is turned on or not]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.st_RTDSK0_PIP_2.xOn</Name>
-							<Comment><![CDATA[Readback of whether Gamma Ion Pump is turned on or not]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.st_RTDSK0_PIP_3.xOn</Name>
-							<Comment><![CDATA[Readback of whether Gamma Ion Pump is turned on or not]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.st_RTDSK0_PIP_4.xOn</Name>
-							<Comment><![CDATA[Readback of whether Gamma Ion Pump is turned on or not]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_SXR_VAC.st_DMPS_GCC_1.i_xHvOn</Name>
 							<Comment><![CDATA[High voltage On to turn on ion gauges]]></Comment>
 							<Type>BOOL</Type>
@@ -862,6 +842,26 @@
 						<Var>
 							<Name>GVL_SXR_VAC.st_MR1K1_BEND_GCC_1.i_xHvOn</Name>
 							<Comment><![CDATA[High voltage On to turn on ion gauges]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.st_RTDSK0_PIP_1.xOn</Name>
+							<Comment><![CDATA[Readback of whether Gamma Ion Pump is turned on or not]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.st_RTDSK0_PIP_2.xOn</Name>
+							<Comment><![CDATA[Readback of whether Gamma Ion Pump is turned on or not]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.st_RTDSK0_PIP_3.xOn</Name>
+							<Comment><![CDATA[Readback of whether Gamma Ion Pump is turned on or not]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.st_RTDSK0_PIP_4.xOn</Name>
+							<Comment><![CDATA[Readback of whether Gamma Ion Pump is turned on or not]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -18419,6 +18419,9 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_PA1K0_GCC_1.i_iPRESS_R" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_PA1K0_GCC_1.i_iPRESS_R"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_PA1K0_GPI_1.i_iPRESS_R" VarB="AI Standard Channel 5^GVL_SXR_VAC.fb_PA1K0_GPI_1.i_iPRESS_R"/>
 			</OwnerB>
+			<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EK1100_01_00^PMPS_FFO (EL2202)">
+				<Link VarA="PlcTask Outputs^GVL_Variables.g_FastFaultOutputK0.q_xFastFaultOut" VarB="Channel 1^Output" AutoLink="true"/>
+			</OwnerB>
 			<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EK1100_03_00^=+-EL1004_03_04">
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.i_xClsLS" VarB="Channel 2^Input"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.i_xOpnLS" VarB="Channel 1^Input"/>
@@ -18570,6 +18573,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_SP1K1_MONO_GPI_1.i_iPRESS_R" VarB="AI Standard Channel 2^GVL_SXR_VAC.fb_SP1K1_MONO_GPI_1.i_iPRESS_R"/>
 			</OwnerB>
 			<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EP3174_10_00">
+				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_MR1K4_SOMS_GCC_1.i_iPRESS_R" VarB="AI Standard Channel 3^Value"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_MR1K4_SOMS_GPI_1.i_iPRESS_R" VarB="AI Standard Channel 2^GVL_SXR_VAC.fb_MR1K4_SOMS_GPI_1.i_iPRESS_R"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV3K0_GCC_1.i_iPRESS_R" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_TV3K0_GCC_1.i_iPRESS_R"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV3K0_GPI_1.i_iPRESS_R" VarB="AI Standard Channel 4^GVL_SXR_VAC.fb_TV3K0_GPI_1.i_iPRESS_R"/>

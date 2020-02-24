@@ -18558,6 +18558,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_SP1K1_MONO_GCC_1.q_xHV_DIS" VarB="Channel 1^GVL_SXR_VAC.fb_SP1K1_MONO_GCC_1.q_xHV_DIS"/>
 			</OwnerB>
 			<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EP2624_10_01">
+				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_MR1K4_SOMS_GCC_1.q_xHV_DIS" VarB="Channel 2^Output"/>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV3K0_GCC_1.q_xHV_DIS" VarB="Channel 1^GVL_SXR_VAC.fb_TV3K0_GCC_1.q_xHV_DIS"/>
 			</OwnerB>
 			<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EP3174_07_01">

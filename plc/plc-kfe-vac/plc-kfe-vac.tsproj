@@ -429,7 +429,7 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_DMPS_GCC_1.i_iPRESS_R</Name>
+							<Name>GVL_SXR_VAC.fb_RTDSK0_GCC_1.i_iPRESS_R</Name>
 							<Comment><![CDATA[ Controls and I/Os]]></Comment>
 							<Type>INT</Type>
 						</Var>
@@ -469,7 +469,7 @@
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_DMPS_GPI_1.i_iPRESS_R</Name>
+							<Name>GVL_SXR_VAC.fb_RTDSK0_GPI_1.i_iPRESS_R</Name>
 							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 							<Type>INT</Type>
 						</Var>
@@ -506,6 +506,10 @@
 					</Vars>
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>
+						<Var>
+							<Name>GVL_Variables.g_FastFaultOutputK0.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
+						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_GCC_1.q_xHV_DIS</Name>
 							<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
@@ -654,7 +658,7 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_DMPS_GCC_1.q_xHV_DIS</Name>
+							<Name>GVL_SXR_VAC.fb_RTDSK0_GCC_1.q_xHV_DIS</Name>
 							<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -693,10 +697,6 @@
 							<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
-						<Var>
-							<Name>GVL_Variables.g_FastFaultOutputK0.q_xFastFaultOut</Name>
-							<Type>BOOL</Type>
-						</Var>
 					</Vars>
 					<Vars VarGrpType="8">
 						<Name>PlcTask Retains</Name>
@@ -713,6 +713,19 @@
 							<InOut>7</InOut>
 						</Var>
 					</Vars>
+					<UnrestoredVarLinks ImportTime="2020-02-24T17:37:25">
+						<OwnerA Name="InputDst" Prefix="TIPC^plc_kfe_vac^plc_kfe_vac Instance" Type="1">
+							<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EK1100_01_00^=+-ES3068_01_01">
+								<Link VarA="GVL_SXR_VAC.fb_DMPS_GCC_1.i_iPRESS_R" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_DMPS_GCC_1.i_iPRESS_R" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_SXR_VAC.fb_DMPS_GPI_1.i_iPRESS_R" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AI Standard Channel 5^GVL_SXR_VAC.fb_DMPS_GPI_1.i_iPRESS_R" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+						<OwnerA Name="OutputSrc" Prefix="TIPC^plc_kfe_vac^plc_kfe_vac Instance" Type="2">
+							<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EK1100_01_00^=+-EL2798_01_02">
+								<Link VarA="GVL_SXR_VAC.fb_DMPS_GCC_1.q_xHV_DIS" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^GVL_SXR_VAC.fb_DMPS_GCC_1.q_xHV_DIS" Size="1" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+					</UnrestoredVarLinks>
 					<TaskPouOids>
 						<TaskPouOid Prio="20" OTCID="#x08502001"/>
 					</TaskPouOids>
@@ -18385,7 +18398,6 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030010"/>
 		<OwnerA Name="TIPC^plc_kfe_vac^plc_kfe_vac Instance">
 			<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EK1100_01_00^=+-EL2798_01_02">
-				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_DMPS_GCC_1.q_xHV_DIS" VarB="Channel 1^GVL_SXR_VAC.fb_DMPS_GCC_1.q_xHV_DIS"/>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_IM2K0_XTES_GCC_1.q_xHV_DIS" VarB="Channel 2^GVL_SXR_VAC.fb_IM2K0_XTES_GCC_1.q_xHV_DIS"/>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_PCPM3B_GFS_1.q_xHV_DIS" VarB="Channel 5^GVL_SXR_VAC.fb_PCPM3B_GFS_1.q_xHV_DIS"/>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_SL1K0_GCC_1.q_xHV_DIS" VarB="Channel 4^GVL_SXR_VAC.fb_SL1K0_GCC_1.q_xHV_DIS"/>
@@ -18397,8 +18409,6 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_GCC_2.q_xHV_DIS" VarB="Channel 2^GVL_SXR_VAC.fb_TV2K0_GCC_2.q_xHV_DIS"/>
 			</OwnerB>
 			<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EK1100_01_00^=+-ES3068_01_01">
-				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_DMPS_GCC_1.i_iPRESS_R" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_DMPS_GCC_1.i_iPRESS_R"/>
-				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_DMPS_GPI_1.i_iPRESS_R" VarB="AI Standard Channel 5^GVL_SXR_VAC.fb_DMPS_GPI_1.i_iPRESS_R"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_IM2K0_XTES_GCC_1.i_iPRESS_R" VarB="AI Standard Channel 3^GVL_SXR_VAC.fb_IM2K0_XTES_GCC_1.i_iPRESS_R"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_IM2K0_XTES_GPI_1.i_iPRESS_R" VarB="AI Standard Channel 6^GVL_SXR_VAC.fb_IM2K0_XTES_GPI_1.i_iPRESS_R"/>
 			</OwnerB>

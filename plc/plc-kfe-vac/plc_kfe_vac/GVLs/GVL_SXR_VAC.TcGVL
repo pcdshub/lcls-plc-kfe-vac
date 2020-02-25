@@ -95,8 +95,8 @@ fb_TV3K0_PIP_1 : FB_PIP_GAMMA;
 
 // FB_MKS422
 
-{attribute 'pytmc' := ' pv: DMPS:GCC:1 '}
-fb_DMPS_GCC_1 : FB_MKS422;
+{attribute 'pytmc' := ' pv: RTDSK0:GCC:1 '}
+fb_RTDSK0_GCC_1 : FB_MKS422;
 {attribute 'pytmc' := ' pv: IM2K0:XTES:GCC:1 '}
 fb_IM2K0_XTES_GCC_1 : FB_MKS422;
 {attribute 'pytmc' := ' pv: PCPM3B:GFS:1 '}
@@ -114,8 +114,8 @@ fb_MR1K1_BEND_GCC_1 : FB_MKS422;
 
 // FB_MKS317
 
-{attribute 'pytmc' := ' pv: DMPS:GPI:1 '}
-fb_DMPS_GPI_1 : FB_MKS317;
+{attribute 'pytmc' := ' pv: RTDSK0:GPI:1 '}
+fb_RTDSK0_GPI_1 : FB_MKS317;
 {attribute 'pytmc' := ' pv: IM2K0:XTES:GPI:1 '}
 fb_IM2K0_XTES_GPI_1 : FB_MKS317;
 {attribute 'pytmc' := ' pv: SL1K0:GPI:1 '}

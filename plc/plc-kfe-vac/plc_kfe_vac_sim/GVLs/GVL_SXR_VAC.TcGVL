@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <GVL Name="GVL_SXR_VAC" Id="{abb060cf-858a-46f1-b748-697dab0c9944}">
     <Declaration><![CDATA[VAR_GLOBAL
 
@@ -64,7 +64,7 @@ fb_ST3K4_XTES_VGC_1 : FB_VacuumValve;
 
 // ST_MKS_422
 
-st_DMPS_GCC_1 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
+st_RTDSK0_GCC_1 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
 st_IM2K0_XTES_GCC_1 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
 st_PCPM3B_GFS_1 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
 st_SL1K0_GCC_1 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
@@ -75,7 +75,7 @@ st_MR1K1_BEND_GCC_1 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
 
 // FB_MKS_422
 
-fb_DMPS_GCC_1 : FB_MKS_422;
+fb_RTDSK0_GCC_1 : FB_MKS_422;
 fb_IM2K0_XTES_GCC_1 : FB_MKS_422;
 fb_PCPM3B_GFS_1 : FB_MKS_422;
 fb_SL1K0_GCC_1 : FB_MKS_422;
@@ -86,7 +86,7 @@ fb_MR1K1_BEND_GCC_1 : FB_MKS_422;
 
 // ST_MKS_275
 
-st_DMPS_GPI_1 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+st_RTDSK0_GPI_1 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
 st_IM2K0_XTES_GPI_1 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
 st_SL1K0_GPI_1 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
 st_TV2K0_GPI_1 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
@@ -105,7 +105,7 @@ st_PC4K4_XTES_GPI_1 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
 
 // FB_MKS_275
 
-fb_DMPS_GPI_1 : FB_MKS_275;
+fb_RTDSK0_GPI_1 : FB_MKS_275;
 fb_IM2K0_XTES_GPI_1 : FB_MKS_275;
 fb_SL1K0_GPI_1 : FB_MKS_275;
 fb_TV2K0_GPI_1 : FB_MKS_275;

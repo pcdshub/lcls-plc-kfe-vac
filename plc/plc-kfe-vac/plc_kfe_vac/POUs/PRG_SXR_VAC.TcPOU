@@ -25,8 +25,8 @@ fb_MR1K4_SOMS_GCC_1(PG := fb_MR1K4_SOMS_GPI_1.PG);
 
 // VGC Valves
 
-fb_RTDSK0_VGC_1(i_stUSG := fb_DMPS_GCC_1.IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
-fb_EM1K0_GMD_VGC_1(i_stUSG := fb_DMPS_GCC_1.IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+fb_RTDSK0_VGC_1(i_stUSG := fb_RTDSK0_GCC_1.IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+fb_EM1K0_GMD_VGC_1(i_stUSG := fb_RTDSK0_GCC_1.IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
 fb_AT1K0_GAS_VGC_1(i_stUSG := fb_SL1K0_GCC_1.IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
 fb_EM1K0_XGMD_VGC_1(i_stUSG := , i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
 fb_EM1K0_XGMD_VGC_2(i_stUSG := , i_stDSG := fb_TV2K0_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
@@ -41,11 +41,11 @@ fb_MR1K4_SOMS_VGC_1(i_stUSG := fb_TV3K0_GCC_1.IG, i_stDSG := fb_MR1K4_SOMS_GCC_1
 
 // PIP_Gamma Pumps
 
-fb_RTDSK0_PIP_1(i_stGauge := fb_DMPS_GCC_1.PG);
-fb_RTDSK0_PIP_2(i_stGauge := fb_DMPS_GCC_1.PG);
-fb_RTDSK0_PIP_3(i_stGauge := fb_DMPS_GCC_1.PG);
-fb_RTDSK0_PIP_4(i_stGauge := fb_DMPS_GCC_1.PG);
-fb_RTDSK0_PIP_5(i_stGauge := fb_DMPS_GCC_1.PG);
+fb_RTDSK0_PIP_1(i_stGauge := fb_RTDSK0_GCC_1.PG);
+fb_RTDSK0_PIP_2(i_stGauge := fb_RTDSK0_GCC_1.PG);
+fb_RTDSK0_PIP_3(i_stGauge := fb_RTDSK0_GCC_1.PG);
+fb_RTDSK0_PIP_4(i_stGauge := fb_RTDSK0_GCC_1.PG);
+fb_RTDSK0_PIP_5(i_stGauge := fb_RTDSK0_GCC_1.PG);
 fb_PCPM3B_PIP_1(i_stGauge := fb_PCPM3B_GFS_1.PG);
 fb_PA1K0_PIP_1(i_stGauge := fb_PA1K0_GCC_1.PG);
 fb_PA1K0(i_stGauge := fb_PA1K0_GCC_1.PG);
@@ -59,7 +59,7 @@ fb_TV3K0_PIP_1(i_stGauge := fb_TV3K0_GCC_1.PG);
 
 // FB_MKS422
 
-fb_DMPS_GCC_1(PG := fb_DMPS_GPI_1.PG);
+fb_RTDSK0_GCC_1(PG := fb_RTDSK0_GPI_1.PG);
 fb_IM2K0_XTES_GCC_1(PG := fb_IM2K0_XTES_GPI_1.PG);
 fb_PCPM3B_GFS_1(PG := fb_SL1K0_GPI_1.PG);
 fb_SL1K0_GCC_1(PG := fb_SL1K0_GPI_1.PG);
@@ -70,7 +70,7 @@ fb_MR1K1_BEND_GCC_1(PG := fb_MR1K1_BEND_GPI_1.PG);
 
 // FB_MKS317
 
-fb_DMPS_GPI_1(PG=>);
+fb_RTDSK0_GPI_1(PG=>);
 fb_IM2K0_XTES_GPI_1(PG=>);
 fb_SL1K0_GPI_1(PG=>);
 fb_TV2K0_GPI_1(PG=>);

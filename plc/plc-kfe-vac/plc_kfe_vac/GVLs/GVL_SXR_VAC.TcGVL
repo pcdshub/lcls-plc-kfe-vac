@@ -4,6 +4,24 @@
     <Declaration><![CDATA[VAR_GLOBAL
 
 
+// FB_MKS317
+
+{attribute 'pytmc' := ' pv: RTDSK0:GPI:1 '}
+fb_RTDSK0_GPI_1 : FB_MKS317;
+{attribute 'pytmc' := ' pv: IM2K0:XTES:GPI:1 '}
+fb_IM2K0_XTES_GPI_1 : FB_MKS317;
+{attribute 'pytmc' := ' pv: SL1K0:GPI:1 '}
+fb_SL1K0_GPI_1 : FB_MKS317;
+{attribute 'pytmc' := ' pv: TV2K0:GPI:1 '}
+fb_TV2K0_GPI_1 : FB_MKS317;
+{attribute 'pytmc' := ' pv: TV2K0:GPI:2 '}
+fb_TV2K0_GPI_2 : FB_MKS317;
+{attribute 'pytmc' := ' pv: PA1K0:GPI:1 '}
+fb_PA1K0_GPI_1 : FB_MKS317;
+{attribute 'pytmc' := ' pv: MR1K1:BEND:GPI:1 '}
+fb_MR1K1_BEND_GPI_1 : FB_MKS317;
+
+
 // MKS275 Gauges
 
 {attribute 'pytmc' := ' pv: MR2K3:TXI:GPI:1 '}
@@ -16,6 +34,26 @@ fb_SP1K1_MONO_GPI_1 : FB_MKS275;
 fb_TV3K0_GPI_1 : FB_MKS275;
 {attribute 'pytmc' := ' pv: MR1K4:SOMS:GPI:1 '}
 fb_MR1K4_SOMS_GPI_1 : FB_MKS275;
+
+
+// FB_MKS422
+
+{attribute 'pytmc' := ' pv: RTDSK0:GCC:1 '}
+fb_RTDSK0_GCC_1 : FB_MKS422;
+{attribute 'pytmc' := ' pv: IM2K0:XTES:GCC:1 '}
+fb_IM2K0_XTES_GCC_1 : FB_MKS422;
+{attribute 'pytmc' := ' pv: PCPM3B:GFS:1 '}
+fb_PCPM3B_GFS_1 : FB_MKS422;
+{attribute 'pytmc' := ' pv: SL1K0:GCC:1 '}
+fb_SL1K0_GCC_1 : FB_MKS422;
+{attribute 'pytmc' := ' pv: TV2K0:GCC:1 '}
+fb_TV2K0_GCC_1 : FB_MKS422;
+{attribute 'pytmc' := ' pv: TV2K0:GCC:2 '}
+fb_TV2K0_GCC_2 : FB_MKS422;
+{attribute 'pytmc' := ' pv: PA1K0:GCC:1 '}
+fb_PA1K0_GCC_1 : FB_MKS422;
+{attribute 'pytmc' := ' pv: MR1K1:BEND:GCC:1 '}
+fb_MR1K1_BEND_GCC_1 : FB_MKS422;
 
 
 // MKS500_EP Gauges
@@ -61,6 +99,7 @@ fb_TV3K0_VGC_1 : FB_VGC;
 {attribute 'pytmc' := ' pv: MR1K4:SOMS:VGC:1 '}
 fb_MR1K4_SOMS_VGC_1 : FB_VGC;
 
+
 // PIP_Gamma Pumps
 
 {attribute 'pytmc' := ' pv: RTDSK0:PIP:1 '}
@@ -92,42 +131,6 @@ fb_SP1K1_MONO_PIP_2 : FB_PIP_GAMMA;
 {attribute 'pytmc' := ' pv: TV3K0:PIP:1 '}
 fb_TV3K0_PIP_1 : FB_PIP_GAMMA;
 
-
-// FB_MKS422
-
-{attribute 'pytmc' := ' pv: RTDSK0:GCC:1 '}
-fb_RTDSK0_GCC_1 : FB_MKS422;
-{attribute 'pytmc' := ' pv: IM2K0:XTES:GCC:1 '}
-fb_IM2K0_XTES_GCC_1 : FB_MKS422;
-{attribute 'pytmc' := ' pv: PCPM3B:GFS:1 '}
-fb_PCPM3B_GFS_1 : FB_MKS422;
-{attribute 'pytmc' := ' pv: SL1K0:GCC:1 '}
-fb_SL1K0_GCC_1 : FB_MKS422;
-{attribute 'pytmc' := ' pv: TV2K0:GCC:1 '}
-fb_TV2K0_GCC_1 : FB_MKS422;
-{attribute 'pytmc' := ' pv: TV2K0:GCC:2 '}
-fb_TV2K0_GCC_2 : FB_MKS422;
-{attribute 'pytmc' := ' pv: PA1K0:GCC:1 '}
-fb_PA1K0_GCC_1 : FB_MKS422;
-{attribute 'pytmc' := ' pv: MR1K1:BEND:GCC:1 '}
-fb_MR1K1_BEND_GCC_1 : FB_MKS422;
-
-// FB_MKS317
-
-{attribute 'pytmc' := ' pv: RTDSK0:GPI:1 '}
-fb_RTDSK0_GPI_1 : FB_MKS317;
-{attribute 'pytmc' := ' pv: IM2K0:XTES:GPI:1 '}
-fb_IM2K0_XTES_GPI_1 : FB_MKS317;
-{attribute 'pytmc' := ' pv: SL1K0:GPI:1 '}
-fb_SL1K0_GPI_1 : FB_MKS317;
-{attribute 'pytmc' := ' pv: TV2K0:GPI:1 '}
-fb_TV2K0_GPI_1 : FB_MKS317;
-{attribute 'pytmc' := ' pv: TV2K0:GPI:2 '}
-fb_TV2K0_GPI_2 : FB_MKS317;
-{attribute 'pytmc' := ' pv: PA1K0:GPI:1 '}
-fb_PA1K0_GPI_1 : FB_MKS317;
-{attribute 'pytmc' := ' pv: MR1K1:BEND:GPI:1 '}
-fb_MR1K1_BEND_GPI_1 : FB_MKS317;
 
 END_VAR
 ]]></Declaration>

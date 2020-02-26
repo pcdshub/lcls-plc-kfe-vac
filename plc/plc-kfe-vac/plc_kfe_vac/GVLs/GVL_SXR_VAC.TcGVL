@@ -24,10 +24,10 @@ fb_MR1K1_BEND_GPI_1 : FB_MKS317;
 
 // MKS275 Gauges
 
-{attribute 'pytmc' := ' pv: MR2K3:TXI:GPI:1 '}
-fb_MR2K3_TXI_GPI_1 : FB_MKS275;
 {attribute 'pytmc' := ' pv: MR1K3:TXI:GPI:1 '}
 fb_MR1K3_TXI_GPI_1 : FB_MKS275;
+{attribute 'pytmc' := ' pv: MR2K3:TXI:GPI:1 '}
+fb_MR2K3_TXI_GPI_1 : FB_MKS275;
 {attribute 'pytmc' := ' pv: SP1K1:MONO:GPI:1 '}
 fb_SP1K1_MONO_GPI_1 : FB_MKS275;
 {attribute 'pytmc' := ' pv: TV3K0:GPI:1 '}
@@ -58,10 +58,10 @@ fb_MR1K1_BEND_GCC_1 : FB_MKS422;
 
 // MKS500_EP Gauges
 
-{attribute 'pytmc' := ' pv: MR2K3:TXI:GCC:1 '}
-fb_MR2K3_TXI_GCC_1 : FB_MKS500_EP;
 {attribute 'pytmc' := ' pv: MR1K3:TXI:GCC:1 '}
 fb_MR1K3_TXI_GCC_1 : FB_MKS500_EP;
+{attribute 'pytmc' := ' pv: MR2K3:TXI:GCC:1 '}
+fb_MR2K3_TXI_GCC_1 : FB_MKS500_EP;
 {attribute 'pytmc' := ' pv: SP1K1:MONO:GCC:1 '}
 fb_SP1K1_MONO_GCC_1 : FB_MKS500_EP;
 {attribute 'pytmc' := ' pv: TV3K0:GCC:1 '}
@@ -120,10 +120,10 @@ fb_PA1K0_PIP_1 : FB_PIP_GAMMA;
 fb_PA1K0 : FB_PIP_GAMMA;
 {attribute 'pytmc' := ' pv: MR1K1:BEND:PIP:1 '}
 fb_MR1K1_BEND_PIP_1 : FB_PIP_GAMMA;
-{attribute 'pytmc' := ' pv: MR2K3:TXI:PIP:1 '}
-fb_MR2K3_TXI_PIP_1 : FB_PIP_GAMMA;
 {attribute 'pytmc' := ' pv: MR1K3:TXI:PIP:1 '}
 fb_MR1K3_TXI_PIP_1 : FB_PIP_GAMMA;
+{attribute 'pytmc' := ' pv: MR2K3:TXI:PIP:1 '}
+fb_MR2K3_TXI_PIP_1 : FB_PIP_GAMMA;
 {attribute 'pytmc' := ' pv: SP1K1:MONO:PIP:1 '}
 fb_SP1K1_MONO_PIP_1 : FB_PIP_GAMMA;
 {attribute 'pytmc' := ' pv: SP1K1:MONO:PIP:2 '}

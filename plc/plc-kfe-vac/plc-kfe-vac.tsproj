@@ -122,11 +122,6 @@
 					<Vars VarGrpType="1">
 						<Name>PlcTask Inputs</Name>
 						<Var>
-							<Name>L2SI_Vacuum_Library.Global_Variables.g_stSystem.I_EcatMaster1</Name>
-							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
-							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
-						</Var>
-						<Var>
 							<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
 							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
 							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
@@ -134,6 +129,11 @@
 						<Var>
 							<Name>PRG_DIAGNOSTIC.simHeartbeat</Name>
 							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>L2SI_Vacuum_Library_TEST.Global_Variables.g_stSystem.I_EcatMaster1</Name>
+							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
+							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_GPI_1.i_iPRESS_R</Name>
@@ -171,12 +171,12 @@
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_GPI_1.i_iPRESS_R</Name>
+							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_GPI_1.i_iPRESS_R</Name>
 							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_GPI_1.i_iPRESS_R</Name>
+							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_GPI_1.i_iPRESS_R</Name>
 							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 							<Type>INT</Type>
 						</Var>
@@ -236,12 +236,12 @@
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_GCC_1.i_iPRESS_R</Name>
+							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_GCC_1.i_iPRESS_R</Name>
 							<Comment><![CDATA[ Controls and I/Os]]></Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_GCC_1.i_iPRESS_R</Name>
+							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_GCC_1.i_iPRESS_R</Name>
 							<Comment><![CDATA[ Controls and I/Os]]></Comment>
 							<Type>INT</Type>
 						</Var>
@@ -383,7 +383,7 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_PIP_1.i_xSP_DI</Name>
-							<Comment><![CDATA[ NO contact // 'TcLinkTo' (EL1004) ^Input]]></Comment>
+							<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -392,7 +392,7 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_PIP_2.i_xSP_DI</Name>
-							<Comment><![CDATA[ NO contact // 'TcLinkTo' (EL1004) ^Input]]></Comment>
+							<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -401,7 +401,7 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_PIP_3.i_xSP_DI</Name>
-							<Comment><![CDATA[ NO contact // 'TcLinkTo' (EL1004) ^Input]]></Comment>
+							<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -410,7 +410,7 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_PIP_4.i_xSP_DI</Name>
-							<Comment><![CDATA[ NO contact // 'TcLinkTo' (EL1004) ^Input]]></Comment>
+							<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -419,7 +419,7 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_PIP_5.i_xSP_DI</Name>
-							<Comment><![CDATA[ NO contact // 'TcLinkTo' (EL1004) ^Input]]></Comment>
+							<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -428,7 +428,7 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_PCPM3B_PIP_1.i_xSP_DI</Name>
-							<Comment><![CDATA[ NO contact // 'TcLinkTo' (EL1004) ^Input]]></Comment>
+							<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -437,7 +437,7 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_PA1K0_PIP_1.i_xSP_DI</Name>
-							<Comment><![CDATA[ NO contact // 'TcLinkTo' (EL1004) ^Input]]></Comment>
+							<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -446,7 +446,7 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_PA1K0.i_xSP_DI</Name>
-							<Comment><![CDATA[ NO contact // 'TcLinkTo' (EL1004) ^Input]]></Comment>
+							<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -455,16 +455,7 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_PIP_1.i_xSP_DI</Name>
-							<Comment><![CDATA[ NO contact // 'TcLinkTo' (EL1004) ^Input]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_PIP_1.i_iPRESS</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_PIP_1.i_xSP_DI</Name>
-							<Comment><![CDATA[ NO contact // 'TcLinkTo' (EL1004) ^Input]]></Comment>
+							<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -473,7 +464,16 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_PIP_1.i_xSP_DI</Name>
-							<Comment><![CDATA[ NO contact // 'TcLinkTo' (EL1004) ^Input]]></Comment>
+							<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_PIP_1.i_iPRESS</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_PIP_1.i_xSP_DI</Name>
+							<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -482,7 +482,7 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_SP1K1_MONO_PIP_1.i_xSP_DI</Name>
-							<Comment><![CDATA[ NO contact // 'TcLinkTo' (EL1004) ^Input]]></Comment>
+							<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -491,7 +491,7 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_SP1K1_MONO_PIP_2.i_xSP_DI</Name>
-							<Comment><![CDATA[ NO contact // 'TcLinkTo' (EL1004) ^Input]]></Comment>
+							<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -500,7 +500,7 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_TV3K0_PIP_1.i_xSP_DI</Name>
-							<Comment><![CDATA[ NO contact // 'TcLinkTo' (EL1004) ^Input]]></Comment>
+							<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 					</Vars>
@@ -551,12 +551,12 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_GCC_1.q_xHV_DIS</Name>
+							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_GCC_1.q_xHV_DIS</Name>
 							<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_GCC_1.q_xHV_DIS</Name>
+							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_GCC_1.q_xHV_DIS</Name>
 							<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -673,12 +673,12 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_PIP_1.q_xHVEna_DO</Name>
+							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_PIP_1.q_xHVEna_DO</Name>
 							<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_PIP_1.q_xHVEna_DO</Name>
+							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_PIP_1.q_xHVEna_DO</Name>
 							<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 							<Type>BOOL</Type>
 						</Var>

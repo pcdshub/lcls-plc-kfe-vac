@@ -381,7 +381,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
      </property>
      <widget class="QWidget" name="scrollAreaWidgetContents">
       <property name="enabled">
-       <bool>false</bool>
+       <bool>true</bool>
       </property>
       <property name="geometry">
        <rect>
@@ -1054,7 +1054,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       </widget>
       <widget class="PyDMEmbeddedDisplay" name="SP1K1">
        <property name="enabled">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="geometry">
         <rect>
@@ -2039,7 +2039,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <rect>
          <x>2120</x>
          <y>260</y>
-         <width>451</width>
+         <width>791</width>
          <height>361</height>
         </rect>
        </property>
@@ -2224,6 +2224,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>Qt::Horizontal</enum>
        </property>
       </widget>
+      <zorder>PyDMDrawingRectangle_10</zorder>
       <zorder>line_35</zorder>
       <zorder>line_39</zorder>
       <zorder>line_38</zorder>
@@ -2321,7 +2322,6 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <zorder>PyDMDrawingRectangle_7</zorder>
       <zorder>PyDMDrawingRectangle_8</zorder>
       <zorder>PyDMDrawingRectangle_9</zorder>
-      <zorder>PyDMDrawingRectangle_10</zorder>
       <zorder>PyDMDrawingRectangle_11</zorder>
       <zorder>PyDMDrawingRectangle_12</zorder>
      </widget>

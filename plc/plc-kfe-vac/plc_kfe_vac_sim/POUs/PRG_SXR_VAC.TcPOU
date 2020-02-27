@@ -29,7 +29,7 @@ fb_ST3K4_XTES_VGC_1(stAVol := st_TV1K4_VGC_2_VOL, stBvol := st_PC4K4_VOL, stValv
 // FB_MKS_422
 
 fb_RTDSK0_GCC_1(stVolume := st_RTDS, stGauge := st_RTDSK0_GCC_1);
-fb_IM2K0_XTES_GCC_1(stVolume := st_GMD, stGauge := st_IM2K0_XTES_GCC_1);
+fb_IM1K0_XTES_GCC_1(stVolume := st_GMD, stGauge := st_IM1K0_XTES_GCC_1);
 fb_PCPM3B_GFS_1(stVolume := st_GMD, stGauge := st_PCPM3B_GFS_1);
 fb_SL1K0_GCC_1(stVolume := st_GMD, stGauge := st_SL1K0_GCC_1);
 fb_TV2K0_GCC_1(stVolume := st_EM2K0_VOL, stGauge := st_TV2K0_GCC_1);
@@ -40,7 +40,7 @@ fb_MR1K1_BEND_GCC_1(stVolume := st_MR1K1_VOL, stGauge := st_MR1K1_BEND_GCC_1);
 // FB_MKS_275
 
 fb_RTDSK0_GPI_1(stVolume := st_RTDS, stGauge := st_RTDSK0_GPI_1);
-fb_IM2K0_XTES_GPI_1(stVolume := st_GMD, stGauge := st_IM2K0_XTES_GPI_1);
+fb_IM1K0_XTES_GPI_1(stVolume := st_GMD, stGauge := st_IM1K0_XTES_GPI_1);
 fb_SL1K0_GPI_1(stVolume := st_GMD, stGauge := st_SL1K0_GPI_1);
 fb_TV2K0_GPI_1(stVolume := st_EM2K0_VOL, stGauge := st_TV2K0_GPI_1);
 fb_TV2K0_GPI_2(stVolume := st_TV2K0_VGC_1_VOL, stGauge := st_TV2K0_GPI_2);

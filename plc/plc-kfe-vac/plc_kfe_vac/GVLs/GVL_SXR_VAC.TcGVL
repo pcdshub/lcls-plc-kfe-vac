@@ -8,8 +8,8 @@
 
 {attribute 'pytmc' := ' pv: RTDSK0:GPI:1 '}
 fb_RTDSK0_GPI_1 : FB_MKS317;
-{attribute 'pytmc' := ' pv: IM2K0:XTES:GPI:1 '}
-fb_IM2K0_XTES_GPI_1 : FB_MKS317;
+{attribute 'pytmc' := ' pv: IM1K0:XTES:GPI:1 '}
+fb_IM1K0_XTES_GPI_1 : FB_MKS317;
 {attribute 'pytmc' := ' pv: SL1K0:GPI:1 '}
 fb_SL1K0_GPI_1 : FB_MKS317;
 {attribute 'pytmc' := ' pv: TV2K0:GPI:1 '}
@@ -40,8 +40,8 @@ fb_MR1K4_SOMS_GPI_1 : FB_MKS275;
 
 {attribute 'pytmc' := ' pv: RTDSK0:GCC:1 '}
 fb_RTDSK0_GCC_1 : FB_MKS422;
-{attribute 'pytmc' := ' pv: IM2K0:XTES:GCC:1 '}
-fb_IM2K0_XTES_GCC_1 : FB_MKS422;
+{attribute 'pytmc' := ' pv: IM1K0:XTES:GCC:1 '}
+fb_IM1K0_XTES_GCC_1 : FB_MKS422;
 {attribute 'pytmc' := ' pv: PCPM3B:GFS:1 '}
 fb_PCPM3B_GFS_1 : FB_MKS422;
 {attribute 'pytmc' := ' pv: SL1K0:GCC:1 '}

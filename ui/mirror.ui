@@ -29,7 +29,7 @@
     <enum>PCDSSymbolBase::Top</enum>
    </property>
    <property name="channelsPrefix" stdset="0">
-    <string>ca://${GPI}</string>
+    <string>ca://${MIRROR_PV}:GPI:1</string>
    </property>
   </widget>
   <widget class="IonPump" name="IonPump">
@@ -45,7 +45,7 @@
     <string/>
    </property>
    <property name="channelsPrefix" stdset="0">
-    <string>ca://${PIP}</string>
+    <string>ca://${MIRROR_PV}:PIP:1</string>
    </property>
   </widget>
   <widget class="ColdCathodeGauge" name="ColdCathodeGauge">
@@ -64,7 +64,7 @@
     <enum>PCDSSymbolBase::Top</enum>
    </property>
    <property name="channelsPrefix" stdset="0">
-    <string>ca://${GCC}</string>
+    <string>ca://${MIRROR_PV}:GCC:1</string>
    </property>
   </widget>
   <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle">
@@ -151,7 +151,7 @@
     <string/>
    </property>
    <property name="text">
-    <string>MIRROR</string>
+    <string>${MIRROR_NAME}</string>
    </property>
   </widget>
  </widget>

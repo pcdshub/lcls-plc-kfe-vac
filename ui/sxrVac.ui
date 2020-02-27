@@ -995,7 +995,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <bool>false</bool>
        </property>
       </widget>
-      <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay">
+      <widget class="PyDMEmbeddedDisplay" name="MR1K1">
        <property name="geometry">
         <rect>
          <x>1780</x>
@@ -1008,7 +1008,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;PIP&quot;: &quot;MR1K1:BEND:PIP:1&quot; , &quot;GPI&quot;: &quot;MR1K1:BEND:GPI:1&quot; , &quot;GCC&quot;: &quot;MR1K1:BEND:GCC:1&quot;}</string>
+        <string>{&quot;MIRROR_NAME&quot;: &quot;MR1K1-BEND&quot;, &quot;MIRROR_PV&quot;: &quot;MR1K1:BEND&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>mirror.ui</string>
@@ -1033,7 +1033,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <bool>false</bool>
        </property>
       </widget>
-      <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay_2">
+      <widget class="PyDMEmbeddedDisplay" name="MR1K3">
        <property name="geometry">
         <rect>
          <x>2240</x>
@@ -1046,13 +1046,16 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;PIP&quot;: &quot;MR1K3:TXI:PIP:1&quot; , &quot;GPI&quot;: &quot;MR1K3:TXI:GPI:1&quot; , &quot;GCC&quot;: &quot;MR1K3:TXI:GCC:1&quot;}</string>
+        <string>{&quot;MIRROR_NAME&quot;: &quot;MR1K3-TXI&quot;, &quot;MIRROR_PV&quot;: &quot;MR1K3:TXI&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>mirror.ui</string>
        </property>
       </widget>
-      <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay_3">
+      <widget class="PyDMEmbeddedDisplay" name="SP1K1">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="geometry">
         <rect>
          <x>3050</x>
@@ -1065,7 +1068,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;PIP1&quot;: &quot;SP1K1:MONO:PIP:1&quot; , &quot;PIP2&quot;: &quot;SP1K1:MONO:PIP:2&quot; , &quot;GPI&quot;: &quot;SP1K1:MONO:GPI:1&quot; , &quot;GCC&quot;: &quot;SP1K1:MONO:GCC:1&quot;}</string>
+        <string>{&quot;MONO_PV&quot;:&quot;SP1K1:MONO&quot;, &quot;MONO_NAME&quot;:&quot;SP1K1-MONO&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>monochromator.ui</string>
@@ -1153,7 +1156,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <bool>false</bool>
        </property>
       </widget>
-      <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay_4">
+      <widget class="PyDMEmbeddedDisplay" name="MR1K4">
        <property name="geometry">
         <rect>
          <x>3730</x>
@@ -1166,7 +1169,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;PIP&quot;: &quot;MR1K4:SOMS:PIP:1&quot; , &quot;GPI&quot;: &quot;MR1K4:SOMS:GPI:1&quot; , &quot;GCC&quot;: &quot;MR1K4:SOMS:GCC:1&quot;}</string>
+        <string>{&quot;MIRROR_NAME&quot;: &quot;MR1K4-SOMS&quot;, &quot;MIRROR_PV&quot;: &quot;MR1K4:SOMS&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>mirror.ui</string>
@@ -1289,7 +1292,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <bool>false</bool>
        </property>
       </widget>
-      <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay_5">
+      <widget class="PyDMEmbeddedDisplay" name="MR2K3">
        <property name="geometry">
         <rect>
          <x>2580</x>
@@ -1302,7 +1305,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;PIP&quot;: &quot;MR2K3:TXI:PIP:1&quot; , &quot;GPI&quot;: &quot;MR2K3:TXI:GPI:1&quot; , &quot;GCC&quot;: &quot;MR2K3:TXI:GCC:1&quot;}</string>
+        <string>{&quot;MIRROR_NAME&quot;: &quot;MR2K3-TXI&quot;, &quot;MIRROR_PV&quot;: &quot;MR2K3:TXI&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>mirror.ui</string>
@@ -2289,22 +2292,22 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <zorder>IonPump_7</zorder>
       <zorder>IonPump_8</zorder>
       <zorder>PneumaticValve_7</zorder>
-      <zorder>PyDMEmbeddedDisplay</zorder>
+      <zorder>MR1K1</zorder>
       <zorder>PneumaticValve_8</zorder>
-      <zorder>PyDMEmbeddedDisplay_2</zorder>
-      <zorder>PyDMEmbeddedDisplay_3</zorder>
+      <zorder>MR1K3</zorder>
+      <zorder>SP1K1</zorder>
       <zorder>PneumaticValve_9</zorder>
       <zorder>PyDMDrawingCircle_4</zorder>
       <zorder>PneumaticValve_10</zorder>
       <zorder>PneumaticValve_11</zorder>
-      <zorder>PyDMEmbeddedDisplay_4</zorder>
+      <zorder>MR1K4</zorder>
       <zorder>PneumaticValve_12</zorder>
       <zorder>PneumaticValve_13</zorder>
       <zorder>IonPump_9</zorder>
       <zorder>ColdCathodeGauge_7</zorder>
       <zorder>RoughGauge_6</zorder>
       <zorder>PneumaticValve_14</zorder>
-      <zorder>PyDMEmbeddedDisplay_5</zorder>
+      <zorder>MR2K3</zorder>
       <zorder>PyDMLabel</zorder>
       <zorder>PyDMLabel_2</zorder>
       <zorder>RoughGauge_7</zorder>

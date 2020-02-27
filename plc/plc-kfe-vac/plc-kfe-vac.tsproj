@@ -2748,7 +2748,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit toggles everytime when new value available]]></Comment>
 								</Entry>
-								<Entry Name="GVL_SXR_VAC.fb_IM2K0_XTES_GCC_1.i_iPRESS_R" Index="#x6020" Sub="#x11" Flags="#x00020000">
+								<Entry Name="GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.i_iPRESS_R" Index="#x6020" Sub="#x11" Flags="#x00020000">
 									<Type>INT</Type>
 									<Comment><![CDATA[GVL_SXR_VAC.fb_IM2K0_XTES_GCC_1.i_iPRESS_R]]></Comment>
 								</Entry>
@@ -2894,7 +2894,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit toggles everytime when new value available]]></Comment>
 								</Entry>
-								<Entry Name="GVL_SXR_VAC.fb_IM2K0_XTES_GPI_1.i_iPRESS_R" Index="#x6050" Sub="#x11" Flags="#x00020000">
+								<Entry Name="GVL_SXR_VAC.fb_IM1K0_XTES_GPI_1.i_iPRESS_R" Index="#x6050" Sub="#x11" Flags="#x00020000">
 									<Type>INT</Type>
 									<Comment><![CDATA[GVL_SXR_VAC.fb_IM2K0_XTES_GPI_1.i_iPRESS_R]]></Comment>
 								</Entry>
@@ -3117,7 +3117,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit toggles everytime when new value available]]></Comment>
 								</Entry>
-								<Entry Name="GVL_SXR_VAC.fb_SL1K0_GCC_1.i_iPRESS_R" Index="#x6000" Sub="#x11" Flags="#x00020000">
+								<Entry Name="GVL_SXR_VAC.fb_SL1K0_POWER_GCC_1.i_iPRESS_R" Index="#x6000" Sub="#x11" Flags="#x00020000">
 									<Type>INT</Type>
 									<Comment><![CDATA[GVL_SXR_VAC.fb_SL1K0_GCC_1.i_iPRESS_R]]></Comment>
 								</Entry>
@@ -3311,7 +3311,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit toggles everytime when new value available]]></Comment>
 								</Entry>
-								<Entry Name="GVL_SXR_VAC.fb_SL1K0_GPI_1.i_iPRESS_R" Index="#x6040" Sub="#x11" Flags="#x00020000">
+								<Entry Name="GVL_SXR_VAC.fb_SL1K0_POWER_GPI_1.i_iPRESS_R" Index="#x6040" Sub="#x11" Flags="#x00020000">
 									<Type>INT</Type>
 									<Comment><![CDATA[GVL_SXR_VAC.fb_SL1K0_GPI_1.i_iPRESS_R]]></Comment>
 								</Entry>
@@ -18417,11 +18417,15 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_GCC_2.q_xHV_DIS" VarB="Channel 2^GVL_SXR_VAC.fb_TV2K0_GCC_2.q_xHV_DIS"/>
 			</OwnerB>
 			<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EK1100_01_00^=+-ES3068_01_01">
+				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.i_iPRESS_R" VarB="AI Standard Channel 3^GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.i_iPRESS_R"/>
+				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_IM1K0_XTES_GPI_1.i_iPRESS_R" VarB="AI Standard Channel 6^GVL_SXR_VAC.fb_IM1K0_XTES_GPI_1.i_iPRESS_R"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_RTDSK0_GCC_1.i_iPRESS_R" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_RTDSK0_GCC_1.i_iPRESS_R "/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_RTDSK0_GPI_1.i_iPRESS_R" VarB="AI Standard Channel 5^GVL_SXR_VAC.fb_RTDSK0_GPI_1.i_iPRESS_R "/>
 			</OwnerB>
 			<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EK1100_01_00^=+-ES3068_01_04">
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_PCPM3B_GFS_1.i_iPRESS_R" VarB="AI Standard Channel 3^GVL_SXR_VAC.fb_PCPM3B_GFS_1.i_iPRESS_R"/>
+				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_SL1K0_POWER_GCC_1.i_iPRESS_R" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_SL1K0_POWER_GCC_1.i_iPRESS_R"/>
+				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_SL1K0_POWER_GPI_1.i_iPRESS_R" VarB="AI Standard Channel 5^GVL_SXR_VAC.fb_SL1K0_POWER_GPI_1.i_iPRESS_R"/>
 			</OwnerB>
 			<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EK1100_01_00^=+-ES3068_01_05">
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_GCC_1.i_iPRESS_R" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_TV2K0_GCC_1.i_iPRESS_R"/>

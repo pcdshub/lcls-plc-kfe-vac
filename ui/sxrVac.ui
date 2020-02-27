@@ -1571,7 +1571,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>Qt::Horizontal</enum>
        </property>
       </widget>
-      <widget class="PyDMLabel" name="PyDMLabel">
+      <widget class="PyDMLabel" name="to_txi_label">
        <property name="geometry">
         <rect>
          <x>3090</x>
@@ -1685,7 +1685,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>Qt::Horizontal</enum>
        </property>
       </widget>
-      <widget class="PyDMLabel" name="PyDMLabel_2">
+      <widget class="PyDMLabel" name="to_22_label">
        <property name="geometry">
         <rect>
          <x>3610</x>
@@ -1797,7 +1797,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>Qt::Vertical</enum>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle">
+      <widget class="PyDMDrawingRectangle" name="RTDSK0_box">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -1825,7 +1825,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle_2">
+      <widget class="PyDMDrawingRectangle" name="IM1K0_box">
        <property name="geometry">
         <rect>
          <x>350</x>
@@ -1853,7 +1853,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle_3">
+      <widget class="PyDMDrawingRectangle" name="SL1K0_box">
        <property name="geometry">
         <rect>
          <x>570</x>
@@ -1881,7 +1881,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle_4">
+      <widget class="PyDMDrawingRectangle" name="EM2K0_box">
        <property name="geometry">
         <rect>
          <x>800</x>
@@ -1909,7 +1909,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle_5">
+      <widget class="PyDMDrawingRectangle" name="TV2K0_box">
        <property name="geometry">
         <rect>
          <x>1040</x>
@@ -1937,7 +1937,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle_6">
+      <widget class="PyDMDrawingRectangle" name="PCPM3B_box">
        <property name="geometry">
         <rect>
          <x>430</x>
@@ -1978,7 +1978,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>Qt::Vertical</enum>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle_7">
+      <widget class="PyDMDrawingRectangle" name="PA1K0_box">
        <property name="geometry">
         <rect>
          <x>1350</x>
@@ -2006,7 +2006,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle_8">
+      <widget class="PyDMDrawingRectangle" name="MR1K1_box">
        <property name="geometry">
         <rect>
          <x>1660</x>
@@ -2034,7 +2034,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle_9">
+      <widget class="PyDMDrawingRectangle" name="MR1K3_box">
        <property name="geometry">
         <rect>
          <x>2120</x>
@@ -2062,7 +2062,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle_10">
+      <widget class="PyDMDrawingRectangle" name="SP1K1_box">
        <property name="geometry">
         <rect>
          <x>2940</x>
@@ -2090,13 +2090,13 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle_11">
+      <widget class="PyDMDrawingRectangle" name="TV3K0_box">
        <property name="geometry">
         <rect>
          <x>3140</x>
-         <y>400</y>
+         <y>380</y>
          <width>451</width>
-         <height>261</height>
+         <height>281</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -2118,7 +2118,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle_12">
+      <widget class="PyDMDrawingRectangle" name="MR1K4_box">
        <property name="geometry">
         <rect>
          <x>3600</x>
@@ -2224,7 +2224,18 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>Qt::Horizontal</enum>
        </property>
       </widget>
-      <zorder>PyDMDrawingRectangle_10</zorder>
+      <zorder>SL1K0_box</zorder>
+      <zorder>TV2K0_box</zorder>
+      <zorder>PA1K0_box</zorder>
+      <zorder>EM2K0_box</zorder>
+      <zorder>IM1K0_box</zorder>
+      <zorder>PCPM3B_box</zorder>
+      <zorder>RTDSK0_box</zorder>
+      <zorder>MR1K4_box</zorder>
+      <zorder>TV3K0_box</zorder>
+      <zorder>MR1K1_box</zorder>
+      <zorder>MR1K3_box</zorder>
+      <zorder>SP1K1_box</zorder>
       <zorder>line_35</zorder>
       <zorder>line_39</zorder>
       <zorder>line_38</zorder>
@@ -2309,21 +2320,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <zorder>RoughGauge_6</zorder>
       <zorder>PneumaticValve_14</zorder>
       <zorder>MR2K3</zorder>
-      <zorder>PyDMLabel</zorder>
-      <zorder>PyDMLabel_2</zorder>
+      <zorder>to_txi_label</zorder>
+      <zorder>to_22_label</zorder>
       <zorder>RoughGauge_7</zorder>
       <zorder>ColdCathodeGauge_8</zorder>
-      <zorder>PyDMDrawingRectangle</zorder>
-      <zorder>PyDMDrawingRectangle_2</zorder>
-      <zorder>PyDMDrawingRectangle_3</zorder>
-      <zorder>PyDMDrawingRectangle_4</zorder>
-      <zorder>PyDMDrawingRectangle_5</zorder>
-      <zorder>PyDMDrawingRectangle_6</zorder>
-      <zorder>PyDMDrawingRectangle_7</zorder>
-      <zorder>PyDMDrawingRectangle_8</zorder>
-      <zorder>PyDMDrawingRectangle_9</zorder>
-      <zorder>PyDMDrawingRectangle_11</zorder>
-      <zorder>PyDMDrawingRectangle_12</zorder>
      </widget>
     </widget>
    </item>

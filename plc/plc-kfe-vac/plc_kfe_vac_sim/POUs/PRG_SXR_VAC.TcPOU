@@ -12,8 +12,8 @@ END_VAR
 fb_RTDSK0_VGC_1(stAVol := st_START, stBvol := st_RTDS, stValve := st_RTDSK0_VGC_1);
 fb_EM1K0_GMD_VGC_1(stAVol := st_RTDS, stBvol := st_GMD, stValve := st_EM1K0_GMD_VGC_1);
 fb_AT1K0_GAS_VGC_1(stAVol := st_GMD, stBvol := st_GATT, stValve := st_AT1K0_GAS_VGC_1);
-fb_EM1K0_XGMD_VGC_1(stAVol := st_GATT, stBvol := st_XGMD, stValve := st_EM1K0_XGMD_VGC_1);
-fb_EM1K0_XGMD_VGC_2(stAVol := st_XGMD, stBvol := st_EM2K0_VOL, stValve := st_EM1K0_XGMD_VGC_2);
+fb_EM2K0_XGMD_VGC_1(stAVol := st_GATT, stBvol := st_XGMD, stValve := st_EM2K0_XGMD_VGC_1);
+fb_EM2K0_XGMD_VGC_2(stAVol := st_XGMD, stBvol := st_EM2K0_VOL, stValve := st_EM2K0_XGMD_VGC_2);
 fb_TV2K0_VGC_1(stAVol := st_EM2K0_VOL, stBvol := st_TV2K0_VGC_1_VOL, stValve := st_TV2K0_VGC_1);
 fb_MR1K1_BEND_VGC_1(stAVol := st_TV2K0_VGC_1_VOL, stBvol := st_MR1K1_VOL, stValve := st_MR1K1_BEND_VGC_1);
 fb_MR1K3_TXI_VGC_1(stAVol := st_MR1K1_VOL, stBvol := st_MR_K3_VOL, stValve := st_MR1K3_TXI_VGC_1);

@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>4095</width>
-    <height>829</height>
+    <height>841</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -710,7 +710,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
          <x>770</x>
          <y>410</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -827,7 +827,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
          <x>1190</x>
          <y>410</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -1279,7 +1279,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
          <x>880</x>
          <y>410</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -1887,7 +1887,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
          <x>800</x>
          <y>400</y>
          <width>231</width>
-         <height>151</height>
+         <height>161</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -2224,6 +2224,324 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>Qt::Horizontal</enum>
        </property>
       </widget>
+      <widget class="PyDMLabel" name="RTDSK0_label">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>780</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>RTDSK0 </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="margin">
+        <number>0</number>
+       </property>
+       <property name="indent">
+        <number>-1</number>
+       </property>
+      </widget>
+      <widget class="PyDMLabel" name="PCPM3B_label">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>50</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>PCPM3B </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="PyDMLabel" name="IM1K0_label">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>780</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>IM1K0-XTES </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="PyDMLabel" name="SL1K0_label">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>780</y>
+         <width>161</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>SL1K0-POWER </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="PyDMLabel" name="EM2K0_label">
+       <property name="geometry">
+        <rect>
+         <x>900</x>
+         <y>540</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>EM2K0-XGMD </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="PyDMLabel" name="TV2K0_label">
+       <property name="geometry">
+        <rect>
+         <x>1210</x>
+         <y>780</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>TV2K0 </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="PyDMLabel" name="PA1K0_label">
+       <property name="geometry">
+        <rect>
+         <x>1520</x>
+         <y>600</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>PA1K0 </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="PyDMLabel" name="TV3K0_label">
+       <property name="geometry">
+        <rect>
+         <x>3460</x>
+         <y>640</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>TV3K0 </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
       <zorder>SL1K0_box</zorder>
       <zorder>TV2K0_box</zorder>
       <zorder>PA1K0_box</zorder>
@@ -2286,9 +2604,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <zorder>IonPump_4</zorder>
       <zorder>IonPump_5</zorder>
       <zorder>PneumaticValve_2</zorder>
-      <zorder>ColdCathodeGauge_2</zorder>
       <zorder>RoughGauge_2</zorder>
-      <zorder>IonPump_6</zorder>
       <zorder>ColdCathodeGauge_3</zorder>
       <zorder>PneumaticValve_3</zorder>
       <zorder>PneumaticValve_4</zorder>
@@ -2296,7 +2612,6 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <zorder>ColdCathodeGauge_4</zorder>
       <zorder>RoughGauge_3</zorder>
       <zorder>RoughGauge_4</zorder>
-      <zorder>ColdCathodeGauge_5</zorder>
       <zorder>PneumaticValve_6</zorder>
       <zorder>PyDMDrawingCircle_3</zorder>
       <zorder>RoughGauge_5</zorder>
@@ -2323,7 +2638,18 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <zorder>to_txi_label</zorder>
       <zorder>to_22_label</zorder>
       <zorder>RoughGauge_7</zorder>
+      <zorder>RTDSK0_label</zorder>
+      <zorder>PCPM3B_label</zorder>
+      <zorder>IonPump_6</zorder>
+      <zorder>IM1K0_label</zorder>
+      <zorder>SL1K0_label</zorder>
+      <zorder>ColdCathodeGauge_2</zorder>
       <zorder>ColdCathodeGauge_8</zorder>
+      <zorder>EM2K0_label</zorder>
+      <zorder>TV2K0_label</zorder>
+      <zorder>ColdCathodeGauge_5</zorder>
+      <zorder>PA1K0_label</zorder>
+      <zorder>TV3K0_label</zorder>
      </widget>
     </widget>
    </item>

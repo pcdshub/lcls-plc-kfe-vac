@@ -397,7 +397,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
          <x>-20</x>
          <y>410</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -467,7 +467,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
          <x>-10</x>
          <y>50</y>
          <width>180</width>
-         <height>141</height>
+         <height>151</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -477,7 +477,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>PCDSSymbolBase::Top</enum>
        </property>
        <property name="channelsPrefix" stdset="0">
-        <string>ca://RTDSK0:GCC:1</string>
+        <string>ca://RTDSK0:PIP:1</string>
        </property>
        <property name="controlButtonHorizontal" stdset="0">
         <bool>false</bool>
@@ -489,7 +489,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
          <x>190</x>
          <y>50</y>
          <width>180</width>
-         <height>141</height>
+         <height>151</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -499,7 +499,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>PCDSSymbolBase::Top</enum>
        </property>
        <property name="channelsPrefix" stdset="0">
-        <string>ca://RTDSK0:GCC:5</string>
+        <string>ca://RTDSK0:PIP:5</string>
        </property>
        <property name="controlButtonHorizontal" stdset="0">
         <bool>false</bool>
@@ -511,7 +511,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
          <x>150</x>
          <y>250</y>
          <width>180</width>
-         <height>141</height>
+         <height>151</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -521,7 +521,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>PCDSSymbolBase::Bottom</enum>
        </property>
        <property name="channelsPrefix" stdset="0">
-        <string>ca://RTDSK0:GCC:4</string>
+        <string>ca://RTDSK0:PIP:4</string>
        </property>
        <property name="controlButtonHorizontal" stdset="0">
         <bool>false</bool>
@@ -533,7 +533,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
          <x>90</x>
          <y>50</y>
          <width>180</width>
-         <height>141</height>
+         <height>151</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -543,7 +543,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>PCDSSymbolBase::Top</enum>
        </property>
        <property name="channelsPrefix" stdset="0">
-        <string>ca://RTDSK0:GCC:3</string>
+        <string>ca://RTDSK0:PIP:3</string>
        </property>
        <property name="controlButtonHorizontal" stdset="0">
         <bool>false</bool>
@@ -555,7 +555,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
          <x>30</x>
          <y>250</y>
          <width>180</width>
-         <height>141</height>
+         <height>151</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -565,7 +565,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>PCDSSymbolBase::Bottom</enum>
        </property>
        <property name="channelsPrefix" stdset="0">
-        <string>ca://RTDSK0:GCC:2</string>
+        <string>ca://RTDSK0:PIP:2</string>
        </property>
        <property name="controlButtonHorizontal" stdset="0">
         <bool>false</bool>
@@ -577,7 +577,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
          <x>310</x>
          <y>410</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -691,7 +691,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
          <x>650</x>
          <y>410</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -729,7 +729,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
          <x>1070</x>
          <y>410</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -982,7 +982,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
          <x>1630</x>
          <y>410</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -1020,7 +1020,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
          <x>2090</x>
          <y>410</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -1080,7 +1080,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
          <x>2900</x>
          <y>150</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -1124,7 +1124,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
          <x>3440</x>
          <y>150</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -1143,7 +1143,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
          <x>2950</x>
          <y>650</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -1181,7 +1181,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
          <x>3110</x>
          <y>410</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -1200,7 +1200,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
          <x>3580</x>
          <y>410</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -1736,7 +1736,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="channelsPrefix" stdset="0">
-        <string>ca://SLK10:POWER:GPI:1</string>
+        <string>ca://SL1K0:POWER:GPI:1</string>
        </property>
       </widget>
       <widget class="ColdCathodeGauge" name="ColdCathodeGauge_8">
@@ -1752,7 +1752,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="channelsPrefix" stdset="0">
-        <string>ca://SLK10:POWER:GCC:1</string>
+        <string>ca://SL1K0:POWER:GCC:1</string>
        </property>
        <property name="controlButtonHorizontal" stdset="0">
         <bool>false</bool>

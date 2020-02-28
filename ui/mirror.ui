@@ -38,7 +38,7 @@
      <x>71</x>
      <y>202</y>
      <width>180</width>
-     <height>99</height>
+     <height>109</height>
     </rect>
    </property>
    <property name="toolTip">
@@ -54,7 +54,7 @@
      <x>0</x>
      <y>0</y>
      <width>180</width>
-     <height>99</height>
+     <height>109</height>
     </rect>
    </property>
    <property name="toolTip">
@@ -134,9 +134,9 @@
   <widget class="PyDMLabel" name="PyDMLabel_5">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>70</x>
      <y>140</y>
-     <width>281</width>
+     <width>181</width>
      <height>21</height>
     </rect>
    </property>
@@ -153,7 +153,18 @@
    <property name="text">
     <string>${MIRROR_NAME}</string>
    </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
+  <zorder>PyDMDrawingRectangle</zorder>
+  <zorder>line</zorder>
+  <zorder>line_2</zorder>
+  <zorder>line_3</zorder>
+  <zorder>PyDMLabel_5</zorder>
+  <zorder>ColdCathodeGauge</zorder>
+  <zorder>RoughGauge</zorder>
+  <zorder>IonPump</zorder>
  </widget>
  <customwidgets>
   <customwidget>

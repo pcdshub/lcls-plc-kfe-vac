@@ -151,6 +151,24 @@
 							<Type>INT</Type>
 						</Var>
 						<Var>
+							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xOpnLS</Name>
+							<Comment><![CDATA[IO]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xOpnLS</Name>
+							<Comment><![CDATA[IO]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>L2SI_Vacuum_Library_TEST.Global_Variables.g_stSystem.I_EcatMaster1</Name>
 							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
 							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
@@ -285,24 +303,6 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xOpnLS</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xOpnLS</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xClsLS</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -521,6 +521,14 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
+							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_GCC_1.q_xHV_DIS</Name>
 							<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>
 							<Type>BOOL</Type>
@@ -585,14 +593,6 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.q_xOPN_DO</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -741,6 +741,22 @@
 							<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EK1100_01_00^=+-EL2798_01_02">
 								<Link VarA="GVL_SXR_VAC.fb_IM2K0_XTES_GCC_1.q_xHV_DIS" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 2^GVL_SXR_VAC.fb_IM2K0_XTES_GCC_1.q_xHV_DIS" Size="1" RestoreInfo="ANotFound"/>
 								<Link VarA="GVL_SXR_VAC.fb_SL1K0_GCC_1.q_xHV_DIS" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 4^GVL_SXR_VAC.fb_SL1K0_GCC_1.q_xHV_DIS" Size="1" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+					</UnrestoredVarLinks>
+					<UnrestoredVarLinks ImportTime="2020-02-27T17:20:11">
+						<OwnerA Name="InputDst" Prefix="TIPC^plc_kfe_vac^plc_kfe_vac Instance" Type="1">
+							<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EP2338_04_00">
+								<Link VarA="GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xClsLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 2^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xClsLS" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xOpnLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xOpnLS" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xClsLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 6^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xClsLS" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xOpnLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 5^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xOpnLS" Size="1" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+						<OwnerA Name="OutputSrc" Prefix="TIPC^plc_kfe_vac^plc_kfe_vac Instance" Type="2">
+							<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EP2338_04_00">
+								<Link VarA="GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.q_xOPN_DO" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 11^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.q_xOPN_DO" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.q_xOPN_DO" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 15^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.q_xOPN_DO" Size="1" RestoreInfo="ANotFound"/>
 							</OwnerB>
 						</OwnerA>
 					</UnrestoredVarLinks>
@@ -18524,14 +18540,6 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_PA1K0.i_iPRESS" VarB="AI Standard Channel 2^GVL_SXR_VAC.fb_PA1K0.i_iPRESS"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_PA1K0_PIP_1.i_iPRESS" VarB="AI Standard Channel 3^GVL_SXR_VAC.fb_PA1K0_PIP_1.i_iPRESS"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_PCPM3B_PIP_1.i_iPRESS" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_PCPM3B_PIP_1.i_iPRESS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EP2338_04_00">
-				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xClsLS"/>
-				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xOpnLS"/>
-				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xClsLS" VarB="Channel 6^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xClsLS"/>
-				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xOpnLS" VarB="Channel 5^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xOpnLS"/>
-				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.q_xOPN_DO" VarB="Channel 11^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.q_xOPN_DO"/>
-				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.q_xOPN_DO" VarB="Channel 15^GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.q_xOPN_DO"/>
 			</OwnerB>
 			<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EP2338_05_00">
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VGC_1.i_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_TV2K0_VGC_1.i_xClsLS"/>

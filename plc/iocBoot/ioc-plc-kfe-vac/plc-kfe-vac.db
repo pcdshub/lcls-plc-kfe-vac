@@ -33182,6 +33182,906 @@ record(bi, "SL1K0:POWER:GCC:1:ILK_OK_RBV") {
   field(ONAM, "OK")
 }
 
+record(bi, "EM2K0:XGMD:VGC:1:Dis_DPIlk_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...GC_1.i_xDis_DPIlk")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xDis_DPIlk?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "EM2K0:XGMD:VGC:1:Dis_DPIlk") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...GC_1.i_xDis_DPIlk")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xDis_DPIlk=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:1:EPS_OK_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...D_VGC_1.i_xEPS_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xEPS_OK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "EM2K0:XGMD:VGC:1:EPS_OK") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...D_VGC_1.i_xEPS_OK")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xEPS_OK=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:1:MPS_OK_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E..._VGC_1.i_xPMPS_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xPMPS_OK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "EM2K0:XGMD:VGC:1:MPS_OK") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E..._VGC_1.i_xPMPS_OK")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xPMPS_OK=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:1:FF_Reset_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...MD_VGC_1.i_xReset")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xReset?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "EM2K0:XGMD:VGC:1:FF_Reset") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...MD_VGC_1.i_xReset")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xReset=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:1:OPN_SW_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.pv_xOPN_SW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.pv_xOPN_SW?")
+  field(ZNAM, "CLOSE")
+  field(ONAM, "OPEN")
+}
+
+record(bo, "EM2K0:XGMD:VGC:1:OPN_SW") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.pv_xOPN_SW")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.pv_xOPN_SW=")
+  field(ZNAM, "CLOSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:1:ALM_RST_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.pv_xAlmRst")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.pv_xAlmRst?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "EM2K0:XGMD:VGC:1:ALM_RST") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.pv_xAlmRst")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.pv_xAlmRst=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:1:FORCE_OPN_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...Valve.pv_xOvrdOpn")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.pv_xOvrdOpn?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "OPEN")
+}
+
+record(bo, "EM2K0:XGMD:VGC:1:FORCE_OPN") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...Valve.pv_xOvrdOpn")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.pv_xOvrdOpn=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:1:OVRD_ON_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.xOverrideMode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.xOverrideMode?")
+  field(ZNAM, "Override ON")
+  field(ONAM, "Override OFF")
+}
+
+record(bo, "EM2K0:XGMD:VGC:1:OVRD_ON") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.xOverrideMode")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.xOverrideMode=")
+  field(ZNAM, "Override ON")
+  field(ONAM, "Override OFF")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:1:OPN_DI_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E..._stValve.i_xOpnLS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.i_xOpnLS?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "OPEN")
+}
+
+record(bi, "EM2K0:XGMD:VGC:1:CLS_DI_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E..._stValve.i_xClsLS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.i_xClsLS?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "CLOSE")
+}
+
+record(bi, "EM2K0:XGMD:VGC:1:OPN_DO_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...stValve.q_xOPN_DO")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.q_xOPN_DO?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+}
+
+record(bi, "EM2K0:XGMD:VGC:1:EXT_ILK_OK_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...q_stValve.xEXT_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.xEXT_OK?")
+  field(ZNAM, "NOT OK")
+  field(ONAM, "OK")
+}
+
+record(bi, "EM2K0:XGMD:VGC:1:DP_OK_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...iq_stValve.xDP_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.xDP_OK?")
+  field(ZNAM, "DP NOT OK")
+  field(ONAM, "DP OK")
+}
+
+record(bi, "EM2K0:XGMD:VGC:1:OPN_OK_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...q_stValve.xOPN_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.xOPN_OK?")
+  field(ZNAM, "OPN ILK NOT OK")
+  field(ONAM, "OPN ILK OK")
+}
+
+record(ai, "EM2K0:XGMD:VGC:1:AT_VAC_SP_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.rAT_VAC_SP")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.rAT_VAC_SP?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "EM2K0:XGMD:VGC:1:AT_VAC_SP") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.rAT_VAC_SP")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.rAT_VAC_SP=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
+record(ai, "EM2K0:XGMD:VGC:1:AT_VAC_HYS_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...Valve.rAT_VAC_HYS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.rAT_VAC_HYS?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "EM2K0:XGMD:VGC:1:AT_VAC_HYS") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...Valve.rAT_VAC_HYS")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.rAT_VAC_HYS=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
+record(ai, "EM2K0:XGMD:VGC:1:HYST_PERC_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.rHYST_PERC")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.rHYST_PERC?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "EM2K0:XGMD:VGC:1:HYST_PERC") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.rHYST_PERC")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.rHYST_PERC=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:1:AT_VAC_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...q_stValve.xAT_VAC")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.xAT_VAC?")
+  field(ZNAM, "NOT AT VAC")
+  field(ONAM, "AT VAC")
+}
+
+record(bi, "EM2K0:XGMD:VGC:1:ERR_DifPres_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...alve.xERR_DifPres")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.xERR_DifPres?")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "Diffrential error present")
+}
+
+record(bo, "EM2K0:XGMD:VGC:1:ERR_DifPres") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...alve.xERR_DifPres")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.xERR_DifPres=")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "Diffrential error present")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:1:ERR_SP_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...q_stValve.xERR_SP")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.xERR_SP?")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "Setpoint error present")
+}
+
+record(bo, "EM2K0:XGMD:VGC:1:ERR_SP") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...q_stValve.xERR_SP")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.xERR_SP=")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "Setpoint error present")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:1:ERR_Ext_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.xERR_ExtFault")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.xERR_ExtFault?")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "External error present")
+}
+
+record(bo, "EM2K0:XGMD:VGC:1:ERR_Ext") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.xERR_ExtFault")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.xERR_ExtFault=")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "External error present")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:1:ERROR_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.bErrorPresent")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.bErrorPresent?")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "ERROR PRESENT")
+}
+
+record(bo, "EM2K0:XGMD:VGC:1:ERROR") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.bErrorPresent")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.bErrorPresent=")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "ERROR PRESENT")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(waveform, "EM2K0:XGMD:VGC:1:ErrMsg_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.sErrorMessage")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.sErrorMessage?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+}
+
+record(waveform, "EM2K0:XGMD:VGC:1:ErrMsg") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.sErrorMessage")
+  field(DTYP, "asynInt8ArrayOut")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.sErrorMessage=")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(mbbi, "EM2K0:XGMD:VGC:1:STATE_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.eVGC_State")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.eVGC_State?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(ZRST, "Vented")
+  field(ONST, "At Vacuum")
+  field(TWST, "Differential Pressure")
+  field(THST, "Lost Vacuum")
+  field(FRST, "Ext Fault")
+}
+
+record(mbbi, "EM2K0:XGMD:VGC:1:POS_STATE_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...iq_stValve.eState")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.iq_stValve.eState?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(ZRST, "OPEN")
+  field(ONST, "CLOSED")
+  field(TWST, "MOVING")
+  field(THST, "INVALID")
+}
+
+record(bi, "EM2K0:XGMD:VGC:1:MPS_FAULT_OK_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...GMD_VGC_1.xMPS_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.xMPS_OK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "EM2K0:XGMD:VGC:1:MPS_FAULT_OK") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...GMD_VGC_1.xMPS_OK")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.xMPS_OK=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:2:Dis_DPIlk_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...GC_2.i_xDis_DPIlk")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xDis_DPIlk?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "EM2K0:XGMD:VGC:2:Dis_DPIlk") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...GC_2.i_xDis_DPIlk")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xDis_DPIlk=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:2:EPS_OK_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...D_VGC_2.i_xEPS_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xEPS_OK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "EM2K0:XGMD:VGC:2:EPS_OK") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...D_VGC_2.i_xEPS_OK")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xEPS_OK=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:2:MPS_OK_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E..._VGC_2.i_xPMPS_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xPMPS_OK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "EM2K0:XGMD:VGC:2:MPS_OK") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E..._VGC_2.i_xPMPS_OK")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xPMPS_OK=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:2:FF_Reset_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...MD_VGC_2.i_xReset")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xReset?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "EM2K0:XGMD:VGC:2:FF_Reset") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...MD_VGC_2.i_xReset")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xReset=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:2:OPN_SW_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.pv_xOPN_SW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.pv_xOPN_SW?")
+  field(ZNAM, "CLOSE")
+  field(ONAM, "OPEN")
+}
+
+record(bo, "EM2K0:XGMD:VGC:2:OPN_SW") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.pv_xOPN_SW")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.pv_xOPN_SW=")
+  field(ZNAM, "CLOSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:2:ALM_RST_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.pv_xAlmRst")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.pv_xAlmRst?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "EM2K0:XGMD:VGC:2:ALM_RST") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.pv_xAlmRst")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.pv_xAlmRst=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:2:FORCE_OPN_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...Valve.pv_xOvrdOpn")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.pv_xOvrdOpn?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "OPEN")
+}
+
+record(bo, "EM2K0:XGMD:VGC:2:FORCE_OPN") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...Valve.pv_xOvrdOpn")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.pv_xOvrdOpn=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:2:OVRD_ON_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.xOverrideMode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.xOverrideMode?")
+  field(ZNAM, "Override ON")
+  field(ONAM, "Override OFF")
+}
+
+record(bo, "EM2K0:XGMD:VGC:2:OVRD_ON") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.xOverrideMode")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.xOverrideMode=")
+  field(ZNAM, "Override ON")
+  field(ONAM, "Override OFF")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:2:OPN_DI_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E..._stValve.i_xOpnLS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.i_xOpnLS?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "OPEN")
+}
+
+record(bi, "EM2K0:XGMD:VGC:2:CLS_DI_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E..._stValve.i_xClsLS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.i_xClsLS?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "CLOSE")
+}
+
+record(bi, "EM2K0:XGMD:VGC:2:OPN_DO_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...stValve.q_xOPN_DO")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.q_xOPN_DO?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+}
+
+record(bi, "EM2K0:XGMD:VGC:2:EXT_ILK_OK_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...q_stValve.xEXT_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.xEXT_OK?")
+  field(ZNAM, "NOT OK")
+  field(ONAM, "OK")
+}
+
+record(bi, "EM2K0:XGMD:VGC:2:DP_OK_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...iq_stValve.xDP_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.xDP_OK?")
+  field(ZNAM, "DP NOT OK")
+  field(ONAM, "DP OK")
+}
+
+record(bi, "EM2K0:XGMD:VGC:2:OPN_OK_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...q_stValve.xOPN_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.xOPN_OK?")
+  field(ZNAM, "OPN ILK NOT OK")
+  field(ONAM, "OPN ILK OK")
+}
+
+record(ai, "EM2K0:XGMD:VGC:2:AT_VAC_SP_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.rAT_VAC_SP")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.rAT_VAC_SP?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "EM2K0:XGMD:VGC:2:AT_VAC_SP") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.rAT_VAC_SP")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.rAT_VAC_SP=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
+record(ai, "EM2K0:XGMD:VGC:2:AT_VAC_HYS_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...Valve.rAT_VAC_HYS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.rAT_VAC_HYS?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "EM2K0:XGMD:VGC:2:AT_VAC_HYS") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...Valve.rAT_VAC_HYS")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.rAT_VAC_HYS=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
+record(ai, "EM2K0:XGMD:VGC:2:HYST_PERC_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.rHYST_PERC")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.rHYST_PERC?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "EM2K0:XGMD:VGC:2:HYST_PERC") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.rHYST_PERC")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.rHYST_PERC=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:2:AT_VAC_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...q_stValve.xAT_VAC")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.xAT_VAC?")
+  field(ZNAM, "NOT AT VAC")
+  field(ONAM, "AT VAC")
+}
+
+record(bi, "EM2K0:XGMD:VGC:2:ERR_DifPres_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...alve.xERR_DifPres")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.xERR_DifPres?")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "Diffrential error present")
+}
+
+record(bo, "EM2K0:XGMD:VGC:2:ERR_DifPres") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...alve.xERR_DifPres")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.xERR_DifPres=")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "Diffrential error present")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:2:ERR_SP_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...q_stValve.xERR_SP")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.xERR_SP?")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "Setpoint error present")
+}
+
+record(bo, "EM2K0:XGMD:VGC:2:ERR_SP") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...q_stValve.xERR_SP")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.xERR_SP=")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "Setpoint error present")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:2:ERR_Ext_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.xERR_ExtFault")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.xERR_ExtFault?")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "External error present")
+}
+
+record(bo, "EM2K0:XGMD:VGC:2:ERR_Ext") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.xERR_ExtFault")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.xERR_ExtFault=")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "External error present")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2K0:XGMD:VGC:2:ERROR_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.bErrorPresent")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.bErrorPresent?")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "ERROR PRESENT")
+}
+
+record(bo, "EM2K0:XGMD:VGC:2:ERROR") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.bErrorPresent")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.bErrorPresent=")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "ERROR PRESENT")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(waveform, "EM2K0:XGMD:VGC:2:ErrMsg_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.sErrorMessage")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.sErrorMessage?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+}
+
+record(waveform, "EM2K0:XGMD:VGC:2:ErrMsg") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.sErrorMessage")
+  field(DTYP, "asynInt8ArrayOut")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.sErrorMessage=")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(mbbi, "EM2K0:XGMD:VGC:2:STATE_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.eVGC_State")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.eVGC_State?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(ZRST, "Vented")
+  field(ONST, "At Vacuum")
+  field(TWST, "Differential Pressure")
+  field(THST, "Lost Vacuum")
+  field(FRST, "Ext Fault")
+}
+
+record(mbbi, "EM2K0:XGMD:VGC:2:POS_STATE_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...iq_stValve.eState")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.iq_stValve.eState?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(ZRST, "OPEN")
+  field(ONST, "CLOSED")
+  field(TWST, "MOVING")
+  field(THST, "INVALID")
+}
+
+record(bi, "EM2K0:XGMD:VGC:2:MPS_FAULT_OK_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...GMD_VGC_2.xMPS_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.xMPS_OK?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "EM2K0:XGMD:VGC:2:MPS_FAULT_OK") {
+  field(DESC, "ads:GVL_SXR_VAC.fb_E...GMD_VGC_2.xMPS_OK")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.xMPS_OK=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
 record(ai, "RTDSK0:GPI:1:PRESS_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_R...0_GPI_1.PG.rPRESS")
   field(SCAN, "I/O Intr")
@@ -38543,906 +39443,6 @@ record(bo, "AT1K0:GAS:VGC:1:MPS_FAULT_OK") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM1K0:XGMD:VGC:1:Dis_DPIlk_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...GC_1.i_xDis_DPIlk")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xDis_DPIlk?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bo, "EM1K0:XGMD:VGC:1:Dis_DPIlk") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...GC_1.i_xDis_DPIlk")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xDis_DPIlk=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:1:EPS_OK_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...D_VGC_1.i_xEPS_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xEPS_OK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bo, "EM1K0:XGMD:VGC:1:EPS_OK") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...D_VGC_1.i_xEPS_OK")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xEPS_OK=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:1:MPS_OK_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E..._VGC_1.i_xPMPS_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xPMPS_OK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bo, "EM1K0:XGMD:VGC:1:MPS_OK") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E..._VGC_1.i_xPMPS_OK")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xPMPS_OK=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:1:FF_Reset_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...MD_VGC_1.i_xReset")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xReset?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bo, "EM1K0:XGMD:VGC:1:FF_Reset") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...MD_VGC_1.i_xReset")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xReset=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:1:OPN_SW_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.pv_xOPN_SW")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.pv_xOPN_SW?")
-  field(ZNAM, "CLOSE")
-  field(ONAM, "OPEN")
-}
-
-record(bo, "EM1K0:XGMD:VGC:1:OPN_SW") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.pv_xOPN_SW")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.pv_xOPN_SW=")
-  field(ZNAM, "CLOSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:1:ALM_RST_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.pv_xAlmRst")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.pv_xAlmRst?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bo, "EM1K0:XGMD:VGC:1:ALM_RST") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.pv_xAlmRst")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.pv_xAlmRst=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:1:FORCE_OPN_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...Valve.pv_xOvrdOpn")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.pv_xOvrdOpn?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "OPEN")
-}
-
-record(bo, "EM1K0:XGMD:VGC:1:FORCE_OPN") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...Valve.pv_xOvrdOpn")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.pv_xOvrdOpn=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:1:OVRD_ON_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.xOverrideMode")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.xOverrideMode?")
-  field(ZNAM, "Override ON")
-  field(ONAM, "Override OFF")
-}
-
-record(bo, "EM1K0:XGMD:VGC:1:OVRD_ON") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.xOverrideMode")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.xOverrideMode=")
-  field(ZNAM, "Override ON")
-  field(ONAM, "Override OFF")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:1:OPN_DI_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E..._stValve.i_xOpnLS")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.i_xOpnLS?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "OPEN")
-}
-
-record(bi, "EM1K0:XGMD:VGC:1:CLS_DI_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E..._stValve.i_xClsLS")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.i_xClsLS?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "CLOSE")
-}
-
-record(bi, "EM1K0:XGMD:VGC:1:OPN_DO_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...stValve.q_xOPN_DO")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.q_xOPN_DO?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-}
-
-record(bi, "EM1K0:XGMD:VGC:1:EXT_ILK_OK_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...q_stValve.xEXT_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.xEXT_OK?")
-  field(ZNAM, "NOT OK")
-  field(ONAM, "OK")
-}
-
-record(bi, "EM1K0:XGMD:VGC:1:DP_OK_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...iq_stValve.xDP_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.xDP_OK?")
-  field(ZNAM, "DP NOT OK")
-  field(ONAM, "DP OK")
-}
-
-record(bi, "EM1K0:XGMD:VGC:1:OPN_OK_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...q_stValve.xOPN_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.xOPN_OK?")
-  field(ZNAM, "OPN ILK NOT OK")
-  field(ONAM, "OPN ILK OK")
-}
-
-record(ai, "EM1K0:XGMD:VGC:1:AT_VAC_SP_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.rAT_VAC_SP")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.rAT_VAC_SP?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC")
-}
-
-record(ao, "EM1K0:XGMD:VGC:1:AT_VAC_SP") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.rAT_VAC_SP")
-  field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.rAT_VAC_SP=")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC VAL")
-}
-
-record(ai, "EM1K0:XGMD:VGC:1:AT_VAC_HYS_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...Valve.rAT_VAC_HYS")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.rAT_VAC_HYS?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC")
-}
-
-record(ao, "EM1K0:XGMD:VGC:1:AT_VAC_HYS") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...Valve.rAT_VAC_HYS")
-  field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.rAT_VAC_HYS=")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC VAL")
-}
-
-record(ai, "EM1K0:XGMD:VGC:1:HYST_PERC_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.rHYST_PERC")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.rHYST_PERC?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC")
-}
-
-record(ao, "EM1K0:XGMD:VGC:1:HYST_PERC") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.rHYST_PERC")
-  field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.rHYST_PERC=")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:1:AT_VAC_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...q_stValve.xAT_VAC")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.xAT_VAC?")
-  field(ZNAM, "NOT AT VAC")
-  field(ONAM, "AT VAC")
-}
-
-record(bi, "EM1K0:XGMD:VGC:1:ERR_DifPres_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...alve.xERR_DifPres")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.xERR_DifPres?")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "Diffrential error present")
-}
-
-record(bo, "EM1K0:XGMD:VGC:1:ERR_DifPres") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...alve.xERR_DifPres")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.xERR_DifPres=")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "Diffrential error present")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:1:ERR_SP_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...q_stValve.xERR_SP")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.xERR_SP?")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "Setpoint error present")
-}
-
-record(bo, "EM1K0:XGMD:VGC:1:ERR_SP") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...q_stValve.xERR_SP")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.xERR_SP=")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "Setpoint error present")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:1:ERR_Ext_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.xERR_ExtFault")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.xERR_ExtFault?")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "External error present")
-}
-
-record(bo, "EM1K0:XGMD:VGC:1:ERR_Ext") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.xERR_ExtFault")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.xERR_ExtFault=")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "External error present")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:1:ERROR_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.bErrorPresent")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.bErrorPresent?")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "ERROR PRESENT")
-}
-
-record(bo, "EM1K0:XGMD:VGC:1:ERROR") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.bErrorPresent")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.bErrorPresent=")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "ERROR PRESENT")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(waveform, "EM1K0:XGMD:VGC:1:ErrMsg_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.sErrorMessage")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.sErrorMessage?")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-}
-
-record(waveform, "EM1K0:XGMD:VGC:1:ErrMsg") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.sErrorMessage")
-  field(DTYP, "asynInt8ArrayOut")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.sErrorMessage=")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(mbbi, "EM1K0:XGMD:VGC:1:STATE_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.eVGC_State")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.eVGC_State?")
-  field(ZRVL, "0")
-  field(ONVL, "1")
-  field(TWVL, "2")
-  field(THVL, "3")
-  field(FRVL, "4")
-  field(ZRST, "Vented")
-  field(ONST, "At Vacuum")
-  field(TWST, "Differential Pressure")
-  field(THST, "Lost Vacuum")
-  field(FRST, "Ext Fault")
-}
-
-record(mbbi, "EM1K0:XGMD:VGC:1:POS_STATE_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...iq_stValve.eState")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.iq_stValve.eState?")
-  field(ZRVL, "0")
-  field(ONVL, "1")
-  field(TWVL, "2")
-  field(THVL, "3")
-  field(ZRST, "OPEN")
-  field(ONST, "CLOSED")
-  field(TWST, "MOVING")
-  field(THST, "INVALID")
-}
-
-record(bi, "EM1K0:XGMD:VGC:1:MPS_FAULT_OK_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...GMD_VGC_1.xMPS_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.xMPS_OK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bo, "EM1K0:XGMD:VGC:1:MPS_FAULT_OK") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...GMD_VGC_1.xMPS_OK")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.xMPS_OK=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:2:Dis_DPIlk_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...GC_2.i_xDis_DPIlk")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xDis_DPIlk?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bo, "EM1K0:XGMD:VGC:2:Dis_DPIlk") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...GC_2.i_xDis_DPIlk")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xDis_DPIlk=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:2:EPS_OK_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...D_VGC_2.i_xEPS_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xEPS_OK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bo, "EM1K0:XGMD:VGC:2:EPS_OK") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...D_VGC_2.i_xEPS_OK")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xEPS_OK=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:2:MPS_OK_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E..._VGC_2.i_xPMPS_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xPMPS_OK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bo, "EM1K0:XGMD:VGC:2:MPS_OK") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E..._VGC_2.i_xPMPS_OK")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xPMPS_OK=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:2:FF_Reset_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...MD_VGC_2.i_xReset")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xReset?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bo, "EM1K0:XGMD:VGC:2:FF_Reset") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...MD_VGC_2.i_xReset")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xReset=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:2:OPN_SW_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.pv_xOPN_SW")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.pv_xOPN_SW?")
-  field(ZNAM, "CLOSE")
-  field(ONAM, "OPEN")
-}
-
-record(bo, "EM1K0:XGMD:VGC:2:OPN_SW") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.pv_xOPN_SW")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.pv_xOPN_SW=")
-  field(ZNAM, "CLOSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:2:ALM_RST_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.pv_xAlmRst")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.pv_xAlmRst?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bo, "EM1K0:XGMD:VGC:2:ALM_RST") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.pv_xAlmRst")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.pv_xAlmRst=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:2:FORCE_OPN_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...Valve.pv_xOvrdOpn")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.pv_xOvrdOpn?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "OPEN")
-}
-
-record(bo, "EM1K0:XGMD:VGC:2:FORCE_OPN") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...Valve.pv_xOvrdOpn")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.pv_xOvrdOpn=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:2:OVRD_ON_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.xOverrideMode")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.xOverrideMode?")
-  field(ZNAM, "Override ON")
-  field(ONAM, "Override OFF")
-}
-
-record(bo, "EM1K0:XGMD:VGC:2:OVRD_ON") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.xOverrideMode")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.xOverrideMode=")
-  field(ZNAM, "Override ON")
-  field(ONAM, "Override OFF")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:2:OPN_DI_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E..._stValve.i_xOpnLS")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.i_xOpnLS?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "OPEN")
-}
-
-record(bi, "EM1K0:XGMD:VGC:2:CLS_DI_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E..._stValve.i_xClsLS")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.i_xClsLS?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "CLOSE")
-}
-
-record(bi, "EM1K0:XGMD:VGC:2:OPN_DO_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...stValve.q_xOPN_DO")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.q_xOPN_DO?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-}
-
-record(bi, "EM1K0:XGMD:VGC:2:EXT_ILK_OK_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...q_stValve.xEXT_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.xEXT_OK?")
-  field(ZNAM, "NOT OK")
-  field(ONAM, "OK")
-}
-
-record(bi, "EM1K0:XGMD:VGC:2:DP_OK_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...iq_stValve.xDP_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.xDP_OK?")
-  field(ZNAM, "DP NOT OK")
-  field(ONAM, "DP OK")
-}
-
-record(bi, "EM1K0:XGMD:VGC:2:OPN_OK_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...q_stValve.xOPN_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.xOPN_OK?")
-  field(ZNAM, "OPN ILK NOT OK")
-  field(ONAM, "OPN ILK OK")
-}
-
-record(ai, "EM1K0:XGMD:VGC:2:AT_VAC_SP_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.rAT_VAC_SP")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.rAT_VAC_SP?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC")
-}
-
-record(ao, "EM1K0:XGMD:VGC:2:AT_VAC_SP") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.rAT_VAC_SP")
-  field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.rAT_VAC_SP=")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC VAL")
-}
-
-record(ai, "EM1K0:XGMD:VGC:2:AT_VAC_HYS_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...Valve.rAT_VAC_HYS")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.rAT_VAC_HYS?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC")
-}
-
-record(ao, "EM1K0:XGMD:VGC:2:AT_VAC_HYS") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...Valve.rAT_VAC_HYS")
-  field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.rAT_VAC_HYS=")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC VAL")
-}
-
-record(ai, "EM1K0:XGMD:VGC:2:HYST_PERC_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.rHYST_PERC")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.rHYST_PERC?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC")
-}
-
-record(ao, "EM1K0:XGMD:VGC:2:HYST_PERC") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.rHYST_PERC")
-  field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.rHYST_PERC=")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:2:AT_VAC_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...q_stValve.xAT_VAC")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.xAT_VAC?")
-  field(ZNAM, "NOT AT VAC")
-  field(ONAM, "AT VAC")
-}
-
-record(bi, "EM1K0:XGMD:VGC:2:ERR_DifPres_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...alve.xERR_DifPres")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.xERR_DifPres?")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "Diffrential error present")
-}
-
-record(bo, "EM1K0:XGMD:VGC:2:ERR_DifPres") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...alve.xERR_DifPres")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.xERR_DifPres=")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "Diffrential error present")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:2:ERR_SP_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...q_stValve.xERR_SP")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.xERR_SP?")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "Setpoint error present")
-}
-
-record(bo, "EM1K0:XGMD:VGC:2:ERR_SP") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...q_stValve.xERR_SP")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.xERR_SP=")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "Setpoint error present")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:2:ERR_Ext_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.xERR_ExtFault")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.xERR_ExtFault?")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "External error present")
-}
-
-record(bo, "EM1K0:XGMD:VGC:2:ERR_Ext") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.xERR_ExtFault")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.xERR_ExtFault=")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "External error present")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1K0:XGMD:VGC:2:ERROR_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.bErrorPresent")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.bErrorPresent?")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "ERROR PRESENT")
-}
-
-record(bo, "EM1K0:XGMD:VGC:2:ERROR") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.bErrorPresent")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.bErrorPresent=")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "ERROR PRESENT")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(waveform, "EM1K0:XGMD:VGC:2:ErrMsg_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.sErrorMessage")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.sErrorMessage?")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-}
-
-record(waveform, "EM1K0:XGMD:VGC:2:ErrMsg") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...lve.sErrorMessage")
-  field(DTYP, "asynInt8ArrayOut")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.sErrorMessage=")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(mbbi, "EM1K0:XGMD:VGC:2:STATE_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...tValve.eVGC_State")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.eVGC_State?")
-  field(ZRVL, "0")
-  field(ONVL, "1")
-  field(TWVL, "2")
-  field(THVL, "3")
-  field(FRVL, "4")
-  field(ZRST, "Vented")
-  field(ONST, "At Vacuum")
-  field(TWST, "Differential Pressure")
-  field(THST, "Lost Vacuum")
-  field(FRST, "Ext Fault")
-}
-
-record(mbbi, "EM1K0:XGMD:VGC:2:POS_STATE_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...iq_stValve.eState")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.iq_stValve.eState?")
-  field(ZRVL, "0")
-  field(ONVL, "1")
-  field(TWVL, "2")
-  field(THVL, "3")
-  field(ZRST, "OPEN")
-  field(ONST, "CLOSED")
-  field(TWST, "MOVING")
-  field(THST, "INVALID")
-}
-
-record(bi, "EM1K0:XGMD:VGC:2:MPS_FAULT_OK_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...GMD_VGC_2.xMPS_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.xMPS_OK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bo, "EM1K0:XGMD:VGC:2:MPS_FAULT_OK") {
-  field(DESC, "ads:GVL_SXR_VAC.fb_E...GMD_VGC_2.xMPS_OK")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.xMPS_OK=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-  info(autosaveFields_pass0, "VAL")
-}
-
 record(bi, "TV2K0:VGC:1:Dis_DPIlk_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_T...GC_1.i_xDis_DPIlk")
   field(SCAN, "I/O Intr")
@@ -39893,7 +39893,7 @@ record(bo, "TV2K0:VGC:1:MPS_FAULT_OK") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K1:BEND:VGC:1:Dis_DPIlk_RBV") {
+record(bi, "MR1K1:VGC:1:Dis_DPIlk_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...GC_1.i_xDis_DPIlk")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -39904,7 +39904,7 @@ record(bi, "MR1K1:BEND:VGC:1:Dis_DPIlk_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "MR1K1:BEND:VGC:1:Dis_DPIlk") {
+record(bo, "MR1K1:VGC:1:Dis_DPIlk") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...GC_1.i_xDis_DPIlk")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.i_xDis_DPIlk=")
@@ -39913,7 +39913,7 @@ record(bo, "MR1K1:BEND:VGC:1:Dis_DPIlk") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K1:BEND:VGC:1:EPS_OK_RBV") {
+record(bi, "MR1K1:VGC:1:EPS_OK_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...D_VGC_1.i_xEPS_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -39924,7 +39924,7 @@ record(bi, "MR1K1:BEND:VGC:1:EPS_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "MR1K1:BEND:VGC:1:EPS_OK") {
+record(bo, "MR1K1:VGC:1:EPS_OK") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...D_VGC_1.i_xEPS_OK")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.i_xEPS_OK=")
@@ -39933,7 +39933,7 @@ record(bo, "MR1K1:BEND:VGC:1:EPS_OK") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K1:BEND:VGC:1:MPS_OK_RBV") {
+record(bi, "MR1K1:VGC:1:MPS_OK_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M..._VGC_1.i_xPMPS_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -39944,7 +39944,7 @@ record(bi, "MR1K1:BEND:VGC:1:MPS_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "MR1K1:BEND:VGC:1:MPS_OK") {
+record(bo, "MR1K1:VGC:1:MPS_OK") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M..._VGC_1.i_xPMPS_OK")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.i_xPMPS_OK=")
@@ -39953,7 +39953,7 @@ record(bo, "MR1K1:BEND:VGC:1:MPS_OK") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K1:BEND:VGC:1:FF_Reset_RBV") {
+record(bi, "MR1K1:VGC:1:FF_Reset_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...ND_VGC_1.i_xReset")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -39964,7 +39964,7 @@ record(bi, "MR1K1:BEND:VGC:1:FF_Reset_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "MR1K1:BEND:VGC:1:FF_Reset") {
+record(bo, "MR1K1:VGC:1:FF_Reset") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...ND_VGC_1.i_xReset")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.i_xReset=")
@@ -39973,7 +39973,7 @@ record(bo, "MR1K1:BEND:VGC:1:FF_Reset") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K1:BEND:VGC:1:OPN_SW_RBV") {
+record(bi, "MR1K1:VGC:1:OPN_SW_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.pv_xOPN_SW")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -39984,7 +39984,7 @@ record(bi, "MR1K1:BEND:VGC:1:OPN_SW_RBV") {
   field(ONAM, "OPEN")
 }
 
-record(bo, "MR1K1:BEND:VGC:1:OPN_SW") {
+record(bo, "MR1K1:VGC:1:OPN_SW") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.pv_xOPN_SW")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.iq_stValve.pv_xOPN_SW=")
@@ -39993,7 +39993,7 @@ record(bo, "MR1K1:BEND:VGC:1:OPN_SW") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K1:BEND:VGC:1:ALM_RST_RBV") {
+record(bi, "MR1K1:VGC:1:ALM_RST_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.pv_xAlmRst")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40004,7 +40004,7 @@ record(bi, "MR1K1:BEND:VGC:1:ALM_RST_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "MR1K1:BEND:VGC:1:ALM_RST") {
+record(bo, "MR1K1:VGC:1:ALM_RST") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.pv_xAlmRst")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.iq_stValve.pv_xAlmRst=")
@@ -40013,7 +40013,7 @@ record(bo, "MR1K1:BEND:VGC:1:ALM_RST") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K1:BEND:VGC:1:FORCE_OPN_RBV") {
+record(bi, "MR1K1:VGC:1:FORCE_OPN_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...Valve.pv_xOvrdOpn")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40024,7 +40024,7 @@ record(bi, "MR1K1:BEND:VGC:1:FORCE_OPN_RBV") {
   field(ONAM, "OPEN")
 }
 
-record(bo, "MR1K1:BEND:VGC:1:FORCE_OPN") {
+record(bo, "MR1K1:VGC:1:FORCE_OPN") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...Valve.pv_xOvrdOpn")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.iq_stValve.pv_xOvrdOpn=")
@@ -40033,7 +40033,7 @@ record(bo, "MR1K1:BEND:VGC:1:FORCE_OPN") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K1:BEND:VGC:1:OVRD_ON_RBV") {
+record(bi, "MR1K1:VGC:1:OVRD_ON_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.xOverrideMode")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40044,7 +40044,7 @@ record(bi, "MR1K1:BEND:VGC:1:OVRD_ON_RBV") {
   field(ONAM, "Override OFF")
 }
 
-record(bo, "MR1K1:BEND:VGC:1:OVRD_ON") {
+record(bo, "MR1K1:VGC:1:OVRD_ON") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.xOverrideMode")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.iq_stValve.xOverrideMode=")
@@ -40053,7 +40053,7 @@ record(bo, "MR1K1:BEND:VGC:1:OVRD_ON") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K1:BEND:VGC:1:OPN_DI_RBV") {
+record(bi, "MR1K1:VGC:1:OPN_DI_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M..._stValve.i_xOpnLS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40064,7 +40064,7 @@ record(bi, "MR1K1:BEND:VGC:1:OPN_DI_RBV") {
   field(ONAM, "OPEN")
 }
 
-record(bi, "MR1K1:BEND:VGC:1:CLS_DI_RBV") {
+record(bi, "MR1K1:VGC:1:CLS_DI_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M..._stValve.i_xClsLS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40075,7 +40075,7 @@ record(bi, "MR1K1:BEND:VGC:1:CLS_DI_RBV") {
   field(ONAM, "CLOSE")
 }
 
-record(bi, "MR1K1:BEND:VGC:1:OPN_DO_RBV") {
+record(bi, "MR1K1:VGC:1:OPN_DO_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...stValve.q_xOPN_DO")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40086,7 +40086,7 @@ record(bi, "MR1K1:BEND:VGC:1:OPN_DO_RBV") {
   field(ONAM, "TRUE")
 }
 
-record(bi, "MR1K1:BEND:VGC:1:EXT_ILK_OK_RBV") {
+record(bi, "MR1K1:VGC:1:EXT_ILK_OK_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...q_stValve.xEXT_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40097,7 +40097,7 @@ record(bi, "MR1K1:BEND:VGC:1:EXT_ILK_OK_RBV") {
   field(ONAM, "OK")
 }
 
-record(bi, "MR1K1:BEND:VGC:1:DP_OK_RBV") {
+record(bi, "MR1K1:VGC:1:DP_OK_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...iq_stValve.xDP_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40108,7 +40108,7 @@ record(bi, "MR1K1:BEND:VGC:1:DP_OK_RBV") {
   field(ONAM, "DP OK")
 }
 
-record(bi, "MR1K1:BEND:VGC:1:OPN_OK_RBV") {
+record(bi, "MR1K1:VGC:1:OPN_OK_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...q_stValve.xOPN_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40119,7 +40119,7 @@ record(bi, "MR1K1:BEND:VGC:1:OPN_OK_RBV") {
   field(ONAM, "OPN ILK OK")
 }
 
-record(ai, "MR1K1:BEND:VGC:1:AT_VAC_SP_RBV") {
+record(ai, "MR1K1:VGC:1:AT_VAC_SP_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.rAT_VAC_SP")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40130,7 +40130,7 @@ record(ai, "MR1K1:BEND:VGC:1:AT_VAC_SP_RBV") {
   info(autosaveFields_pass0, "PREC")
 }
 
-record(ao, "MR1K1:BEND:VGC:1:AT_VAC_SP") {
+record(ao, "MR1K1:VGC:1:AT_VAC_SP") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.rAT_VAC_SP")
   field(DTYP, "asynFloat64")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.iq_stValve.rAT_VAC_SP=")
@@ -40138,7 +40138,7 @@ record(ao, "MR1K1:BEND:VGC:1:AT_VAC_SP") {
   info(autosaveFields_pass0, "PREC VAL")
 }
 
-record(ai, "MR1K1:BEND:VGC:1:AT_VAC_HYS_RBV") {
+record(ai, "MR1K1:VGC:1:AT_VAC_HYS_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...Valve.rAT_VAC_HYS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40149,7 +40149,7 @@ record(ai, "MR1K1:BEND:VGC:1:AT_VAC_HYS_RBV") {
   info(autosaveFields_pass0, "PREC")
 }
 
-record(ao, "MR1K1:BEND:VGC:1:AT_VAC_HYS") {
+record(ao, "MR1K1:VGC:1:AT_VAC_HYS") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...Valve.rAT_VAC_HYS")
   field(DTYP, "asynFloat64")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.iq_stValve.rAT_VAC_HYS=")
@@ -40157,7 +40157,7 @@ record(ao, "MR1K1:BEND:VGC:1:AT_VAC_HYS") {
   info(autosaveFields_pass0, "PREC VAL")
 }
 
-record(ai, "MR1K1:BEND:VGC:1:HYST_PERC_RBV") {
+record(ai, "MR1K1:VGC:1:HYST_PERC_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.rHYST_PERC")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40168,7 +40168,7 @@ record(ai, "MR1K1:BEND:VGC:1:HYST_PERC_RBV") {
   info(autosaveFields_pass0, "PREC")
 }
 
-record(ao, "MR1K1:BEND:VGC:1:HYST_PERC") {
+record(ao, "MR1K1:VGC:1:HYST_PERC") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.rHYST_PERC")
   field(DTYP, "asynFloat64")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.iq_stValve.rHYST_PERC=")
@@ -40176,7 +40176,7 @@ record(ao, "MR1K1:BEND:VGC:1:HYST_PERC") {
   info(autosaveFields_pass0, "PREC VAL")
 }
 
-record(bi, "MR1K1:BEND:VGC:1:AT_VAC_RBV") {
+record(bi, "MR1K1:VGC:1:AT_VAC_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...q_stValve.xAT_VAC")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40187,7 +40187,7 @@ record(bi, "MR1K1:BEND:VGC:1:AT_VAC_RBV") {
   field(ONAM, "AT VAC")
 }
 
-record(bi, "MR1K1:BEND:VGC:1:ERR_DifPres_RBV") {
+record(bi, "MR1K1:VGC:1:ERR_DifPres_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...alve.xERR_DifPres")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40198,7 +40198,7 @@ record(bi, "MR1K1:BEND:VGC:1:ERR_DifPres_RBV") {
   field(ONAM, "Diffrential error present")
 }
 
-record(bo, "MR1K1:BEND:VGC:1:ERR_DifPres") {
+record(bo, "MR1K1:VGC:1:ERR_DifPres") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...alve.xERR_DifPres")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.iq_stValve.xERR_DifPres=")
@@ -40207,7 +40207,7 @@ record(bo, "MR1K1:BEND:VGC:1:ERR_DifPres") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K1:BEND:VGC:1:ERR_SP_RBV") {
+record(bi, "MR1K1:VGC:1:ERR_SP_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...q_stValve.xERR_SP")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40218,7 +40218,7 @@ record(bi, "MR1K1:BEND:VGC:1:ERR_SP_RBV") {
   field(ONAM, "Setpoint error present")
 }
 
-record(bo, "MR1K1:BEND:VGC:1:ERR_SP") {
+record(bo, "MR1K1:VGC:1:ERR_SP") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...q_stValve.xERR_SP")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.iq_stValve.xERR_SP=")
@@ -40227,7 +40227,7 @@ record(bo, "MR1K1:BEND:VGC:1:ERR_SP") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K1:BEND:VGC:1:ERR_Ext_RBV") {
+record(bi, "MR1K1:VGC:1:ERR_Ext_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.xERR_ExtFault")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40238,7 +40238,7 @@ record(bi, "MR1K1:BEND:VGC:1:ERR_Ext_RBV") {
   field(ONAM, "External error present")
 }
 
-record(bo, "MR1K1:BEND:VGC:1:ERR_Ext") {
+record(bo, "MR1K1:VGC:1:ERR_Ext") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.xERR_ExtFault")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.iq_stValve.xERR_ExtFault=")
@@ -40247,7 +40247,7 @@ record(bo, "MR1K1:BEND:VGC:1:ERR_Ext") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K1:BEND:VGC:1:ERROR_RBV") {
+record(bi, "MR1K1:VGC:1:ERROR_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.bErrorPresent")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40258,7 +40258,7 @@ record(bi, "MR1K1:BEND:VGC:1:ERROR_RBV") {
   field(ONAM, "ERROR PRESENT")
 }
 
-record(bo, "MR1K1:BEND:VGC:1:ERROR") {
+record(bo, "MR1K1:VGC:1:ERROR") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.bErrorPresent")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.iq_stValve.bErrorPresent=")
@@ -40267,7 +40267,7 @@ record(bo, "MR1K1:BEND:VGC:1:ERROR") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(waveform, "MR1K1:BEND:VGC:1:ErrMsg_RBV") {
+record(waveform, "MR1K1:VGC:1:ErrMsg_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.sErrorMessage")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40278,7 +40278,7 @@ record(waveform, "MR1K1:BEND:VGC:1:ErrMsg_RBV") {
   field(NELM, "80")
 }
 
-record(waveform, "MR1K1:BEND:VGC:1:ErrMsg") {
+record(waveform, "MR1K1:VGC:1:ErrMsg") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.sErrorMessage")
   field(DTYP, "asynInt8ArrayOut")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.iq_stValve.sErrorMessage=")
@@ -40287,7 +40287,7 @@ record(waveform, "MR1K1:BEND:VGC:1:ErrMsg") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(mbbi, "MR1K1:BEND:VGC:1:STATE_RBV") {
+record(mbbi, "MR1K1:VGC:1:STATE_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.eVGC_State")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40306,7 +40306,7 @@ record(mbbi, "MR1K1:BEND:VGC:1:STATE_RBV") {
   field(FRST, "Ext Fault")
 }
 
-record(mbbi, "MR1K1:BEND:VGC:1:POS_STATE_RBV") {
+record(mbbi, "MR1K1:VGC:1:POS_STATE_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...iq_stValve.eState")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40323,7 +40323,7 @@ record(mbbi, "MR1K1:BEND:VGC:1:POS_STATE_RBV") {
   field(THST, "INVALID")
 }
 
-record(bi, "MR1K1:BEND:VGC:1:MPS_FAULT_OK_RBV") {
+record(bi, "MR1K1:VGC:1:MPS_FAULT_OK_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...END_VGC_1.xMPS_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40334,7 +40334,7 @@ record(bi, "MR1K1:BEND:VGC:1:MPS_FAULT_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "MR1K1:BEND:VGC:1:MPS_FAULT_OK") {
+record(bo, "MR1K1:VGC:1:MPS_FAULT_OK") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...END_VGC_1.xMPS_OK")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.xMPS_OK=")
@@ -40343,7 +40343,7 @@ record(bo, "MR1K1:BEND:VGC:1:MPS_FAULT_OK") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K3:TXI:VGC:1:Dis_DPIlk_RBV") {
+record(bi, "MR1K3:VGC:1:Dis_DPIlk_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...GC_1.i_xDis_DPIlk")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40354,7 +40354,7 @@ record(bi, "MR1K3:TXI:VGC:1:Dis_DPIlk_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "MR1K3:TXI:VGC:1:Dis_DPIlk") {
+record(bo, "MR1K3:VGC:1:Dis_DPIlk") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...GC_1.i_xDis_DPIlk")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.i_xDis_DPIlk=")
@@ -40363,7 +40363,7 @@ record(bo, "MR1K3:TXI:VGC:1:Dis_DPIlk") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K3:TXI:VGC:1:EPS_OK_RBV") {
+record(bi, "MR1K3:VGC:1:EPS_OK_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...I_VGC_1.i_xEPS_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40374,7 +40374,7 @@ record(bi, "MR1K3:TXI:VGC:1:EPS_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "MR1K3:TXI:VGC:1:EPS_OK") {
+record(bo, "MR1K3:VGC:1:EPS_OK") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...I_VGC_1.i_xEPS_OK")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.i_xEPS_OK=")
@@ -40383,7 +40383,7 @@ record(bo, "MR1K3:TXI:VGC:1:EPS_OK") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K3:TXI:VGC:1:MPS_OK_RBV") {
+record(bi, "MR1K3:VGC:1:MPS_OK_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M..._VGC_1.i_xPMPS_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40394,7 +40394,7 @@ record(bi, "MR1K3:TXI:VGC:1:MPS_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "MR1K3:TXI:VGC:1:MPS_OK") {
+record(bo, "MR1K3:VGC:1:MPS_OK") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M..._VGC_1.i_xPMPS_OK")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.i_xPMPS_OK=")
@@ -40403,7 +40403,7 @@ record(bo, "MR1K3:TXI:VGC:1:MPS_OK") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K3:TXI:VGC:1:FF_Reset_RBV") {
+record(bi, "MR1K3:VGC:1:FF_Reset_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...XI_VGC_1.i_xReset")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40414,7 +40414,7 @@ record(bi, "MR1K3:TXI:VGC:1:FF_Reset_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "MR1K3:TXI:VGC:1:FF_Reset") {
+record(bo, "MR1K3:VGC:1:FF_Reset") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...XI_VGC_1.i_xReset")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.i_xReset=")
@@ -40423,7 +40423,7 @@ record(bo, "MR1K3:TXI:VGC:1:FF_Reset") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K3:TXI:VGC:1:OPN_SW_RBV") {
+record(bi, "MR1K3:VGC:1:OPN_SW_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.pv_xOPN_SW")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40434,7 +40434,7 @@ record(bi, "MR1K3:TXI:VGC:1:OPN_SW_RBV") {
   field(ONAM, "OPEN")
 }
 
-record(bo, "MR1K3:TXI:VGC:1:OPN_SW") {
+record(bo, "MR1K3:VGC:1:OPN_SW") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.pv_xOPN_SW")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.iq_stValve.pv_xOPN_SW=")
@@ -40443,7 +40443,7 @@ record(bo, "MR1K3:TXI:VGC:1:OPN_SW") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K3:TXI:VGC:1:ALM_RST_RBV") {
+record(bi, "MR1K3:VGC:1:ALM_RST_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.pv_xAlmRst")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40454,7 +40454,7 @@ record(bi, "MR1K3:TXI:VGC:1:ALM_RST_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "MR1K3:TXI:VGC:1:ALM_RST") {
+record(bo, "MR1K3:VGC:1:ALM_RST") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.pv_xAlmRst")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.iq_stValve.pv_xAlmRst=")
@@ -40463,7 +40463,7 @@ record(bo, "MR1K3:TXI:VGC:1:ALM_RST") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K3:TXI:VGC:1:FORCE_OPN_RBV") {
+record(bi, "MR1K3:VGC:1:FORCE_OPN_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...Valve.pv_xOvrdOpn")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40474,7 +40474,7 @@ record(bi, "MR1K3:TXI:VGC:1:FORCE_OPN_RBV") {
   field(ONAM, "OPEN")
 }
 
-record(bo, "MR1K3:TXI:VGC:1:FORCE_OPN") {
+record(bo, "MR1K3:VGC:1:FORCE_OPN") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...Valve.pv_xOvrdOpn")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.iq_stValve.pv_xOvrdOpn=")
@@ -40483,7 +40483,7 @@ record(bo, "MR1K3:TXI:VGC:1:FORCE_OPN") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K3:TXI:VGC:1:OVRD_ON_RBV") {
+record(bi, "MR1K3:VGC:1:OVRD_ON_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.xOverrideMode")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40494,7 +40494,7 @@ record(bi, "MR1K3:TXI:VGC:1:OVRD_ON_RBV") {
   field(ONAM, "Override OFF")
 }
 
-record(bo, "MR1K3:TXI:VGC:1:OVRD_ON") {
+record(bo, "MR1K3:VGC:1:OVRD_ON") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.xOverrideMode")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.iq_stValve.xOverrideMode=")
@@ -40503,7 +40503,7 @@ record(bo, "MR1K3:TXI:VGC:1:OVRD_ON") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K3:TXI:VGC:1:OPN_DI_RBV") {
+record(bi, "MR1K3:VGC:1:OPN_DI_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M..._stValve.i_xOpnLS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40514,7 +40514,7 @@ record(bi, "MR1K3:TXI:VGC:1:OPN_DI_RBV") {
   field(ONAM, "OPEN")
 }
 
-record(bi, "MR1K3:TXI:VGC:1:CLS_DI_RBV") {
+record(bi, "MR1K3:VGC:1:CLS_DI_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M..._stValve.i_xClsLS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40525,7 +40525,7 @@ record(bi, "MR1K3:TXI:VGC:1:CLS_DI_RBV") {
   field(ONAM, "CLOSE")
 }
 
-record(bi, "MR1K3:TXI:VGC:1:OPN_DO_RBV") {
+record(bi, "MR1K3:VGC:1:OPN_DO_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...stValve.q_xOPN_DO")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40536,7 +40536,7 @@ record(bi, "MR1K3:TXI:VGC:1:OPN_DO_RBV") {
   field(ONAM, "TRUE")
 }
 
-record(bi, "MR1K3:TXI:VGC:1:EXT_ILK_OK_RBV") {
+record(bi, "MR1K3:VGC:1:EXT_ILK_OK_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...q_stValve.xEXT_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40547,7 +40547,7 @@ record(bi, "MR1K3:TXI:VGC:1:EXT_ILK_OK_RBV") {
   field(ONAM, "OK")
 }
 
-record(bi, "MR1K3:TXI:VGC:1:DP_OK_RBV") {
+record(bi, "MR1K3:VGC:1:DP_OK_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...iq_stValve.xDP_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40558,7 +40558,7 @@ record(bi, "MR1K3:TXI:VGC:1:DP_OK_RBV") {
   field(ONAM, "DP OK")
 }
 
-record(bi, "MR1K3:TXI:VGC:1:OPN_OK_RBV") {
+record(bi, "MR1K3:VGC:1:OPN_OK_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...q_stValve.xOPN_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40569,7 +40569,7 @@ record(bi, "MR1K3:TXI:VGC:1:OPN_OK_RBV") {
   field(ONAM, "OPN ILK OK")
 }
 
-record(ai, "MR1K3:TXI:VGC:1:AT_VAC_SP_RBV") {
+record(ai, "MR1K3:VGC:1:AT_VAC_SP_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.rAT_VAC_SP")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40580,7 +40580,7 @@ record(ai, "MR1K3:TXI:VGC:1:AT_VAC_SP_RBV") {
   info(autosaveFields_pass0, "PREC")
 }
 
-record(ao, "MR1K3:TXI:VGC:1:AT_VAC_SP") {
+record(ao, "MR1K3:VGC:1:AT_VAC_SP") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.rAT_VAC_SP")
   field(DTYP, "asynFloat64")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.iq_stValve.rAT_VAC_SP=")
@@ -40588,7 +40588,7 @@ record(ao, "MR1K3:TXI:VGC:1:AT_VAC_SP") {
   info(autosaveFields_pass0, "PREC VAL")
 }
 
-record(ai, "MR1K3:TXI:VGC:1:AT_VAC_HYS_RBV") {
+record(ai, "MR1K3:VGC:1:AT_VAC_HYS_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...Valve.rAT_VAC_HYS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40599,7 +40599,7 @@ record(ai, "MR1K3:TXI:VGC:1:AT_VAC_HYS_RBV") {
   info(autosaveFields_pass0, "PREC")
 }
 
-record(ao, "MR1K3:TXI:VGC:1:AT_VAC_HYS") {
+record(ao, "MR1K3:VGC:1:AT_VAC_HYS") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...Valve.rAT_VAC_HYS")
   field(DTYP, "asynFloat64")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.iq_stValve.rAT_VAC_HYS=")
@@ -40607,7 +40607,7 @@ record(ao, "MR1K3:TXI:VGC:1:AT_VAC_HYS") {
   info(autosaveFields_pass0, "PREC VAL")
 }
 
-record(ai, "MR1K3:TXI:VGC:1:HYST_PERC_RBV") {
+record(ai, "MR1K3:VGC:1:HYST_PERC_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.rHYST_PERC")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40618,7 +40618,7 @@ record(ai, "MR1K3:TXI:VGC:1:HYST_PERC_RBV") {
   info(autosaveFields_pass0, "PREC")
 }
 
-record(ao, "MR1K3:TXI:VGC:1:HYST_PERC") {
+record(ao, "MR1K3:VGC:1:HYST_PERC") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.rHYST_PERC")
   field(DTYP, "asynFloat64")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.iq_stValve.rHYST_PERC=")
@@ -40626,7 +40626,7 @@ record(ao, "MR1K3:TXI:VGC:1:HYST_PERC") {
   info(autosaveFields_pass0, "PREC VAL")
 }
 
-record(bi, "MR1K3:TXI:VGC:1:AT_VAC_RBV") {
+record(bi, "MR1K3:VGC:1:AT_VAC_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...q_stValve.xAT_VAC")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40637,7 +40637,7 @@ record(bi, "MR1K3:TXI:VGC:1:AT_VAC_RBV") {
   field(ONAM, "AT VAC")
 }
 
-record(bi, "MR1K3:TXI:VGC:1:ERR_DifPres_RBV") {
+record(bi, "MR1K3:VGC:1:ERR_DifPres_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...alve.xERR_DifPres")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40648,7 +40648,7 @@ record(bi, "MR1K3:TXI:VGC:1:ERR_DifPres_RBV") {
   field(ONAM, "Diffrential error present")
 }
 
-record(bo, "MR1K3:TXI:VGC:1:ERR_DifPres") {
+record(bo, "MR1K3:VGC:1:ERR_DifPres") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...alve.xERR_DifPres")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.iq_stValve.xERR_DifPres=")
@@ -40657,7 +40657,7 @@ record(bo, "MR1K3:TXI:VGC:1:ERR_DifPres") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K3:TXI:VGC:1:ERR_SP_RBV") {
+record(bi, "MR1K3:VGC:1:ERR_SP_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...q_stValve.xERR_SP")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40668,7 +40668,7 @@ record(bi, "MR1K3:TXI:VGC:1:ERR_SP_RBV") {
   field(ONAM, "Setpoint error present")
 }
 
-record(bo, "MR1K3:TXI:VGC:1:ERR_SP") {
+record(bo, "MR1K3:VGC:1:ERR_SP") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...q_stValve.xERR_SP")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.iq_stValve.xERR_SP=")
@@ -40677,7 +40677,7 @@ record(bo, "MR1K3:TXI:VGC:1:ERR_SP") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K3:TXI:VGC:1:ERR_Ext_RBV") {
+record(bi, "MR1K3:VGC:1:ERR_Ext_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.xERR_ExtFault")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40688,7 +40688,7 @@ record(bi, "MR1K3:TXI:VGC:1:ERR_Ext_RBV") {
   field(ONAM, "External error present")
 }
 
-record(bo, "MR1K3:TXI:VGC:1:ERR_Ext") {
+record(bo, "MR1K3:VGC:1:ERR_Ext") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.xERR_ExtFault")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.iq_stValve.xERR_ExtFault=")
@@ -40697,7 +40697,7 @@ record(bo, "MR1K3:TXI:VGC:1:ERR_Ext") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K3:TXI:VGC:1:ERROR_RBV") {
+record(bi, "MR1K3:VGC:1:ERROR_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.bErrorPresent")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40708,7 +40708,7 @@ record(bi, "MR1K3:TXI:VGC:1:ERROR_RBV") {
   field(ONAM, "ERROR PRESENT")
 }
 
-record(bo, "MR1K3:TXI:VGC:1:ERROR") {
+record(bo, "MR1K3:VGC:1:ERROR") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.bErrorPresent")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.iq_stValve.bErrorPresent=")
@@ -40717,7 +40717,7 @@ record(bo, "MR1K3:TXI:VGC:1:ERROR") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(waveform, "MR1K3:TXI:VGC:1:ErrMsg_RBV") {
+record(waveform, "MR1K3:VGC:1:ErrMsg_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.sErrorMessage")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40728,7 +40728,7 @@ record(waveform, "MR1K3:TXI:VGC:1:ErrMsg_RBV") {
   field(NELM, "80")
 }
 
-record(waveform, "MR1K3:TXI:VGC:1:ErrMsg") {
+record(waveform, "MR1K3:VGC:1:ErrMsg") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.sErrorMessage")
   field(DTYP, "asynInt8ArrayOut")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.iq_stValve.sErrorMessage=")
@@ -40737,7 +40737,7 @@ record(waveform, "MR1K3:TXI:VGC:1:ErrMsg") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(mbbi, "MR1K3:TXI:VGC:1:STATE_RBV") {
+record(mbbi, "MR1K3:VGC:1:STATE_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.eVGC_State")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40756,7 +40756,7 @@ record(mbbi, "MR1K3:TXI:VGC:1:STATE_RBV") {
   field(FRST, "Ext Fault")
 }
 
-record(mbbi, "MR1K3:TXI:VGC:1:POS_STATE_RBV") {
+record(mbbi, "MR1K3:VGC:1:POS_STATE_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...iq_stValve.eState")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40773,7 +40773,7 @@ record(mbbi, "MR1K3:TXI:VGC:1:POS_STATE_RBV") {
   field(THST, "INVALID")
 }
 
-record(bi, "MR1K3:TXI:VGC:1:MPS_FAULT_OK_RBV") {
+record(bi, "MR1K3:VGC:1:MPS_FAULT_OK_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...TXI_VGC_1.xMPS_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -40784,7 +40784,7 @@ record(bi, "MR1K3:TXI:VGC:1:MPS_FAULT_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "MR1K3:TXI:VGC:1:MPS_FAULT_OK") {
+record(bo, "MR1K3:VGC:1:MPS_FAULT_OK") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...TXI_VGC_1.xMPS_OK")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.xMPS_OK=")
@@ -42593,7 +42593,7 @@ record(bo, "TV3K0:VGC:1:MPS_FAULT_OK") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K4:SOMS:VGC:1:Dis_DPIlk_RBV") {
+record(bi, "MR1K4:VGC:1:Dis_DPIlk_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...GC_1.i_xDis_DPIlk")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42604,7 +42604,7 @@ record(bi, "MR1K4:SOMS:VGC:1:Dis_DPIlk_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "MR1K4:SOMS:VGC:1:Dis_DPIlk") {
+record(bo, "MR1K4:VGC:1:Dis_DPIlk") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...GC_1.i_xDis_DPIlk")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.i_xDis_DPIlk=")
@@ -42613,7 +42613,7 @@ record(bo, "MR1K4:SOMS:VGC:1:Dis_DPIlk") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K4:SOMS:VGC:1:EPS_OK_RBV") {
+record(bi, "MR1K4:VGC:1:EPS_OK_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...S_VGC_1.i_xEPS_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42624,7 +42624,7 @@ record(bi, "MR1K4:SOMS:VGC:1:EPS_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "MR1K4:SOMS:VGC:1:EPS_OK") {
+record(bo, "MR1K4:VGC:1:EPS_OK") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...S_VGC_1.i_xEPS_OK")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.i_xEPS_OK=")
@@ -42633,7 +42633,7 @@ record(bo, "MR1K4:SOMS:VGC:1:EPS_OK") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K4:SOMS:VGC:1:MPS_OK_RBV") {
+record(bi, "MR1K4:VGC:1:MPS_OK_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M..._VGC_1.i_xPMPS_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42644,7 +42644,7 @@ record(bi, "MR1K4:SOMS:VGC:1:MPS_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "MR1K4:SOMS:VGC:1:MPS_OK") {
+record(bo, "MR1K4:VGC:1:MPS_OK") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M..._VGC_1.i_xPMPS_OK")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.i_xPMPS_OK=")
@@ -42653,7 +42653,7 @@ record(bo, "MR1K4:SOMS:VGC:1:MPS_OK") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K4:SOMS:VGC:1:FF_Reset_RBV") {
+record(bi, "MR1K4:VGC:1:FF_Reset_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...MS_VGC_1.i_xReset")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42664,7 +42664,7 @@ record(bi, "MR1K4:SOMS:VGC:1:FF_Reset_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "MR1K4:SOMS:VGC:1:FF_Reset") {
+record(bo, "MR1K4:VGC:1:FF_Reset") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...MS_VGC_1.i_xReset")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.i_xReset=")
@@ -42673,7 +42673,7 @@ record(bo, "MR1K4:SOMS:VGC:1:FF_Reset") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K4:SOMS:VGC:1:OPN_SW_RBV") {
+record(bi, "MR1K4:VGC:1:OPN_SW_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.pv_xOPN_SW")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42684,7 +42684,7 @@ record(bi, "MR1K4:SOMS:VGC:1:OPN_SW_RBV") {
   field(ONAM, "OPEN")
 }
 
-record(bo, "MR1K4:SOMS:VGC:1:OPN_SW") {
+record(bo, "MR1K4:VGC:1:OPN_SW") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.pv_xOPN_SW")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.iq_stValve.pv_xOPN_SW=")
@@ -42693,7 +42693,7 @@ record(bo, "MR1K4:SOMS:VGC:1:OPN_SW") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K4:SOMS:VGC:1:ALM_RST_RBV") {
+record(bi, "MR1K4:VGC:1:ALM_RST_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.pv_xAlmRst")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42704,7 +42704,7 @@ record(bi, "MR1K4:SOMS:VGC:1:ALM_RST_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "MR1K4:SOMS:VGC:1:ALM_RST") {
+record(bo, "MR1K4:VGC:1:ALM_RST") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.pv_xAlmRst")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.iq_stValve.pv_xAlmRst=")
@@ -42713,7 +42713,7 @@ record(bo, "MR1K4:SOMS:VGC:1:ALM_RST") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K4:SOMS:VGC:1:FORCE_OPN_RBV") {
+record(bi, "MR1K4:VGC:1:FORCE_OPN_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...Valve.pv_xOvrdOpn")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42724,7 +42724,7 @@ record(bi, "MR1K4:SOMS:VGC:1:FORCE_OPN_RBV") {
   field(ONAM, "OPEN")
 }
 
-record(bo, "MR1K4:SOMS:VGC:1:FORCE_OPN") {
+record(bo, "MR1K4:VGC:1:FORCE_OPN") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...Valve.pv_xOvrdOpn")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.iq_stValve.pv_xOvrdOpn=")
@@ -42733,7 +42733,7 @@ record(bo, "MR1K4:SOMS:VGC:1:FORCE_OPN") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K4:SOMS:VGC:1:OVRD_ON_RBV") {
+record(bi, "MR1K4:VGC:1:OVRD_ON_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.xOverrideMode")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42744,7 +42744,7 @@ record(bi, "MR1K4:SOMS:VGC:1:OVRD_ON_RBV") {
   field(ONAM, "Override OFF")
 }
 
-record(bo, "MR1K4:SOMS:VGC:1:OVRD_ON") {
+record(bo, "MR1K4:VGC:1:OVRD_ON") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.xOverrideMode")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.iq_stValve.xOverrideMode=")
@@ -42753,7 +42753,7 @@ record(bo, "MR1K4:SOMS:VGC:1:OVRD_ON") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K4:SOMS:VGC:1:OPN_DI_RBV") {
+record(bi, "MR1K4:VGC:1:OPN_DI_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M..._stValve.i_xOpnLS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42764,7 +42764,7 @@ record(bi, "MR1K4:SOMS:VGC:1:OPN_DI_RBV") {
   field(ONAM, "OPEN")
 }
 
-record(bi, "MR1K4:SOMS:VGC:1:CLS_DI_RBV") {
+record(bi, "MR1K4:VGC:1:CLS_DI_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M..._stValve.i_xClsLS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42775,7 +42775,7 @@ record(bi, "MR1K4:SOMS:VGC:1:CLS_DI_RBV") {
   field(ONAM, "CLOSE")
 }
 
-record(bi, "MR1K4:SOMS:VGC:1:OPN_DO_RBV") {
+record(bi, "MR1K4:VGC:1:OPN_DO_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...stValve.q_xOPN_DO")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42786,7 +42786,7 @@ record(bi, "MR1K4:SOMS:VGC:1:OPN_DO_RBV") {
   field(ONAM, "TRUE")
 }
 
-record(bi, "MR1K4:SOMS:VGC:1:EXT_ILK_OK_RBV") {
+record(bi, "MR1K4:VGC:1:EXT_ILK_OK_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...q_stValve.xEXT_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42797,7 +42797,7 @@ record(bi, "MR1K4:SOMS:VGC:1:EXT_ILK_OK_RBV") {
   field(ONAM, "OK")
 }
 
-record(bi, "MR1K4:SOMS:VGC:1:DP_OK_RBV") {
+record(bi, "MR1K4:VGC:1:DP_OK_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...iq_stValve.xDP_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42808,7 +42808,7 @@ record(bi, "MR1K4:SOMS:VGC:1:DP_OK_RBV") {
   field(ONAM, "DP OK")
 }
 
-record(bi, "MR1K4:SOMS:VGC:1:OPN_OK_RBV") {
+record(bi, "MR1K4:VGC:1:OPN_OK_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...q_stValve.xOPN_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42819,7 +42819,7 @@ record(bi, "MR1K4:SOMS:VGC:1:OPN_OK_RBV") {
   field(ONAM, "OPN ILK OK")
 }
 
-record(ai, "MR1K4:SOMS:VGC:1:AT_VAC_SP_RBV") {
+record(ai, "MR1K4:VGC:1:AT_VAC_SP_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.rAT_VAC_SP")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42830,7 +42830,7 @@ record(ai, "MR1K4:SOMS:VGC:1:AT_VAC_SP_RBV") {
   info(autosaveFields_pass0, "PREC")
 }
 
-record(ao, "MR1K4:SOMS:VGC:1:AT_VAC_SP") {
+record(ao, "MR1K4:VGC:1:AT_VAC_SP") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.rAT_VAC_SP")
   field(DTYP, "asynFloat64")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.iq_stValve.rAT_VAC_SP=")
@@ -42838,7 +42838,7 @@ record(ao, "MR1K4:SOMS:VGC:1:AT_VAC_SP") {
   info(autosaveFields_pass0, "PREC VAL")
 }
 
-record(ai, "MR1K4:SOMS:VGC:1:AT_VAC_HYS_RBV") {
+record(ai, "MR1K4:VGC:1:AT_VAC_HYS_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...Valve.rAT_VAC_HYS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42849,7 +42849,7 @@ record(ai, "MR1K4:SOMS:VGC:1:AT_VAC_HYS_RBV") {
   info(autosaveFields_pass0, "PREC")
 }
 
-record(ao, "MR1K4:SOMS:VGC:1:AT_VAC_HYS") {
+record(ao, "MR1K4:VGC:1:AT_VAC_HYS") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...Valve.rAT_VAC_HYS")
   field(DTYP, "asynFloat64")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.iq_stValve.rAT_VAC_HYS=")
@@ -42857,7 +42857,7 @@ record(ao, "MR1K4:SOMS:VGC:1:AT_VAC_HYS") {
   info(autosaveFields_pass0, "PREC VAL")
 }
 
-record(ai, "MR1K4:SOMS:VGC:1:HYST_PERC_RBV") {
+record(ai, "MR1K4:VGC:1:HYST_PERC_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.rHYST_PERC")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42868,7 +42868,7 @@ record(ai, "MR1K4:SOMS:VGC:1:HYST_PERC_RBV") {
   info(autosaveFields_pass0, "PREC")
 }
 
-record(ao, "MR1K4:SOMS:VGC:1:HYST_PERC") {
+record(ao, "MR1K4:VGC:1:HYST_PERC") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.rHYST_PERC")
   field(DTYP, "asynFloat64")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.iq_stValve.rHYST_PERC=")
@@ -42876,7 +42876,7 @@ record(ao, "MR1K4:SOMS:VGC:1:HYST_PERC") {
   info(autosaveFields_pass0, "PREC VAL")
 }
 
-record(bi, "MR1K4:SOMS:VGC:1:AT_VAC_RBV") {
+record(bi, "MR1K4:VGC:1:AT_VAC_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...q_stValve.xAT_VAC")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42887,7 +42887,7 @@ record(bi, "MR1K4:SOMS:VGC:1:AT_VAC_RBV") {
   field(ONAM, "AT VAC")
 }
 
-record(bi, "MR1K4:SOMS:VGC:1:ERR_DifPres_RBV") {
+record(bi, "MR1K4:VGC:1:ERR_DifPres_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...alve.xERR_DifPres")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42898,7 +42898,7 @@ record(bi, "MR1K4:SOMS:VGC:1:ERR_DifPres_RBV") {
   field(ONAM, "Diffrential error present")
 }
 
-record(bo, "MR1K4:SOMS:VGC:1:ERR_DifPres") {
+record(bo, "MR1K4:VGC:1:ERR_DifPres") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...alve.xERR_DifPres")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.iq_stValve.xERR_DifPres=")
@@ -42907,7 +42907,7 @@ record(bo, "MR1K4:SOMS:VGC:1:ERR_DifPres") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K4:SOMS:VGC:1:ERR_SP_RBV") {
+record(bi, "MR1K4:VGC:1:ERR_SP_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...q_stValve.xERR_SP")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42918,7 +42918,7 @@ record(bi, "MR1K4:SOMS:VGC:1:ERR_SP_RBV") {
   field(ONAM, "Setpoint error present")
 }
 
-record(bo, "MR1K4:SOMS:VGC:1:ERR_SP") {
+record(bo, "MR1K4:VGC:1:ERR_SP") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...q_stValve.xERR_SP")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.iq_stValve.xERR_SP=")
@@ -42927,7 +42927,7 @@ record(bo, "MR1K4:SOMS:VGC:1:ERR_SP") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K4:SOMS:VGC:1:ERR_Ext_RBV") {
+record(bi, "MR1K4:VGC:1:ERR_Ext_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.xERR_ExtFault")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42938,7 +42938,7 @@ record(bi, "MR1K4:SOMS:VGC:1:ERR_Ext_RBV") {
   field(ONAM, "External error present")
 }
 
-record(bo, "MR1K4:SOMS:VGC:1:ERR_Ext") {
+record(bo, "MR1K4:VGC:1:ERR_Ext") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.xERR_ExtFault")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.iq_stValve.xERR_ExtFault=")
@@ -42947,7 +42947,7 @@ record(bo, "MR1K4:SOMS:VGC:1:ERR_Ext") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "MR1K4:SOMS:VGC:1:ERROR_RBV") {
+record(bi, "MR1K4:VGC:1:ERROR_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.bErrorPresent")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42958,7 +42958,7 @@ record(bi, "MR1K4:SOMS:VGC:1:ERROR_RBV") {
   field(ONAM, "ERROR PRESENT")
 }
 
-record(bo, "MR1K4:SOMS:VGC:1:ERROR") {
+record(bo, "MR1K4:VGC:1:ERROR") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.bErrorPresent")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.iq_stValve.bErrorPresent=")
@@ -42967,7 +42967,7 @@ record(bo, "MR1K4:SOMS:VGC:1:ERROR") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(waveform, "MR1K4:SOMS:VGC:1:ErrMsg_RBV") {
+record(waveform, "MR1K4:VGC:1:ErrMsg_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.sErrorMessage")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -42978,7 +42978,7 @@ record(waveform, "MR1K4:SOMS:VGC:1:ErrMsg_RBV") {
   field(NELM, "80")
 }
 
-record(waveform, "MR1K4:SOMS:VGC:1:ErrMsg") {
+record(waveform, "MR1K4:VGC:1:ErrMsg") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...lve.sErrorMessage")
   field(DTYP, "asynInt8ArrayOut")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.iq_stValve.sErrorMessage=")
@@ -42987,7 +42987,7 @@ record(waveform, "MR1K4:SOMS:VGC:1:ErrMsg") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(mbbi, "MR1K4:SOMS:VGC:1:STATE_RBV") {
+record(mbbi, "MR1K4:VGC:1:STATE_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...tValve.eVGC_State")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -43006,7 +43006,7 @@ record(mbbi, "MR1K4:SOMS:VGC:1:STATE_RBV") {
   field(FRST, "Ext Fault")
 }
 
-record(mbbi, "MR1K4:SOMS:VGC:1:POS_STATE_RBV") {
+record(mbbi, "MR1K4:VGC:1:POS_STATE_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...iq_stValve.eState")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -43023,7 +43023,7 @@ record(mbbi, "MR1K4:SOMS:VGC:1:POS_STATE_RBV") {
   field(THST, "INVALID")
 }
 
-record(bi, "MR1K4:SOMS:VGC:1:MPS_FAULT_OK_RBV") {
+record(bi, "MR1K4:VGC:1:MPS_FAULT_OK_RBV") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...OMS_VGC_1.xMPS_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -43034,7 +43034,7 @@ record(bi, "MR1K4:SOMS:VGC:1:MPS_FAULT_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "MR1K4:SOMS:VGC:1:MPS_FAULT_OK") {
+record(bo, "MR1K4:VGC:1:MPS_FAULT_OK") {
   field(DESC, "ads:GVL_SXR_VAC.fb_M...OMS_VGC_1.xMPS_OK")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.xMPS_OK=")

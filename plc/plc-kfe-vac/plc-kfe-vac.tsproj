@@ -6037,13 +6037,13 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 						<Fmmu>0000000000000000000f00020100000001000000000000000000000000000000</Fmmu>
 						<Fmmu>0000000000000000001000010100000002000000000000000000000000000000</Fmmu>
 						<Pdo Name="Channel 1" Index="#x1a00" Flags="#x0011" SyncMan="1">
-							<Entry Name="GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xOpnLS" Index="#x6000" Sub="#x01">
+							<Entry Name="GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xOpnLS" Index="#x6000" Sub="#x01">
 								<Type>BIT</Type>
 								<Comment><![CDATA[GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xOpnLS]]></Comment>
 							</Entry>
 						</Pdo>
 						<Pdo Name="Channel 2" Index="#x1a01" Flags="#x0011" SyncMan="1">
-							<Entry Name="GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xClsLS" Index="#x6010" Sub="#x01">
+							<Entry Name="GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xClsLS" Index="#x6010" Sub="#x01">
 								<Type>BIT</Type>
 								<Comment><![CDATA[GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_1.i_xClsLS]]></Comment>
 							</Entry>
@@ -6059,13 +6059,13 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 							</Entry>
 						</Pdo>
 						<Pdo Name="Channel 5" Index="#x1a04" Flags="#x0011" SyncMan="1">
-							<Entry Name="GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xOpnLS" Index="#x6040" Sub="#x01">
+							<Entry Name="GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xOpnLS" Index="#x6040" Sub="#x01">
 								<Type>BIT</Type>
 								<Comment><![CDATA[GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xOpnLS]]></Comment>
 							</Entry>
 						</Pdo>
 						<Pdo Name="Channel 6" Index="#x1a05" Flags="#x0011" SyncMan="1">
-							<Entry Name="GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xClsLS" Index="#x6050" Sub="#x01">
+							<Entry Name="GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xClsLS" Index="#x6050" Sub="#x01">
 								<Type>BIT</Type>
 								<Comment><![CDATA[GVL_SXR_VAC.fb_EM1K0_XGMD_VGC_2.i_xClsLS]]></Comment>
 							</Entry>
@@ -18540,6 +18540,12 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_PA1K0.i_iPRESS" VarB="AI Standard Channel 2^GVL_SXR_VAC.fb_PA1K0.i_iPRESS"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_PA1K0_PIP_1.i_iPRESS" VarB="AI Standard Channel 3^GVL_SXR_VAC.fb_PA1K0_PIP_1.i_iPRESS"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_PCPM3B_PIP_1.i_iPRESS" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_PCPM3B_PIP_1.i_iPRESS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EP2338_04_00">
+				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xClsLS"/>
+				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xOpnLS"/>
+				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xClsLS" VarB="Channel 6^GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xClsLS"/>
+				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xOpnLS" VarB="Channel 5^GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xOpnLS"/>
 			</OwnerB>
 			<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EP2338_05_00">
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VGC_1.i_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_TV2K0_VGC_1.i_xClsLS"/>

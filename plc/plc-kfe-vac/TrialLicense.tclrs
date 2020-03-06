@@ -2,9 +2,9 @@
 <TcLicenseInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2011/11/TcLicenseInfo">
 	<LicenseInfo>
 		<SystemId>{24ABCED8-38BD-4777-35F9-841365E3A837}</SystemId>
-		<IssueTime>2020-02-23T22:17:00</IssueTime>
-		<ExpireTime>2020-03-02T00:00:00</ExpireTime>
-		<LicenseKey>0bc23cfe813cb7a08a57b997346f21a5f1d10cec434553805c8d7a74dccd3c1be6bbd49df95a1ba9c1cba9eeb93b8075a1d088d4c4965bfd186f195a11234d8b3e47917536f2ab105e908a3b81b9a6a04d5e04aaeffb8e4aee0662768ae226bf645893b39ad94307574b930b0b44b129acbaf6d4c0de6b7ae1027774b44d9d5735312c14e61571c170e746d385db9482f3fa923a567b11f302413292ace81895c4f6db675e64a52cef1ff223a45d105911b3b571b2bb33564644baf5a89f69a290b62dc9002dae68af1566f39ae1376ce02559d8b48f7d2455fbd964da2f18c3fb62e51b692849e65a7beea7b6cfcac0070bae142143aff369448e7f352929d1</LicenseKey>
+		<IssueTime>2020-03-03T01:55:00</IssueTime>
+		<ExpireTime>2020-03-11T00:00:00</ExpireTime>
+		<LicenseKey>003bb2f95377360b5da33bf857e0e612939f9cf7c0793b0931b223351991ab732737e0f303b112a8d750d64ca317f6f803356dd87c25a180e5269ad7ab459b7420ebe88c1425868072ab4a0d44113c91339e8b48f2838264f46bb1cb3cab58709e0005f8e698562fd480ce6804b4e067fb462d68774c489f4d997bd0ed6c33ec05689e657b76772ebe253c0eea7e0ade303951812b19f9cd8fc57baa52cf2b39012f47f2713d9c3b267f66ba6213caf2fbe85246d8c27a0f166f51fbc3c42d98d69a2a71ec3eef411daa854f38ad1b681ba9502637bb09ef3b653773d7058049ddbb407a5f91d40e7025f927ac86efd01702c5ac8c201063a8289c10ae4558e6</LicenseKey>
 		<License>
 			<LicenseId>{4C256767-E6E6-4AF5-BD68-9F7ABAD0C200}</LicenseId>
 			<Name>TC3 ADS</Name>
@@ -35,11 +35,6 @@
 			<LicenseId>{B27B051A-CA6A-42EA-833E-82CC92903D83}</LicenseId>
 			<Name>TC3 UML</Name>
 			<OrderNo>TF1910</OrderNo>
-		</License>
-		<License>
-			<LicenseId>{777F1598-583B-4503-99BB-7C02E0ABD97E}</LicenseId>
-			<Name>TC3 Controller Toolbox</Name>
-			<OrderNo>TF4100</OrderNo>
 		</License>
 		<License>
 			<LicenseId>{D59230D3-7C55-4138-859C-234C1C6CFDA8}</LicenseId>

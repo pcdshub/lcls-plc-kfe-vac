@@ -2889,6 +2889,7 @@ IonPump[state=&quot;FAULT&quot;] #icon {
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
       </widget>
+      <zorder>AT1K0_box</zorder>
       <zorder>SL1K0_box</zorder>
       <zorder>TV2K0_box</zorder>
       <zorder>PA1K0_box</zorder>
@@ -2952,7 +2953,6 @@ IonPump[state=&quot;FAULT&quot;] #icon {
       <zorder>PneumaticValve_2</zorder>
       <zorder>RoughGauge_2</zorder>
       <zorder>ColdCathodeGauge_3</zorder>
-      <zorder>PneumaticValve_3</zorder>
       <zorder>PneumaticValve_4</zorder>
       <zorder>PneumaticValve_5</zorder>
       <zorder>ColdCathodeGauge_4</zorder>
@@ -2996,8 +2996,8 @@ IonPump[state=&quot;FAULT&quot;] #icon {
       <zorder>ColdCathodeGauge_5</zorder>
       <zorder>PA1K0_label</zorder>
       <zorder>TV3K0_label</zorder>
-      <zorder>AT1K0_box</zorder>
       <zorder>EM2K0_label_2</zorder>
+      <zorder>PneumaticValve_3</zorder>
      </widget>
     </widget>
    </item>

@@ -103,6 +103,7 @@
 			<Licenses>
 				<Target>
 					<ManualSelect>{D59230D3-7C55-4138-859C-234C1C6CFDA8}</ManualSelect>
+					<ManualSelect>{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</ManualSelect>
 				</Target>
 			</Licenses>
 			<Tasks>
@@ -122,9 +123,23 @@
 					<Vars VarGrpType="1">
 						<Name>PlcTask Inputs</Name>
 						<Var>
+							<Name>L2SI_Vacuum_Library_TEST.Global_Variables.g_stSystem.I_EcatMaster1</Name>
+							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
+							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+						</Var>
+						<Var>
 							<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
 							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
 							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+						</Var>
+						<Var>
+							<Name>PRG_DIAGNOSTIC.simHeartbeat</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_RTDSK0_GPI_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+							<Type>INT</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_IM1K0_XTES_GPI_1.i_iPRESS_R</Name>
@@ -133,48 +148,6 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_SL1K0_POWER_GPI_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ Controls and I/Os]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>PRG_DIAGNOSTIC.simHeartbeat</Name>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_SL1K0_POWER_GCC_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ Controls and I/Os]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xOpnLS</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xOpnLS</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>L2SI_Vacuum_Library_TEST.Global_Variables.g_stSystem.I_EcatMaster1</Name>
-							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
-							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_RTDSK0_GPI_1.i_iPRESS_R</Name>
 							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 							<Type>INT</Type>
 						</Var>
@@ -229,7 +202,17 @@
 							<Type>INT</Type>
 						</Var>
 						<Var>
+							<Name>GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ Controls and I/Os]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
 							<Name>GVL_SXR_VAC.fb_PCPM3B_GFS_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ Controls and I/Os]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_SL1K0_POWER_GCC_1.i_iPRESS_R</Name>
 							<Comment><![CDATA[ Controls and I/Os]]></Comment>
 							<Type>INT</Type>
 						</Var>
@@ -303,6 +286,24 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xOpnLS</Name>
+							<Comment><![CDATA[IO]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xOpnLS</Name>
+							<Comment><![CDATA[IO]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xClsLS</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -507,34 +508,22 @@
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.q_xHV_DIS</Name>
-							<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.g_FastFaultOutputK0.q_xFastFaultOut</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_SL1K0_POWER_GCC_1.q_xHV_DIS</Name>
-							<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_GCC_1.q_xHV_DIS</Name>
 							<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
+							<Name>GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.q_xHV_DIS</Name>
+							<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_SXR_VAC.fb_PCPM3B_GFS_1.q_xHV_DIS</Name>
+							<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_SL1K0_POWER_GCC_1.q_xHV_DIS</Name>
 							<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -593,6 +582,14 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.q_xOPN_DO</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -695,6 +692,10 @@
 						<Var>
 							<Name>GVL_SXR_VAC.fb_TV3K0_PIP_1.q_xHVEna_DO</Name>
 							<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.g_FastFaultOutputK0.q_xFastFaultOut</Name>
 							<Type>BOOL</Type>
 						</Var>
 					</Vars>

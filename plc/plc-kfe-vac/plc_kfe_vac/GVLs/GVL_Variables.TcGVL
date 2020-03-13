@@ -12,6 +12,9 @@ xSystemOverrideMode : BOOL; (* Global system override for the prototype section*
 {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO (EL2202)]^Channel 1^Output'}
 g_FastFaultOutputK0  :   FB_HardwareFFOutput;
 
+
+fbLogHandler : FB_loghandler;
+
 END_VAR
 ]]></Declaration>
   </GVL>

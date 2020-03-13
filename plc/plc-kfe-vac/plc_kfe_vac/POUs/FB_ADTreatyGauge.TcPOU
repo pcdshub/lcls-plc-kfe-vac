@@ -5,17 +5,39 @@
 VAR_INPUT
 END_VAR
 VAR_OUTPUT
+	{attribute 'pytmc' := '
+    pv: 
+	'}
 	AD_Gauge : ST_VG;
 END_VAR
 VAR
+	//	Setpoint agreed upon w/ AD signified by the signal they send. 
+	rTREATY_SIGNAL_PRESS : REAL := 5E-6;
+	
+	// Presumed pressure if AD's signal is not received. 
+	rNO_SIGNAL_PRESS : REAL := 760;
+	
+	// Input from AD's system indicating pressure belopw setpoint. 
 	i_xAD_Press_OK AT %I* : BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[IF i_xAD_Press_OK = TRUE THEN
+	AD_Gauge.rPRESS := rTREATY_SIGNAL_PRESS;
+	AD_Gauge.xPRESS_OK := TRUE; 
+ELSE
+	AD_Gauge.rPRESS := rNO_SIGNAL_PRESS;
+	AD_Gauge.xPRESS_OK := FALSE; 
+END_IF]]></ST>
     </Implementation>
     <LineIds Name="FB_ADTreatyGauge">
       <LineId Id="9" Count="0" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="20" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

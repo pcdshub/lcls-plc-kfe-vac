@@ -3050,7 +3050,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 								</Entry>
 							</Pdo>
 							<Pdo Name="Channel 2" Index="#x1601" InOut="1" Flags="#x0011" SyncMan="0">
-								<Entry Name="GVL_SXR_VAC.fb_IM2K0_XTES_GCC_1.q_xHV_DIS" Index="#x7010" Sub="#x01">
+								<Entry Name="GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.q_xHV_DIS" Index="#x7010" Sub="#x01">
 									<Type>BIT</Type>
 									<Comment><![CDATA[GVL_SXR_VAC.fb_IM2K0_XTES_GCC_1.q_xHV_DIS]]></Comment>
 								</Entry>
@@ -3061,7 +3061,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 								</Entry>
 							</Pdo>
 							<Pdo Name="Channel 4" Index="#x1603" InOut="1" Flags="#x0011" SyncMan="0">
-								<Entry Name="GVL_SXR_VAC.fb_SL1K0_GCC_1.q_xHV_DIS" Index="#x7030" Sub="#x01">
+								<Entry Name="GVL_SXR_VAC.fb_SL1K0_POWER_GCC_1.q_xHV_DIS" Index="#x7030" Sub="#x01">
 									<Type>BIT</Type>
 									<Comment><![CDATA[GVL_SXR_VAC.fb_SL1K0_GCC_1.q_xHV_DIS]]></Comment>
 								</Entry>
@@ -18433,8 +18433,10 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030010"/>
 		<OwnerA Name="TIPC^plc_kfe_vac^plc_kfe_vac Instance">
 			<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EK1100_01_00^=+-EL2798_01_02">
+				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.q_xHV_DIS" VarB="Channel 2^GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.q_xHV_DIS"/>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_PCPM3B_GFS_1.q_xHV_DIS" VarB="Channel 5^GVL_SXR_VAC.fb_PCPM3B_GFS_1.q_xHV_DIS"/>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_RTDSK0_GCC_1.q_xHV_DIS" VarB="Channel 1^GVL_SXR_VAC.fb_RTDSK0_GCC_1.q_xHV_DIS "/>
+				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_SL1K0_POWER_GCC_1.q_xHV_DIS" VarB="Channel 4^GVL_SXR_VAC.fb_SL1K0_POWER_GCC_1.q_xHV_DIS"/>
 			</OwnerB>
 			<OwnerB Name="TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EK1100_01_00^=+-EL2798_01_06">
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.q_xHV_DIS" VarB="Channel 5^GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.q_xHV_DIS"/>

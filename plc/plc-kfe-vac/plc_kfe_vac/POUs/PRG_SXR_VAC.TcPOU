@@ -1,12 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.0">
   <POU Name="PRG_SXR_VAC" Id="{7118719b-3077-4104-9acc-cffb49d6edd3}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_SXR_VAC
 VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
+      <ST><![CDATA[// Treaty interface
+
+fb_TV1K0_INTF_GCC_1(); 
+
+fb_RTDSK0_INTF_VGC_1(TREATY_VGC := fb_RTDSK0_VGC_1.iq_stValve);
+
 // MKS275 Gauges
 
 fb_MR2K3_TXI_GPI_1(PG=>);
@@ -25,7 +30,7 @@ fb_MR1K4_SOMS_GCC_1(PG := fb_MR1K4_SOMS_GPI_1.PG);
 
 // VGC Valves
 
-fb_RTDSK0_VGC_1(i_stUSG := fb_RTDSK0_GCC_1.IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+fb_RTDSK0_VGC_1(i_stUSG := fb_TV1K0_INTF_GCC_1.IG, i_stDSG := fb_RTDSK0_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
 fb_EM1K0_GMD_VGC_1(i_stUSG := fb_RTDSK0_GCC_1.IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
 fb_AT1K0_GAS_VGC_1(i_stUSG := fb_SL1K0_POWER_GCC_1.IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
 fb_EM2K0_XGMD_VGC_1(i_stUSG := , i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
@@ -80,7 +85,12 @@ fb_MR1K1_BEND_GPI_1(PG=>);
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_SXR_VAC">
-      <LineId Id="95" Count="7" />
+      <LineId Id="95" Count="0" />
+      <LineId Id="190" Count="0" />
+      <LineId Id="187" Count="0" />
+      <LineId Id="189" Count="0" />
+      <LineId Id="184" Count="1" />
+      <LineId Id="96" Count="6" />
       <LineId Id="107" Count="7" />
       <LineId Id="119" Count="15" />
       <LineId Id="138" Count="16" />

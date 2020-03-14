@@ -123,18 +123,23 @@
 					<Vars VarGrpType="1">
 						<Name>PlcTask Inputs</Name>
 						<Var>
-							<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
+							<Name>L2SI_Vacuum_Library.Global_Variables.g_stSystem.I_EcatMaster1</Name>
 							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
 							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 						</Var>
 						<Var>
-							<Name>L2SI_Vacuum_Library.Global_Variables.g_stSystem.I_EcatMaster1</Name>
+							<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
 							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
 							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 						</Var>
 						<Var>
 							<Name>PRG_DIAGNOSTIC.simHeartbeat</Name>
 							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV1K0_INTF_GCC_1.i_xAD_Press_OK</Name>
+							<Comment><![CDATA[ Input from AD's system indicating pressure belopw setpoint. ]]></Comment>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_GPI_1.i_iPRESS_R</Name>
@@ -507,6 +512,10 @@
 					</Vars>
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_RTDSK0_INTF_VGC_1.q_xTREATY_VGC_STATUS</Name>
+							<Type>BOOL</Type>
+						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_GCC_1.q_xHV_DIS</Name>
 							<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>

@@ -8,7 +8,7 @@ VAR_OUTPUT
 	{attribute 'pytmc' := '
     pv: 
 	'}
-	AD_Gauge : ST_VG;
+	IG : ST_VG;
 END_VAR
 VAR
 	//	Setpoint agreed upon w/ AD signified by the signal they send. 
@@ -23,11 +23,11 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF i_xAD_Press_OK = TRUE THEN
-	AD_Gauge.rPRESS := rTREATY_SIGNAL_PRESS;
-	AD_Gauge.xPRESS_OK := TRUE; 
+	IG.rPRESS := rTREATY_SIGNAL_PRESS;
+	IG.xPRESS_OK := TRUE; 
 ELSE
-	AD_Gauge.rPRESS := rNO_SIGNAL_PRESS;
-	AD_Gauge.xPRESS_OK := FALSE; 
+	IG.rPRESS := rNO_SIGNAL_PRESS;
+	IG.xPRESS_OK := FALSE; 
 END_IF]]></ST>
     </Implementation>
     <LineIds Name="FB_AD_TREATY_GAUGE">

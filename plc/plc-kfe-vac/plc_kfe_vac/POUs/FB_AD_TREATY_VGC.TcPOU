@@ -3,14 +3,16 @@
   <POU Name="FB_AD_TREATY_VGC" Id="{cc8265de-575f-4e4a-be6e-e4d049fa76c4}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_AD_TREATY_VGC
 VAR_INPUT
+	TREATY_VGC : ST_VGC;
 END_VAR
 VAR_OUTPUT
 END_VAR
 VAR
+	q_xTREATY_VGC_STATUS : AT %Q* BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[q_xTREATY_VGC_STATUS := TREATY_VGC.i_xOpnLS;]]></ST>
     </Implementation>
     <LineIds Name="FB_AD_TREATY_VGC">
       <LineId Id="9" Count="0" />

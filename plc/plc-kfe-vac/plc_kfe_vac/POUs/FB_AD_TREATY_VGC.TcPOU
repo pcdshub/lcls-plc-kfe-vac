@@ -12,7 +12,7 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[q_xTREATY_VGC_STATUS := TREATY_VGC.i_xOpnLS;]]></ST>
+      <ST><![CDATA[q_xTREATY_VGC_STATUS := TREATY_VGC.eState = E_ValvePositionState.OPEN;]]></ST>
     </Implementation>
     <LineIds Name="FB_AD_TREATY_VGC">
       <LineId Id="9" Count="0" />

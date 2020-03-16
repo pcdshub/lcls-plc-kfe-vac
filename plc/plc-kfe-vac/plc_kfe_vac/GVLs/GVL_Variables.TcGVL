@@ -14,6 +14,7 @@ g_FastFaultOutputK0  :   FB_HardwareFFOutput;
 
 
 fbLogHandler : FB_loghandler;
+fbEcatDiagWrapper : FB_EcatDiagWrapper;
 
 END_VAR
 ]]></Declaration>

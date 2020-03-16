@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.0">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <GVL Name="GVL_SXR_VAC" Id="{d38b3a8d-c2e8-4a67-9aeb-873e21370c76}">
     <Declaration><![CDATA[VAR_GLOBAL
 // AD Interface
@@ -105,6 +105,11 @@ fb_IM1K2_PPM_VGC_1 : FB_VGC;
 fb_TV3K0_VGC_1 : FB_VGC;
 {attribute 'pytmc' := ' pv: MR1K4:VGC:1 '}
 fb_MR1K4_SOMS_VGC_1 : FB_VGC;
+
+
+// VFS valves 
+{attribute 'pytmc' := ' pv: MR1K4:VGC:1 '}
+fb_TV2K0_VFS_1 : FB_VFS;
 
 
 // PIP_Gamma Pumps

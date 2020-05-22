@@ -3184,7 +3184,7 @@ IonPump[state=&quot;FAULT&quot;] #icon {
       <widget class="PyDMByteIndicator" name="PyDMByteIndicator">
        <property name="geometry">
         <rect>
-         <x>4440</x>
+         <x>4410</x>
          <y>730</y>
          <width>221</width>
          <height>20</height>
@@ -3230,7 +3230,7 @@ IonPump[state=&quot;FAULT&quot;] #icon {
       <widget class="PyDMCheckbox" name="PyDMCheckbox">
        <property name="geometry">
         <rect>
-         <x>4460</x>
+         <x>4420</x>
          <y>760</y>
          <width>14</width>
          <height>15</height>
@@ -3250,6 +3250,19 @@ IonPump[state=&quot;FAULT&quot;] #icon {
        </property>
        <property name="channel" stdset="0">
         <string>ca://RTDSK0:KFEVAC:SYSOVERRIDE</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>4440</x>
+         <y>760</y>
+         <width>241</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;-- Check this box to disable interlocks</string>
        </property>
       </widget>
       <zorder>IM1K2_box</zorder>
@@ -3368,6 +3381,7 @@ IonPump[state=&quot;FAULT&quot;] #icon {
       <zorder>EM1K0_label_3</zorder>
       <zorder>PyDMByteIndicator</zorder>
       <zorder>PyDMCheckbox</zorder>
+      <zorder>label</zorder>
      </widget>
     </widget>
    </item>

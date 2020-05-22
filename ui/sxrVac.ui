@@ -675,7 +675,7 @@ IonPump[state=&quot;FAULT&quot;] #icon {
       </property>
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>-629</x>
         <y>0</y>
         <width>4704</width>
         <height>829</height>
@@ -3181,6 +3181,77 @@ IonPump[state=&quot;FAULT&quot;] #icon {
         <double>1.000000000000000</double>
        </property>
       </widget>
+      <widget class="PyDMByteIndicator" name="PyDMByteIndicator">
+       <property name="geometry">
+        <rect>
+         <x>4440</x>
+         <y>730</y>
+         <width>221</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="rules" stdset="0">
+        <string>[]</string>
+       </property>
+       <property name="alarmSensitiveContent" stdset="0">
+        <bool>true</bool>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://RTDSK0:KFEVAC:SYSOVERRIDE_RBV</string>
+       </property>
+       <property name="onColor" stdset="0">
+        <color>
+         <red>255</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </property>
+       <property name="offColor" stdset="0">
+        <color>
+         <red>0</red>
+         <green>255</green>
+         <blue>0</blue>
+        </color>
+       </property>
+       <property name="showLabels" stdset="0">
+        <bool>true</bool>
+       </property>
+       <property name="labels" stdset="0">
+        <stringlist>
+         <string>Vacuum interlocks enabled</string>
+         <string>Vacuum Interlocks DISABLED</string>
+         <string></string>
+        </stringlist>
+       </property>
+      </widget>
+      <widget class="PyDMCheckbox" name="PyDMCheckbox">
+       <property name="geometry">
+        <rect>
+         <x>4460</x>
+         <y>760</y>
+         <width>14</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="alarmSensitiveContent" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://RTDSK0:KFEVAC:SYSOVERRIDE</string>
+       </property>
+      </widget>
       <zorder>IM1K2_box</zorder>
       <zorder>EM2K0_box</zorder>
       <zorder>line_23</zorder>
@@ -3295,6 +3366,8 @@ IonPump[state=&quot;FAULT&quot;] #icon {
       <zorder>EM2K0_label_4</zorder>
       <zorder>to_tmo_label</zorder>
       <zorder>EM1K0_label_3</zorder>
+      <zorder>PyDMByteIndicator</zorder>
+      <zorder>PyDMCheckbox</zorder>
      </widget>
     </widget>
    </item>
@@ -3305,6 +3378,16 @@ IonPump[state=&quot;FAULT&quot;] #icon {
    <class>PyDMLabel</class>
    <extends>QLabel</extends>
    <header>pydm.widgets.label</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMByteIndicator</class>
+   <extends>QWidget</extends>
+   <header>pydm.widgets.byte</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMCheckbox</class>
+   <extends>QCheckBox</extends>
+   <header>pydm.widgets.checkbox</header>
   </customwidget>
   <customwidget>
    <class>PyDMDrawingCircle</class>

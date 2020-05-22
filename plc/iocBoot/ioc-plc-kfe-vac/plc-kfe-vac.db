@@ -44904,3 +44904,28 @@ record(mbbi, "TV3K0:PIP:1:STATE_RBV") {
   field(TWST, "RUNNING")
   field(THST, "FAULT")
 }
+
+record(bi, "PLC:KFE:VAC:K0:SYSOVERRIDE_RBV") {
+  field(DESC, "ads:GVL_Variables.xSystemOverrideMode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Variables.xSystemOverrideMode?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "PLC:KFE:VAC:K0:SYSOVERRIDE") {
+  field(DESC, "ads:GVL_Variables.xSystemOverrideMode")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Variables.xSystemOverrideMode=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+
+
+
+

@@ -1,12 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <POU Name="PRG_SXR_VAC" Id="{7118719b-3077-4104-9acc-cffb49d6edd3}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_SXR_VAC
 VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
+      <ST><![CDATA[// Treaty interface
+
+fb_TV1K0_INTF_GCC_1(); 
+
+fb_RTDSK0_INTF_VGC_1(TREATY_VGC := fb_RTDSK0_VGC_1.iq_stValve);
+
 // MKS275 Gauges
 
 fb_MR2K3_TXI_GPI_1(PG=>);
@@ -14,10 +19,6 @@ fb_MR1K3_TXI_GPI_1(PG=>);
 fb_SP1K1_MONO_GPI_1(PG=>);
 fb_TV3K0_GPI_1(PG=>);
 fb_MR1K4_SOMS_GPI_1(PG=>);
-fb_TV1K4_GPI_1(PG=>);
-fb_ST1K4_TEST_GPI_1(PG=>);
-fb_ST2K4_BCS_GPI_1(PG=>);
-fb_PC4K4_XTES_GPI_1(PG=>);
 
 // MKS500_EP Gauges
 
@@ -26,58 +27,51 @@ fb_MR1K3_TXI_GCC_1(PG := fb_MR1K3_TXI_GPI_1.PG);
 fb_SP1K1_MONO_GCC_1(PG := fb_SP1K1_MONO_GPI_1.PG);
 fb_TV3K0_GCC_1(PG := fb_TV3K0_GPI_1.PG);
 fb_MR1K4_SOMS_GCC_1(PG := fb_MR1K4_SOMS_GPI_1.PG);
-fb_TV1K4_GCC_1(PG := fb_TV1K4_GPI_1.PG);
-fb_ST1K4_TEST_GCC_1(PG := fb_ST1K4_TEST_GPI_1.PG);
-fb_ST2K4_BCS_GCC_1(PG := fb_ST2K4_BCS_GPI_1.PG);
-fb_PC4K4_XTES_GCC_1(PG := fb_PC4K4_XTES_GPI_1.PG);
 
 // VGC Valves
 
-fb_RTDSK0_VGC_1(i_stUSG := fb_DMPS_GCC_1.IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
-fb_EM1K0_GMD_VGC_1(i_stUSG := fb_DMPS_GCC_1.IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
-fb_AT1K0_GAS_VGC_1(i_stUSG := fb_SL1K0_GCC_1.IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
-fb_EM1K0_XGMD_VGC_1(i_stUSG := , i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
-fb_EM1K0_XGMD_VGC_2(i_stUSG := , i_stDSG := fb_TV2K0_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
-fb_TV2K0_VGC_1(i_stUSG := fb_TV2K0_GCC_1.IG, i_stDSG := fb_TV2K0_GCC_2.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
-fb_MR1K1_BEND_VGC_1(i_stUSG := fb_PA1K0_GCC_1.IG, i_stDSG := fb_MR1K1_BEND_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
-fb_MR1K3_TXI_VGC_1(i_stUSG := fb_MR1K1_BEND_GCC_1.IG, i_stDSG := fb_MR1K3_TXI_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
-fb_SP1K1_MONO_VGC_1(i_stUSG := fb_MR2K3_TXI_GCC_1.IG, i_stDSG := fb_SP1K1_MONO_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
-fb_SP1K1_MONO_VGC_2(i_stUSG := fb_SP1K1_MONO_GCC_1.IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
-fb_IM1K2_PPM_VGC_1(i_stUSG := fb_MR2K3_TXI_GCC_1.IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
-fb_TV3K0_VGC_1(i_stUSG := fb_MR2K3_TXI_GCC_1.IG, i_stDSG := fb_TV3K0_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
-fb_MR1K4_SOMS_VGC_1(i_stUSG := fb_TV3K0_GCC_1.IG, i_stDSG := fb_MR1K4_SOMS_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
-fb_TV1K4_VGC_1(i_stUSG := fb_MR1K4_SOMS_GCC_1.IG, i_stDSG := fb_TV1K4_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
-fb_TV1K4_VGC_2(i_stUSG := fb_TV1K4_GCC_1.IG, i_stDSG := fb_ST1K4_TEST_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
-fb_ST3K4_XTES_VGC_1(i_stUSG := fb_ST2K4_BCS_GCC_1.IG, i_stDSG := fb_PC4K4_XTES_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
+fb_RTDSK0_VGC_1(i_stUSG := fb_TV1K0_INTF_GCC_1.IG, i_stDSG := fb_RTDSK0_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+fb_EM1K0_GMD_VGC_1(i_stUSG := fb_RTDSK0_GCC_1.IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+fb_AT1K0_GAS_VGC_1(i_stUSG := fb_SL1K0_POWER_GCC_1.IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+fb_EM2K0_XGMD_VGC_1(i_stUSG := , i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+fb_EM2K0_XGMD_VGC_2(i_stUSG := , i_stDSG := fb_TV2K0_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+fb_TV2K0_VGC_1(i_stUSG := fb_TV2K0_GCC_1.IG, i_stDSG := fb_TV2K0_GCC_2.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+fb_MR1K1_BEND_VGC_1(i_stUSG := fb_PA1K0_GCC_1.IG, i_stDSG := fb_MR1K3_TXI_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+fb_MR1K3_TXI_VGC_1(i_stUSG := fb_MR1K1_BEND_GCC_1.IG, i_stDSG := fb_MR1K3_TXI_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+fb_SP1K1_MONO_VGC_1(i_stUSG := fb_MR2K3_TXI_GCC_1.IG, i_stDSG := fb_SP1K1_MONO_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+fb_SP1K1_MONO_VGC_2(i_stUSG := fb_SP1K1_MONO_GCC_1.IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+fb_IM1K2_PPM_VGC_1(i_stUSG := fb_MR2K3_TXI_GCC_1.IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+fb_TV3K0_VGC_1(i_stUSG := fb_MR2K3_TXI_GCC_1.IG, i_stDSG := fb_TV3K0_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+fb_MR1K4_SOMS_VGC_1(i_stUSG := fb_TV3K0_GCC_1.IG, i_stDSG := fb_MR1K4_SOMS_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+
+// VFS Valves
+
+// fb_TV2K0_VFS_1(i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
 
 // PIP_Gamma Pumps
 
-fb_RTDSK0_PIP_1(i_stGauge := fb_DMPS_GCC_1.PG);
-fb_RTDSK0_PIP_2(i_stGauge := fb_DMPS_GCC_1.PG);
-fb_RTDSK0_PIP_3(i_stGauge := fb_DMPS_GCC_1.PG);
-fb_RTDSK0_PIP_4(i_stGauge := fb_DMPS_GCC_1.PG);
-fb_RTDSK0_PIP_5(i_stGauge := fb_DMPS_GCC_1.PG);
-fb_PCPM3B_PIP_1(i_stGauge := fb_PCPM3B_GFS_1.PG);
-fb_PA1K0_PIP_1(i_stGauge := fb_PA1K0_GCC_1.PG);
-fb_PA1K0(i_stGauge := fb_PA1K0_GCC_1.PG);
-fb_MR1K1_BEND_PIP_1(i_stGauge := fb_MR1K1_BEND_GCC_1.PG);
-fb_MR2K3_TXI_PIP_1(i_stGauge := fb_MR2K3_TXI_GCC_1.PG);
-fb_MR1K3_TXI_PIP_1(i_stGauge := fb_MR1K3_TXI_GCC_1.PG);
-fb_SP1K1_MONO_PIP_1(i_stGauge := fb_SP1K1_MONO_GCC_1.PG);
-fb_SP1K1_MONO_PIP_2(i_stGauge := fb_SP1K1_MONO_GCC_1.PG);
-fb_TV3K0_PIP_1(i_stGauge := fb_TV3K0_GCC_1.PG);
-fb_MR1K4_SOMS_PIP_1(i_stGauge := fb_MR1K4_SOMS_GCC_1.PG);
-fb_ST1K4_TEST_PIP_1(i_stGauge := fb_ST1K4_TEST_GCC_1.PG);
-fb_ST2K4_BCS_PIP_1(i_stGauge := fb_ST2K4_BCS_GCC_1.PG);
-fb_ST3K4_PPS_PIP_1(i_stGauge := fb_ST2K4_BCS_GCC_1.PG);
-fb_PC4K4_XTES_PIP_1(i_stGauge := fb_PC4K4_XTES_GCC_1.PG);
+fb_RTDSK0_PIP_1(i_stGauge := fb_RTDSK0_GCC_1.IG);
+fb_RTDSK0_PIP_2(i_stGauge := fb_RTDSK0_GCC_1.IG);
+fb_RTDSK0_PIP_3(i_stGauge := fb_RTDSK0_GCC_1.IG);
+fb_RTDSK0_PIP_4(i_stGauge := fb_RTDSK0_GCC_1.IG);
+fb_RTDSK0_PIP_5(i_stGauge := fb_RTDSK0_GCC_1.IG);
+fb_PCPM3B_PIP_1(i_stGauge := fb_PCPM3B_GFS_1.IG);
+fb_PA1K0_PIP_1(i_stGauge := fb_PA1K0_GCC_1.IG);
+fb_PA1K0(i_stGauge := fb_PA1K0_GCC_1.IG);
+fb_MR1K1_BEND_PIP_1(i_stGauge := fb_MR1K1_BEND_GCC_1.IG);
+fb_MR2K3_TXI_PIP_1(i_stGauge := fb_MR2K3_TXI_GCC_1.IG);
+fb_MR1K3_TXI_PIP_1(i_stGauge := fb_MR1K3_TXI_GCC_1.IG);
+fb_SP1K1_MONO_PIP_1(i_stGauge := fb_SP1K1_MONO_GCC_1.IG);
+fb_SP1K1_MONO_PIP_2(i_stGauge := fb_SP1K1_MONO_GCC_1.IG);
+fb_TV3K0_PIP_1(i_stGauge := fb_TV3K0_GCC_1.IG);
+
 
 // FB_MKS422
 
-fb_DMPS_GCC_1(PG := fb_DMPS_GPI_1.PG);
-fb_IM2K0_XTES_GCC_1(PG := fb_IM2K0_XTES_GPI_1.PG);
-fb_PCPM3B_GFS_1(PG := fb_SL1K0_GPI_1.PG);
-fb_SL1K0_GCC_1(PG := fb_SL1K0_GPI_1.PG);
+fb_RTDSK0_GCC_1(PG := fb_RTDSK0_GPI_1.PG);
+fb_IM1K0_XTES_GCC_1(PG := fb_IM1K0_XTES_GPI_1.PG);
+fb_PCPM3B_GFS_1(PG := fb_SL1K0_POWER_GPI_1.PG);
+fb_SL1K0_POWER_GCC_1(PG := fb_SL1K0_POWER_GPI_1.PG);
 fb_TV2K0_GCC_1(PG := fb_TV2K0_GPI_1.PG);
 fb_TV2K0_GCC_2(PG := fb_TV2K0_GPI_2.PG);
 fb_PA1K0_GCC_1(PG := fb_PA1K0_GPI_1.PG);
@@ -85,9 +79,9 @@ fb_MR1K1_BEND_GCC_1(PG := fb_MR1K1_BEND_GPI_1.PG);
 
 // FB_MKS317
 
-fb_DMPS_GPI_1(PG=>);
-fb_IM2K0_XTES_GPI_1(PG=>);
-fb_SL1K0_GPI_1(PG=>);
+fb_RTDSK0_GPI_1(PG=>);
+fb_IM1K0_XTES_GPI_1(PG=>);
+fb_SL1K0_POWER_GPI_1(PG=>);
 fb_TV2K0_GPI_1(PG=>);
 fb_TV2K0_GPI_2(PG=>);
 fb_PA1K0_GPI_1(PG=>);
@@ -95,7 +89,19 @@ fb_MR1K1_BEND_GPI_1(PG=>);
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_SXR_VAC">
-      <LineId Id="95" Count="85" />
+      <LineId Id="95" Count="0" />
+      <LineId Id="190" Count="0" />
+      <LineId Id="187" Count="0" />
+      <LineId Id="189" Count="0" />
+      <LineId Id="184" Count="1" />
+      <LineId Id="96" Count="6" />
+      <LineId Id="107" Count="7" />
+      <LineId Id="119" Count="15" />
+      <LineId Id="194" Count="1" />
+      <LineId Id="197" Count="0" />
+      <LineId Id="196" Count="0" />
+      <LineId Id="138" Count="16" />
+      <LineId Id="159" Count="21" />
       <LineId Id="5" Count="0" />
     </LineIds>
   </POU>

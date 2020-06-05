@@ -1,9 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <GVL Name="GVL_Variables" Id="{4e0ea985-29d8-4132-9223-f15e8fa1fe3d}">
     <Declaration><![CDATA[VAR_GLOBAL
-
+	
+{attribute 'pytmc' := '
+	pv: PLC:KFE:VAC:K0:SYSOVERRIDE
+'}
 xSystemOverrideMode : BOOL; (* Global system override for the prototype section*)
+
+//Example implementation of the FFO
+{attribute 'pytmc' := '
+	pv: PLC:KFE:VAC:K0:FF1
+'}
+{attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO (EL2202)]^Channel 1^Output'}
+g_FastFaultOutputK0  :   FB_HardwareFFOutput;
+
+
+fbLogHandler : FB_loghandler;
+fbEcatDiagWrapper : FB_EcatDiagWrapper;
 
 END_VAR
 ]]></Declaration>

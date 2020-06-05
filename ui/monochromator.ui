@@ -29,7 +29,7 @@
     <enum>PCDSSymbolBase::Top</enum>
    </property>
    <property name="channelsPrefix" stdset="0">
-    <string>ca://${GPI}</string>
+    <string>ca://${MONO_PV}:GPI:1</string>
    </property>
   </widget>
   <widget class="IonPump" name="IonPump">
@@ -38,14 +38,14 @@
      <x>10</x>
      <y>202</y>
      <width>180</width>
-     <height>99</height>
+     <height>109</height>
     </rect>
    </property>
    <property name="toolTip">
     <string/>
    </property>
    <property name="channelsPrefix" stdset="0">
-    <string>ca://${PIP1}</string>
+    <string>ca://${MONO_PV}:PIP:1</string>
    </property>
   </widget>
   <widget class="ColdCathodeGauge" name="ColdCathodeGauge">
@@ -54,7 +54,7 @@
      <x>30</x>
      <y>0</y>
      <width>180</width>
-     <height>99</height>
+     <height>109</height>
     </rect>
    </property>
    <property name="toolTip">
@@ -64,7 +64,7 @@
     <enum>PCDSSymbolBase::Top</enum>
    </property>
    <property name="channelsPrefix" stdset="0">
-    <string>ca://${GCC}</string>
+    <string>ca://${MONO_PV}:GCC:1</string>
    </property>
   </widget>
   <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle">
@@ -136,7 +136,7 @@
     <rect>
      <x>100</x>
      <y>140</y>
-     <width>281</width>
+     <width>181</width>
      <height>21</height>
     </rect>
    </property>
@@ -151,7 +151,10 @@
     <string/>
    </property>
    <property name="text">
-    <string>MONOCHROMATOR</string>
+    <string>${MONO_NAME}</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="IonPump" name="IonPump_2">
@@ -160,14 +163,14 @@
      <x>191</x>
      <y>202</y>
      <width>180</width>
-     <height>99</height>
+     <height>109</height>
     </rect>
    </property>
    <property name="toolTip">
     <string/>
    </property>
    <property name="channelsPrefix" stdset="0">
-    <string>ca://${PIP2}</string>
+    <string>ca://${MONO_PV}:PIP:2</string>
    </property>
   </widget>
   <widget class="Line" name="line_4">
@@ -183,6 +186,16 @@
     <enum>Qt::Vertical</enum>
    </property>
   </widget>
+  <zorder>PyDMDrawingRectangle</zorder>
+  <zorder>line</zorder>
+  <zorder>line_2</zorder>
+  <zorder>line_3</zorder>
+  <zorder>PyDMLabel_5</zorder>
+  <zorder>line_4</zorder>
+  <zorder>ColdCathodeGauge</zorder>
+  <zorder>RoughGauge</zorder>
+  <zorder>IonPump</zorder>
+  <zorder>IonPump_2</zorder>
  </widget>
  <customwidgets>
   <customwidget>

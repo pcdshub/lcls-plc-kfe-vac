@@ -1,0 +1,320 @@
+RoughGauge[state="Off"] #icon{
+    qproperty-brush: red;
+    color: gray;
+}
+RoughGauge[state="On"] #icon{
+    qproperty-brush: #00FF00;
+    color: black;
+}
+RoughGauge #pressure[alarmSeverity="0"]{
+    color: blue;
+ border: 1px solid black;
+background-color : white
+}
+ColdCathodeGauge #pressure{
+    color: blue;
+/* border: 1px solid black;*/
+background-color : white
+}
+ColdCathodeGauge[interlocked="true"] #icon{
+    border: 2px solid black;
+        qproperty-brush: black;
+border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+ColdCathodeGauge[state="Off"] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: gray;
+}
+ColdCathodeGauge[state="GaugeDisconnected"] #icon {
+    qproperty-penColor: red;
+    qproperty-brush: gray;
+}
+ColdCathodeGauge[state="PressInvalid"] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: gray;
+}
+ColdCathodeGauge[state="Starting"] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: yellow;
+}
+ColdCathodeGauge[state="Valid"] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: #00FF00;
+}
+ColdCathodeGauge[state="ValidLo"] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: yellow;
+}
+ApertureValve #icon [alarmSeverity="0"]{
+    qproperty-penStyle: "QT::SolidLine";
+    qproperty-penColor: black;
+ 
+ 
+}
+ApertureValve[interlocked="true"] #icon{
+    border: 2px solid black;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+ApertureValve[interlocked="false"] #icon{
+    border: 0px;
+    qproperty-brush: yellow;
+}
+ApertureValve[interlocked="true"] #icon {
+    qproperty-interlockBrush: black;
+}
+ApertureValve[interlocked="false"] #icon{
+    qproperty-interlockBrush: #00FF00;
+}
+ApertureValve[state="OPEN"] #icon {
+     qproperty-penStyle: "QT::SolidLine";
+    qproperty-penColor: black;
+    qproperty-brush: #00FF00;
+}
+ApertureValve[state="MOVING"] #icon {
+    qproperty-penStyle: "QT::SolidLine";
+    qproperty-penColor: black;
+    qproperty-brush: yellow;
+}
+ApertureValve[state="CLOSED"] #icon {
+    qproperty-penStyle: "QT::SolidLine";
+    qproperty-penColor: gray;
+    qproperty-brush: black;
+}
+ApertureValve[state="INVALID"] #icon {
+    qproperty-penStyle: "QT::SolidLine";
+    qproperty-penColor: black;
+    qproperty-brush: red;
+}
+ApertureValve[error="VENTED"] #icon {
+       qproperty-penStyle: "QT::SolidLine";
+}
+ApertureValve[error="ERR_LOST_VAC"] #icon {
+    qproperty-penStyle: "Qt::DotLine";
+    qproperty-penColor: black;
+   qproperty-interlockBrush: red;
+}
+ApertureValve[error="Ext Fault"] #icon {
+    qproperty-penStyle: "QT::SolidLine";
+    qproperty-penColor: black;
+   qproperty-interlockBrush: black;
+}
+TurboPump[interlocked="true"] #icon {
+    border: 2px solid black;
+    qproperty-penColor: black;
+}
+TurboPump[interlocked="false"] #icon {
+    border: 0px;
+}
+TurboPump[state="RUNNING"] #icon {
+    qproperty-penColor: black;
+    qproperty-centerBrush: #00FF00;
+    qproperty-brush: #00FF00;
+}
+TurboPump[state="STARTING"] #icon {
+    qproperty-penColor: black;
+    qproperty-centerBrush: yellow;
+}
+TurboPump[state="STOPPED"] #icon {
+    qproperty-penColor: black;
+    qproperty-centerBrush: gray;
+    qproperty-brush: gray;
+}
+TurboPump[state="FAULT"] #icon {
+    qproperty-penColor: red;
+    qproperty-centerBrush: red;
+    qproperty-brush: gray;
+}
+TurboPump[error="true"] #icon {
+     qproperty-penColor: red;
+    qproperty-centerBrush: red;
+}
+PneumaticValve #icon [alarmSeverity="0"]{
+    qproperty-penStyle: "QT::SolidLine";
+    qproperty-penColor: black;
+    qproperty-penWidth: 2;
+ 
+}
+PneumaticValve[interlocked="true"] #icon{
+    border: 2px solid black;
+    qproperty-penWidth: 2;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+PneumaticValve[interlocked="false"] #icon{
+    border: 0px;
+    qproperty-penWidth: 2;
+    qproperty-brush: #00FF00;
+}
+PneumaticValve[interlocked="true"] #icon {
+    qproperty-interlockBrush: black;
+}
+PneumaticValve[interlocked="false"] #icon{
+    qproperty-interlockBrush: #00FF00;
+}
+PneumaticValve[state="OPEN"] #icon {
+     qproperty-penStyle: "QT::SolidLine";
+    qproperty-penColor: black;
+    qproperty-penWidth: 2;
+    qproperty-brush: #00FF00;
+}
+PneumaticValve[state="MOVING"] #icon {
+    qproperty-penStyle: "QT::SolidLine";
+    qproperty-penColor: black;
+    qproperty-penWidth: 2;
+    qproperty-brush: yellow;
+}
+PneumaticValve[state="CLOSED"] #icon {
+    qproperty-penStyle: "QT::SolidLine";
+    qproperty-penColor: gray;
+    qproperty-penWidth: 2;
+    qproperty-brush: black;
+}
+PneumaticValve[state="INVALID"] #icon {
+    qproperty-penStyle: "QT::SolidLine";
+    qproperty-penColor: black;
+    qproperty-penWidth: 2;
+    qproperty-brush: red;
+}
+PneumaticValve[error="VENTED"] #icon {
+       qproperty-penStyle: "QT::SolidLine";
+}
+PneumaticValve[error="ERR_LOST_VAC"] #icon {
+    qproperty-penStyle: "Qt::DotLine";
+    qproperty-penColor: black;
+    qproperty-penWidth: 2;
+   qproperty-interlockBrush: red;
+}
+PneumaticValve[error="Ext Fault"] #icon {
+    qproperty-penStyle: "QT::SolidLine";
+    qproperty-penColor: black;
+    qproperty-penWidth: 2;
+   qproperty-interlockBrush: red;
+}
+ControlOnlyValveNC[interlocked="true"] #icon {
+     border: 2px solid black;
+    qproperty-penWidth: 2;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+ControlOnlyValveNC[interlocked="false"] #icon {
+     border: 0px;
+    qproperty-penWidth: 2;
+    qproperty-brush: #00FF00;
+}
+ControlOnlyValveNC[interlocked="true"] #icon {
+    qproperty-interlockBrush: #FF0000;
+}
+ControlOnlyValveNC[interlocked="false"] #icon {
+    qproperty-interlockBrush: #00FF00;
+}
+ControlOnlyValveNC[state="One"] #icon {
+     qproperty-penStyle: "QT::SolidLine";
+    qproperty-penColor: black;
+    qproperty-penWidth: 2;
+    qproperty-brush: #00FF00;
+}
+ControlOnlyValveNC[state="Zero"] #icon {
+    qproperty-penStyle: "QT::SolidLine";
+    qproperty-penColor: gray;
+    qproperty-penWidth: 2;
+    qproperty-brush: black;
+}
+NeedleValve[interlocked="true"] #icon{
+    border: 2px solid black;
+    qproperty-penWidth: 2;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+NeedleValve[interlocked="false"] #icon{
+    border: 0px;
+    qproperty-penWidth: 2;
+    qproperty-brush: #00FF00;
+}
+NeedleValve[interlocked="true"] #icon {
+    qproperty-interlockBrush: black;
+}
+NeedleValve[interlocked="false"] #icon{
+    qproperty-interlockBrush: #00FF00;
+}
+NeedleValve[state="Close"] #icon {
+   qproperty-penStyle: "QT::SolidLine";
+    qproperty-penColor: gray;
+    qproperty-penWidth: 2;
+    qproperty-brush: black;
+}
+NeedleValve[state="Open"] #icon {
+   qproperty-penStyle: "QT::SolidLine";
+    qproperty-penColor: black;
+    qproperty-penWidth: 2;
+    qproperty-brush: #00FF00;
+}
+ScrollPump[state="RUNNING"] #icon {
+    qproperty-penColor: black;
+    qproperty-centerBrush: #00FF00;
+    qproperty-brush: #00FF00;
+}
+ScrollPump[interlocked="true"] #icon {
+    border: 2px solid black;
+}
+ScrollPump[interlocked="false"] #icon {
+    border: 0px;
+}
+ScrollPump[state="Accelerating"] #icon {
+    qproperty-brush: #00FF00;
+    qproperty-centerBrush: yellow;
+}
+ScrollPump[state="STOPPED"] #icon {
+    qproperty-penColor: black;
+    qproperty-centerBrush: gray;
+    qproperty-brush: gray;
+}
+ScrollPump[state="FAULT"] #icon {
+    qproperty-penColor: black;
+    qproperty-centerBrush: red;
+    qproperty-brush: gray;
+}
+ScrollPump[error="true"] #icon {
+    qproperty-penWidth: 2;
+    qproperty-centerBrush: red;
+}
+IonPump[interlocked="true"] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: #00FF00;
+}
+IonPump[interlocked="false"] #icon{
+    border: 0px;
+}
+IonPump[error="true"] #icon {
+    qproperty-penStyle: "Qt::DotLine";
+    qproperty-penWidth: 2;
+    qproperty-brush: red;
+}
+IonPump[state="RUNNING"] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: #00FF00;
+}
+IonPump[state="STARTING"] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: yellow;
+}
+IonPump[state="STOPPED"] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: gray;
+}
+IonPump[state="FAULT"] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: red;
+}
+

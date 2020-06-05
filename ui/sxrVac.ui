@@ -10,82 +10,71 @@
     <x>0</x>
     <y>0</y>
     <width>4095</width>
-    <height>829</height>
+    <height>918</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">RoughGauge[state=&quot;On&quot;] #icon{
+   <string notr="true">RoughGauge[state=&quot;Off&quot;] #icon{
     qproperty-brush: red;
     color: gray;
 }
-RoughGauge[state=&quot;Off&quot;] #icon{
+RoughGauge[state=&quot;On&quot;] #icon{
     qproperty-brush: #00FF00;
     color: black;
 }
-
-RoughGauge #pressure{
+RoughGauge #pressure[alarmSeverity=&quot;0&quot;]{
     color: blue;
  border: 1px solid black;
 background-color : white
 }
-
-
 ColdCathodeGauge #pressure{
     color: blue;
- border: 1px solid black;
+/* border: 1px solid black;*/
 background-color : white
 }
-
-
 ColdCathodeGauge[interlocked=&quot;true&quot;] #icon{
     border: 2px solid black;
-		qproperty-brush: black;
+        qproperty-brush: black;
 border-top-left-radius: 9px;
     border-top-right-radius: 9px;
 border-bottom-left-radius: 9px;
     border-bottom-right-radius: 9px;
 }
-
 ColdCathodeGauge[state=&quot;Off&quot;] #icon {
     qproperty-penColor: black;
-	qproperty-brush: gray;
+    qproperty-brush: gray;
 }
-
 ColdCathodeGauge[state=&quot;GaugeDisconnected&quot;] #icon {
     qproperty-penColor: red;
-	qproperty-brush: gray;
+    qproperty-brush: gray;
 }
 ColdCathodeGauge[state=&quot;PressInvalid&quot;] #icon {
     qproperty-penColor: black;
-	qproperty-brush: gray;
+    qproperty-brush: gray;
 }
-
 ColdCathodeGauge[state=&quot;Starting&quot;] #icon {
     qproperty-penColor: black;
-	qproperty-brush: yellow;
+    qproperty-brush: yellow;
 }
-
 ColdCathodeGauge[state=&quot;Valid&quot;] #icon {
     qproperty-penColor: black;
-	qproperty-brush: #00FF00;
+    qproperty-brush: #00FF00;
 }
-
-
-
-
-ApertureValve #icon {
+ColdCathodeGauge[state=&quot;ValidLo&quot;] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: yellow;
+}
+ApertureValve #icon [alarmSeverity=&quot;0&quot;]{
     qproperty-penStyle: &quot;QT::SolidLine&quot;;
-	qproperty-penColor: black;
+    qproperty-penColor: black;
  
  
 }
-
 ApertureValve[interlocked=&quot;true&quot;] #icon{
     border: 2px solid black;
-
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
     border-bottom-left-radius: 9px;
@@ -93,108 +82,83 @@ ApertureValve[interlocked=&quot;true&quot;] #icon{
 }
 ApertureValve[interlocked=&quot;false&quot;] #icon{
     border: 0px;
-
-	qproperty-brush: yellow;
+    qproperty-brush: yellow;
 }
 ApertureValve[interlocked=&quot;true&quot;] #icon {
     qproperty-interlockBrush: black;
 }
-
 ApertureValve[interlocked=&quot;false&quot;] #icon{
     qproperty-interlockBrush: #00FF00;
 }
-
 ApertureValve[state=&quot;OPEN&quot;] #icon {
      qproperty-penStyle: &quot;QT::SolidLine&quot;;
-	qproperty-penColor: black;
-	qproperty-brush: #00FF00;
+    qproperty-penColor: black;
+    qproperty-brush: #00FF00;
 }
-
 ApertureValve[state=&quot;MOVING&quot;] #icon {
     qproperty-penStyle: &quot;QT::SolidLine&quot;;
-	qproperty-penColor: black;
- 	qproperty-brush: yellow;
+    qproperty-penColor: black;
+    qproperty-brush: yellow;
 }
 ApertureValve[state=&quot;CLOSED&quot;] #icon {
-	qproperty-penStyle: &quot;QT::SolidLine&quot;;
+    qproperty-penStyle: &quot;QT::SolidLine&quot;;
     qproperty-penColor: gray;
-	qproperty-brush: black;
+    qproperty-brush: black;
 }
-
 ApertureValve[state=&quot;INVALID&quot;] #icon {
     qproperty-penStyle: &quot;QT::SolidLine&quot;;
-	qproperty-penColor: black;
- 	qproperty-brush: red;
+    qproperty-penColor: black;
+    qproperty-brush: red;
 }
-
 ApertureValve[error=&quot;VENTED&quot;] #icon {
        qproperty-penStyle: &quot;QT::SolidLine&quot;;
 }
-
 ApertureValve[error=&quot;ERR_LOST_VAC&quot;] #icon {
     qproperty-penStyle: &quot;Qt::DotLine&quot;;
     qproperty-penColor: black;
    qproperty-interlockBrush: red;
-
 }
-
 ApertureValve[error=&quot;Ext Fault&quot;] #icon {
- 	qproperty-penStyle: &quot;QT::SolidLine&quot;;
+    qproperty-penStyle: &quot;QT::SolidLine&quot;;
     qproperty-penColor: black;
    qproperty-interlockBrush: black;
-
 }
-
-
-
-
 TurboPump[interlocked=&quot;true&quot;] #icon {
     border: 2px solid black;
     qproperty-penColor: black;
 }
-
 TurboPump[interlocked=&quot;false&quot;] #icon {
     border: 0px;
 }
-
 TurboPump[state=&quot;RUNNING&quot;] #icon {
-	qproperty-penColor: black;
+    qproperty-penColor: black;
     qproperty-centerBrush: #00FF00;
     qproperty-brush: #00FF00;
 }
-
 TurboPump[state=&quot;STARTING&quot;] #icon {
     qproperty-penColor: black;
-	qproperty-centerBrush: yellow;
+    qproperty-centerBrush: yellow;
 }
-
 TurboPump[state=&quot;STOPPED&quot;] #icon {
-	qproperty-penColor: black;
+    qproperty-penColor: black;
     qproperty-centerBrush: gray;
-	qproperty-brush: gray;
+    qproperty-brush: gray;
 }
-
 TurboPump[state=&quot;FAULT&quot;] #icon {
-	qproperty-penColor: red;
+    qproperty-penColor: red;
     qproperty-centerBrush: red;
-	qproperty-brush: gray;
+    qproperty-brush: gray;
 }
-
 TurboPump[error=&quot;true&quot;] #icon {
      qproperty-penColor: red;
-	qproperty-centerBrush: red;
+    qproperty-centerBrush: red;
 }
-
-
-
-
-PneumaticValve #icon {
+PneumaticValve #icon [alarmSeverity=&quot;0&quot;]{
     qproperty-penStyle: &quot;QT::SolidLine&quot;;
-	qproperty-penColor: black;
+    qproperty-penColor: black;
     qproperty-penWidth: 2;
  
 }
-
 PneumaticValve[interlocked=&quot;true&quot;] #icon{
     border: 2px solid black;
     qproperty-penWidth: 2;
@@ -206,67 +170,84 @@ PneumaticValve[interlocked=&quot;true&quot;] #icon{
 PneumaticValve[interlocked=&quot;false&quot;] #icon{
     border: 0px;
     qproperty-penWidth: 2;
-	qproperty-brush: #00FF00;
+    qproperty-brush: #00FF00;
 }
 PneumaticValve[interlocked=&quot;true&quot;] #icon {
     qproperty-interlockBrush: black;
 }
-
 PneumaticValve[interlocked=&quot;false&quot;] #icon{
     qproperty-interlockBrush: #00FF00;
 }
-
 PneumaticValve[state=&quot;OPEN&quot;] #icon {
      qproperty-penStyle: &quot;QT::SolidLine&quot;;
-	qproperty-penColor: black;
+    qproperty-penColor: black;
     qproperty-penWidth: 2;
-	qproperty-brush: #00FF00;
+    qproperty-brush: #00FF00;
 }
-
 PneumaticValve[state=&quot;MOVING&quot;] #icon {
     qproperty-penStyle: &quot;QT::SolidLine&quot;;
-	qproperty-penColor: black;
+    qproperty-penColor: black;
     qproperty-penWidth: 2;
- 	qproperty-brush: yellow;
+    qproperty-brush: yellow;
 }
 PneumaticValve[state=&quot;CLOSED&quot;] #icon {
-	qproperty-penStyle: &quot;QT::SolidLine&quot;;
+    qproperty-penStyle: &quot;QT::SolidLine&quot;;
     qproperty-penColor: gray;
     qproperty-penWidth: 2;
-	qproperty-brush: black;
+    qproperty-brush: black;
 }
-
 PneumaticValve[state=&quot;INVALID&quot;] #icon {
     qproperty-penStyle: &quot;QT::SolidLine&quot;;
-	qproperty-penColor: black;
+    qproperty-penColor: black;
     qproperty-penWidth: 2;
- 	qproperty-brush: red;
+    qproperty-brush: red;
 }
-
 PneumaticValve[error=&quot;VENTED&quot;] #icon {
        qproperty-penStyle: &quot;QT::SolidLine&quot;;
 }
-
 PneumaticValve[error=&quot;ERR_LOST_VAC&quot;] #icon {
     qproperty-penStyle: &quot;Qt::DotLine&quot;;
     qproperty-penColor: black;
     qproperty-penWidth: 2;
    qproperty-interlockBrush: red;
-
 }
-
 PneumaticValve[error=&quot;Ext Fault&quot;] #icon {
- 	qproperty-penStyle: &quot;QT::SolidLine&quot;;
+    qproperty-penStyle: &quot;QT::SolidLine&quot;;
     qproperty-penColor: black;
     qproperty-penWidth: 2;
    qproperty-interlockBrush: red;
-
 }
-
-
-
-
-
+ControlOnlyValveNC[interlocked=&quot;true&quot;] #icon {
+     border: 2px solid black;
+    qproperty-penWidth: 2;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+ControlOnlyValveNC[interlocked=&quot;false&quot;] #icon {
+     border: 0px;
+    qproperty-penWidth: 2;
+    qproperty-brush: #00FF00;
+}
+ControlOnlyValveNC[interlocked=&quot;true&quot;] #icon {
+    qproperty-interlockBrush: #FF0000;
+}
+ControlOnlyValveNC[interlocked=&quot;false&quot;] #icon {
+    qproperty-interlockBrush: #00FF00;
+}
+ControlOnlyValveNC[state=&quot;One&quot;] #icon {
+     qproperty-penStyle: &quot;QT::SolidLine&quot;;
+    qproperty-penColor: black;
+    qproperty-penWidth: 2;
+    qproperty-brush: #00FF00;
+}
+ControlOnlyValveNC[state=&quot;Zero&quot;] #icon {
+    qproperty-penStyle: &quot;QT::SolidLine&quot;;
+    qproperty-penColor: gray;
+    qproperty-penWidth: 2;
+    qproperty-brush: black;
+}
 NeedleValve[interlocked=&quot;true&quot;] #icon{
     border: 2px solid black;
     qproperty-penWidth: 2;
@@ -278,12 +259,11 @@ NeedleValve[interlocked=&quot;true&quot;] #icon{
 NeedleValve[interlocked=&quot;false&quot;] #icon{
     border: 0px;
     qproperty-penWidth: 2;
-	qproperty-brush: #00FF00;
+    qproperty-brush: #00FF00;
 }
 NeedleValve[interlocked=&quot;true&quot;] #icon {
     qproperty-interlockBrush: black;
 }
-
 NeedleValve[interlocked=&quot;false&quot;] #icon{
     qproperty-interlockBrush: #00FF00;
 }
@@ -291,22 +271,17 @@ NeedleValve[state=&quot;Close&quot;] #icon {
    qproperty-penStyle: &quot;QT::SolidLine&quot;;
     qproperty-penColor: gray;
     qproperty-penWidth: 2;
-	qproperty-brush: black;
+    qproperty-brush: black;
 }
-
 NeedleValve[state=&quot;Open&quot;] #icon {
    qproperty-penStyle: &quot;QT::SolidLine&quot;;
     qproperty-penColor: black;
     qproperty-penWidth: 2;
-	qproperty-brush: #00FF00;
+    qproperty-brush: #00FF00;
 }
-
-
-
-
 ScrollPump[state=&quot;RUNNING&quot;] #icon {
     qproperty-penColor: black;
-	qproperty-centerBrush: #00FF00;
+    qproperty-centerBrush: #00FF00;
     qproperty-brush: #00FF00;
 }
 ScrollPump[interlocked=&quot;true&quot;] #icon {
@@ -317,56 +292,49 @@ ScrollPump[interlocked=&quot;false&quot;] #icon {
 }
 ScrollPump[state=&quot;Accelerating&quot;] #icon {
     qproperty-brush: #00FF00;
-	qproperty-centerBrush: yellow;
+    qproperty-centerBrush: yellow;
 }
 ScrollPump[state=&quot;STOPPED&quot;] #icon {
     qproperty-penColor: black;
-	qproperty-centerBrush: gray;
+    qproperty-centerBrush: gray;
     qproperty-brush: gray;
 }
 ScrollPump[state=&quot;FAULT&quot;] #icon {
     qproperty-penColor: black;
-	qproperty-centerBrush: red;
+    qproperty-centerBrush: red;
     qproperty-brush: gray;
 }
 ScrollPump[error=&quot;true&quot;] #icon {
     qproperty-penWidth: 2;
     qproperty-centerBrush: red;
 }
-
-
-
-
-
-ControlOnlyValveNC[interlocked=&quot;true&quot;] #icon {
-    border: 2px solid black;
-border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+IonPump[interlocked=&quot;true&quot;] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: #00FF00;
 }
-ControlOnlyValveNC[interlocked=&quot;false&quot;] #icon {
+IonPump[interlocked=&quot;false&quot;] #icon{
     border: 0px;
 }
-ControlOnlyValveNC[interlocked=&quot;true&quot;] #icon {
-    qproperty-interlockBrush: black;
+IonPump[error=&quot;true&quot;] #icon {
+    qproperty-penStyle: &quot;Qt::DotLine&quot;;
+    qproperty-penWidth: 2;
+    qproperty-brush: red;
 }
-ControlOnlyValveNC[interlocked=&quot;false&quot;] #icon {
-    qproperty-interlockBrush: #00FF00;
-}
-
-ControlOnlyValveNC[state=&quot;Open&quot;] #icon {
+IonPump[state=&quot;RUNNING&quot;] #icon {
     qproperty-penColor: black;
-	qproperty-brush:#00FF00;
+    qproperty-brush: #00FF00;
 }
-ControlOnlyValveNC[state=&quot;Zero&quot;] #icon {
-    qproperty-penColor: Black;
- qproperty-brush: black;
+IonPump[state=&quot;STARTING&quot;] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: yellow;
 }
-
-ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
-    qproperty-penColor: gray;
-  qproperty-brush: black;
+IonPump[state=&quot;STOPPED&quot;] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: gray;
+}
+IonPump[state=&quot;FAULT&quot;] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: red;
 }
 </string>
   </property>
@@ -376,28 +344,350 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
      <property name="enabled">
       <bool>true</bool>
      </property>
+     <property name="styleSheet">
+      <string notr="true">RoughGauge[state=&quot;Off&quot;] #icon{
+    qproperty-brush: red;
+    color: gray;
+}
+RoughGauge[state=&quot;On&quot;] #icon{
+    qproperty-brush: #00FF00;
+    color: black;
+}
+RoughGauge #pressure[alarmSeverity=&quot;0&quot;]{
+    color: blue;
+ border: 1px solid black;
+background-color : white
+}
+ColdCathodeGauge #pressure{
+    color: blue;
+/* border: 1px solid black;*/
+background-color : white
+}
+ColdCathodeGauge[interlocked=&quot;true&quot;] #icon{
+    border: 2px solid black;
+        qproperty-brush: black;
+border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+ColdCathodeGauge[state=&quot;Off&quot;] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: gray;
+}
+ColdCathodeGauge[state=&quot;GaugeDisconnected&quot;] #icon {
+    qproperty-penColor: red;
+    qproperty-brush: gray;
+}
+ColdCathodeGauge[state=&quot;PressInvalid&quot;] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: gray;
+}
+ColdCathodeGauge[state=&quot;Starting&quot;] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: yellow;
+}
+ColdCathodeGauge[state=&quot;Valid&quot;] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: #00FF00;
+}
+ColdCathodeGauge[state=&quot;ValidLo&quot;] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: yellow;
+}
+ApertureValve #icon [alarmSeverity=&quot;0&quot;]{
+    qproperty-penStyle: &quot;QT::SolidLine&quot;;
+    qproperty-penColor: black;
+ 
+ 
+}
+ApertureValve[interlocked=&quot;true&quot;] #icon{
+    border: 2px solid black;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+ApertureValve[interlocked=&quot;false&quot;] #icon{
+    border: 0px;
+    qproperty-brush: yellow;
+}
+ApertureValve[interlocked=&quot;true&quot;] #icon {
+    qproperty-interlockBrush: black;
+}
+ApertureValve[interlocked=&quot;false&quot;] #icon{
+    qproperty-interlockBrush: #00FF00;
+}
+ApertureValve[state=&quot;OPEN&quot;] #icon {
+     qproperty-penStyle: &quot;QT::SolidLine&quot;;
+    qproperty-penColor: black;
+    qproperty-brush: #00FF00;
+}
+ApertureValve[state=&quot;MOVING&quot;] #icon {
+    qproperty-penStyle: &quot;QT::SolidLine&quot;;
+    qproperty-penColor: black;
+    qproperty-brush: yellow;
+}
+ApertureValve[state=&quot;CLOSED&quot;] #icon {
+    qproperty-penStyle: &quot;QT::SolidLine&quot;;
+    qproperty-penColor: gray;
+    qproperty-brush: black;
+}
+ApertureValve[state=&quot;INVALID&quot;] #icon {
+    qproperty-penStyle: &quot;QT::SolidLine&quot;;
+    qproperty-penColor: black;
+    qproperty-brush: red;
+}
+ApertureValve[error=&quot;VENTED&quot;] #icon {
+       qproperty-penStyle: &quot;QT::SolidLine&quot;;
+}
+ApertureValve[error=&quot;ERR_LOST_VAC&quot;] #icon {
+    qproperty-penStyle: &quot;Qt::DotLine&quot;;
+    qproperty-penColor: black;
+   qproperty-interlockBrush: red;
+}
+ApertureValve[error=&quot;Ext Fault&quot;] #icon {
+    qproperty-penStyle: &quot;QT::SolidLine&quot;;
+    qproperty-penColor: black;
+   qproperty-interlockBrush: black;
+}
+TurboPump[interlocked=&quot;true&quot;] #icon {
+    border: 2px solid black;
+    qproperty-penColor: black;
+}
+TurboPump[interlocked=&quot;false&quot;] #icon {
+    border: 0px;
+}
+TurboPump[state=&quot;RUNNING&quot;] #icon {
+    qproperty-penColor: black;
+    qproperty-centerBrush: #00FF00;
+    qproperty-brush: #00FF00;
+}
+TurboPump[state=&quot;STARTING&quot;] #icon {
+    qproperty-penColor: black;
+    qproperty-centerBrush: yellow;
+}
+TurboPump[state=&quot;STOPPED&quot;] #icon {
+    qproperty-penColor: black;
+    qproperty-centerBrush: gray;
+    qproperty-brush: gray;
+}
+TurboPump[state=&quot;FAULT&quot;] #icon {
+    qproperty-penColor: red;
+    qproperty-centerBrush: red;
+    qproperty-brush: gray;
+}
+TurboPump[error=&quot;true&quot;] #icon {
+     qproperty-penColor: red;
+    qproperty-centerBrush: red;
+}
+PneumaticValve #icon [alarmSeverity=&quot;0&quot;]{
+    qproperty-penStyle: &quot;QT::SolidLine&quot;;
+    qproperty-penColor: black;
+    qproperty-penWidth: 2;
+ 
+}
+PneumaticValve[interlocked=&quot;true&quot;] #icon{
+    border: 2px solid black;
+    qproperty-penWidth: 2;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+PneumaticValve[interlocked=&quot;false&quot;] #icon{
+    border: 0px;
+    qproperty-penWidth: 2;
+    qproperty-brush: #00FF00;
+}
+PneumaticValve[interlocked=&quot;true&quot;] #icon {
+    qproperty-interlockBrush: black;
+}
+PneumaticValve[interlocked=&quot;false&quot;] #icon{
+    qproperty-interlockBrush: #00FF00;
+}
+PneumaticValve[state=&quot;OPEN&quot;] #icon {
+     qproperty-penStyle: &quot;QT::SolidLine&quot;;
+    qproperty-penColor: black;
+    qproperty-penWidth: 2;
+    qproperty-brush: #00FF00;
+}
+PneumaticValve[state=&quot;MOVING&quot;] #icon {
+    qproperty-penStyle: &quot;QT::SolidLine&quot;;
+    qproperty-penColor: black;
+    qproperty-penWidth: 2;
+    qproperty-brush: yellow;
+}
+PneumaticValve[state=&quot;CLOSED&quot;] #icon {
+    qproperty-penStyle: &quot;QT::SolidLine&quot;;
+    qproperty-penColor: gray;
+    qproperty-penWidth: 2;
+    qproperty-brush: black;
+}
+PneumaticValve[state=&quot;INVALID&quot;] #icon {
+    qproperty-penStyle: &quot;QT::SolidLine&quot;;
+    qproperty-penColor: black;
+    qproperty-penWidth: 2;
+    qproperty-brush: red;
+}
+PneumaticValve[error=&quot;VENTED&quot;] #icon {
+       qproperty-penStyle: &quot;QT::SolidLine&quot;;
+}
+PneumaticValve[error=&quot;ERR_LOST_VAC&quot;] #icon {
+    qproperty-penStyle: &quot;Qt::DotLine&quot;;
+    qproperty-penColor: black;
+    qproperty-penWidth: 2;
+   qproperty-interlockBrush: red;
+}
+PneumaticValve[error=&quot;Ext Fault&quot;] #icon {
+    qproperty-penStyle: &quot;QT::SolidLine&quot;;
+    qproperty-penColor: black;
+    qproperty-penWidth: 2;
+   qproperty-interlockBrush: red;
+}
+ControlOnlyValveNC[interlocked=&quot;true&quot;] #icon {
+     border: 2px solid black;
+    qproperty-penWidth: 2;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+ControlOnlyValveNC[interlocked=&quot;false&quot;] #icon {
+     border: 0px;
+    qproperty-penWidth: 2;
+    qproperty-brush: #00FF00;
+}
+ControlOnlyValveNC[interlocked=&quot;true&quot;] #icon {
+    qproperty-interlockBrush: #FF0000;
+}
+ControlOnlyValveNC[interlocked=&quot;false&quot;] #icon {
+    qproperty-interlockBrush: #00FF00;
+}
+ControlOnlyValveNC[state=&quot;One&quot;] #icon {
+     qproperty-penStyle: &quot;QT::SolidLine&quot;;
+    qproperty-penColor: black;
+    qproperty-penWidth: 2;
+    qproperty-brush: #00FF00;
+}
+ControlOnlyValveNC[state=&quot;Zero&quot;] #icon {
+    qproperty-penStyle: &quot;QT::SolidLine&quot;;
+    qproperty-penColor: gray;
+    qproperty-penWidth: 2;
+    qproperty-brush: black;
+}
+NeedleValve[interlocked=&quot;true&quot;] #icon{
+    border: 2px solid black;
+    qproperty-penWidth: 2;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+NeedleValve[interlocked=&quot;false&quot;] #icon{
+    border: 0px;
+    qproperty-penWidth: 2;
+    qproperty-brush: #00FF00;
+}
+NeedleValve[interlocked=&quot;true&quot;] #icon {
+    qproperty-interlockBrush: black;
+}
+NeedleValve[interlocked=&quot;false&quot;] #icon{
+    qproperty-interlockBrush: #00FF00;
+}
+NeedleValve[state=&quot;Close&quot;] #icon {
+   qproperty-penStyle: &quot;QT::SolidLine&quot;;
+    qproperty-penColor: gray;
+    qproperty-penWidth: 2;
+    qproperty-brush: black;
+}
+NeedleValve[state=&quot;Open&quot;] #icon {
+   qproperty-penStyle: &quot;QT::SolidLine&quot;;
+    qproperty-penColor: black;
+    qproperty-penWidth: 2;
+    qproperty-brush: #00FF00;
+}
+ScrollPump[state=&quot;RUNNING&quot;] #icon {
+    qproperty-penColor: black;
+    qproperty-centerBrush: #00FF00;
+    qproperty-brush: #00FF00;
+}
+ScrollPump[interlocked=&quot;true&quot;] #icon {
+    border: 2px solid black;
+}
+ScrollPump[interlocked=&quot;false&quot;] #icon {
+    border: 0px;
+}
+ScrollPump[state=&quot;Accelerating&quot;] #icon {
+    qproperty-brush: #00FF00;
+    qproperty-centerBrush: yellow;
+}
+ScrollPump[state=&quot;STOPPED&quot;] #icon {
+    qproperty-penColor: black;
+    qproperty-centerBrush: gray;
+    qproperty-brush: gray;
+}
+ScrollPump[state=&quot;FAULT&quot;] #icon {
+    qproperty-penColor: black;
+    qproperty-centerBrush: red;
+    qproperty-brush: gray;
+}
+ScrollPump[error=&quot;true&quot;] #icon {
+    qproperty-penWidth: 2;
+    qproperty-centerBrush: red;
+}
+IonPump[interlocked=&quot;true&quot;] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: #00FF00;
+}
+IonPump[interlocked=&quot;false&quot;] #icon{
+    border: 0px;
+}
+IonPump[error=&quot;true&quot;] #icon {
+    qproperty-penStyle: &quot;Qt::DotLine&quot;;
+    qproperty-penWidth: 2;
+    qproperty-brush: red;
+}
+IonPump[state=&quot;RUNNING&quot;] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: #00FF00;
+}
+IonPump[state=&quot;STARTING&quot;] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: yellow;
+}
+IonPump[state=&quot;STOPPED&quot;] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: gray;
+}
+IonPump[state=&quot;FAULT&quot;] #icon {
+    qproperty-penColor: black;
+    qproperty-brush: red;
+}
+</string>
+     </property>
      <property name="widgetResizable">
       <bool>false</bool>
      </property>
      <widget class="QWidget" name="scrollAreaWidgetContents">
       <property name="enabled">
-       <bool>false</bool>
+       <bool>true</bool>
       </property>
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>-629</x>
         <y>0</y>
-        <width>4075</width>
-        <height>809</height>
+        <width>4704</width>
+        <height>829</height>
        </rect>
       </property>
       <widget class="PneumaticValve" name="PneumaticValve">
        <property name="geometry">
         <rect>
-         <x>-20</x>
+         <x>-30</x>
          <y>410</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -413,7 +703,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="ColdCathodeGauge" name="ColdCathodeGauge">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>0</x>
          <y>640</y>
          <width>180</width>
          <height>141</height>
@@ -429,26 +719,13 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <bool>false</bool>
        </property>
       </widget>
-      <widget class="Line" name="line">
-       <property name="geometry">
-        <rect>
-         <x>80</x>
-         <y>430</y>
-         <width>1356</width>
-         <height>3</height>
-        </rect>
-       </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-      </widget>
       <widget class="RoughGauge" name="RoughGauge">
        <property name="enabled">
         <bool>false</bool>
        </property>
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>150</x>
          <y>640</y>
          <width>70</width>
          <height>60</height>
@@ -464,10 +741,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="IonPump" name="IonPump">
        <property name="geometry">
         <rect>
-         <x>-10</x>
+         <x>-20</x>
          <y>50</y>
          <width>180</width>
-         <height>141</height>
+         <height>151</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -477,7 +754,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>PCDSSymbolBase::Top</enum>
        </property>
        <property name="channelsPrefix" stdset="0">
-        <string>ca://RTDSK0:GCC:1</string>
+        <string>ca://RTDSK0:PIP:1</string>
        </property>
        <property name="controlButtonHorizontal" stdset="0">
         <bool>false</bool>
@@ -486,10 +763,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="IonPump" name="IonPump_2">
        <property name="geometry">
         <rect>
-         <x>190</x>
+         <x>180</x>
          <y>50</y>
          <width>180</width>
-         <height>141</height>
+         <height>151</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -499,7 +776,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>PCDSSymbolBase::Top</enum>
        </property>
        <property name="channelsPrefix" stdset="0">
-        <string>ca://RTDSK0:GCC:5</string>
+        <string>ca://RTDSK0:PIP:5</string>
        </property>
        <property name="controlButtonHorizontal" stdset="0">
         <bool>false</bool>
@@ -508,10 +785,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="IonPump" name="IonPump_3">
        <property name="geometry">
         <rect>
-         <x>150</x>
+         <x>140</x>
          <y>250</y>
          <width>180</width>
-         <height>141</height>
+         <height>151</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -521,7 +798,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>PCDSSymbolBase::Bottom</enum>
        </property>
        <property name="channelsPrefix" stdset="0">
-        <string>ca://RTDSK0:GCC:4</string>
+        <string>ca://RTDSK0:PIP:4</string>
        </property>
        <property name="controlButtonHorizontal" stdset="0">
         <bool>false</bool>
@@ -530,10 +807,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="IonPump" name="IonPump_4">
        <property name="geometry">
         <rect>
-         <x>90</x>
+         <x>80</x>
          <y>50</y>
          <width>180</width>
-         <height>141</height>
+         <height>151</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -543,7 +820,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>PCDSSymbolBase::Top</enum>
        </property>
        <property name="channelsPrefix" stdset="0">
-        <string>ca://RTDSK0:GCC:3</string>
+        <string>ca://RTDSK0:PIP:3</string>
        </property>
        <property name="controlButtonHorizontal" stdset="0">
         <bool>false</bool>
@@ -552,10 +829,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="IonPump" name="IonPump_5">
        <property name="geometry">
         <rect>
-         <x>30</x>
+         <x>20</x>
          <y>250</y>
          <width>180</width>
-         <height>141</height>
+         <height>151</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -565,7 +842,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>PCDSSymbolBase::Bottom</enum>
        </property>
        <property name="channelsPrefix" stdset="0">
-        <string>ca://RTDSK0:GCC:2</string>
+        <string>ca://RTDSK0:PIP:2</string>
        </property>
        <property name="controlButtonHorizontal" stdset="0">
         <bool>false</bool>
@@ -574,10 +851,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="PneumaticValve" name="PneumaticValve_2">
        <property name="geometry">
         <rect>
-         <x>310</x>
+         <x>320</x>
          <y>410</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -593,7 +870,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="ColdCathodeGauge" name="ColdCathodeGauge_2">
        <property name="geometry">
         <rect>
-         <x>320</x>
+         <x>500</x>
          <y>640</y>
          <width>180</width>
          <height>141</height>
@@ -615,7 +892,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
        </property>
        <property name="geometry">
         <rect>
-         <x>470</x>
+         <x>650</x>
          <y>640</y>
          <width>70</width>
          <height>60</height>
@@ -631,7 +908,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="IonPump" name="IonPump_6">
        <property name="geometry">
         <rect>
-         <x>400</x>
+         <x>590</x>
          <y>50</y>
          <width>180</width>
          <height>151</height>
@@ -653,7 +930,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="ColdCathodeGauge" name="ColdCathodeGauge_3">
        <property name="geometry">
         <rect>
-         <x>470</x>
+         <x>660</x>
          <y>240</y>
          <width>180</width>
          <height>141</height>
@@ -675,7 +952,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_3">
        <property name="geometry">
         <rect>
-         <x>80</x>
+         <x>70</x>
          <y>219</y>
          <width>200</width>
          <height>3</height>
@@ -688,10 +965,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="PneumaticValve" name="PneumaticValve_3">
        <property name="geometry">
         <rect>
-         <x>650</x>
+         <x>830</x>
          <y>410</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -707,10 +984,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="PneumaticValve" name="PneumaticValve_4">
        <property name="geometry">
         <rect>
-         <x>770</x>
+         <x>1110</x>
          <y>410</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -726,10 +1003,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="PneumaticValve" name="PneumaticValve_5">
        <property name="geometry">
         <rect>
-         <x>1070</x>
+         <x>1560</x>
          <y>410</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -745,7 +1022,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="ColdCathodeGauge" name="ColdCathodeGauge_4">
        <property name="geometry">
         <rect>
-         <x>1010</x>
+         <x>1500</x>
          <y>50</y>
          <width>180</width>
          <height>141</height>
@@ -770,7 +1047,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
        </property>
        <property name="geometry">
         <rect>
-         <x>1180</x>
+         <x>1670</x>
          <y>150</y>
          <width>70</width>
          <height>60</height>
@@ -789,7 +1066,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
        </property>
        <property name="geometry">
         <rect>
-         <x>1230</x>
+         <x>1720</x>
          <y>640</y>
          <width>70</width>
          <height>60</height>
@@ -805,7 +1082,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="ColdCathodeGauge" name="ColdCathodeGauge_5">
        <property name="geometry">
         <rect>
-         <x>1080</x>
+         <x>1570</x>
          <y>640</y>
          <width>180</width>
          <height>141</height>
@@ -824,10 +1101,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="PneumaticValve" name="PneumaticValve_6">
        <property name="geometry">
         <rect>
-         <x>1190</x>
+         <x>1680</x>
          <y>410</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -843,7 +1120,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_4">
        <property name="geometry">
         <rect>
-         <x>1220</x>
+         <x>1710</x>
          <y>430</y>
          <width>3</width>
          <height>230</height>
@@ -856,7 +1133,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_5">
        <property name="geometry">
         <rect>
-         <x>1160</x>
+         <x>1650</x>
          <y>170</y>
          <width>3</width>
          <height>250</height>
@@ -869,7 +1146,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="PyDMDrawingCircle" name="PyDMDrawingCircle_3">
        <property name="geometry">
         <rect>
-         <x>1415</x>
+         <x>1905</x>
          <y>390</y>
          <width>111</width>
          <height>71</height>
@@ -879,11 +1156,11 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="brush" stdset="0">
-        <brush brushstyle="NoBrush">
+        <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>0</red>
-          <green>0</green>
-          <blue>0</blue>
+          <red>239</red>
+          <green>239</green>
+          <blue>239</blue>
          </color>
         </brush>
        </property>
@@ -897,7 +1174,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
        </property>
        <property name="geometry">
         <rect>
-         <x>1500</x>
+         <x>1990</x>
          <y>150</y>
          <width>70</width>
          <height>60</height>
@@ -913,7 +1190,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="ColdCathodeGauge" name="ColdCathodeGauge_6">
        <property name="geometry">
         <rect>
-         <x>1320</x>
+         <x>1810</x>
          <y>50</y>
          <width>180</width>
          <height>141</height>
@@ -935,7 +1212,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="IonPump" name="IonPump_7">
        <property name="geometry">
         <rect>
-         <x>1460</x>
+         <x>1950</x>
          <y>243</y>
          <width>180</width>
          <height>151</height>
@@ -957,7 +1234,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="IonPump" name="IonPump_8">
        <property name="geometry">
         <rect>
-         <x>1460</x>
+         <x>1950</x>
          <y>410</y>
          <width>180</width>
          <height>151</height>
@@ -979,10 +1256,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="PneumaticValve" name="PneumaticValve_7">
        <property name="geometry">
         <rect>
-         <x>1630</x>
+         <x>2120</x>
          <y>410</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -995,10 +1272,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <bool>false</bool>
        </property>
       </widget>
-      <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay">
+      <widget class="PyDMEmbeddedDisplay" name="MR1K1">
        <property name="geometry">
         <rect>
-         <x>1780</x>
+         <x>2270</x>
          <y>280</y>
          <width>321</width>
          <height>321</height>
@@ -1008,7 +1285,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;PIP&quot;: &quot;MR1K1:BEND:PIP:1&quot; , &quot;GPI&quot;: &quot;MR1K1:BEND:GPI:1&quot; , &quot;GCC&quot;: &quot;MR1K1:BEND:GCC:1&quot;}</string>
+        <string>{&quot;MIRROR_NAME&quot;: &quot;MR1K1-BEND&quot;, &quot;MIRROR_PV&quot;: &quot;MR1K1:BEND&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>mirror.ui</string>
@@ -1017,10 +1294,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="PneumaticValve" name="PneumaticValve_8">
        <property name="geometry">
         <rect>
-         <x>2090</x>
+         <x>2580</x>
          <y>410</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -1033,10 +1310,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <bool>false</bool>
        </property>
       </widget>
-      <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay_2">
+      <widget class="PyDMEmbeddedDisplay" name="MR1K3">
        <property name="geometry">
         <rect>
-         <x>2240</x>
+         <x>2730</x>
          <y>280</y>
          <width>321</width>
          <height>321</height>
@@ -1046,16 +1323,19 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;PIP&quot;: &quot;MR1K3:TXI:PIP:1&quot; , &quot;GPI&quot;: &quot;MR1K3:TXI:GPI:1&quot; , &quot;GCC&quot;: &quot;MR1K3:TXI:GCC:1&quot;}</string>
+        <string>{&quot;MIRROR_NAME&quot;: &quot;MR1K3-TXI&quot;, &quot;MIRROR_PV&quot;: &quot;MR1K3:TXI&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>mirror.ui</string>
        </property>
       </widget>
-      <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay_3">
+      <widget class="PyDMEmbeddedDisplay" name="SP1K1">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
        <property name="geometry">
         <rect>
-         <x>3050</x>
+         <x>3560</x>
          <y>20</y>
          <width>391</width>
          <height>331</height>
@@ -1065,7 +1345,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;PIP1&quot;: &quot;SP1K1:MONO:PIP:1&quot; , &quot;PIP2&quot;: &quot;SP1K1:MONO:PIP:2&quot; , &quot;GPI&quot;: &quot;SP1K1:MONO:GPI:1&quot; , &quot;GCC&quot;: &quot;SP1K1:MONO:GCC:1&quot;}</string>
+        <string>{&quot;MONO_PV&quot;:&quot;SP1K1:MONO&quot;, &quot;MONO_NAME&quot;:&quot;SP1K1-MONO&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>monochromator.ui</string>
@@ -1074,10 +1354,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="PneumaticValve" name="PneumaticValve_9">
        <property name="geometry">
         <rect>
-         <x>2900</x>
+         <x>3410</x>
          <y>150</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -1093,7 +1373,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="PyDMDrawingCircle" name="PyDMDrawingCircle_4">
        <property name="geometry">
         <rect>
-         <x>2920</x>
+         <x>3430</x>
          <y>390</y>
          <width>111</width>
          <height>71</height>
@@ -1103,11 +1383,11 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="brush" stdset="0">
-        <brush brushstyle="NoBrush">
+        <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>0</red>
-          <green>0</green>
-          <blue>0</blue>
+          <red>239</red>
+          <green>239</green>
+          <blue>239</blue>
          </color>
         </brush>
        </property>
@@ -1118,10 +1398,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="PneumaticValve" name="PneumaticValve_10">
        <property name="geometry">
         <rect>
-         <x>3440</x>
+         <x>3950</x>
          <y>150</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -1137,10 +1417,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="PneumaticValve" name="PneumaticValve_11">
        <property name="geometry">
         <rect>
-         <x>2950</x>
-         <y>650</y>
+         <x>3460</x>
+         <y>670</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -1153,10 +1433,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <bool>false</bool>
        </property>
       </widget>
-      <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay_4">
+      <widget class="PyDMEmbeddedDisplay" name="MR1K4">
        <property name="geometry">
         <rect>
-         <x>3730</x>
+         <x>4240</x>
          <y>280</y>
          <width>321</width>
          <height>321</height>
@@ -1166,7 +1446,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;PIP&quot;: &quot;MR1K4:SOMS:PIP:1&quot; , &quot;GPI&quot;: &quot;MR1K4:SOMS:GPI:1&quot; , &quot;GCC&quot;: &quot;MR1K4:SOMS:GCC:1&quot;}</string>
+        <string>{&quot;MIRROR_NAME&quot;: &quot;MR1K4-SOMS&quot;, &quot;MIRROR_PV&quot;: &quot;MR1K4:SOMS&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>mirror.ui</string>
@@ -1175,10 +1455,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="PneumaticValve" name="PneumaticValve_12">
        <property name="geometry">
         <rect>
-         <x>3110</x>
+         <x>3620</x>
          <y>410</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -1194,10 +1474,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="PneumaticValve" name="PneumaticValve_13">
        <property name="geometry">
         <rect>
-         <x>3580</x>
+         <x>4090</x>
          <y>410</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -1213,7 +1493,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="IonPump" name="IonPump_9">
        <property name="geometry">
         <rect>
-         <x>3230</x>
+         <x>3740</x>
          <y>500</y>
          <width>180</width>
          <height>151</height>
@@ -1235,7 +1515,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="ColdCathodeGauge" name="ColdCathodeGauge_7">
        <property name="geometry">
         <rect>
-         <x>3380</x>
+         <x>3890</x>
          <y>430</y>
          <width>180</width>
          <height>111</height>
@@ -1257,7 +1537,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="RoughGauge" name="RoughGauge_6">
        <property name="geometry">
         <rect>
-         <x>3380</x>
+         <x>3890</x>
          <y>550</y>
          <width>70</width>
          <height>60</height>
@@ -1273,10 +1553,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="PneumaticValve" name="PneumaticValve_14">
        <property name="geometry">
         <rect>
-         <x>880</x>
+         <x>1370</x>
          <y>410</y>
          <width>180</width>
-         <height>121</height>
+         <height>125</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -1289,10 +1569,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <bool>false</bool>
        </property>
       </widget>
-      <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay_5">
+      <widget class="PyDMEmbeddedDisplay" name="MR2K3">
        <property name="geometry">
         <rect>
-         <x>2580</x>
+         <x>3070</x>
          <y>280</y>
          <width>321</width>
          <height>321</height>
@@ -1302,7 +1582,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;PIP&quot;: &quot;MR2K3:TXI:PIP:1&quot; , &quot;GPI&quot;: &quot;MR2K3:TXI:GPI:1&quot; , &quot;GCC&quot;: &quot;MR2K3:TXI:GCC:1&quot;}</string>
+        <string>{&quot;MIRROR_NAME&quot;: &quot;MR2K3-TXI&quot;, &quot;MIRROR_PV&quot;: &quot;MR2K3:TXI&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>mirror.ui</string>
@@ -1311,7 +1591,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_6">
        <property name="geometry">
         <rect>
-         <x>490</x>
+         <x>680</x>
          <y>260</y>
          <width>70</width>
          <height>3</height>
@@ -1324,7 +1604,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_2">
        <property name="geometry">
         <rect>
-         <x>100</x>
+         <x>90</x>
          <y>660</y>
          <width>90</width>
          <height>3</height>
@@ -1337,7 +1617,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_7">
        <property name="geometry">
         <rect>
-         <x>420</x>
+         <x>596</x>
          <y>660</y>
          <width>90</width>
          <height>3</height>
@@ -1350,7 +1630,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_8">
        <property name="geometry">
         <rect>
-         <x>1170</x>
+         <x>1660</x>
          <y>660</y>
          <width>90</width>
          <height>3</height>
@@ -1363,7 +1643,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_9">
        <property name="geometry">
         <rect>
-         <x>1110</x>
+         <x>1600</x>
          <y>170</y>
          <width>100</width>
          <height>3</height>
@@ -1376,7 +1656,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_10">
        <property name="geometry">
         <rect>
-         <x>1470</x>
+         <x>1960</x>
          <y>260</y>
          <width>69</width>
          <height>3</height>
@@ -1389,7 +1669,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_11">
        <property name="geometry">
         <rect>
-         <x>1420</x>
+         <x>1910</x>
          <y>170</y>
          <width>110</width>
          <height>3</height>
@@ -1402,7 +1682,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_12">
        <property name="geometry">
         <rect>
-         <x>1470</x>
+         <x>1960</x>
          <y>170</y>
          <width>3</width>
          <height>220</height>
@@ -1415,7 +1695,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_13">
        <property name="geometry">
         <rect>
-         <x>490</x>
+         <x>680</x>
          <y>170</y>
          <width>3</width>
          <height>260</height>
@@ -1428,7 +1708,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_14">
        <property name="geometry">
         <rect>
-         <x>180</x>
+         <x>170</x>
          <y>220</y>
          <width>3</width>
          <height>211</height>
@@ -1441,7 +1721,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_15">
        <property name="geometry">
         <rect>
-         <x>120</x>
+         <x>110</x>
          <y>220</y>
          <width>3</width>
          <height>30</height>
@@ -1454,7 +1734,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_16">
        <property name="geometry">
         <rect>
-         <x>240</x>
+         <x>230</x>
          <y>220</y>
          <width>3</width>
          <height>30</height>
@@ -1467,7 +1747,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_17">
        <property name="geometry">
         <rect>
-         <x>280</x>
+         <x>270</x>
          <y>190</y>
          <width>3</width>
          <height>30</height>
@@ -1480,7 +1760,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_18">
        <property name="geometry">
         <rect>
-         <x>180</x>
+         <x>170</x>
          <y>190</y>
          <width>3</width>
          <height>30</height>
@@ -1493,7 +1773,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_19">
        <property name="geometry">
         <rect>
-         <x>80</x>
+         <x>70</x>
          <y>190</y>
          <width>3</width>
          <height>30</height>
@@ -1506,7 +1786,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_20">
        <property name="geometry">
         <rect>
-         <x>2920</x>
+         <x>3430</x>
          <y>160</y>
          <width>70</width>
          <height>3</height>
@@ -1519,7 +1799,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_21">
        <property name="geometry">
         <rect>
-         <x>2920</x>
+         <x>3430</x>
          <y>160</y>
          <width>3</width>
          <height>270</height>
@@ -1532,47 +1812,34 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_22">
        <property name="geometry">
         <rect>
-         <x>2974</x>
+         <x>3484</x>
          <y>460</y>
          <width>3</width>
-         <height>200</height>
+         <height>227</height>
         </rect>
        </property>
        <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>
       </widget>
-      <widget class="Line" name="line_23">
-       <property name="geometry">
-        <rect>
-         <x>2975</x>
-         <y>660</y>
-         <width>50</width>
-         <height>3</height>
-        </rect>
-       </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-      </widget>
       <widget class="Line" name="line_24">
        <property name="geometry">
         <rect>
-         <x>3045</x>
-         <y>653</y>
-         <width>50</width>
-         <height>16</height>
+         <x>3484</x>
+         <y>678</y>
+         <width>121</width>
+         <height>20</height>
         </rect>
        </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
       </widget>
-      <widget class="PyDMLabel" name="PyDMLabel">
+      <widget class="PyDMLabel" name="to_txi_label">
        <property name="geometry">
         <rect>
-         <x>3090</x>
-         <y>640</y>
+         <x>3610</x>
+         <y>670</y>
          <width>91</width>
          <height>41</height>
         </rect>
@@ -1590,11 +1857,14 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
        <property name="text">
         <string>TXI</string>
        </property>
+       <property name="rules" stdset="0">
+        <string>[]</string>
+       </property>
       </widget>
       <widget class="Line" name="line_25">
        <property name="geometry">
         <rect>
-         <x>3000</x>
+         <x>3510</x>
          <y>160</y>
          <width>142</width>
          <height>3</height>
@@ -1607,7 +1877,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_26">
        <property name="geometry">
         <rect>
-         <x>3340</x>
+         <x>3850</x>
          <y>160</y>
          <width>180</width>
          <height>3</height>
@@ -1620,7 +1890,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_27">
        <property name="geometry">
         <rect>
-         <x>3540</x>
+         <x>4050</x>
          <y>160</y>
          <width>80</width>
          <height>3</height>
@@ -1633,7 +1903,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_28">
        <property name="geometry">
         <rect>
-         <x>3380</x>
+         <x>3890</x>
          <y>430</y>
          <width>3</width>
          <height>141</height>
@@ -1646,7 +1916,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_29">
        <property name="geometry">
         <rect>
-         <x>3330</x>
+         <x>3840</x>
          <y>510</y>
          <width>50</width>
          <height>3</height>
@@ -1659,7 +1929,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_30">
        <property name="geometry">
         <rect>
-         <x>3380</x>
+         <x>3890</x>
          <y>480</y>
          <width>50</width>
          <height>3</height>
@@ -1672,7 +1942,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_31">
        <property name="geometry">
         <rect>
-         <x>3380</x>
+         <x>3890</x>
          <y>570</y>
          <width>40</width>
          <height>3</height>
@@ -1682,10 +1952,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>Qt::Horizontal</enum>
        </property>
       </widget>
-      <widget class="PyDMLabel" name="PyDMLabel_2">
+      <widget class="PyDMLabel" name="to_22_label">
        <property name="geometry">
         <rect>
-         <x>3610</x>
+         <x>4120</x>
          <y>140</y>
          <width>251</width>
          <height>41</height>
@@ -1723,7 +1993,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
        </property>
        <property name="geometry">
         <rect>
-         <x>690</x>
+         <x>870</x>
          <y>640</y>
          <width>70</width>
          <height>60</height>
@@ -1739,7 +2009,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="ColdCathodeGauge" name="ColdCathodeGauge_8">
        <property name="geometry">
         <rect>
-         <x>540</x>
+         <x>720</x>
          <y>640</y>
          <width>180</width>
          <height>141</height>
@@ -1758,7 +2028,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_32">
        <property name="geometry">
         <rect>
-         <x>630</x>
+         <x>810</x>
          <y>660</y>
          <width>90</width>
          <height>3</height>
@@ -1771,7 +2041,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_33">
        <property name="geometry">
         <rect>
-         <x>680</x>
+         <x>850</x>
          <y>430</y>
          <width>3</width>
          <height>231</height>
@@ -1784,7 +2054,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_34">
        <property name="geometry">
         <rect>
-         <x>460</x>
+         <x>640</x>
          <y>430</y>
          <width>3</width>
          <height>230</height>
@@ -1794,10 +2064,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>Qt::Vertical</enum>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle">
+      <widget class="PyDMDrawingRectangle" name="RTDSK0_box">
        <property name="geometry">
         <rect>
-         <x>20</x>
+         <x>10</x>
          <y>50</y>
          <width>321</width>
          <height>751</height>
@@ -1822,10 +2092,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle_2">
+      <widget class="PyDMDrawingRectangle" name="IM1K0_box">
        <property name="geometry">
         <rect>
-         <x>350</x>
+         <x>530</x>
          <y>630</y>
          <width>211</width>
          <height>171</height>
@@ -1850,10 +2120,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle_3">
+      <widget class="PyDMDrawingRectangle" name="SL1K0_box">
        <property name="geometry">
         <rect>
-         <x>570</x>
+         <x>750</x>
          <y>630</y>
          <width>211</width>
          <height>171</height>
@@ -1878,13 +2148,13 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle_4">
+      <widget class="PyDMDrawingRectangle" name="EM2K0_box">
        <property name="geometry">
         <rect>
-         <x>800</x>
+         <x>1140</x>
          <y>400</y>
-         <width>231</width>
-         <height>151</height>
+         <width>381</width>
+         <height>161</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -1906,10 +2176,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle_5">
+      <widget class="PyDMDrawingRectangle" name="TV2K0_box">
        <property name="geometry">
         <rect>
-         <x>1040</x>
+         <x>1530</x>
          <y>50</y>
          <width>301</width>
          <height>751</height>
@@ -1934,10 +2204,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle_6">
+      <widget class="PyDMDrawingRectangle" name="PCPM3B_box">
        <property name="geometry">
         <rect>
-         <x>430</x>
+         <x>620</x>
          <y>50</y>
          <width>191</width>
          <height>351</height>
@@ -1965,7 +2235,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_35">
        <property name="geometry">
         <rect>
-         <x>150</x>
+         <x>140</x>
          <y>430</y>
          <width>3</width>
          <height>231</height>
@@ -1975,10 +2245,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>Qt::Vertical</enum>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle_7">
+      <widget class="PyDMDrawingRectangle" name="PA1K0_box">
        <property name="geometry">
         <rect>
-         <x>1350</x>
+         <x>1840</x>
          <y>50</y>
          <width>301</width>
          <height>571</height>
@@ -2003,10 +2273,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle_8">
+      <widget class="PyDMDrawingRectangle" name="MR1K1_box">
        <property name="geometry">
         <rect>
-         <x>1660</x>
+         <x>2150</x>
          <y>260</y>
          <width>451</width>
          <height>361</height>
@@ -2031,12 +2301,12 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle_9">
+      <widget class="PyDMDrawingRectangle" name="MR1K3_box">
        <property name="geometry">
         <rect>
-         <x>2120</x>
+         <x>2610</x>
          <y>260</y>
-         <width>451</width>
+         <width>791</width>
          <height>361</height>
         </rect>
        </property>
@@ -2059,10 +2329,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle_10">
+      <widget class="PyDMDrawingRectangle" name="SP1K1_box">
        <property name="geometry">
         <rect>
-         <x>2940</x>
+         <x>3450</x>
          <y>10</y>
          <width>651</width>
          <height>351</height>
@@ -2087,13 +2357,13 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle_11">
+      <widget class="PyDMDrawingRectangle" name="TV3K0_box">
        <property name="geometry">
         <rect>
-         <x>3140</x>
-         <y>400</y>
+         <x>3650</x>
+         <y>380</y>
          <width>451</width>
-         <height>261</height>
+         <height>281</height>
         </rect>
        </property>
        <property name="toolTip">
@@ -2115,10 +2385,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="PyDMDrawingRectangle" name="PyDMDrawingRectangle_12">
+      <widget class="PyDMDrawingRectangle" name="MR1K4_box">
        <property name="geometry">
         <rect>
-         <x>3600</x>
+         <x>4110</x>
          <y>270</y>
          <width>461</width>
          <height>391</height>
@@ -2143,12 +2413,531 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="Line" name="line_36">
+      <widget class="PyDMLabel" name="RTDSK0_label">
        <property name="geometry">
         <rect>
-         <x>1506</x>
+         <x>200</x>
+         <y>780</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>RTDSK0 </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="margin">
+        <number>0</number>
+       </property>
+       <property name="indent">
+        <number>-1</number>
+       </property>
+      </widget>
+      <widget class="PyDMLabel" name="PCPM3B_label">
+       <property name="geometry">
+        <rect>
+         <x>680</x>
+         <y>50</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>PCPM3B </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="PyDMLabel" name="IM1K0_label">
+       <property name="geometry">
+        <rect>
+         <x>610</x>
+         <y>780</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>IM1K0-XTES </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="PyDMLabel" name="SL1K0_label">
+       <property name="geometry">
+        <rect>
+         <x>800</x>
+         <y>780</y>
+         <width>161</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>SL1K0-POWER </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="PyDMLabel" name="EM2K0_label">
+       <property name="geometry">
+        <rect>
+         <x>1380</x>
+         <y>540</y>
+         <width>141</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>EM2K0-XGMD </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="PyDMLabel" name="TV2K0_label">
+       <property name="geometry">
+        <rect>
+         <x>1700</x>
+         <y>780</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>TV2K0 </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="PyDMLabel" name="PA1K0_label">
+       <property name="geometry">
+        <rect>
+         <x>2010</x>
+         <y>600</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>PA1K0 </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="PyDMLabel" name="TV3K0_label">
+       <property name="geometry">
+        <rect>
+         <x>3970</x>
+         <y>640</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>TV3K0 </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="PyDMDrawingRectangle" name="AT1K0_box">
+       <property name="geometry">
+        <rect>
+         <x>860</x>
+         <y>400</y>
+         <width>271</width>
+         <height>161</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="brush" stdset="0">
+        <brush brushstyle="NoBrush">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </property>
+       <property name="penStyle" stdset="0">
+        <enum>Qt::DashLine</enum>
+       </property>
+       <property name="penWidth" stdset="0">
+        <double>1.000000000000000</double>
+       </property>
+      </widget>
+      <widget class="PyDMLabel" name="AT1K0_label">
+       <property name="geometry">
+        <rect>
+         <x>990</x>
+         <y>540</y>
+         <width>141</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>AT1K0-GAS </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="PyDMDrawingRectangle" name="EM1K0_box">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>400</y>
+         <width>271</width>
+         <height>161</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="brush" stdset="0">
+        <brush brushstyle="NoBrush">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </property>
+       <property name="penStyle" stdset="0">
+        <enum>Qt::DashLine</enum>
+       </property>
+       <property name="penWidth" stdset="0">
+        <double>1.000000000000000</double>
+       </property>
+      </widget>
+      <widget class="PyDMLabel" name="EM1K0_label">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>540</y>
+         <width>141</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>EM1K0-GMD </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="PyDMDrawingRectangle" name="EM1K0_box_2">
+       <property name="geometry">
+        <rect>
+         <x>460</x>
+         <y>410</y>
+         <width>141</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="brush" stdset="0">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>239</red>
+          <green>239</green>
+          <blue>239</blue>
+         </color>
+        </brush>
+       </property>
+       <property name="penStyle" stdset="0">
+        <enum>Qt::DashLine</enum>
+       </property>
+       <property name="penWidth" stdset="0">
+        <double>1.000000000000000</double>
+       </property>
+      </widget>
+      <widget class="PyDMLabel" name="EM1K0_label_2">
+       <property name="geometry">
+        <rect>
+         <x>460</x>
+         <y>420</y>
+         <width>141</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>EM1K0-GMD </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="Line" name="line_23">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
          <y>430</y>
-         <width>335</width>
+         <width>4600</width>
          <height>3</height>
         </rect>
        </property>
@@ -2156,74 +2945,345 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>Qt::Horizontal</enum>
        </property>
       </widget>
-      <widget class="Line" name="line_37">
+      <widget class="PyDMLabel" name="AT1K0_label_3">
        <property name="geometry">
         <rect>
-         <x>2040</x>
-         <y>430</y>
-         <width>262</width>
-         <height>3</height>
+         <x>980</x>
+         <y>420</y>
+         <width>141</width>
+         <height>21</height>
         </rect>
        </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>AT1K0-GAS</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="Line" name="line_38">
+      <widget class="PyDMDrawingRectangle" name="AT1K0_box_3">
        <property name="geometry">
         <rect>
-         <x>2500</x>
-         <y>430</y>
-         <width>142</width>
-         <height>3</height>
+         <x>980</x>
+         <y>410</y>
+         <width>141</width>
+         <height>41</height>
         </rect>
        </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="brush" stdset="0">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>239</red>
+          <green>239</green>
+          <blue>239</blue>
+         </color>
+        </brush>
+       </property>
+       <property name="penStyle" stdset="0">
+        <enum>Qt::DashLine</enum>
+       </property>
+       <property name="penWidth" stdset="0">
+        <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="Line" name="line_39">
+      <widget class="PyDMLabel" name="EM2K0_label_4">
        <property name="geometry">
         <rect>
-         <x>2840</x>
-         <y>430</y>
-         <width>100</width>
-         <height>3</height>
+         <x>1260</x>
+         <y>420</y>
+         <width>141</width>
+         <height>21</height>
         </rect>
        </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>EM2K0-XGMD</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="Line" name="line_40">
+      <widget class="PyDMDrawingRectangle" name="EM2K0_box_4">
        <property name="geometry">
         <rect>
-         <x>3010</x>
-         <y>430</y>
-         <width>782</width>
-         <height>3</height>
+         <x>1260</x>
+         <y>410</y>
+         <width>141</width>
+         <height>41</height>
         </rect>
        </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="brush" stdset="0">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>239</red>
+          <green>239</green>
+          <blue>239</blue>
+         </color>
+        </brush>
+       </property>
+       <property name="penStyle" stdset="0">
+        <enum>Qt::DashLine</enum>
+       </property>
+       <property name="penWidth" stdset="0">
+        <double>1.000000000000000</double>
        </property>
       </widget>
-      <widget class="Line" name="line_41">
+      <widget class="PyDMLabel" name="to_tmo_label">
        <property name="geometry">
         <rect>
-         <x>3990</x>
-         <y>430</y>
-         <width>75</width>
-         <height>3</height>
+         <x>4610</x>
+         <y>410</y>
+         <width>251</width>
+         <height>41</height>
         </rect>
        </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>TMO</string>
        </property>
       </widget>
+      <widget class="PyDMLabel" name="EM1K0_label_3">
+       <property name="geometry">
+        <rect>
+         <x>3470</x>
+         <y>800</y>
+         <width>141</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>EM1K0-GMD </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="PyDMDrawingRectangle" name="IM1K2_box">
+       <property name="geometry">
+        <rect>
+         <x>3460</x>
+         <y>640</y>
+         <width>151</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="brush" stdset="0">
+        <brush brushstyle="NoBrush">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </property>
+       <property name="penStyle" stdset="0">
+        <enum>Qt::DashLine</enum>
+       </property>
+       <property name="penWidth" stdset="0">
+        <double>1.000000000000000</double>
+       </property>
+      </widget>
+      <widget class="PyDMByteIndicator" name="PyDMByteIndicator">
+       <property name="geometry">
+        <rect>
+         <x>4410</x>
+         <y>730</y>
+         <width>221</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="rules" stdset="0">
+        <string>[]</string>
+       </property>
+       <property name="alarmSensitiveContent" stdset="0">
+        <bool>true</bool>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://RTDSK0:KFEVAC:SYSOVERRIDE_RBV</string>
+       </property>
+       <property name="onColor" stdset="0">
+        <color>
+         <red>255</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </property>
+       <property name="offColor" stdset="0">
+        <color>
+         <red>0</red>
+         <green>255</green>
+         <blue>0</blue>
+        </color>
+       </property>
+       <property name="showLabels" stdset="0">
+        <bool>true</bool>
+       </property>
+       <property name="labels" stdset="0">
+        <stringlist>
+         <string>Vacuum interlocks enabled</string>
+         <string>Vacuum Interlocks DISABLED</string>
+         <string></string>
+        </stringlist>
+       </property>
+      </widget>
+      <widget class="PyDMCheckbox" name="PyDMCheckbox">
+       <property name="geometry">
+        <rect>
+         <x>4420</x>
+         <y>760</y>
+         <width>14</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="alarmSensitiveContent" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://RTDSK0:KFEVAC:SYSOVERRIDE</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>4440</x>
+         <y>760</y>
+         <width>241</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;-- Check this box to disable interlocks</string>
+       </property>
+      </widget>
+      <zorder>IM1K2_box</zorder>
+      <zorder>EM2K0_box</zorder>
+      <zorder>line_23</zorder>
+      <zorder>EM2K0_box_4</zorder>
+      <zorder>AT1K0_box</zorder>
+      <zorder>EM1K0_box</zorder>
+      <zorder>AT1K0_box_3</zorder>
+      <zorder>SL1K0_box</zorder>
+      <zorder>TV2K0_box</zorder>
+      <zorder>PA1K0_box</zorder>
+      <zorder>IM1K0_box</zorder>
+      <zorder>PCPM3B_box</zorder>
+      <zorder>RTDSK0_box</zorder>
+      <zorder>MR1K4_box</zorder>
+      <zorder>TV3K0_box</zorder>
+      <zorder>MR1K1_box</zorder>
+      <zorder>MR1K3_box</zorder>
+      <zorder>SP1K1_box</zorder>
       <zorder>line_35</zorder>
-      <zorder>line_39</zorder>
-      <zorder>line_38</zorder>
       <zorder>line_12</zorder>
       <zorder>line_7</zorder>
       <zorder>line_11</zorder>
@@ -2233,7 +3293,6 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <zorder>line_14</zorder>
       <zorder>line_19</zorder>
       <zorder>line_16</zorder>
-      <zorder>line_36</zorder>
       <zorder>line_33</zorder>
       <zorder>line_21</zorder>
       <zorder>line_25</zorder>
@@ -2243,13 +3302,9 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <zorder>line_26</zorder>
       <zorder>line_31</zorder>
       <zorder>line_17</zorder>
-      <zorder>line_37</zorder>
-      <zorder>line_41</zorder>
-      <zorder>line_23</zorder>
       <zorder>line_24</zorder>
       <zorder>line_3</zorder>
       <zorder>line_2</zorder>
-      <zorder>line_40</zorder>
       <zorder>line_8</zorder>
       <zorder>line_4</zorder>
       <zorder>line_6</zorder>
@@ -2257,7 +3312,6 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <zorder>line_15</zorder>
       <zorder>line_10</zorder>
       <zorder>line_22</zorder>
-      <zorder>line</zorder>
       <zorder>line_30</zorder>
       <zorder>line_9</zorder>
       <zorder>line_29</zorder>
@@ -2271,17 +3325,13 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <zorder>IonPump_4</zorder>
       <zorder>IonPump_5</zorder>
       <zorder>PneumaticValve_2</zorder>
-      <zorder>ColdCathodeGauge_2</zorder>
       <zorder>RoughGauge_2</zorder>
-      <zorder>IonPump_6</zorder>
       <zorder>ColdCathodeGauge_3</zorder>
-      <zorder>PneumaticValve_3</zorder>
       <zorder>PneumaticValve_4</zorder>
       <zorder>PneumaticValve_5</zorder>
       <zorder>ColdCathodeGauge_4</zorder>
       <zorder>RoughGauge_3</zorder>
       <zorder>RoughGauge_4</zorder>
-      <zorder>ColdCathodeGauge_5</zorder>
       <zorder>PneumaticValve_6</zorder>
       <zorder>PyDMDrawingCircle_3</zorder>
       <zorder>RoughGauge_5</zorder>
@@ -2289,38 +3339,49 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <zorder>IonPump_7</zorder>
       <zorder>IonPump_8</zorder>
       <zorder>PneumaticValve_7</zorder>
-      <zorder>PyDMEmbeddedDisplay</zorder>
+      <zorder>MR1K1</zorder>
       <zorder>PneumaticValve_8</zorder>
-      <zorder>PyDMEmbeddedDisplay_2</zorder>
-      <zorder>PyDMEmbeddedDisplay_3</zorder>
+      <zorder>MR1K3</zorder>
+      <zorder>SP1K1</zorder>
       <zorder>PneumaticValve_9</zorder>
       <zorder>PyDMDrawingCircle_4</zorder>
       <zorder>PneumaticValve_10</zorder>
       <zorder>PneumaticValve_11</zorder>
-      <zorder>PyDMEmbeddedDisplay_4</zorder>
+      <zorder>MR1K4</zorder>
       <zorder>PneumaticValve_12</zorder>
       <zorder>PneumaticValve_13</zorder>
       <zorder>IonPump_9</zorder>
       <zorder>ColdCathodeGauge_7</zorder>
       <zorder>RoughGauge_6</zorder>
       <zorder>PneumaticValve_14</zorder>
-      <zorder>PyDMEmbeddedDisplay_5</zorder>
-      <zorder>PyDMLabel</zorder>
-      <zorder>PyDMLabel_2</zorder>
+      <zorder>MR2K3</zorder>
+      <zorder>to_txi_label</zorder>
+      <zorder>to_22_label</zorder>
       <zorder>RoughGauge_7</zorder>
+      <zorder>RTDSK0_label</zorder>
+      <zorder>PCPM3B_label</zorder>
+      <zorder>IonPump_6</zorder>
+      <zorder>IM1K0_label</zorder>
+      <zorder>SL1K0_label</zorder>
+      <zorder>ColdCathodeGauge_2</zorder>
       <zorder>ColdCathodeGauge_8</zorder>
-      <zorder>PyDMDrawingRectangle</zorder>
-      <zorder>PyDMDrawingRectangle_2</zorder>
-      <zorder>PyDMDrawingRectangle_3</zorder>
-      <zorder>PyDMDrawingRectangle_4</zorder>
-      <zorder>PyDMDrawingRectangle_5</zorder>
-      <zorder>PyDMDrawingRectangle_6</zorder>
-      <zorder>PyDMDrawingRectangle_7</zorder>
-      <zorder>PyDMDrawingRectangle_8</zorder>
-      <zorder>PyDMDrawingRectangle_9</zorder>
-      <zorder>PyDMDrawingRectangle_10</zorder>
-      <zorder>PyDMDrawingRectangle_11</zorder>
-      <zorder>PyDMDrawingRectangle_12</zorder>
+      <zorder>EM2K0_label</zorder>
+      <zorder>TV2K0_label</zorder>
+      <zorder>ColdCathodeGauge_5</zorder>
+      <zorder>PA1K0_label</zorder>
+      <zorder>TV3K0_label</zorder>
+      <zorder>AT1K0_label</zorder>
+      <zorder>PneumaticValve_3</zorder>
+      <zorder>EM1K0_label</zorder>
+      <zorder>EM1K0_box_2</zorder>
+      <zorder>EM1K0_label_2</zorder>
+      <zorder>AT1K0_label_3</zorder>
+      <zorder>EM2K0_label_4</zorder>
+      <zorder>to_tmo_label</zorder>
+      <zorder>EM1K0_label_3</zorder>
+      <zorder>PyDMByteIndicator</zorder>
+      <zorder>PyDMCheckbox</zorder>
+      <zorder>label</zorder>
      </widget>
     </widget>
    </item>
@@ -2331,6 +3392,16 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
    <class>PyDMLabel</class>
    <extends>QLabel</extends>
    <header>pydm.widgets.label</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMByteIndicator</class>
+   <extends>QWidget</extends>
+   <header>pydm.widgets.byte</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMCheckbox</class>
+   <extends>QCheckBox</extends>
+   <header>pydm.widgets.checkbox</header>
   </customwidget>
   <customwidget>
    <class>PyDMDrawingCircle</class>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <GVL Name="GVL_SXR_VAC" Id="{abb060cf-858a-46f1-b748-697dab0c9944}">
     <Declaration><![CDATA[VAR_GLOBAL
 
@@ -29,8 +29,8 @@ st_PC4K4_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLea
 st_RTDSK0_VGC_1 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
 st_EM1K0_GMD_VGC_1 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
 st_AT1K0_GAS_VGC_1 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
-st_EM1K0_XGMD_VGC_1 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
-st_EM1K0_XGMD_VGC_2 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
+st_EM2K0_XGMD_VGC_1 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
+st_EM2K0_XGMD_VGC_2 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
 st_TV2K0_VGC_1 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
 st_MR1K1_BEND_VGC_1 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
 st_MR1K3_TXI_VGC_1 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
@@ -48,8 +48,8 @@ st_ST3K4_XTES_VGC_1 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
 fb_RTDSK0_VGC_1 : FB_VacuumValve;
 fb_EM1K0_GMD_VGC_1 : FB_VacuumValve;
 fb_AT1K0_GAS_VGC_1 : FB_VacuumValve;
-fb_EM1K0_XGMD_VGC_1 : FB_VacuumValve;
-fb_EM1K0_XGMD_VGC_2 : FB_VacuumValve;
+fb_EM2K0_XGMD_VGC_1 : FB_VacuumValve;
+fb_EM2K0_XGMD_VGC_2 : FB_VacuumValve;
 fb_TV2K0_VGC_1 : FB_VacuumValve;
 fb_MR1K1_BEND_VGC_1 : FB_VacuumValve;
 fb_MR1K3_TXI_VGC_1 : FB_VacuumValve;
@@ -64,10 +64,10 @@ fb_ST3K4_XTES_VGC_1 : FB_VacuumValve;
 
 // ST_MKS_422
 
-st_DMPS_GCC_1 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
-st_IM2K0_XTES_GCC_1 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
+st_RTDSK0_GCC_1 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
+st_IM1K0_XTES_GCC_1 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
 st_PCPM3B_GFS_1 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
-st_SL1K0_GCC_1 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
+st_SL1K0_POWER_GCC_1 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
 st_TV2K0_GCC_1 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
 st_TV2K0_GCC_2 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
 st_PA1K0_GCC_1 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
@@ -75,10 +75,10 @@ st_MR1K1_BEND_GCC_1 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
 
 // FB_MKS_422
 
-fb_DMPS_GCC_1 : FB_MKS_422;
-fb_IM2K0_XTES_GCC_1 : FB_MKS_422;
+fb_RTDSK0_GCC_1 : FB_MKS_422;
+fb_IM1K0_XTES_GCC_1 : FB_MKS_422;
 fb_PCPM3B_GFS_1 : FB_MKS_422;
-fb_SL1K0_GCC_1 : FB_MKS_422;
+fb_SL1K0_POWER_GCC_1 : FB_MKS_422;
 fb_TV2K0_GCC_1 : FB_MKS_422;
 fb_TV2K0_GCC_2 : FB_MKS_422;
 fb_PA1K0_GCC_1 : FB_MKS_422;
@@ -86,9 +86,9 @@ fb_MR1K1_BEND_GCC_1 : FB_MKS_422;
 
 // ST_MKS_275
 
-st_DMPS_GPI_1 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
-st_IM2K0_XTES_GPI_1 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
-st_SL1K0_GPI_1 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+st_RTDSK0_GPI_1 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+st_IM1K0_XTES_GPI_1 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+st_SL1K0_POWER_GPI_1 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
 st_TV2K0_GPI_1 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
 st_TV2K0_GPI_2 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
 st_PA1K0_GPI_1 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
@@ -105,9 +105,9 @@ st_PC4K4_XTES_GPI_1 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
 
 // FB_MKS_275
 
-fb_DMPS_GPI_1 : FB_MKS_275;
-fb_IM2K0_XTES_GPI_1 : FB_MKS_275;
-fb_SL1K0_GPI_1 : FB_MKS_275;
+fb_RTDSK0_GPI_1 : FB_MKS_275;
+fb_IM1K0_XTES_GPI_1 : FB_MKS_275;
+fb_SL1K0_POWER_GPI_1 : FB_MKS_275;
 fb_TV2K0_GPI_1 : FB_MKS_275;
 fb_TV2K0_GPI_2 : FB_MKS_275;
 fb_PA1K0_GPI_1 : FB_MKS_275;

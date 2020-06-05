@@ -1733,7 +1733,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="channelsPrefix" stdset="0">
-        <string>ca://SLK10:POWER:GPI:1</string>
+        <string>ca://SL1K0:POWER:GPI:1</string>
        </property>
       </widget>
       <widget class="ColdCathodeGauge" name="ColdCathodeGauge_8">
@@ -1749,7 +1749,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="channelsPrefix" stdset="0">
-        <string>ca://SLK10:POWER:GCC:1</string>
+        <string>ca://SL1K0:POWER:GCC:1</string>
        </property>
        <property name="controlButtonHorizontal" stdset="0">
         <bool>false</bool>

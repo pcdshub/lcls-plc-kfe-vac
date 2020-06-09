@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <GVL Name="GVL_VAC_INTF" Id="{bdd53724-11cd-4a04-8f7d-c6faba7ad570}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+    nTMO_VAC_counter    :   INT := 0;
+    TMO_ads_watch_dog   :   FB_ADS_WATCHDOG;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

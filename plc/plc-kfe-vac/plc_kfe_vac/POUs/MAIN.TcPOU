@@ -8,11 +8,13 @@ END_VAR
     <Implementation>
       <ST><![CDATA[PRG_DIAGNOSTIC();
 PRG_SXR_VAC();
+PRG_VAC_INTF();
 fbEcatDiagWrapper();
 fbLogHandler();]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="6" Count="1" />
+      <LineId Id="22" Count="0" />
       <LineId Id="17" Count="0" />
       <LineId Id="12" Count="0" />
     </LineIds>

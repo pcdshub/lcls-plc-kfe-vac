@@ -86,11 +86,6 @@
     </PlaceholderReference>
   </ItemGroup>
   <ItemGroup>
-    <PlaceholderResolution Include="LCLS General">
-      <Resolution>LCLS General, 0.0.0 (SLAC)</Resolution>
-    </PlaceholderResolution>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="plc_kfe_vac.tmc">
       <SubType>Content</SubType>
     </None>

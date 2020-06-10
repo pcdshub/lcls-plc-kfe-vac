@@ -2,8 +2,25 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <GVL Name="GVL_VAC_INTF" Id="{bdd53724-11cd-4a04-8f7d-c6faba7ad570}">
     <Declaration><![CDATA[VAR_GLOBAL
-    nTMO_VAC_counter    :   INT := 0;
-    TMO_ads_watch_dog   :   FB_ADS_WATCHDOG;
+    
+    // TMO vacuum interface 
+    n_TMO_VAC_counter           :   INT := 0;
+    fb_TMO_ads_watch_dog        :   FB_ADS_WATCHDOG;
+    
+    // EM1K0-GMD Vacuum Interface
+    n_EM1K0_VAC_counter         :   UDINT;
+    fb_EM1K0_GMD_GCC_10_reader  :   FB_TGCC_ADS;
+    
+    // AT1K0-GAS Vacuum Interface 
+    n_AT1K0_VAC_counter         :   UDINT;
+    
+    
+    // EM2K0-XGMD Vacuum Interface 
+    n_EM2K0_VAC_counter         :   UDINT;  
+    fb_EM2K0_XGMD_GCC_10_reader :   FB_TGCC_ADS;
+    fb_EM2K0_XGMD_GCC_90_reader :   FB_TGCC_ADS;
+    
+    
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

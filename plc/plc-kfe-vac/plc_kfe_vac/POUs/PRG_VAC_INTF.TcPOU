@@ -6,16 +6,61 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[TMO_ads_watch_dog(
+      <ST><![CDATA[
+// Provide Watchdog for TMO Vacuum PLC
+fb_TMO_ads_watch_dog(
     sNetId      :=  '172.21.132.22.1.1', // AMS NET ID of TMO Vacuum PLC
+    nPort       :=  851, // ADS port of TMO Vacuum PLC
+    sVarName    :=  'n_TMO_VAC_counter'
+);
+
+// EM1K0-GMD Vacuum Interface
+    
+fb_EM1K0_GMD_GCC_10_reader(
+    sNetId      :=  '172.21.92.59.1.1',
     nPort       :=  851,
-    sVarName    := "nTMO_VAC_counter"
-);]]></ST>
+    sVarName    :=  'fb_EM1K0_GMD_GCC_10',
+    iWatchdog   :=  n_EM1K0_VAC_counter
+);
+
+    
+// EM2K0-XGMD Vacuum Interface 
+    
+fb_EM2K0_XGMD_GCC_10_reader(
+    sNetId      :=  '172.21.92.60.1.1',
+    nPort       :=  851,
+    sVarName    :=  'fb_EM2K0_XGMD_GCC_10',
+    iWatchdog   :=  n_EM2K0_VAC_counter
+);
+fb_EM2K0_XGMD_GCC_90_reader(
+    sNetId      :=  '172.21.92.60.1.1',
+    nPort       :=  851,
+    sVarName    :=  'fb_EM2K0_XGMD_GCC_90',
+    iWatchdog   :=  n_EM2K0_VAC_counter
+)
+
+]]></ST>
     </Implementation>
     <LineIds Name="PRG_VAC_INTF">
+      <LineId Id="15" Count="1" />
       <LineId Id="5" Count="0" />
       <LineId Id="7" Count="2" />
       <LineId Id="6" Count="0" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="19" Count="2" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="35" Count="1" />
+      <LineId Id="32" Count="0" />
+      <LineId Id="24" Count="2" />
+      <LineId Id="28" Count="1" />
+      <LineId Id="38" Count="3" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="43" Count="3" />
+      <LineId Id="42" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="13" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

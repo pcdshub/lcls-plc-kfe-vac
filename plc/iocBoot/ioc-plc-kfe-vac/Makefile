@@ -8,4 +8,6 @@ PLC = plc_kfe_vac
 PYTMC_OPTS = 
 PREFIX = PREFIX:
 
+PRODUCTION_IOC := 1
+
 include $(IOC_TOP)/iocBoot/templates/Makefile.base

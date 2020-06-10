@@ -6,7 +6,7 @@ PROJECT_PATH := ../../plc-kfe-vac/plc-kfe-vac.tsproj
 PLC = plc_kfe_vac
 
 PYTMC_OPTS = 
-PREFIX = PREFIX:
+PREFIX = IOC:PLC:KFE:VAC
 
 PRODUCTION_IOC := 1
 

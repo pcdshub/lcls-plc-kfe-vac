@@ -1,11 +1,12 @@
-#!/reg/g/pcds/epics-dev/zlentz/ads-ioc//bin/rhel7-x86_64/adsIoc
+#!/reg/g/pcds/epics/ioc/common/ads-ioc/R0.2.4/bin/rhel7-x86_64/adsIoc
+###### AUTO-GENERATED DO NOT EDIT ##############
 
 < envPaths
 
 epicsEnvSet("ADS_IOC_TOP", "$(TOP)" )
 
 epicsEnvSet("IOCNAME", "ioc-plc-kfe-vac" )
-epicsEnvSet("ENGINEER", "root" )
+epicsEnvSet("ENGINEER", "nwbrown" )
 epicsEnvSet("LOCATION", "IOC:PLC:KFE:VAC" )
 epicsEnvSet("IOCSH_PS1", "$(IOCNAME)> " )
 
@@ -51,13 +52,17 @@ epicsEnvSet("ADS_TIME_SOURCE",  "0")
 #                         arrives in the EPICS client.
 adsAsynPortDriverConfigure("$(ASYN_PORT)", "$(IPADDR)", "$(AMSID)", "$(AMS_PORT)", "$(ADS_MAX_PARAMS)", 0, 0, "$(ADS_SAMPLE_MS)", "$(ADS_MAX_DELAY_MS)", "$(ADS_TIMEOUT_MS)", "$(ADS_TIME_SOURCE)")
 
-cd "$(IOC_TOP)"
-dbLoadRecords("plc-kfe-vac.db", "PORT=ASYN_PLC,PREFIX=IOC:PLC:KFE:VAC,IOCNAME=$(IOCNAME),")
+cd "$(ADS_IOC_TOP)/db"
+
+
+dbLoadRecords("iocSoft.db", "IOC=IOC:PLC:KFE:VAC")
+dbLoadRecords("save_restoreStatus.db", "P=IOC:PLC:KFE:VAC:")
 
 cd "$(IOC_TOP)"
 
-dbLoadRecords("db/iocSoft.db", "IOC=IOC:PLC:KFE:VAC")
-dbLoadRecords("db/save_restoreStatus.db", "P=IOC:PLC:KFE:VAC")
+## Database files ##
+< "$(IOC_TOP)/load_plc_databases.cmd"
+
 
 # Setup autosave
 set_savefile_path( "$(IOC_DATA)/$(IOC)/autosave" )
@@ -72,6 +77,9 @@ set_pass1_restoreFile( "info_settings.sav" )
 cd "$(IOC_TOP)/autosave"
 makeAutosaveFiles()
 cd "$(IOC_TOP)"
+
+# Create the archiver file
+makeArchiveFromDbInfo("$(IOC_DATA)/$(IOC)/archive/$(IOC).archive", "archive")
 
 # Initialize the IOC and start processing records
 iocInit()

@@ -32,12 +32,13 @@ fb_EM2K0_XGMD_GCC_10_reader(
     sVarName    :=  'fb_EM2K0_XGMD_GCC_10',
     iWatchdog   :=  n_EM2K0_VAC_counter
 );
+
 fb_EM2K0_XGMD_GCC_90_reader(
     sNetId      :=  '172.21.92.60.1.1',
     nPort       :=  851,
     sVarName    :=  'fb_EM2K0_XGMD_GCC_90',
     iWatchdog   :=  n_EM2K0_VAC_counter
-)
+);
 
 ]]></ST>
     </Implementation>
@@ -56,6 +57,7 @@ fb_EM2K0_XGMD_GCC_90_reader(
       <LineId Id="28" Count="1" />
       <LineId Id="38" Count="3" />
       <LineId Id="37" Count="0" />
+      <LineId Id="50" Count="0" />
       <LineId Id="17" Count="0" />
       <LineId Id="43" Count="3" />
       <LineId Id="42" Count="0" />

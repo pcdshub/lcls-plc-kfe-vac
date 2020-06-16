@@ -19,7 +19,7 @@ fb_TMO_ads_watch_dog(
 fb_EM1K0_GMD_GCC_10_reader(
     sNetId      :=  '172.21.92.59.1.1',
     nPort       :=  851,
-    sVarName    :=  'fb_EM1K0_GMD_GCC_10',
+    sVarName    :=  'GVL_GMD.fb_EM1K0_GMD_GCC_10',
     iWatchdog   :=  n_EM1K0_VAC_counter
 );
 
@@ -29,14 +29,14 @@ fb_EM1K0_GMD_GCC_10_reader(
 fb_EM2K0_XGMD_GCC_10_reader(
     sNetId      :=  '172.21.92.60.1.1',
     nPort       :=  851,
-    sVarName    :=  'fb_EM2K0_XGMD_GCC_10',
+    sVarName    :=  'GVL_GMD.fb_EM2K0_XGMD_GCC_10',
     iWatchdog   :=  n_EM2K0_VAC_counter
 );
 
 fb_EM2K0_XGMD_GCC_90_reader(
     sNetId      :=  '172.21.92.60.1.1',
     nPort       :=  851,
-    sVarName    :=  'fb_EM2K0_XGMD_GCC_90',
+    sVarName    :=  'GVL_GMD.fb_EM2K0_XGMD_GCC_90',
     iWatchdog   :=  n_EM2K0_VAC_counter
 );
 

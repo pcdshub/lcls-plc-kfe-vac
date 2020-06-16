@@ -26,7 +26,7 @@
 			<BaseType GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</BaseType>
 		</DataType>
 		<DataType>
-			<Name GUID="{189C4254-44CC-48CC-97BA-E660B250C5CF}" Namespace="LCLS_Vacuum" AutoDeleteType="true">E_ValvePositionState</Name>
+			<Name GUID="{A3541BDB-1202-48BA-B278-2CDC69D7839D}" Namespace="LCLS_Vacuum" AutoDeleteType="true">E_ValvePositionState</Name>
 			<BitSize>16</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000006}">INT</BaseType>
 			<EnumInfo>
@@ -45,6 +45,13 @@
 				<Text><![CDATA[INVALID]]></Text>
 				<Enum>3</Enum>
 			</EnumInfo>
+			<EnumInfo>
+				<Text><![CDATA[OPEN_F]]></Text>
+				<Enum>4</Enum>
+			</EnumInfo>
+			<Hides>
+				<Hide GUID="{189C4254-44CC-48CC-97BA-E660B250C5CF}"/>
+			</Hides>
 		</DataType>
 		<DataType>
 			<Name GUID="{EFA1748F-C4D4-4C43-B8A6-D3315D094B94}" Namespace="LCLS_Vacuum" AutoDeleteType="true">E_VGC</Name>
@@ -72,7 +79,7 @@
 			</EnumInfo>
 		</DataType>
 		<DataType>
-			<Name GUID="{7B9FE57E-E5E1-4EC2-AD23-16899665BCD0}" Namespace="LCLS_Vacuum" AutoDeleteType="true">ST_ValveBase</Name>
+			<Name GUID="{0BA4F662-135C-4E89-BEE6-9E9A2AFA97F2}" Namespace="LCLS_Vacuum" AutoDeleteType="true">ST_ValveBase</Name>
 			<BitSize>800</BitSize>
 			<SubItem>
 				<Name>pv_xOPN_SW</Name>
@@ -237,7 +244,7 @@
 			</SubItem>
 			<SubItem>
 				<Name>eState</Name>
-				<Type GUID="{189C4254-44CC-48CC-97BA-E660B250C5CF}" Namespace="LCLS_Vacuum">E_ValvePositionState</Type>
+				<Type GUID="{A3541BDB-1202-48BA-B278-2CDC69D7839D}" Namespace="LCLS_Vacuum">E_ValvePositionState</Type>
 				<Comment><![CDATA[ States ]]></Comment>
 				<BitSize>16</BitSize>
 				<BitOffs>80</BitOffs>
@@ -254,6 +261,7 @@
 	field: ONST CLOSED ;
 	field: TWST MOVING ;
 	field: THST INVALID ;
+	field: FRST OPEN_F ;
 	io: i;
 	</Value>
 					</Property>
@@ -318,11 +326,34 @@
 					</Property>
 				</Properties>
 			</SubItem>
+			<SubItem>
+				<Name>xLog</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>792</BitOffs>
+				<Default>
+					<Value>1</Value>
+				</Default>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+    pv: LOGGER;
+	io: i;
+	field: ZNAM OFF ;
+	field: ONAM ON ;
+    </Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<Hides>
+				<Hide GUID="{7B9FE57E-E5E1-4EC2-AD23-16899665BCD0}"/>
+			</Hides>
 		</DataType>
 		<DataType>
-			<Name GUID="{246FBB80-B487-4847-B750-5755664595B6}" Namespace="LCLS_Vacuum" AutoDeleteType="true">ST_VGC</Name>
+			<Name GUID="{BAC3B9A7-3461-44AA-A262-F5F91280F55B}" Namespace="LCLS_Vacuum" AutoDeleteType="true">ST_VGC</Name>
 			<BitSize>2304</BitSize>
-			<ExtendsType GUID="{7B9FE57E-E5E1-4EC2-AD23-16899665BCD0}" Namespace="LCLS_Vacuum">ST_ValveBase</ExtendsType>
+			<ExtendsType GUID="{0BA4F662-135C-4E89-BEE6-9E9A2AFA97F2}" Namespace="LCLS_Vacuum">ST_ValveBase</ExtendsType>
 			<SubItem>
 				<Name>xDP_OK</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
@@ -523,6 +554,9 @@
 					</Property>
 				</Properties>
 			</SubItem>
+			<Hides>
+				<Hide GUID="{246FBB80-B487-4847-B750-5755664595B6}"/>
+			</Hides>
 		</DataType>
 		<DataType>
 			<Name GUID="{18071995-0000-0000-0000-002000000001}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BIT</Name>
@@ -644,6 +678,36 @@
 						</Var>
 						<Var>
 							<Name>PRG_DIAGNOSTIC.simHeartbeat</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.wFrmXWcState</Name>
+							<Comment><![CDATA[ link to task related ethercat frame state (Frm1WcState)]]></Comment>
+							<Type>WORD</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCount</Name>
+							<Comment><![CDATA[ link to SlaveCount of EtherCAT Master (Inputs)]]></Comment>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterDevState</Name>
+							<Comment><![CDATA[ link to DevState of EtherCAT Master (Inputs)]]></Comment>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterDeviceId</Name>
+							<Comment><![CDATA[ link to DevID of EtherCAT Master (InfoData)]]></Comment>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.arrEcMasterNetId</Name>
+							<Comment><![CDATA[ link to NetID of EtherCAT Master (InfoData)]]></Comment>
+							<Type GUID="{F1C07B37-2D70-463E-B9ED-92089788D29C}" Namespace="Tc2_System">T_AmsNetIdArr</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCountCfg</Name>
+							<Comment><![CDATA[ link to CfgSlaveCount of EtherCAT Master (InfoData)]]></Comment>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
@@ -813,6 +877,11 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
+							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xOpnLS</Name>
+							<Comment><![CDATA[IO]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xClsLS</Name>
 							<Type>BOOL</Type>
 						</Var>
@@ -832,11 +901,6 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xOpnLS</Name>
-							<Comment><![CDATA[IO]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -1061,39 +1125,13 @@
 							<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.wFrmXWcState</Name>
-							<Comment><![CDATA[ link to task related ethercat frame state (Frm1WcState)]]></Comment>
-							<Type>WORD</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCount</Name>
-							<Comment><![CDATA[ link to SlaveCount of EtherCAT Master (Inputs)]]></Comment>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterDevState</Name>
-							<Comment><![CDATA[ link to DevState of EtherCAT Master (Inputs)]]></Comment>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterDeviceId</Name>
-							<Comment><![CDATA[ link to DevID of EtherCAT Master (InfoData)]]></Comment>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.arrEcMasterNetId</Name>
-							<Comment><![CDATA[ link to NetID of EtherCAT Master (InfoData)]]></Comment>
-							<Type GUID="{F1C07B37-2D70-463E-B9ED-92089788D29C}" Namespace="Tc2_System">T_AmsNetIdArr</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCountCfg</Name>
-							<Comment><![CDATA[ link to CfgSlaveCount of EtherCAT Master (InfoData)]]></Comment>
-							<Type>UINT</Type>
-						</Var>
 					</Vars>
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>
+						<Var>
+							<Name>GVL_Variables.g_FastFaultOutputK0.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
+						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_INTF_VGC_1.q_xTREATY_VGC_STATUS</Name>
 							<Type>BOOL</Type>
@@ -1129,12 +1167,12 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.q_xHV_DIS</Name>
+							<Name>GVL_SXR_VAC.fb_PA1K0_GCC_1.q_xHV_DIS</Name>
 							<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_PA1K0_GCC_1.q_xHV_DIS</Name>
+							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.q_xHV_DIS</Name>
 							<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -1218,7 +1256,7 @@
 						<Var>
 							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.iq_stValve</Name>
 							<Comment><![CDATA[ All valve data and states will be in this struct]]></Comment>
-							<Type GUID="{246FBB80-B487-4847-B750-5755664595B6}" Namespace="LCLS_Vacuum">ST_VGC</Type>
+							<Type GUID="{BAC3B9A7-3461-44AA-A262-F5F91280F55B}" Namespace="LCLS_Vacuum">ST_VGC</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xClose_A</Name>
@@ -1329,10 +1367,6 @@
 						<Var>
 							<Name>GVL_SXR_VAC.fb_TV3K0_PIP_1.q_xHVEna_DO</Name>
 							<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.g_FastFaultOutputK0.q_xFastFaultOut</Name>
 							<Type>BOOL</Type>
 						</Var>
 					</Vars>

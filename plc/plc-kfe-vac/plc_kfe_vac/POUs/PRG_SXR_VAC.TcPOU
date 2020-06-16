@@ -31,10 +31,10 @@ fb_MR1K4_SOMS_GCC_1(PG := fb_MR1K4_SOMS_GPI_1.PG);
 // VGC Valves
 
 fb_RTDSK0_VGC_1(i_stUSG := fb_TV1K0_INTF_GCC_1.IG, i_stDSG := fb_RTDSK0_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
-fb_EM1K0_GMD_VGC_1(i_stUSG := fb_RTDSK0_GCC_1.IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+fb_EM1K0_GMD_VGC_1(i_stUSG := fb_RTDSK0_GCC_1.IG, i_stDSG := fb_EM1K0_GMD_GCC_10_reader.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
 fb_AT1K0_GAS_VGC_1(i_stUSG := fb_SL1K0_POWER_GCC_1.IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
-fb_EM2K0_XGMD_VGC_1(i_stUSG := , i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
-fb_EM2K0_XGMD_VGC_2(i_stUSG := , i_stDSG := fb_TV2K0_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+fb_EM2K0_XGMD_VGC_1(i_stUSG := , i_stDSG := fb_EM2K0_XGMD_GCC_10_reader.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+fb_EM2K0_XGMD_VGC_2(i_stUSG := fb_EM2K0_XGMD_GCC_90_reader.IG, i_stDSG := fb_TV2K0_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
 fb_TV2K0_VGC_1(i_stUSG := fb_TV2K0_GCC_1.IG, i_stDSG := fb_TV2K0_GCC_2.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
 fb_MR1K1_BEND_VGC_1(i_stUSG := fb_PA1K0_GCC_1.IG, i_stDSG := fb_MR1K3_TXI_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
 fb_MR1K3_TXI_VGC_1(i_stUSG := fb_MR1K1_BEND_GCC_1.IG, i_stDSG := fb_MR1K3_TXI_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);

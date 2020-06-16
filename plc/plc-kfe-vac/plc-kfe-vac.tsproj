@@ -781,12 +781,12 @@
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.i_iPRESS_R</Name>
+							<Name>GVL_SXR_VAC.fb_PCPM3B_GFS_1.i_iPRESS_R</Name>
 							<Comment><![CDATA[ Controls and I/Os]]></Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_PCPM3B_GFS_1.i_iPRESS_R</Name>
+							<Name>GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.i_iPRESS_R</Name>
 							<Comment><![CDATA[ Controls and I/Os]]></Comment>
 							<Type>INT</Type>
 						</Var>
@@ -1133,12 +1133,12 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_RTDSK0_INTF_VGC_1.q_xTREATY_VGC_STATUS</Name>
+							<Name>GVL_SXR_VAC.fb_RTDSK0_GCC_1.q_xHV_DIS</Name>
+							<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_RTDSK0_GCC_1.q_xHV_DIS</Name>
-							<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>
+							<Name>GVL_SXR_VAC.fb_RTDSK0_INTF_VGC_1.q_xTREATY_VGC_STATUS</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>

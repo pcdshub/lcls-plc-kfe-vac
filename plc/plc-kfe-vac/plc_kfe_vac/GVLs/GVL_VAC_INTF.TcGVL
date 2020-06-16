@@ -7,12 +7,16 @@
     n_TMO_VAC_counter           :   INT := 0;
     fb_TMO_ads_watch_dog        :   FB_ADS_WATCHDOG;
     
+    
     // EM1K0-GMD Vacuum Interface
     n_EM1K0_VAC_counter         :   UDINT;
     fb_EM1K0_GMD_GCC_10_reader  :   FB_TGCC_ADS;
     
+    
     // AT1K0-GAS Vacuum Interface 
     n_AT1K0_VAC_counter         :   UDINT;
+    fb_AT1K0_GAS_GCC_10_reader  :   FB_TGCC_ADS;
+    fb_AT1K0_GAS_GCC_140_reader :   FB_TGCC_ADS;
     
     
     // EM2K0-XGMD Vacuum Interface 

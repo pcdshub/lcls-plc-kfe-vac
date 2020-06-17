@@ -31,10 +31,18 @@ fb_MR1K4_SOMS_GCC_1(PG := fb_MR1K4_SOMS_GPI_1.PG);
 // VGC Valves
 
 fb_RTDSK0_VGC_1(i_stUSG := fb_TV1K0_INTF_GCC_1.IG, i_stDSG := fb_RTDSK0_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
-fb_EM1K0_GMD_VGC_1(i_stUSG := fb_RTDSK0_GCC_1.IG, i_stDSG := fb_EM1K0_GMD_GCC_10_reader.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
-fb_AT1K0_GAS_VGC_1(i_stUSG := fb_SL1K0_POWER_GCC_1.IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
-fb_EM2K0_XGMD_VGC_1(i_stUSG := , i_stDSG := fb_EM2K0_XGMD_GCC_10_reader.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
-fb_EM2K0_XGMD_VGC_2(i_stUSG := fb_EM2K0_XGMD_GCC_90_reader.IG, i_stDSG := fb_TV2K0_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+fb_EM1K0_GMD_VGC_1(i_stUSG := fb_RTDSK0_GCC_1.IG, i_stDSG := fb_EM1K0_GMD_GCC_10_reader.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, 
+    i_xExt_OK := (NOT fb_EM1K0_GMD_GCC_10_reader.bError),
+    i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+fb_AT1K0_GAS_VGC_1(i_stUSG := fb_SL1K0_POWER_GCC_1.IG, i_stDSG := fb_AT1K0_GAS_GCC_10_reader.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE,
+    i_xExt_OK := (NOT fb_AT1K0_GAS_GCC_10_reader.bError), 
+    i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+fb_EM2K0_XGMD_VGC_1(i_stUSG := fb_AT1K0_GAS_GCC_140_reader.IG, i_stDSG := fb_EM2K0_XGMD_GCC_10_reader.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE,
+    i_xExt_OK := (NOT fb_AT1K0_GAS_GCC_140_reader.bError) AND (NOT fb_EM2K0_XGMD_GCC_10_reader.bError), 
+    i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
+fb_EM2K0_XGMD_VGC_2(i_stUSG := fb_EM2K0_XGMD_GCC_90_reader.IG, i_stDSG := fb_TV2K0_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE,
+    i_xExt_OK := (NOT fb_EM2K0_XGMD_GCC_90_reader.bError), 
+    i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
 fb_TV2K0_VGC_1(i_stUSG := fb_TV2K0_GCC_1.IG, i_stDSG := fb_TV2K0_GCC_2.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
 fb_MR1K1_BEND_VGC_1(i_stUSG := fb_PA1K0_GCC_1.IG, i_stDSG := fb_MR1K3_TXI_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
 fb_MR1K3_TXI_VGC_1(i_stUSG := fb_MR1K1_BEND_GCC_1.IG, i_stDSG := fb_MR1K3_TXI_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, io_fbFFHWO := g_FastFaultOutputK0);
@@ -96,7 +104,19 @@ fb_MR1K1_BEND_GPI_1(PG=>);
       <LineId Id="184" Count="1" />
       <LineId Id="96" Count="6" />
       <LineId Id="107" Count="7" />
-      <LineId Id="119" Count="15" />
+      <LineId Id="119" Count="4" />
+      <LineId Id="202" Count="0" />
+      <LineId Id="206" Count="0" />
+      <LineId Id="124" Count="0" />
+      <LineId Id="210" Count="0" />
+      <LineId Id="207" Count="0" />
+      <LineId Id="125" Count="0" />
+      <LineId Id="204" Count="0" />
+      <LineId Id="208" Count="0" />
+      <LineId Id="126" Count="0" />
+      <LineId Id="205" Count="0" />
+      <LineId Id="209" Count="0" />
+      <LineId Id="127" Count="7" />
       <LineId Id="194" Count="1" />
       <LineId Id="197" Count="0" />
       <LineId Id="196" Count="0" />

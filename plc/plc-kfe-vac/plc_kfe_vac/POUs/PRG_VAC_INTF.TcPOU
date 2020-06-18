@@ -7,11 +7,16 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[
-// Provide Watchdog for TMO Vacuum PLC
-fb_TMO_ads_watch_dog(
-    sNetId      :=  '172.21.132.22.1.1', // AMS NET ID of TMO Vacuum PLC
-    nPort       :=  851, // ADS port of TMO Vacuum PLC
-    sVarName    :=  'n_TMO_VAC_counter'
+// Update interlock signals for TMO
+st_TMO_ILK_Upper.rPRO_SP 	:=	1E-4; // Fix the agreed-upon values
+fb_TMO_ILK_Uppper(
+	VG	:=	fb_MR1K4_SOMS_GCC_1.IG,
+	ILK	:=	st_TMO_ILK_Upper
+);
+st_TMO_ILK_Lower.rPRO_SP	:=	1E-6; // Fix the agreed-upon values
+fb_TMO_ILK_Lower(
+	VG	:=	fb_MR1K4_SOMS_GCC_1.IG,
+	ILK	:=	st_TMO_ILK_Lower
 );
 
 
@@ -62,10 +67,15 @@ fb_EM2K0_XGMD_GCC_90_reader(
     </Implementation>
     <LineIds Name="PRG_VAC_INTF">
       <LineId Id="15" Count="1" />
-      <LineId Id="5" Count="0" />
-      <LineId Id="7" Count="2" />
+      <LineId Id="102" Count="0" />
+      <LineId Id="94" Count="0" />
+      <LineId Id="97" Count="1" />
+      <LineId Id="95" Count="0" />
+      <LineId Id="101" Count="0" />
+      <LineId Id="93" Count="0" />
+      <LineId Id="99" Count="1" />
+      <LineId Id="96" Count="0" />
       <LineId Id="6" Count="0" />
-      <LineId Id="89" Count="0" />
       <LineId Id="30" Count="0" />
       <LineId Id="19" Count="0" />
       <LineId Id="56" Count="5" />

@@ -4,9 +4,13 @@
     <Declaration><![CDATA[VAR_GLOBAL
     
     // TMO vacuum interface 
-    n_TMO_VAC_counter           :   INT := 0;
-    fb_TMO_ads_watch_dog        :   FB_ADS_WATCHDOG;
+	{attribute 'pytmc' :=' pv: MR1K4:SOMS:GCC:1:ILK_UPPER'}
+	st_TMO_ILK_Upper			:	ST_EXT_ILK;
+	{attribute 'pytmc' :=' pv: MR1K4:SOMS:GCC:1:ILK_LOWER'}
+	st_TMO_ILK_Lower			:	ST_EXT_ILK;
     
+	fb_TMO_ILK_Uppper			:	FB_EXT_ILK;
+	fb_TMO_ILK_Lower			:	FB_EXT_ILK;
     
     // EM1K0-GMD Vacuum Interface
     n_EM1K0_VAC_counter         :   UDINT;

@@ -686,41 +686,6 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_RTDSK0_GPI_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_IM1K0_XTES_GPI_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_SL1K0_POWER_GPI_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_GPI_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_GPI_2.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_PA1K0_GPI_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_GPI_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
 							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_GPI_1.i_iPRESS_R</Name>
 							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 							<Type>INT</Type>
@@ -970,6 +935,71 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.wFrmXWcState</Name>
+							<Comment><![CDATA[ link to task related ethercat frame state (Frm1WcState)]]></Comment>
+							<Type>WORD</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCount</Name>
+							<Comment><![CDATA[ link to SlaveCount of EtherCAT Master (Inputs)]]></Comment>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterDevState</Name>
+							<Comment><![CDATA[ link to DevState of EtherCAT Master (Inputs)]]></Comment>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterDeviceId</Name>
+							<Comment><![CDATA[ link to DevID of EtherCAT Master (InfoData)]]></Comment>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.arrEcMasterNetId</Name>
+							<Comment><![CDATA[ link to NetID of EtherCAT Master (InfoData)]]></Comment>
+							<Type GUID="{F1C07B37-2D70-463E-B9ED-92089788D29C}" Namespace="Tc2_System">T_AmsNetIdArr</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCountCfg</Name>
+							<Comment><![CDATA[ link to CfgSlaveCount of EtherCAT Master (InfoData)]]></Comment>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_RTDSK0_GPI_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_IM1K0_XTES_GPI_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_SL1K0_POWER_GPI_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_GPI_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_GPI_2.i_iPRESS_R</Name>
+							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_PA1K0_GPI_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_GPI_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_PIP_1.i_iPRESS</Name>
 							<Type>INT</Type>
 						</Var>
@@ -1094,36 +1124,6 @@
 							<Name>GVL_SXR_VAC.fb_TV3K0_PIP_1.i_xSP_DI</Name>
 							<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.wFrmXWcState</Name>
-							<Comment><![CDATA[ link to task related ethercat frame state (Frm1WcState)]]></Comment>
-							<Type>WORD</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCount</Name>
-							<Comment><![CDATA[ link to SlaveCount of EtherCAT Master (Inputs)]]></Comment>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterDevState</Name>
-							<Comment><![CDATA[ link to DevState of EtherCAT Master (Inputs)]]></Comment>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterDeviceId</Name>
-							<Comment><![CDATA[ link to DevID of EtherCAT Master (InfoData)]]></Comment>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.arrEcMasterNetId</Name>
-							<Comment><![CDATA[ link to NetID of EtherCAT Master (InfoData)]]></Comment>
-							<Type GUID="{F1C07B37-2D70-463E-B9ED-92089788D29C}" Namespace="Tc2_System">T_AmsNetIdArr</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCountCfg</Name>
-							<Comment><![CDATA[ link to CfgSlaveCount of EtherCAT Master (InfoData)]]></Comment>
-							<Type>UINT</Type>
 						</Var>
 					</Vars>
 					<Vars VarGrpType="2">
@@ -1366,6 +1366,16 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
+							<Name>GVL_VAC_INTF.fb_TMO_ILK_Uppper.q_xILK_OK_DO</Name>
+							<Comment><![CDATA[ Send the signal to indicate that the interlock pressure has been met.]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_VAC_INTF.fb_TMO_ILK_Lower.q_xILK_OK_DO</Name>
+							<Comment><![CDATA[ Send the signal to indicate that the interlock pressure has been met.]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_Variables.g_FastFaultOutputK0.q_xFastFaultOut</Name>
 							<Type>BOOL</Type>
 						</Var>
@@ -1375,13 +1385,13 @@
 						<Var>
 							<Name>PMPS_GVL.SuccessfulPreemption</Name>
 							<Comment><![CDATA[ Any time BPTM applies a new BP request which is confirmed]]></Comment>
-							<Type>ULINT</Type>
+							<Type>UDINT</Type>
 							<InOut>7</InOut>
 						</Var>
 						<Var>
 							<Name>PMPS_GVL.AccumulatedFF</Name>
 							<Comment><![CDATA[ Any time a FF occurs]]></Comment>
-							<Type>ULINT</Type>
+							<Type>UDINT</Type>
 							<InOut>7</InOut>
 						</Var>
 					</Vars>
@@ -19139,6 +19149,10 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_01_00^PMPS_FFO (EL2202)">
 				<Link VarA="PlcTask Outputs^GVL_Variables.g_FastFaultOutputK0.q_xFastFaultOut" VarB="Channel 1^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_02_00^=+-EL2798_02_06">
+				<Link VarA="PlcTask Outputs^GVL_VAC_INTF.fb_TMO_ILK_Lower.q_xILK_OK_DO" VarB="Channel 2^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_VAC_INTF.fb_TMO_ILK_Uppper.q_xILK_OK_DO" VarB="Channel 1^Output"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_03_00^=+-EL1004_03_04">
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.i_xClsLS" VarB="Channel 2^Input"/>

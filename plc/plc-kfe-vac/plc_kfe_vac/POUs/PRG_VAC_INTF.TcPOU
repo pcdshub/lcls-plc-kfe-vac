@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <POU Name="PRG_VAC_INTF" Id="{53a728aa-6dbf-4df3-9e27-18c0d8781c72}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_VAC_INTF
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+// Update interlock signals for TMO
+st_TMO_ILK_Upper.rPRO_SP 	:=	1E-4; // Fix the agreed-upon values
+fb_TMO_ILK_Uppper(
+	VG	:=	fb_MR1K4_SOMS_GCC_1.IG,
+	ILK	:=	st_TMO_ILK_Upper
+);
+st_TMO_ILK_Lower.rPRO_SP	:=	1E-6; // Fix the agreed-upon values
+fb_TMO_ILK_Lower(
+	VG	:=	fb_MR1K4_SOMS_GCC_1.IG,
+	ILK	:=	st_TMO_ILK_Lower
+);
+
+
+// EM1K0-GMD Vacuum Interface
+
+fb_EM1K0_GMD_GCC_10_reader(
+    sNetId      :=  '172.21.92.59.1.1',
+    nPort       :=  851,
+    sVarName    :=  'GVL_GMD.fb_EM1K0_GMD_GCC_10',
+    iWatchdog   :=  n_EM1K0_VAC_counter
+);
+
+
+// AT1K0-GAS Vacuum Interface
+    
+fb_AT1K0_GAS_GCC_10_reader(
+    sNetId      :=  '172.21.92.57.1.1',
+    nPort       :=  851,
+    sVarName    :=  'GVL_Devices.fb_AT1K0_GAS_GCC_10',
+    iWatchdog   :=  n_AT1K0_VAC_counter
+);
+
+fb_AT1K0_GAS_GCC_140_reader(
+    sNetId      :=  '172.21.92.57.1.1',
+    nPort       :=  851,
+    sVarName    :=  'GVL_Devices.fb_AT1K0_GAS_GCC_140',
+    iWatchdog   :=  n_AT1K0_VAC_counter
+);
+
+
+// EM2K0-XGMD Vacuum Interface 
+    
+fb_EM2K0_XGMD_GCC_10_reader(
+    sNetId      :=  '172.21.92.60.1.1',
+    nPort       :=  851,
+    sVarName    :=  'GVL_GMD.fb_EM2K0_XGMD_GCC_10',
+    iWatchdog   :=  n_EM2K0_VAC_counter
+);
+
+fb_EM2K0_XGMD_GCC_90_reader(
+    sNetId      :=  '172.21.92.60.1.1',
+    nPort       :=  851,
+    sVarName    :=  'GVL_GMD.fb_EM2K0_XGMD_GCC_90',
+    iWatchdog   :=  n_EM2K0_VAC_counter
+);
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_VAC_INTF">
+      <LineId Id="15" Count="1" />
+      <LineId Id="102" Count="0" />
+      <LineId Id="94" Count="0" />
+      <LineId Id="97" Count="1" />
+      <LineId Id="95" Count="0" />
+      <LineId Id="101" Count="0" />
+      <LineId Id="93" Count="0" />
+      <LineId Id="99" Count="1" />
+      <LineId Id="96" Count="0" />
+      <LineId Id="6" Count="0" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="56" Count="5" />
+      <LineId Id="55" Count="0" />
+      <LineId Id="87" Count="0" />
+      <LineId Id="86" Count="0" />
+      <LineId Id="70" Count="14" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="88" Count="0" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="28" Count="1" />
+      <LineId Id="38" Count="3" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="50" Count="0" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="43" Count="3" />
+      <LineId Id="42" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="13" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <GVL Name="GVL_VAC_INTF" Id="{bdd53724-11cd-4a04-8f7d-c6faba7ad570}">
+    <Declaration><![CDATA[VAR_GLOBAL
+    
+    // TMO vacuum interface 
+	{attribute 'pytmc' :=' pv: MR1K4:SOMS:GCC:1:ILK_UPPER'}
+	st_TMO_ILK_Upper			:	ST_EXT_ILK;
+	{attribute 'pytmc' :=' pv: MR1K4:SOMS:GCC:1:ILK_LOWER'}
+	st_TMO_ILK_Lower			:	ST_EXT_ILK;
+    
+	fb_TMO_ILK_Uppper			:	FB_EXT_ILK;
+	fb_TMO_ILK_Lower			:	FB_EXT_ILK;
+    
+    // EM1K0-GMD Vacuum Interface
+    n_EM1K0_VAC_counter         :   UDINT;
+    fb_EM1K0_GMD_GCC_10_reader  :   FB_TGCC_ADS;
+    
+    
+    // AT1K0-GAS Vacuum Interface 
+    n_AT1K0_VAC_counter         :   UDINT;
+    fb_AT1K0_GAS_GCC_10_reader  :   FB_TGCC_ADS;
+    fb_AT1K0_GAS_GCC_140_reader :   FB_TGCC_ADS;
+    
+    
+    // EM2K0-XGMD Vacuum Interface 
+    n_EM2K0_VAC_counter         :   UDINT;  
+    fb_EM2K0_XGMD_GCC_10_reader :   FB_TGCC_ADS;
+    fb_EM2K0_XGMD_GCC_90_reader :   FB_TGCC_ADS;
+    
+    
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

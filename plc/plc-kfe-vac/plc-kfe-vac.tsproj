@@ -26,6 +26,539 @@
 			<BaseType GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</BaseType>
 		</DataType>
 		<DataType>
+			<Name GUID="{A3541BDB-1202-48BA-B278-2CDC69D7839D}" Namespace="LCLS_Vacuum" AutoDeleteType="true">E_ValvePositionState</Name>
+			<BitSize>16</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000006}">INT</BaseType>
+			<EnumInfo>
+				<Text><![CDATA[OPEN]]></Text>
+				<Enum>0</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text><![CDATA[CLOSED]]></Text>
+				<Enum>1</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text><![CDATA[MOVING]]></Text>
+				<Enum>2</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text><![CDATA[INVALID]]></Text>
+				<Enum>3</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text><![CDATA[OPEN_F]]></Text>
+				<Enum>4</Enum>
+			</EnumInfo>
+			<Hides>
+				<Hide GUID="{189C4254-44CC-48CC-97BA-E660B250C5CF}"/>
+			</Hides>
+		</DataType>
+		<DataType>
+			<Name GUID="{EFA1748F-C4D4-4C43-B8A6-D3315D094B94}" Namespace="LCLS_Vacuum" AutoDeleteType="true">E_VGC</Name>
+			<BitSize>16</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000006}">INT</BaseType>
+			<EnumInfo>
+				<Text><![CDATA[Vented]]></Text>
+				<Enum>0</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text><![CDATA[AtVacuum]]></Text>
+				<Enum>1</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text><![CDATA[ERR_DiffPress]]></Text>
+				<Enum>2</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text><![CDATA[ERR_LostVac]]></Text>
+				<Enum>3</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text><![CDATA[ERR_ExtFault]]></Text>
+				<Enum>4</Enum>
+			</EnumInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{0BA4F662-135C-4E89-BEE6-9E9A2AFA97F2}" Namespace="LCLS_Vacuum" AutoDeleteType="true">ST_ValveBase</Name>
+			<BitSize>800</BitSize>
+			<SubItem>
+				<Name>pv_xOPN_SW</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[ EPICS Controls ]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>0</BitOffs>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+	pv: OPN_SW; 
+	field: ZNAM CLOSE; 
+	field: ONAM OPEN;
+	io: io ;
+	</Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>pv_xAlmRst</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>8</BitOffs>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+    pv: ALM_RST;
+	io: io;
+    </Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>pv_xOvrdOpn</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>16</BitOffs>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+    pv: FORCE_OPN;
+	io: io;
+	field: ZNAM FALSE;
+	field: ONAM FORCE OPEN;
+    </Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>xOverrideMode</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[ Shows the override status of this valve ]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>24</BitOffs>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+	pv: OVRD_ON ;
+	field: ZNAM Override OFF ;
+	field: ONAM Override ON;
+	io: io;
+	</Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>i_xOpnLS</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[ I/Os
+ Readbacks ]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>32</BitOffs>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+	pv: OPN_DI;
+	io: i;
+	field: ZNAM FALSE;
+	field: ONAM OPEN;
+	</Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>i_xClsLS</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>40</BitOffs>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+    pv: CLS_DI;
+	io: i;
+	field: ZNAM FALSE;
+	field: ONAM CLOSE;
+    </Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>q_xOPN_DO</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[ Controls ]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>48</BitOffs>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+    pv: OPN_DO;
+	io: i;
+	field: ZNAM FALSE;
+	field: ONAM TRUE;
+    </Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>xEXT_OK</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[ External interlock for custom interlocking in addition to regular DP ilk, this must be set true, or the interlock condition before calling the FB_VGC ]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>56</BitOffs>
+				<Default>
+					<Value>0</Value>
+				</Default>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+	pv: EXT_ILK_OK ;
+	field: ZNAM NOT OK ;
+	field: ONAM OK ;
+	io: i ;
+	</Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>xOPN_OK</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[ Final SUM of DP_OK and EXT_OK, needed because it allows the DP ilk to be switched off, see FB_VGC.Dis_DPIlk ]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>64</BitOffs>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+    pv: OPN_OK;
+	field: ZNAM OPN ILK NOT OK ;
+	field: ONAM OPN ILK OK ;
+	io: i;
+ 	</Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>eState</Name>
+				<Type GUID="{A3541BDB-1202-48BA-B278-2CDC69D7839D}" Namespace="LCLS_Vacuum">E_ValvePositionState</Type>
+				<Comment><![CDATA[ States ]]></Comment>
+				<BitSize>16</BitSize>
+				<BitOffs>80</BitOffs>
+				<Default>
+					<Value>3</Value>
+				</Default>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+	pv: POS_STATE;
+	type: mbbi ;
+	field: ZRST OPEN ;
+	field: ONST CLOSED ;
+	field: TWST MOVING ;
+	field: THST INVALID ;
+	field: FRST OPEN_F ;
+	io: i;
+	</Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>eVGC_State</Name>
+				<Type GUID="{EFA1748F-C4D4-4C43-B8A6-D3315D094B94}" Namespace="LCLS_Vacuum">E_VGC</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>96</BitOffs>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+	pv: STATE;
+	field: ZRST Vented;
+	field: ONST At Vacuum;
+	field: TWST Differential Pressure;
+	field: THST Lost Vacuum;
+	field: FRST Ext Fault;
+	io: i;
+	</Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>bErrorPresent</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[ Error ]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>112</BitOffs>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+    pv: ERROR;
+	field: ZNAM NO ERROR ;
+	field: ONAM ERROR PRESENT ;
+	io: o;
+    </Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>iErrorCode</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>128</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>sErrorMessage</Name>
+				<Type GUID="{18071995-0000-0000-0000-000100000050}">STRING(80)</Type>
+				<BitSize>648</BitSize>
+				<BitOffs>144</BitOffs>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+    pv: ErrMsg;
+	io: o;
+    </Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>xLog</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>792</BitOffs>
+				<Default>
+					<Value>1</Value>
+				</Default>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+    pv: LOGGER;
+	io: i;
+	field: ZNAM OFF ;
+	field: ONAM ON ;
+    </Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<Hides>
+				<Hide GUID="{7B9FE57E-E5E1-4EC2-AD23-16899665BCD0}"/>
+			</Hides>
+		</DataType>
+		<DataType>
+			<Name GUID="{BAC3B9A7-3461-44AA-A262-F5F91280F55B}" Namespace="LCLS_Vacuum" AutoDeleteType="true">ST_VGC</Name>
+			<BitSize>2304</BitSize>
+			<ExtendsType GUID="{0BA4F662-135C-4E89-BEE6-9E9A2AFA97F2}" Namespace="LCLS_Vacuum">ST_ValveBase</ExtendsType>
+			<SubItem>
+				<Name>xDP_OK</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[ Indicates the valve can be opened because the differential pressure is low enough]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>800</BitOffs>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+    pv: DP_OK;
+	field: ZNAM DP NOT OK ;
+	field: ONAM DP OK ;
+	io: i;
+    </Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>rAT_VAC_SP</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000000D}">REAL</Type>
+				<Comment><![CDATA[ Interlock setpoint for gauges on both sides of valve]]></Comment>
+				<BitSize>32</BitSize>
+				<BitOffs>832</BitOffs>
+				<Default>
+					<Value>1E-06</Value>
+				</Default>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value> 
+	pv: AT_VAC_SP;
+	io: o;
+	field: HOPR 1000
+	field: LOPR 0
+	field: PREC 2
+	field: EGU "TORR"
+	</Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>rAT_VAC_SP_LAST</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000000D}">REAL</Type>
+				<Comment><![CDATA[ Interlock setpoint for gauges on both sides of valve]]></Comment>
+				<BitSize>32</BitSize>
+				<BitOffs>864</BitOffs>
+				<Default>
+					<Value>1E-06</Value>
+				</Default>
+			</SubItem>
+			<SubItem>
+				<Name>rAT_VAC_HYS</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000000D}">REAL</Type>
+				<Comment><![CDATA[ Hysteresis of the vacuum sp]]></Comment>
+				<BitSize>32</BitSize>
+				<BitOffs>896</BitOffs>
+				<Default>
+					<Value>1E-06</Value>
+				</Default>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+    pv: AT_VAC_HYS;
+	io: o;
+	field: HOPR 1000
+	field: LOPR 0
+	field: PREC 2
+	field: EGU "TORR"
+    </Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>rHYST_PERC</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000000D}">REAL</Type>
+				<Comment><![CDATA[ Hysteresis percentage]]></Comment>
+				<BitSize>32</BitSize>
+				<BitOffs>928</BitOffs>
+				<Default>
+					<Value>0.8</Value>
+				</Default>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+    pv: HYST_PERC ;
+	io: o;
+    </Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>xAT_VAC</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[At vacuum setpoint]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>960</BitOffs>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+	pv: AT_VAC ; 
+	field: ZNAM NOT AT VAC ;
+	field: ONAM AT VAC ;
+	io: i;
+	</Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>xERR_DifPres</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<Comment><![CDATA[ Alarm Outputs ]]></Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>968</BitOffs>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+    pv: ERR_DifPres;
+	field: ZNAM NO ERROR ;
+	field: ONAM Diffrential error present ;
+	io: o;
+    </Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>xERR_SP</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>976</BitOffs>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+    pv: ERR_SP;
+	field: ZNAM NO ERROR ;
+	field: ONAM Setpoint error present ;
+	io: o;
+    </Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>xERR_ExtFault</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>984</BitOffs>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+    pv: ERR_Ext;
+	field: ZNAM NO ERROR ;
+	field: ONAM External error present ;
+	io: o;
+    </Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>xAlmSum</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>992</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>sIlkUSDeviceName</Name>
+				<Type GUID="{18071995-0000-0000-0000-000100000050}">STRING(80)</Type>
+				<Comment><![CDATA[ILK Devices]]></Comment>
+				<BitSize>648</BitSize>
+				<BitOffs>1000</BitOffs>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+    pv: ILK_DEVICE_US;
+	io: o;
+    </Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>sIlkDSDeviceName</Name>
+				<Type GUID="{18071995-0000-0000-0000-000100000050}">STRING(80)</Type>
+				<BitSize>648</BitSize>
+				<BitOffs>1648</BitOffs>
+				<Properties>
+					<Property>
+						<Name>pytmc</Name>
+						<Value>
+    pv: ILK_DEVICE_DS;
+	io: o;
+    </Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<Hides>
+				<Hide GUID="{246FBB80-B487-4847-B750-5755664595B6}"/>
+			</Hides>
+		</DataType>
+		<DataType>
 			<Name GUID="{18071995-0000-0000-0000-002000000001}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BIT</Name>
 			<BitSize>1</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
@@ -129,18 +662,28 @@
 					<Vars VarGrpType="1">
 						<Name>PlcTask Inputs</Name>
 						<Var>
-							<Name>LCLS_Vacuum.LCLSVacuumSerialDriverLib.L2SI_Vacuum_Library.Global_Variables.g_stSystem.I_EcatMaster1</Name>
+							<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
 							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
 							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 						</Var>
 						<Var>
-							<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
+							<Name>LCLS_Vacuum.Global_Variables.g_stSystem.I_EcatMaster1</Name>
+							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
+							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+						</Var>
+						<Var>
+							<Name>LCLS_Vacuum.LCLSVacuumSerialDriverLib.L2SI_Vacuum_Library.Global_Variables.g_stSystem.I_EcatMaster1</Name>
 							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
 							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 						</Var>
 						<Var>
 							<Name>PRG_DIAGNOSTIC.simHeartbeat</Name>
 							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV1K0_INTF_GCC_1.i_xAD_Press_OK</Name>
+							<Comment><![CDATA[ Input from AD's system indicating pressure belopw setpoint. ]]></Comment>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_VGC_1.i_xOpnLS</Name>
@@ -176,6 +719,138 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_GPI_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_GPI_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_SP1K1_MONO_GPI_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV3K0_GPI_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_MR1K4_SOMS_GPI_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_RTDSK0_GCC_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ Controls and I/Os]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ Controls and I/Os]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_PCPM3B_GFS_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ Controls and I/Os]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_SL1K0_POWER_GCC_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ Controls and I/Os]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_GCC_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ Controls and I/Os]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_GCC_2.i_iPRESS_R</Name>
+							<Comment><![CDATA[ Controls and I/Os]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_PA1K0_GCC_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ Controls and I/Os]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ Controls and I/Os]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_GCC_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ Controls and I/Os]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_GCC_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ Controls and I/Os]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_SP1K1_MONO_GCC_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ Controls and I/Os]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV3K0_GCC_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ Controls and I/Os]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_MR1K4_SOMS_GCC_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ Controls and I/Os]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xOpnLS</Name>
+							<Comment><![CDATA[IO]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xTrigger</Name>
+							<Comment><![CDATA[ Could be Up to 4]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xPress_OK</Name>
+							<Comment><![CDATA[To be linked to the Fast sensor structure signal IG.xPRESS_OK, to make sure that the device is connected]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xOPN_SW</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xCLS_SW</Name>
+							<Comment><![CDATA[external open signal e.g epics]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xResetFault</Name>
+							<Comment><![CDATA[FFO iReset]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xOverrideMode</Name>
+							<Comment><![CDATA[To be linked to global override bit. This Overrides Vacuum logic only, EPS, MPS and PMPS are still enforces]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xOverrideOpen</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -290,50 +965,6 @@
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>PMPS.LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
-							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
-							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
-						</Var>
-						<Var>
-							<Name>LCLS_Vacuum.Global_Variables.g_stSystem.I_EcatMaster1</Name>
-							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
-							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV1K0_INTF_GCC_1.i_xAD_Press_OK</Name>
-							<Comment><![CDATA[ Input from AD's system indicating pressure belopw setpoint. ]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xCLS_SW</Name>
-							<Comment><![CDATA[external open signal e.g epics]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xOpnLS</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xTrigger</Name>
-							<Comment><![CDATA[ Could be Up to 4]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xPress_OK</Name>
-							<Comment><![CDATA[To be linked to the Fast sensor structure signal IG.xPRESS_OK, to make sure that the device is connected]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xResetFault</Name>
-							<Comment><![CDATA[FFO iReset]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_GPI_1.i_iPRESS_R</Name>
 							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 							<Type>INT</Type>
@@ -366,96 +997,6 @@
 						<Var>
 							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_GPI_1.i_iPRESS_R</Name>
 							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_GPI_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_GPI_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_SP1K1_MONO_GPI_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV3K0_GPI_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K4_SOMS_GPI_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_RTDSK0_GCC_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ Controls and I/Os]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ Controls and I/Os]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_PCPM3B_GFS_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ Controls and I/Os]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_SL1K0_POWER_GCC_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ Controls and I/Os]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_GCC_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ Controls and I/Os]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_GCC_2.i_iPRESS_R</Name>
-							<Comment><![CDATA[ Controls and I/Os]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_PA1K0_GCC_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ Controls and I/Os]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ Controls and I/Os]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_GCC_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ Controls and I/Os]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_GCC_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ Controls and I/Os]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_SP1K1_MONO_GCC_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ Controls and I/Os]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV3K0_GCC_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ Controls and I/Os]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K4_SOMS_GCC_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ Controls and I/Os]]></Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
@@ -588,6 +1129,10 @@
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>
 						<Var>
+							<Name>GVL_SXR_VAC.fb_RTDSK0_INTF_VGC_1.q_xTREATY_VGC_STATUS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_VGC_1.q_xOPN_DO</Name>
 							<Type>BOOL</Type>
 						</Var>
@@ -601,87 +1146,6 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_SP1K1_MONO_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_SP1K1_MONO_VGC_2.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV3K0_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_RTDSK0_INTF_VGC_1.q_xTREATY_VGC_STATUS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xClose_A</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xClose_B</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xClose_C</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xTrigger</Name>
-							<Comment><![CDATA[Interface]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xVFS_Open</Name>
-							<Comment><![CDATA[Interface]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xVFS_Closed</Name>
-							<Comment><![CDATA[Interface]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xVAC_FAULT_OK</Name>
-							<Comment><![CDATA[Valve Vacuum OK, is set to False when there is Vacuum Fault]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xMPS_OK</Name>
-							<Comment><![CDATA[MPS Fault OK, is set when the Valve is Open and there is no trigger]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -747,6 +1211,88 @@
 						<Var>
 							<Name>GVL_SXR_VAC.fb_MR1K4_SOMS_GCC_1.q_xHV_DIS</Name>
 							<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.iq_stValve</Name>
+							<Comment><![CDATA[ All valve data and states will be in this struct]]></Comment>
+							<Type GUID="{BAC3B9A7-3461-44AA-A262-F5F91280F55B}" Namespace="LCLS_Vacuum">ST_VGC</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xClose_A</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xClose_B</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xClose_C</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xTrigger</Name>
+							<Comment><![CDATA[Interface]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xVFS_Open</Name>
+							<Comment><![CDATA[Interface]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xVFS_Closed</Name>
+							<Comment><![CDATA[Interface]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xVAC_FAULT_OK</Name>
+							<Comment><![CDATA[Valve Vacuum OK, is set to False when there is Vacuum Fault]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xMPS_OK</Name>
+							<Comment><![CDATA[MPS Fault OK, is set when the Valve is Open and there is no trigger]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VGC_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_SP1K1_MONO_VGC_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_SP1K1_MONO_VGC_2.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV3K0_VGC_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.q_xOPN_DO</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -820,6 +1366,16 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
+							<Name>GVL_VAC_INTF.fb_TMO_ILK_Uppper.q_xILK_OK_DO</Name>
+							<Comment><![CDATA[ Send the signal to indicate that the interlock pressure has been met.]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_VAC_INTF.fb_TMO_ILK_Lower.q_xILK_OK_DO</Name>
+							<Comment><![CDATA[ Send the signal to indicate that the interlock pressure has been met.]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_Variables.g_FastFaultOutputK0.q_xFastFaultOut</Name>
 							<Type>BOOL</Type>
 						</Var>
@@ -829,13 +1385,13 @@
 						<Var>
 							<Name>PMPS_GVL.SuccessfulPreemption</Name>
 							<Comment><![CDATA[ Any time BPTM applies a new BP request which is confirmed]]></Comment>
-							<Type>ULINT</Type>
+							<Type>UDINT</Type>
 							<InOut>7</InOut>
 						</Var>
 						<Var>
 							<Name>PMPS_GVL.AccumulatedFF</Name>
 							<Comment><![CDATA[ Any time a FF occurs]]></Comment>
-							<Type>ULINT</Type>
+							<Type>UDINT</Type>
 							<InOut>7</InOut>
 						</Var>
 					</Vars>
@@ -18594,6 +19150,10 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_01_00^PMPS_FFO (EL2202)">
 				<Link VarA="PlcTask Outputs^GVL_Variables.g_FastFaultOutputK0.q_xFastFaultOut" VarB="Channel 1^Output" AutoLink="true"/>
 			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_02_00^=+-EL2798_02_06">
+				<Link VarA="PlcTask Outputs^GVL_VAC_INTF.fb_TMO_ILK_Lower.q_xILK_OK_DO" VarB="Channel 2^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_VAC_INTF.fb_TMO_ILK_Uppper.q_xILK_OK_DO" VarB="Channel 1^Output"/>
+			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_03_00^=+-EL1004_03_04">
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.i_xClsLS" VarB="Channel 2^Input"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.i_xOpnLS" VarB="Channel 1^Input"/>
@@ -18612,10 +19172,13 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_03_00^=+-ES2004_03_02">
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.q_xOPN_DO" VarB="Channel 3^GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.q_xOPN_DO"/>
+				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.q_xOPN_DO" VarB="Channel 4^GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.q_xOPN_DO"/>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_RTDSK0_VGC_1.q_xOPN_DO" VarB="Channel 1^GVL_SXR_VAC.fb_RTDSK0_VGC_1.q_xOPN_DO"/>
+				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_RTDSK0_VGC_1.q_xOPN_DO" VarB="Channel 2^GVL_SXR_VAC.fb_RTDSK0_VGC_1.q_xOPN_DO"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_03_00^=+-ES2004_03_03">
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.q_xOPN_DO" VarB="Channel 1^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.q_xOPN_DO"/>
+				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.q_xOPN_DO" VarB="Channel 2^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.q_xOPN_DO"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES1004_05_02">
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xClsLS" VarB="Channel 1^GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xClsLS"/>

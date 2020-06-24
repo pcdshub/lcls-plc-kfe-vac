@@ -931,48 +931,6 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xOpnLS</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xTrigger</Name>
-							<Comment><![CDATA[ Could be Up to 4]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xPress_OK</Name>
-							<Comment><![CDATA[To be linked to the Fast sensor structure signal IG.xPRESS_OK, to make sure that the device is connected]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xOPN_SW</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xCLS_SW</Name>
-							<Comment><![CDATA[external open signal e.g epics]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xResetFault</Name>
-							<Comment><![CDATA[FFO iReset]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xOverrideMode</Name>
-							<Comment><![CDATA[To be linked to global override bit. This Overrides Vacuum logic only, EPS, MPS and PMPS are still enforces]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xOverrideOpen</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_PIP_1.i_iPRESS</Name>
 							<Type>INT</Type>
 						</Var>
@@ -1250,52 +1208,6 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.iq_stValve</Name>
-							<Comment><![CDATA[ All valve data and states will be in this struct]]></Comment>
-							<Type GUID="{BAC3B9A7-3461-44AA-A262-F5F91280F55B}" Namespace="LCLS_Vacuum">ST_VGC</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xClose_A</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xClose_B</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xClose_C</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xTrigger</Name>
-							<Comment><![CDATA[Interface]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xVFS_Open</Name>
-							<Comment><![CDATA[Interface]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xVFS_Closed</Name>
-							<Comment><![CDATA[Interface]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xVAC_FAULT_OK</Name>
-							<Comment><![CDATA[Valve Vacuum OK, is set to False when there is Vacuum Fault]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xMPS_OK</Name>
-							<Comment><![CDATA[MPS Fault OK, is set when the Valve is Open and there is no trigger]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -19246,6 +19158,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 	</Project>
 	<Mappings>
 		<MappingInfo Identifier="{08502081-0040-0304-8020-500840000403}" Id="#x02030030" Watchdog="04000000040000000400000004000000"/>
+		<MappingInfo Identifier="{08502081-0010-0304-8020-500810000403}" Id="#x02030050" Watchdog="04000000040000000400000004000000"/>
 		<MappingInfo Identifier="{00000000-2001-0850-0020-500841000403}" Id="#x02030020"/>
 		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030010"/>
 		<MappingInfo Identifier="{00000000-2001-0850-0020-500822000403}" Id="#x02030040"/>
@@ -19467,6 +19380,9 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 			</OwnerB>
 		</OwnerA>
 		<OwnerA Name="TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_01_00^PMPS_FFO (EL2202)">
+				<Link VarA="PlcTask Outputs^GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.q_xFastFaultOut" VarB="Channel 2^Output" AutoLink="true"/>
+			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_02_00^=+-EL1124_02_08">
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xTrigger" VarB="Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xTrigger"/>
 			</OwnerB>

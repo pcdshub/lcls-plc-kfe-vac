@@ -6,15 +6,19 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fb_TV2K0_VFS_1(
+      <ST><![CDATA[(*
+fb_TV2K0_VFS_1(
 	i_xPMPS_OK:= TRUE, 
 	i_xExt_OK:= TRUE, 
 	iq_stValve=>,
-	io_fbFFHWO:= g_FastFaultOutput2);]]></ST>
+	io_fbFFHWO:= g_FastFaultOutput2);
+*)]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
+      <LineId Id="10" Count="0" />
       <LineId Id="6" Count="3" />
       <LineId Id="2" Count="0" />
+      <LineId Id="11" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

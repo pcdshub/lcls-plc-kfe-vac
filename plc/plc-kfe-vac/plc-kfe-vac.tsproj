@@ -689,40 +689,39 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_RTDSK0_VGC_1.i_xOpnLS</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
+							<Name>GVL_SXR_VAC.fb_RTDSK0_GPI_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_RTDSK0_VGC_1.i_xClsLS</Name>
-							<Type>BOOL</Type>
+							<Name>GVL_SXR_VAC.fb_IM1K0_XTES_GPI_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.i_xOpnLS</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
+							<Name>GVL_SXR_VAC.fb_SL1K0_POWER_GPI_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.i_xClsLS</Name>
-							<Type>BOOL</Type>
+							<Name>GVL_SXR_VAC.fb_TV2K0_GPI_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.i_xOpnLS</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
+							<Name>GVL_SXR_VAC.fb_TV2K0_GPI_2.i_iPRESS_R</Name>
+							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.i_xClsLS</Name>
-							<Type>BOOL</Type>
+							<Name>GVL_SXR_VAC.fb_PA1K0_GPI_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xOpnLS</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xClsLS</Name>
-							<Type>BOOL</Type>
+							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_GPI_1.i_iPRESS_R</Name>
+							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+							<Type>INT</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_GPI_1.i_iPRESS_R</Name>
@@ -815,45 +814,39 @@
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xOpnLS</Name>
+							<Name>GVL_SXR_VAC.fb_RTDSK0_VGC_1.i_xOpnLS</Name>
 							<Comment><![CDATA[IO]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xClsLS</Name>
+							<Name>GVL_SXR_VAC.fb_RTDSK0_VGC_1.i_xClsLS</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xTrigger</Name>
-							<Comment><![CDATA[ Could be Up to 4]]></Comment>
+							<Name>GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.i_xOpnLS</Name>
+							<Comment><![CDATA[IO]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xPress_OK</Name>
-							<Comment><![CDATA[To be linked to the Fast sensor structure signal IG.xPRESS_OK, to make sure that the device is connected]]></Comment>
+							<Name>GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.i_xClsLS</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xOPN_SW</Name>
+							<Name>GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.i_xOpnLS</Name>
+							<Comment><![CDATA[IO]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xCLS_SW</Name>
-							<Comment><![CDATA[external open signal e.g epics]]></Comment>
+							<Name>GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.i_xClsLS</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xResetFault</Name>
-							<Comment><![CDATA[FFO iReset]]></Comment>
+							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xOpnLS</Name>
+							<Comment><![CDATA[IO]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xOverrideMode</Name>
-							<Comment><![CDATA[To be linked to global override bit. This Overrides Vacuum logic only, EPS, MPS and PMPS are still enforces]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xOverrideOpen</Name>
+							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xClsLS</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -938,69 +931,46 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.wFrmXWcState</Name>
-							<Comment><![CDATA[ link to task related ethercat frame state (Frm1WcState)]]></Comment>
-							<Type>WORD</Type>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xOpnLS</Name>
+							<Comment><![CDATA[IO]]></Comment>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCount</Name>
-							<Comment><![CDATA[ link to SlaveCount of EtherCAT Master (Inputs)]]></Comment>
-							<Type>UINT</Type>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xClsLS</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterDevState</Name>
-							<Comment><![CDATA[ link to DevState of EtherCAT Master (Inputs)]]></Comment>
-							<Type>UINT</Type>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xTrigger</Name>
+							<Comment><![CDATA[ Could be Up to 4]]></Comment>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterDeviceId</Name>
-							<Comment><![CDATA[ link to DevID of EtherCAT Master (InfoData)]]></Comment>
-							<Type>UINT</Type>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xPress_OK</Name>
+							<Comment><![CDATA[To be linked to the Fast sensor structure signal IG.xPRESS_OK, to make sure that the device is connected]]></Comment>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.arrEcMasterNetId</Name>
-							<Comment><![CDATA[ link to NetID of EtherCAT Master (InfoData)]]></Comment>
-							<Type GUID="{F1C07B37-2D70-463E-B9ED-92089788D29C}" Namespace="Tc2_System">T_AmsNetIdArr</Type>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xOPN_SW</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCountCfg</Name>
-							<Comment><![CDATA[ link to CfgSlaveCount of EtherCAT Master (InfoData)]]></Comment>
-							<Type>UINT</Type>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xCLS_SW</Name>
+							<Comment><![CDATA[external open signal e.g epics]]></Comment>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_RTDSK0_GPI_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xResetFault</Name>
+							<Comment><![CDATA[FFO iReset]]></Comment>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_IM1K0_XTES_GPI_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xOverrideMode</Name>
+							<Comment><![CDATA[To be linked to global override bit. This Overrides Vacuum logic only, EPS, MPS and PMPS are still enforces]]></Comment>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_SL1K0_POWER_GPI_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_GPI_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_GPI_2.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_PA1K0_GPI_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_GPI_1.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xOverrideOpen</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_PIP_1.i_iPRESS</Name>
@@ -1128,27 +1098,41 @@
 							<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.wFrmXWcState</Name>
+							<Comment><![CDATA[ link to task related ethercat frame state (Frm1WcState)]]></Comment>
+							<Type>WORD</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCount</Name>
+							<Comment><![CDATA[ link to SlaveCount of EtherCAT Master (Inputs)]]></Comment>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterDevState</Name>
+							<Comment><![CDATA[ link to DevState of EtherCAT Master (Inputs)]]></Comment>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterDeviceId</Name>
+							<Comment><![CDATA[ link to DevID of EtherCAT Master (InfoData)]]></Comment>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.arrEcMasterNetId</Name>
+							<Comment><![CDATA[ link to NetID of EtherCAT Master (InfoData)]]></Comment>
+							<Type GUID="{F1C07B37-2D70-463E-B9ED-92089788D29C}" Namespace="Tc2_System">T_AmsNetIdArr</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCountCfg</Name>
+							<Comment><![CDATA[ link to CfgSlaveCount of EtherCAT Master (InfoData)]]></Comment>
+							<Type>UINT</Type>
+						</Var>
 					</Vars>
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_INTF_VGC_1.q_xTREATY_VGC_STATUS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_RTDSK0_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.q_xOPN_DO</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -1217,6 +1201,58 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
+							<Name>GVL_SXR_VAC.fb_RTDSK0_VGC_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV2K0_VGC_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_SP1K1_MONO_VGC_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_SP1K1_MONO_VGC_2.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV3K0_VGC_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.iq_stValve</Name>
 							<Comment><![CDATA[ All valve data and states will be in this struct]]></Comment>
 							<Type GUID="{BAC3B9A7-3461-44AA-A262-F5F91280F55B}" Namespace="LCLS_Vacuum">ST_VGC</Type>
@@ -1260,42 +1296,6 @@
 						<Var>
 							<Name>GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xMPS_OK</Name>
 							<Comment><![CDATA[MPS Fault OK, is set when the Valve is Open and there is no trigger]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV2K0_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_SP1K1_MONO_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_SP1K1_MONO_VGC_2.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_TV3K0_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.q_xOPN_DO</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -2130,6 +2130,137 @@
 				<Instance Id="#x08502080" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2">
 					<Name>plc_kfe_vac_fs Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Vars VarGrpType="1">
+						<Name>PlcTask Inputs</Name>
+						<Var>
+							<Name>LCLS_Vacuum.Global_Variables.g_stSystem.I_EcatMaster1</Name>
+							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
+							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+						</Var>
+						<Var>
+							<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
+							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
+							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+						</Var>
+						<Var>
+							<Name>LCLS_Vacuum.LCLSVacuumSerialDriverLib.L2SI_Vacuum_Library.Global_Variables.g_stSystem.I_EcatMaster1</Name>
+							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
+							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xOpnLS</Name>
+							<Comment><![CDATA[IO]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xTrigger</Name>
+							<Comment><![CDATA[ Could be Up to 4]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xPress_OK</Name>
+							<Comment><![CDATA[To be linked to the Fast sensor structure signal IG.xPRESS_OK, to make sure that the device is connected]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xOPN_SW</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xCLS_SW</Name>
+							<Comment><![CDATA[external open signal e.g epics]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xResetFault</Name>
+							<Comment><![CDATA[FFO iReset]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xOverrideMode</Name>
+							<Comment><![CDATA[To be linked to global override bit. This Overrides Vacuum logic only, EPS, MPS and PMPS are still enforces]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xOverrideOpen</Name>
+							<Type>BOOL</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="2">
+						<Name>PlcTask Outputs</Name>
+						<Var>
+							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.iq_stValve</Name>
+							<Comment><![CDATA[ All valve data and states will be in this struct]]></Comment>
+							<Type GUID="{BAC3B9A7-3461-44AA-A262-F5F91280F55B}" Namespace="LCLS_Vacuum">ST_VGC</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xClose_A</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xClose_B</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xClose_C</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xTrigger</Name>
+							<Comment><![CDATA[Interface]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xVFS_Open</Name>
+							<Comment><![CDATA[Interface]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xVFS_Closed</Name>
+							<Comment><![CDATA[Interface]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xVAC_FAULT_OK</Name>
+							<Comment><![CDATA[Valve Vacuum OK, is set to False when there is Vacuum Fault]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xMPS_OK</Name>
+							<Comment><![CDATA[MPS Fault OK, is set when the Valve is Open and there is no trigger]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="8">
+						<Name>PlcTask Retains</Name>
+						<Var>
+							<Name>PMPS_GVL.SuccessfulPreemption</Name>
+							<Comment><![CDATA[ Any time BPTM applies a new BP request which is confirmed]]></Comment>
+							<Type>UDINT</Type>
+							<InOut>7</InOut>
+						</Var>
+						<Var>
+							<Name>PMPS_GVL.AccumulatedFF</Name>
+							<Comment><![CDATA[ Any time a FF occurs]]></Comment>
+							<Type>UDINT</Type>
+							<InOut>7</InOut>
+						</Var>
+					</Vars>
+					<TaskPouOids>
+						<TaskPouOid Prio="22" OTCID="#x08502081"/>
+					</TaskPouOids>
 				</Instance>
 			</Project>
 		</Plc>
@@ -2171,6 +2302,9 @@
 				</AddressInfo>
 				<Image Id="1" AddrType="9" ImageType="3">
 					<Name>Image</Name>
+				</Image>
+				<Image Id="4" AddrType="10" ImageType="3">
+					<Name>Image-2</Name>
 				</Image>
 				<Box Id="1" BoxType="9099">
 					<Name>=+-EK1200_00_00</Name>
@@ -6175,7 +6309,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 						</EtherCAT>
 					</Box>
 					<Box Id="80" BoxType="9099">
-						<Name>Term 80 (EL9505)</Name>
+						<Name>=+-EL9505_02_07</Name>
 						<ImageId>1003</ImageId>
 						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x25213052" RevisionNo="#x00110000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL9505 Power supply terminal 5V" Desc="EL9505" PortABoxInfo="#x01000025">
 							<SyncMan>001001000000010004000000000000000000001000000000</SyncMan>
@@ -6191,13 +6325,13 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 						</EtherCAT>
 					</Box>
 					<Box Id="78" BoxType="9099">
-						<Name>Term 78 (EL1124)</Name>
+						<Name>=+-EL1124_02_08</Name>
 						<ImageId>7</ImageId>
 						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x04643052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1124 4Ch. Dig. Input 5V, 10µs, Sensor Power" Desc="EL1124" PortABoxInfo="#x01000050">
 							<SyncMan>001001000000010004000000000000000100001000010000</SyncMan>
 							<Fmmu>0000000000000000001000010100000002000000000000000000000000000000</Fmmu>
 							<Pdo Name="Channel 1" Index="#x1a00" Flags="#x0011" SyncMan="0">
-								<Entry Name="Input" Index="#x6000" Sub="#x01">
+								<Entry Name="GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xTrigger" Index="#x6000" Sub="#x01">
 									<Type>BIT</Type>
 								</Entry>
 							</Pdo>
@@ -6219,7 +6353,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 						</EtherCAT>
 					</Box>
 					<Box Id="79" BoxType="9099">
-						<Name>Term 79 (EL9011)</Name>
+						<Name>=+-EL9011_02_09</Name>
 						<ImageId>1009</ImageId>
 						<EtherCAT CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x23333050" InfoDataState="false" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL9011 End Terminal" Desc="EL9011" PortABoxInfo="#x0100004e"/>
 					</Box>
@@ -6919,12 +7053,12 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 							<SyncMan>001001000000010004000000000000000100001000010000</SyncMan>
 							<Fmmu>0000000000000000001000010100000002000000000000000000000000000000</Fmmu>
 							<Pdo Name="Channel 1" Index="#x1a00" Flags="#x0011" SyncMan="0">
-								<Entry Name="GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xClsLS" Index="#x6000" Sub="#x01">
+								<Entry Name="GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xClsLS" Index="#x6000" Sub="#x01">
 									<Type>BIT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="Channel 2" Index="#x1a01" Flags="#x0011" SyncMan="0">
-								<Entry Name="GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xOpnLS" Index="#x6010" Sub="#x01">
+								<Entry Name="GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xOpnLS" Index="#x6010" Sub="#x01">
 									<Type>BIT</Type>
 								</Entry>
 							</Pdo>
@@ -6947,7 +7081,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 							<SyncMan>000f01004400010003000000000000000000000f44090000</SyncMan>
 							<Fmmu>0000000000000000000f00020100000001000000060000000000000000000000</Fmmu>
 							<Pdo Name="Channel 1" Index="#x1600" InOut="1" Flags="#x0011" SyncMan="0">
-								<Entry Name="GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xClose_A" Index="#x7000" Sub="#x01">
+								<Entry Name="GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xClose_A" Index="#x7000" Sub="#x01">
 									<Type>BIT</Type>
 								</Entry>
 								<Entry Name="TriState" Index="#x7000" Sub="#x02">
@@ -6955,7 +7089,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 								</Entry>
 							</Pdo>
 							<Pdo Name="Channel 2" Index="#x1601" InOut="1" Flags="#x0011" SyncMan="0">
-								<Entry Name="GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xClose_B" Index="#x7010" Sub="#x01">
+								<Entry Name="GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xClose_B" Index="#x7010" Sub="#x01">
 									<Type>BIT</Type>
 								</Entry>
 								<Entry Name="TriState" Index="#x7010" Sub="#x02">
@@ -6971,7 +7105,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 							<SyncMan>000f01004400010003000000000000000000000f44090000</SyncMan>
 							<Fmmu>0000000000000000000f00020100000001000000060000000000000000000000</Fmmu>
 							<Pdo Name="Channel 1" Index="#x1600" InOut="1" Flags="#x0011" SyncMan="0">
-								<Entry Name="GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xClose_C" Index="#x7000" Sub="#x01">
+								<Entry Name="GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xClose_C" Index="#x7000" Sub="#x01">
 									<Type>BIT</Type>
 								</Entry>
 								<Entry Name="TriState" Index="#x7000" Sub="#x02">
@@ -6979,7 +7113,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 								</Entry>
 							</Pdo>
 							<Pdo Name="Channel 2" Index="#x1601" InOut="1" Flags="#x0011" SyncMan="0">
-								<Entry Name="GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xOPN_DO" Index="#x7010" Sub="#x01">
+								<Entry Name="GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xOPN_DO" Index="#x7010" Sub="#x01">
 									<Type>BIT</Type>
 								</Entry>
 								<Entry Name="TriState" Index="#x7010" Sub="#x02">
@@ -19111,8 +19245,10 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 		</Io>
 	</Project>
 	<Mappings>
-		<MappingInfo Identifier="{00000000-2001-0850-0020-500821000403}" Id="#x02030020"/>
+		<MappingInfo Identifier="{08502081-0040-0304-8020-500840000403}" Id="#x02030030" Watchdog="04000000040000000400000004000000"/>
+		<MappingInfo Identifier="{00000000-2001-0850-0020-500841000403}" Id="#x02030020"/>
 		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030010"/>
+		<MappingInfo Identifier="{00000000-2001-0850-0020-500822000403}" Id="#x02030040"/>
 		<OwnerA Name="TIPC^plc_kfe_vac^plc_kfe_vac Instance">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)">
 				<Link VarA="PlcTask Inputs^GVL_Variables.fbEcatDiagWrapper.arrEcMasterNetId" VarB="InfoData^AmsNetId" AutoLink="true"/>
@@ -19120,6 +19256,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="PlcTask Inputs^GVL_Variables.fbEcatDiagWrapper.nEcMasterDeviceId" VarB="InfoData^DevId" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCount" VarB="Inputs^SlaveCount" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCountCfg" VarB="InfoData^CfgSlaveCount" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Variables.fbEcatDiagWrapper.wFrmXWcState" VarB="Inputs^Frm1WcState" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_01_00^=+-EL2798_01_02">
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.q_xHV_DIS" VarB="Channel 2^GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.q_xHV_DIS"/>
@@ -19188,18 +19325,6 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_03_00^=+-ES2004_03_03">
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.q_xOPN_DO" VarB="Channel 1^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.q_xOPN_DO"/>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.q_xOPN_DO" VarB="Channel 2^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.q_xOPN_DO"/>
-			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES1004_05_02">
-				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xClsLS" VarB="Channel 1^GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xClsLS"/>
-				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xOpnLS" VarB="Channel 2^GVL_SXR_VAC.fb_TV2K0_VFS_1.i_xOpnLS"/>
-			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES2202_05_03">
-				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xClose_A" VarB="Channel 1^GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xClose_A"/>
-				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xClose_B" VarB="Channel 2^GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xClose_B"/>
-			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES2202_05_04">
-				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xClose_C" VarB="Channel 1^GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xClose_C"/>
-				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xOPN_DO" VarB="Channel 2^GVL_SXR_VAC.fb_TV2K0_VFS_1.q_xOPN_DO"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1200_00_00^=+-EL2794_00_03">
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_RTDSK0_PIP_1.q_xHVEna_DO" VarB="Channel 1^GVL_SXR_VAC.fb_RTDSK0_PIP_1.q_xHVEna_DO"/>
@@ -19339,6 +19464,23 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_MR1K4_SOMS_GPI_1.i_iPRESS_R" VarB="AI Standard Channel 2^GVL_SXR_VAC.fb_MR1K4_SOMS_GPI_1.i_iPRESS_R"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV3K0_GCC_1.i_iPRESS_R" VarB="AI Standard Channel 1^GVL_SXR_VAC.fb_TV3K0_GCC_1.i_iPRESS_R"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV3K0_GPI_1.i_iPRESS_R" VarB="AI Standard Channel 4^GVL_SXR_VAC.fb_TV3K0_GPI_1.i_iPRESS_R"/>
+			</OwnerB>
+		</OwnerA>
+		<OwnerA Name="TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_02_00^=+-EL1124_02_08">
+				<Link VarA="PlcTask Inputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xTrigger" VarB="Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xTrigger"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES1004_05_02">
+				<Link VarA="PlcTask Inputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xClsLS" VarB="Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xClsLS"/>
+				<Link VarA="PlcTask Inputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xOpnLS" VarB="Channel 2^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xOpnLS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES2202_05_03">
+				<Link VarA="PlcTask Outputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xClose_A" VarB="Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xClose_A"/>
+				<Link VarA="PlcTask Outputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xClose_B" VarB="Channel 2^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xClose_B"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES2202_05_04">
+				<Link VarA="PlcTask Outputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xClose_C" VarB="Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xClose_C"/>
+				<Link VarA="PlcTask Outputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xOPN_DO" VarB="Channel 2^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xOPN_DO"/>
 			</OwnerB>
 		</OwnerA>
 		<OwnerA Name="TIPC^plc_kfe_vac_sim^plc_kfe_vac_sim Instance">

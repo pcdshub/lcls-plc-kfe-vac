@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <POU Name="MAIN" Id="{400798bf-4b47-4e69-b0b8-9446fd0f52d0}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fb_TV2K0_VFS_1(
+	i_xPMPS_OK:= TRUE, 
+	i_xExt_OK:= TRUE, 
+	iq_stValve=>,
+	io_fbFFHWO:= g_FastFaultOutput2);]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="6" Count="3" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

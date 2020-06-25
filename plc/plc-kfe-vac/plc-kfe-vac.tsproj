@@ -51,6 +51,7 @@
 			</EnumInfo>
 			<Hides>
 				<Hide GUID="{189C4254-44CC-48CC-97BA-E660B250C5CF}"/>
+				<Hide GUID="{7C8CB0CB-9586-448E-97F5-6A9DD0D05334}"/>
 			</Hides>
 		</DataType>
 		<DataType>
@@ -77,6 +78,9 @@
 				<Text><![CDATA[ERR_ExtFault]]></Text>
 				<Enum>4</Enum>
 			</EnumInfo>
+			<Hides>
+				<Hide GUID="{9FFCB9A4-88F8-47BB-9134-CD1CC40905DE}"/>
+			</Hides>
 		</DataType>
 		<DataType>
 			<Name GUID="{0BA4F662-135C-4E89-BEE6-9E9A2AFA97F2}" Namespace="LCLS_Vacuum" AutoDeleteType="true">ST_ValveBase</Name>
@@ -348,6 +352,7 @@
 			</SubItem>
 			<Hides>
 				<Hide GUID="{7B9FE57E-E5E1-4EC2-AD23-16899665BCD0}"/>
+				<Hide GUID="{67AACE2F-8A9F-49DE-B4E4-2A49D247D269}"/>
 			</Hides>
 		</DataType>
 		<DataType>
@@ -556,6 +561,7 @@
 			</SubItem>
 			<Hides>
 				<Hide GUID="{246FBB80-B487-4847-B750-5755664595B6}"/>
+				<Hide GUID="{49919C2E-7DBE-4433-9C51-83B926360052}"/>
 			</Hides>
 		</DataType>
 		<DataType>
@@ -2039,7 +2045,7 @@
 				</Instance>
 			</Project>
 			<Project GUID="{65953A75-3E9F-4A42-A7C8-97E0BE35A656}" Name="plc_kfe_vac_fs" PrjFilePath="plc_kfe_vac_fs\plc_kfe_vac_fs.plcproj" TmcFilePath="plc_kfe_vac_fs\plc_kfe_vac_fs.tmc" ReloadTmc="true" AmsPort="853" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502080" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2">
+				<Instance Id="#x08502080" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="plc_kfe_vac_fs\plc_kfe_vac_fs.tmc">
 					<Name>plc_kfe_vac_fs Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">

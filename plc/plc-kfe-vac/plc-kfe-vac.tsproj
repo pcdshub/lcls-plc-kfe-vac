@@ -26,36 +26,7 @@
 			<BaseType GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</BaseType>
 		</DataType>
 		<DataType>
-			<Name GUID="{A3541BDB-1202-48BA-B278-2CDC69D7839D}" Namespace="LCLS_Vacuum" AutoDeleteType="true">E_ValvePositionState</Name>
-			<BitSize>16</BitSize>
-			<BaseType GUID="{18071995-0000-0000-0000-000000000006}">INT</BaseType>
-			<EnumInfo>
-				<Text><![CDATA[OPEN]]></Text>
-				<Enum>0</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text><![CDATA[CLOSED]]></Text>
-				<Enum>1</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text><![CDATA[MOVING]]></Text>
-				<Enum>2</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text><![CDATA[INVALID]]></Text>
-				<Enum>3</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text><![CDATA[OPEN_F]]></Text>
-				<Enum>4</Enum>
-			</EnumInfo>
-			<Hides>
-				<Hide GUID="{189C4254-44CC-48CC-97BA-E660B250C5CF}"/>
-				<Hide GUID="{7C8CB0CB-9586-448E-97F5-6A9DD0D05334}"/>
-			</Hides>
-		</DataType>
-		<DataType>
-			<Name GUID="{EFA1748F-C4D4-4C43-B8A6-D3315D094B94}" Namespace="LCLS_Vacuum" AutoDeleteType="true">E_VGC</Name>
+			<Name GUID="{91187CB5-D5B5-4DD0-8966-41A4C12CC2DB}" Namespace="LCLS_Vacuum" AutoDeleteType="true">E_VGC</Name>
 			<BitSize>16</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000006}">INT</BaseType>
 			<EnumInfo>
@@ -78,490 +49,28 @@
 				<Text><![CDATA[ERR_ExtFault]]></Text>
 				<Enum>4</Enum>
 			</EnumInfo>
+			<EnumInfo>
+				<Text><![CDATA[At_Vac]]></Text>
+				<Enum>5</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text><![CDATA[Triggered]]></Text>
+				<Enum>6</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text><![CDATA[Vac_Fault]]></Text>
+				<Enum>7</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text><![CDATA[Cls_Timeout]]></Text>
+				<Enum>8</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text><![CDATA[Opn_Timeout]]></Text>
+				<Enum>9</Enum>
+			</EnumInfo>
 			<Hides>
-				<Hide GUID="{9FFCB9A4-88F8-47BB-9134-CD1CC40905DE}"/>
-			</Hides>
-		</DataType>
-		<DataType>
-			<Name GUID="{0BA4F662-135C-4E89-BEE6-9E9A2AFA97F2}" Namespace="LCLS_Vacuum" AutoDeleteType="true">ST_ValveBase</Name>
-			<BitSize>800</BitSize>
-			<SubItem>
-				<Name>pv_xOPN_SW</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<Comment><![CDATA[ EPICS Controls ]]></Comment>
-				<BitSize>8</BitSize>
-				<BitOffs>0</BitOffs>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-	pv: OPN_SW; 
-	field: ZNAM CLOSE; 
-	field: ONAM OPEN;
-	io: io ;
-	</Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>pv_xAlmRst</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>8</BitOffs>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-    pv: ALM_RST;
-	io: io;
-    </Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>pv_xOvrdOpn</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>16</BitOffs>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-    pv: FORCE_OPN;
-	io: io;
-	field: ZNAM FALSE;
-	field: ONAM FORCE OPEN;
-    </Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>xOverrideMode</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<Comment><![CDATA[ Shows the override status of this valve ]]></Comment>
-				<BitSize>8</BitSize>
-				<BitOffs>24</BitOffs>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-	pv: OVRD_ON ;
-	field: ZNAM Override OFF ;
-	field: ONAM Override ON;
-	io: io;
-	</Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>i_xOpnLS</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<Comment><![CDATA[ I/Os
- Readbacks ]]></Comment>
-				<BitSize>8</BitSize>
-				<BitOffs>32</BitOffs>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-	pv: OPN_DI;
-	io: i;
-	field: ZNAM FALSE;
-	field: ONAM OPEN;
-	</Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>i_xClsLS</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>40</BitOffs>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-    pv: CLS_DI;
-	io: i;
-	field: ZNAM FALSE;
-	field: ONAM CLOSE;
-    </Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>q_xOPN_DO</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<Comment><![CDATA[ Controls ]]></Comment>
-				<BitSize>8</BitSize>
-				<BitOffs>48</BitOffs>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-    pv: OPN_DO;
-	io: i;
-	field: ZNAM FALSE;
-	field: ONAM TRUE;
-    </Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>xEXT_OK</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<Comment><![CDATA[ External interlock for custom interlocking in addition to regular DP ilk, this must be set true, or the interlock condition before calling the FB_VGC ]]></Comment>
-				<BitSize>8</BitSize>
-				<BitOffs>56</BitOffs>
-				<Default>
-					<Value>0</Value>
-				</Default>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-	pv: EXT_ILK_OK ;
-	field: ZNAM NOT OK ;
-	field: ONAM OK ;
-	io: i ;
-	</Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>xOPN_OK</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<Comment><![CDATA[ Final SUM of DP_OK and EXT_OK, needed because it allows the DP ilk to be switched off, see FB_VGC.Dis_DPIlk ]]></Comment>
-				<BitSize>8</BitSize>
-				<BitOffs>64</BitOffs>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-    pv: OPN_OK;
-	field: ZNAM OPN ILK NOT OK ;
-	field: ONAM OPN ILK OK ;
-	io: i;
- 	</Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>eState</Name>
-				<Type GUID="{A3541BDB-1202-48BA-B278-2CDC69D7839D}" Namespace="LCLS_Vacuum">E_ValvePositionState</Type>
-				<Comment><![CDATA[ States ]]></Comment>
-				<BitSize>16</BitSize>
-				<BitOffs>80</BitOffs>
-				<Default>
-					<Value>3</Value>
-				</Default>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-	pv: POS_STATE;
-	type: mbbi ;
-	field: ZRST OPEN ;
-	field: ONST CLOSED ;
-	field: TWST MOVING ;
-	field: THST INVALID ;
-	field: FRST OPEN_F ;
-	io: i;
-	</Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>eVGC_State</Name>
-				<Type GUID="{EFA1748F-C4D4-4C43-B8A6-D3315D094B94}" Namespace="LCLS_Vacuum">E_VGC</Type>
-				<BitSize>16</BitSize>
-				<BitOffs>96</BitOffs>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-	pv: STATE;
-	field: ZRST Vented;
-	field: ONST At Vacuum;
-	field: TWST Differential Pressure;
-	field: THST Lost Vacuum;
-	field: FRST Ext Fault;
-	io: i;
-	</Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>bErrorPresent</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<Comment><![CDATA[ Error ]]></Comment>
-				<BitSize>8</BitSize>
-				<BitOffs>112</BitOffs>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-    pv: ERROR;
-	field: ZNAM NO ERROR ;
-	field: ONAM ERROR PRESENT ;
-	io: o;
-    </Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>iErrorCode</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
-				<BitSize>16</BitSize>
-				<BitOffs>128</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name>sErrorMessage</Name>
-				<Type GUID="{18071995-0000-0000-0000-000100000050}">STRING(80)</Type>
-				<BitSize>648</BitSize>
-				<BitOffs>144</BitOffs>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-    pv: ErrMsg;
-	io: o;
-    </Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>xLog</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>792</BitOffs>
-				<Default>
-					<Value>1</Value>
-				</Default>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-    pv: LOGGER;
-	io: i;
-	field: ZNAM OFF ;
-	field: ONAM ON ;
-    </Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<Hides>
-				<Hide GUID="{7B9FE57E-E5E1-4EC2-AD23-16899665BCD0}"/>
-				<Hide GUID="{67AACE2F-8A9F-49DE-B4E4-2A49D247D269}"/>
-			</Hides>
-		</DataType>
-		<DataType>
-			<Name GUID="{BAC3B9A7-3461-44AA-A262-F5F91280F55B}" Namespace="LCLS_Vacuum" AutoDeleteType="true">ST_VGC</Name>
-			<BitSize>2304</BitSize>
-			<ExtendsType GUID="{0BA4F662-135C-4E89-BEE6-9E9A2AFA97F2}" Namespace="LCLS_Vacuum">ST_ValveBase</ExtendsType>
-			<SubItem>
-				<Name>xDP_OK</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<Comment><![CDATA[ Indicates the valve can be opened because the differential pressure is low enough]]></Comment>
-				<BitSize>8</BitSize>
-				<BitOffs>800</BitOffs>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-    pv: DP_OK;
-	field: ZNAM DP NOT OK ;
-	field: ONAM DP OK ;
-	io: i;
-    </Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>rAT_VAC_SP</Name>
-				<Type GUID="{18071995-0000-0000-0000-00000000000D}">REAL</Type>
-				<Comment><![CDATA[ Interlock setpoint for gauges on both sides of valve]]></Comment>
-				<BitSize>32</BitSize>
-				<BitOffs>832</BitOffs>
-				<Default>
-					<Value>1E-06</Value>
-				</Default>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value> 
-	pv: AT_VAC_SP;
-	io: o;
-	field: HOPR 1000
-	field: LOPR 0
-	field: PREC 2
-	field: EGU "TORR"
-	</Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>rAT_VAC_SP_LAST</Name>
-				<Type GUID="{18071995-0000-0000-0000-00000000000D}">REAL</Type>
-				<Comment><![CDATA[ Interlock setpoint for gauges on both sides of valve]]></Comment>
-				<BitSize>32</BitSize>
-				<BitOffs>864</BitOffs>
-				<Default>
-					<Value>1E-06</Value>
-				</Default>
-			</SubItem>
-			<SubItem>
-				<Name>rAT_VAC_HYS</Name>
-				<Type GUID="{18071995-0000-0000-0000-00000000000D}">REAL</Type>
-				<Comment><![CDATA[ Hysteresis of the vacuum sp]]></Comment>
-				<BitSize>32</BitSize>
-				<BitOffs>896</BitOffs>
-				<Default>
-					<Value>1E-06</Value>
-				</Default>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-    pv: AT_VAC_HYS;
-	io: o;
-	field: HOPR 1000
-	field: LOPR 0
-	field: PREC 2
-	field: EGU "TORR"
-    </Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>rHYST_PERC</Name>
-				<Type GUID="{18071995-0000-0000-0000-00000000000D}">REAL</Type>
-				<Comment><![CDATA[ Hysteresis percentage]]></Comment>
-				<BitSize>32</BitSize>
-				<BitOffs>928</BitOffs>
-				<Default>
-					<Value>0.8</Value>
-				</Default>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-    pv: HYST_PERC ;
-	io: o;
-    </Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>xAT_VAC</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<Comment><![CDATA[At vacuum setpoint]]></Comment>
-				<BitSize>8</BitSize>
-				<BitOffs>960</BitOffs>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-	pv: AT_VAC ; 
-	field: ZNAM NOT AT VAC ;
-	field: ONAM AT VAC ;
-	io: i;
-	</Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>xERR_DifPres</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<Comment><![CDATA[ Alarm Outputs ]]></Comment>
-				<BitSize>8</BitSize>
-				<BitOffs>968</BitOffs>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-    pv: ERR_DifPres;
-	field: ZNAM NO ERROR ;
-	field: ONAM Diffrential error present ;
-	io: o;
-    </Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>xERR_SP</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>976</BitOffs>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-    pv: ERR_SP;
-	field: ZNAM NO ERROR ;
-	field: ONAM Setpoint error present ;
-	io: o;
-    </Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>xERR_ExtFault</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>984</BitOffs>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-    pv: ERR_Ext;
-	field: ZNAM NO ERROR ;
-	field: ONAM External error present ;
-	io: o;
-    </Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>xAlmSum</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>992</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name>sIlkUSDeviceName</Name>
-				<Type GUID="{18071995-0000-0000-0000-000100000050}">STRING(80)</Type>
-				<Comment><![CDATA[ILK Devices]]></Comment>
-				<BitSize>648</BitSize>
-				<BitOffs>1000</BitOffs>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-    pv: ILK_DEVICE_US;
-	io: o;
-    </Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>sIlkDSDeviceName</Name>
-				<Type GUID="{18071995-0000-0000-0000-000100000050}">STRING(80)</Type>
-				<BitSize>648</BitSize>
-				<BitOffs>1648</BitOffs>
-				<Properties>
-					<Property>
-						<Name>pytmc</Name>
-						<Value>
-    pv: ILK_DEVICE_DS;
-	io: o;
-    </Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<Hides>
-				<Hide GUID="{246FBB80-B487-4847-B750-5755664595B6}"/>
-				<Hide GUID="{49919C2E-7DBE-4433-9C51-83B926360052}"/>
+				<Hide GUID="{EFA1748F-C4D4-4C43-B8A6-D3315D094B94}"/>
 			</Hides>
 		</DataType>
 		<DataType>
@@ -658,8 +167,8 @@
 				<Task Id="4" Priority="21" CycleTime="100000" AmsPort="351" AdtTasks="true">
 					<Name>SimTask</Name>
 				</Task>
-				<Task Id="5" Priority="22" CycleTime="100000" AmsPort="352" AdtTasks="true">
-					<Name>PlcTask1</Name>
+				<Task Id="5" Priority="13" CycleTime="10000" AmsPort="352" AdtTasks="true">
+					<Name>FSV_task</Name>
 				</Task>
 			</Tasks>
 		</System>
@@ -2051,12 +1560,12 @@
 					<Vars VarGrpType="1">
 						<Name>PlcTask Inputs</Name>
 						<Var>
-							<Name>LCLS_Vacuum.Global_Variables.g_stSystem.I_EcatMaster1</Name>
+							<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
 							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
 							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 						</Var>
 						<Var>
-							<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
+							<Name>LCLS_Vacuum.Global_Variables.g_stSystem.I_EcatMaster1</Name>
 							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
 							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 						</Var>
@@ -2076,7 +1585,6 @@
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xTrigger</Name>
-							<Comment><![CDATA[ Could be Up to 4]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -2094,8 +1602,8 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xResetFault</Name>
-							<Comment><![CDATA[FFO iReset]]></Comment>
+							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xVAC_FAULT_Reset</Name>
+							<Comment><![CDATA[Valve Vacuum OK, is set to False when there is Vacuum Fault]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -2111,9 +1619,8 @@
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>
 						<Var>
-							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.iq_stValve</Name>
-							<Comment><![CDATA[ All valve data and states will be in this struct]]></Comment>
-							<Type GUID="{BAC3B9A7-3461-44AA-A262-F5F91280F55B}" Namespace="LCLS_Vacuum">ST_VGC</Type>
+							<Name>GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xClose_A</Name>
@@ -2157,8 +1664,9 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.q_xFastFaultOut</Name>
-							<Type>BOOL</Type>
+							<Name>GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_eVFS_State</Name>
+							<Comment><![CDATA[Interface]]></Comment>
+							<Type GUID="{91187CB5-D5B5-4DD0-8966-41A4C12CC2DB}" Namespace="LCLS_Vacuum">E_VGC</Type>
 						</Var>
 					</Vars>
 					<Vars VarGrpType="8">
@@ -2177,7 +1685,7 @@
 						</Var>
 					</Vars>
 					<TaskPouOids>
-						<TaskPouOid Prio="22" OTCID="#x08502081"/>
+						<TaskPouOid Prio="13" OTCID="#x08502081"/>
 					</TaskPouOids>
 				</Instance>
 			</Project>
@@ -2220,9 +1728,6 @@
 				</AddressInfo>
 				<Image Id="1" AddrType="9" ImageType="3">
 					<Name>Image</Name>
-				</Image>
-				<Image Id="4" AddrType="10" ImageType="3">
-					<Name>Image-2</Name>
 				</Image>
 				<Box Id="1" BoxType="9099">
 					<Name>=+-EK1200_00_00</Name>
@@ -19163,11 +18668,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 		</Io>
 	</Project>
 	<Mappings>
-		<MappingInfo Identifier="{08502081-0040-0304-8020-500840000403}" Id="#x02030030" Watchdog="04000000040000000400000004000000"/>
-		<MappingInfo Identifier="{08502081-0010-0304-8020-500810000403}" Id="#x02030050" Watchdog="04000000040000000400000004000000"/>
-		<MappingInfo Identifier="{00000000-2001-0850-0020-500841000403}" Id="#x02030020"/>
-		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030010"/>
-		<MappingInfo Identifier="{00000000-2001-0850-0020-500822000403}" Id="#x02030040"/>
+		<MappingInfo Identifier="{00000000-2081-0850-8020-500810000403}" Id="#x02030010"/>
 		<OwnerA Name="TIPC^plc_kfe_vac^plc_kfe_vac Instance">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)">
 				<Link VarA="PlcTask Inputs^GVL_Variables.fbEcatDiagWrapper.arrEcMasterNetId" VarB="InfoData^AmsNetId" AutoLink="true"/>
@@ -19175,7 +18676,6 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="PlcTask Inputs^GVL_Variables.fbEcatDiagWrapper.nEcMasterDeviceId" VarB="InfoData^DevId" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCount" VarB="Inputs^SlaveCount" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCountCfg" VarB="InfoData^CfgSlaveCount" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Variables.fbEcatDiagWrapper.wFrmXWcState" VarB="Inputs^Frm1WcState" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_01_00^=+-EL2798_01_02">
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.q_xHV_DIS" VarB="Channel 2^GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.q_xHV_DIS"/>

@@ -2,9 +2,9 @@
 <TcLicenseInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2011/11/TcLicenseInfo">
 	<LicenseInfo>
 		<SystemId>{24ABCED8-38BD-4777-35F9-841365E3A837}</SystemId>
-		<IssueTime>2020-08-07T23:33:00</IssueTime>
-		<ExpireTime>2020-08-15T00:00:00</ExpireTime>
-		<LicenseKey>dbffae34a9c1ee67af5387ad4ddca8e87c03c94a78015a6d0250f2b2b0d6da04ef50e8ef6aefc2d2f45075c2ac9eee522853c3ebb1fc6cf19269f8e9ca3254b6d5ab8cd73a480e93867ff0faa0379ef63c6817c77f4935b096a879319ffb8c5df0feaa318a7bbcd43c59b5babb51d12a2bb3146417519d470d4394fc307c57421636bb94de046472f40278e7dc2bd0ab9b430a80217b5967a21be6e28aa4e39fb4983d9cb696fae0cb839c6222068d534881a05e1c49e13da3d590ca8e2ddc270a8dcde49fd9f2e7b1b4d84180c50fb0a07b934911bf47fd66dc9c73a4632d468de16375c9fe4a1b119789a9cb22ff2bf6eea4074904e286c11c76651214de9e</LicenseKey>
+		<IssueTime>2020-08-11T00:24:00</IssueTime>
+		<ExpireTime>2020-08-19T00:00:00</ExpireTime>
+		<LicenseKey>172a7355014d0eac389468d464c716dd2f989949f078d711271ab6b32d83909736048765463a45cdf5c40b4fda1fb2b20b39a567de40d7fd10eea31bbd24bb9bf6ce2db55efb7e29d08b7a42a8f5e337960657f61e0bec810d9a48def03a865f4e231d03dd534f0a893f878a63a6665d512dc0614785e8219d4e56544c85093721ed922588324bf55facb6d74af9b228e7052797c690645ceeb314c21cf143f40a25b1e3462fdddc7e9cda62f961abff518363b824f602aaef47c92c1769842967c86f79d0281db225fc30ca6169e3d87bc93de1c4a7387e581d5130ff62f17db75c573ed8e553c18ae6e6c9f14d5f551f8c7cb27f90ee64eacaf854e9882a23</LicenseKey>
 		<License>
 			<LicenseId>{4C256767-E6E6-4AF5-BD68-9F7ABAD0C200}</LicenseId>
 			<Name>TC3 ADS</Name>
@@ -19,27 +19,6 @@
 			<LicenseId>{66689887-CCBD-452C-AC9A-039D997C6E66}</LicenseId>
 			<Name>TC3 PLC</Name>
 			<OrderNo>TC1200</OrderNo>
-		</License>
-		<License>
-			<LicenseId>{103F30C9-DF25-439E-837B-9DF80CB9356C}</LicenseId>
-			<Name>TC3 EtherCAT Redundancy 250</Name>
-			<OrderNo>TF6220</OrderNo>
-			<Instances>250</Instances>
-		</License>
-		<License>
-			<LicenseId>{BCA6EE0A-9CE1-4D3F-98CA-413ABC0D94FD}</LicenseId>
-			<Name>TC3 Serial-Communication</Name>
-			<OrderNo>TF6340</OrderNo>
-		</License>
-		<License>
-			<LicenseId>{D59230D3-7C55-4138-859C-234C1C6CFDA8}</LicenseId>
-			<Name>TC3 XCAD Interface</Name>
-			<OrderNo>TE1120</OrderNo>
-		</License>
-		<License>
-			<LicenseId>{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</LicenseId>
-			<Name>TC3 TCP/IP</Name>
-			<OrderNo>TF6310</OrderNo>
 		</License>
 	</LicenseInfo>
 </TcLicenseInfo>

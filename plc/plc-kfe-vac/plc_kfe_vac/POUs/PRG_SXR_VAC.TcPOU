@@ -68,8 +68,8 @@ fb_PCPM3B_PIP_1(	i_stGauge := fb_PCPM3B_GFS_1.IG,		i_xOverrideMode := xSystemOve
 fb_PA1K0_PIP_1(		i_stGauge := fb_PA1K0_GCC_1.IG,			i_xOverrideMode := xSystemOverrideMode);
 fb_PA1K0(			i_stGauge := fb_PA1K0_GCC_1.IG,			i_xOverrideMode := xSystemOverrideMode);
 fb_MR1K1_BEND_PIP_1(i_stGauge := fb_MR1K1_BEND_GCC_1.IG,	i_xOverrideMode := xSystemOverrideMode);
-fb_MR2K3_TXI_PIP_1(	i_stGauge := fb_MR2K3_TXI_GCC_1.IG,		i_xOverrideMode := xSystemOverrideMode);
 fb_MR1K3_TXI_PIP_1(	i_stGauge := fb_MR1K3_TXI_GCC_1.IG,		i_xOverrideMode := xSystemOverrideMode);
+fb_MR2K3_TXI_PIP_1(	i_stGauge := fb_MR1K3_TXI_GCC_1.IG,		i_xOverrideMode := xSystemOverrideMode);
 fb_SP1K1_MONO_PIP_1(i_stGauge := fb_SP1K1_MONO_GCC_1.IG,	i_xOverrideMode := xSystemOverrideMode);
 fb_SP1K1_MONO_PIP_2(i_stGauge := fb_SP1K1_MONO_GCC_1.IG,	i_xOverrideMode := xSystemOverrideMode);
 fb_TV3K0_PIP_1(		i_stGauge := fb_TV3K0_GCC_1.IG,			i_xOverrideMode := xSystemOverrideMode);
@@ -123,7 +123,10 @@ fb_MR1K1_BEND_GPI_1(PG=>);
       <LineId Id="194" Count="1" />
       <LineId Id="197" Count="0" />
       <LineId Id="196" Count="0" />
-      <LineId Id="138" Count="16" />
+      <LineId Id="138" Count="11" />
+      <LineId Id="151" Count="1" />
+      <LineId Id="219" Count="0" />
+      <LineId Id="153" Count="1" />
       <LineId Id="159" Count="21" />
       <LineId Id="5" Count="0" />
     </LineIds>

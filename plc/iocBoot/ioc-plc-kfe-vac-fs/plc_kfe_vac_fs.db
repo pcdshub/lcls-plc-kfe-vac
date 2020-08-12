@@ -34,16 +34,14 @@ record(waveform, "$(PREFIX)LCLSGeneral:LogHost") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(ai, "$(PREFIX)RequestedBP:Attenuation_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...amParameters.fAtt")
+record(longin, "$(PREFIX)RequestedBP:Transmission_RBV") {
+  field(DESC, "ads:PMPS_GVL.stReque...mParameters.nTran")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.fAtt?")
-  field(PREC, "3")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.nTran?")
   field(EGU, "%")
-  info(autosaveFields_pass0, "PREC")
 }
 
 record(longin, "$(PREFIX)RequestedBP:Rate_RBV") {
@@ -57,7 +55,7 @@ record(longin, "$(PREFIX)RequestedBP:Rate_RBV") {
 }
 
 record(ai, "$(PREFIX)RequestedBP:PulseEnergy_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...Parameters.fPP_mJ")
+  field(DESC, "This beam parameter is non-op for now.")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
@@ -76,342 +74,6 @@ record(longin, "$(PREFIX)RequestedBP:PhotonEnergyRanges_RBV") {
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.neVRange?")
   field(EGU, "eV")
-}
-
-record(longin, "$(PREFIX)RequestedBP:AuxAtt:001:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...tenuators[1].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[1].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)RequestedBP:AuxAtt:002:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...tenuators[2].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[2].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)RequestedBP:AuxAtt:003:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...tenuators[3].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[3].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)RequestedBP:AuxAtt:004:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...tenuators[4].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[4].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)RequestedBP:AuxAtt:005:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...tenuators[5].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[5].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)RequestedBP:AuxAtt:006:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...tenuators[6].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[6].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)RequestedBP:AuxAtt:007:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...tenuators[7].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[7].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)RequestedBP:AuxAtt:008:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...tenuators[8].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[8].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)RequestedBP:AuxAtt:009:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...tenuators[9].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[9].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)RequestedBP:AuxAtt:010:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...enuators[10].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[10].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)RequestedBP:AuxAtt:011:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...enuators[11].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[11].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)RequestedBP:AuxAtt:012:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...enuators[12].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[12].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)RequestedBP:AuxAtt:013:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...enuators[13].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[13].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)RequestedBP:AuxAtt:014:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...enuators[14].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[14].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)RequestedBP:AuxAtt:015:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...enuators[15].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[15].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)RequestedBP:AuxAtt:016:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...enuators[16].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[16].nAtt?")
-  field(EGU, "%")
-}
-
-record(bi, "$(PREFIX)RequestedBP:AuxAtt:001:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...nuators[1].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[1].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)RequestedBP:AuxAtt:002:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...nuators[2].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[2].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)RequestedBP:AuxAtt:003:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...nuators[3].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[3].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)RequestedBP:AuxAtt:004:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...nuators[4].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[4].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)RequestedBP:AuxAtt:005:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...nuators[5].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[5].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)RequestedBP:AuxAtt:006:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...nuators[6].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[6].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)RequestedBP:AuxAtt:007:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...nuators[7].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[7].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)RequestedBP:AuxAtt:008:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...nuators[8].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[8].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)RequestedBP:AuxAtt:009:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...nuators[9].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[9].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)RequestedBP:AuxAtt:010:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...uators[10].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[10].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)RequestedBP:AuxAtt:011:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...uators[11].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[11].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)RequestedBP:AuxAtt:012:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...uators[12].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[12].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)RequestedBP:AuxAtt:013:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...uators[13].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[13].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)RequestedBP:AuxAtt:014:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...uators[14].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[14].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)RequestedBP:AuxAtt:015:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...uators[15].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[15].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)RequestedBP:AuxAtt:016:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stReque...uators[16].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.astAttenuators[16].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
 }
 
 record(waveform, "$(PREFIX)RequestedBP:ST_RBV") {
@@ -445,16 +107,14 @@ record(longin, "$(PREFIX)RequestedBP:Cohort_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stRequestedBeamParameters.nCohortInt?")
 }
 
-record(ai, "$(PREFIX)CurrentBP:Attenuation_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...amParameters.fAtt")
+record(longin, "$(PREFIX)CurrentBP:Transmission_RBV") {
+  field(DESC, "ads:PMPS_GVL.stCurre...mParameters.nTran")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.fAtt?")
-  field(PREC, "3")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.nTran?")
   field(EGU, "%")
-  info(autosaveFields_pass0, "PREC")
 }
 
 record(longin, "$(PREFIX)CurrentBP:Rate_RBV") {
@@ -468,7 +128,7 @@ record(longin, "$(PREFIX)CurrentBP:Rate_RBV") {
 }
 
 record(ai, "$(PREFIX)CurrentBP:PulseEnergy_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...Parameters.fPP_mJ")
+  field(DESC, "This beam parameter is non-op for now.")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
@@ -487,342 +147,6 @@ record(longin, "$(PREFIX)CurrentBP:PhotonEnergyRanges_RBV") {
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.neVRange?")
   field(EGU, "eV")
-}
-
-record(longin, "$(PREFIX)CurrentBP:AuxAtt:001:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...tenuators[1].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[1].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)CurrentBP:AuxAtt:002:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...tenuators[2].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[2].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)CurrentBP:AuxAtt:003:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...tenuators[3].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[3].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)CurrentBP:AuxAtt:004:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...tenuators[4].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[4].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)CurrentBP:AuxAtt:005:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...tenuators[5].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[5].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)CurrentBP:AuxAtt:006:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...tenuators[6].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[6].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)CurrentBP:AuxAtt:007:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...tenuators[7].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[7].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)CurrentBP:AuxAtt:008:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...tenuators[8].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[8].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)CurrentBP:AuxAtt:009:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...tenuators[9].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[9].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)CurrentBP:AuxAtt:010:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...enuators[10].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[10].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)CurrentBP:AuxAtt:011:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...enuators[11].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[11].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)CurrentBP:AuxAtt:012:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...enuators[12].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[12].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)CurrentBP:AuxAtt:013:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...enuators[13].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[13].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)CurrentBP:AuxAtt:014:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...enuators[14].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[14].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)CurrentBP:AuxAtt:015:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...enuators[15].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[15].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)CurrentBP:AuxAtt:016:Att_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...enuators[16].nAtt")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[16].nAtt?")
-  field(EGU, "%")
-}
-
-record(bi, "$(PREFIX)CurrentBP:AuxAtt:001:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...nuators[1].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[1].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)CurrentBP:AuxAtt:002:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...nuators[2].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[2].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)CurrentBP:AuxAtt:003:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...nuators[3].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[3].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)CurrentBP:AuxAtt:004:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...nuators[4].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[4].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)CurrentBP:AuxAtt:005:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...nuators[5].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[5].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)CurrentBP:AuxAtt:006:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...nuators[6].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[6].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)CurrentBP:AuxAtt:007:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...nuators[7].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[7].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)CurrentBP:AuxAtt:008:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...nuators[8].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[8].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)CurrentBP:AuxAtt:009:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...nuators[9].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[9].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)CurrentBP:AuxAtt:010:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...uators[10].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[10].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)CurrentBP:AuxAtt:011:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...uators[11].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[11].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)CurrentBP:AuxAtt:012:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...uators[12].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[12].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)CurrentBP:AuxAtt:013:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...uators[13].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[13].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)CurrentBP:AuxAtt:014:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...uators[14].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[14].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)CurrentBP:AuxAtt:015:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...uators[15].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[15].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)CurrentBP:AuxAtt:016:OK_RBV") {
-  field(DESC, "ads:PMPS_GVL.stCurre...uators[16].xAttOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.astAttenuators[16].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
 }
 
 record(waveform, "$(PREFIX)CurrentBP:ST_RBV") {
@@ -856,16 +180,14 @@ record(longin, "$(PREFIX)CurrentBP:Cohort_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.nCohortInt?")
 }
 
-record(ai, "$(PREFIX)FullBeamCnst:Attenuation_RBV") {
+record(longin, "$(PREFIX)FullBeamCnst:Transmission_RBV") {
   field(DESC, "Full beam constant")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.fAtt?")
-  field(PREC, "3")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.nTran?")
   field(EGU, "%")
-  info(autosaveFields_pass0, "PREC")
 }
 
 record(longin, "$(PREFIX)FullBeamCnst:Rate_RBV") {
@@ -879,7 +201,7 @@ record(longin, "$(PREFIX)FullBeamCnst:Rate_RBV") {
 }
 
 record(ai, "$(PREFIX)FullBeamCnst:PulseEnergy_RBV") {
-  field(DESC, "Full beam constant")
+  field(DESC, "This beam parameter is non-op for now.")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
@@ -898,342 +220,6 @@ record(longin, "$(PREFIX)FullBeamCnst:PhotonEnergyRanges_RBV") {
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.neVRange?")
   field(EGU, "eV")
-}
-
-record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:001:Att_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[1].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:002:Att_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[2].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:003:Att_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[3].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:004:Att_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[4].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:005:Att_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[5].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:006:Att_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[6].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:007:Att_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[7].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:008:Att_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[8].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:009:Att_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[9].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:010:Att_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[10].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:011:Att_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[11].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:012:Att_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[12].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:013:Att_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[13].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:014:Att_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[14].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:015:Att_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[15].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)FullBeamCnst:AuxAtt:016:Att_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[16].nAtt?")
-  field(EGU, "%")
-}
-
-record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:001:OK_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[1].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:002:OK_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[2].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:003:OK_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[3].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:004:OK_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[4].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:005:OK_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[5].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:006:OK_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[6].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:007:OK_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[7].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:008:OK_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[8].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:009:OK_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[9].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:010:OK_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[10].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:011:OK_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[11].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:012:OK_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[12].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:013:OK_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[13].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:014:OK_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[14].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:015:OK_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[15].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)FullBeamCnst:AuxAtt:016:OK_RBV") {
-  field(DESC, "Full beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.astAttenuators[16].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
 }
 
 record(waveform, "$(PREFIX)FullBeamCnst:ST_RBV") {
@@ -1267,16 +253,14 @@ record(longin, "$(PREFIX)FullBeamCnst:Cohort_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstFullBeam.nCohortInt?")
 }
 
-record(ai, "$(PREFIX)SafeBeamCnst:Attenuation_RBV") {
+record(longin, "$(PREFIX)SafeBeamCnst:Transmission_RBV") {
   field(DESC, "Safe beam constant")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.fAtt?")
-  field(PREC, "3")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.nTran?")
   field(EGU, "%")
-  info(autosaveFields_pass0, "PREC")
 }
 
 record(longin, "$(PREFIX)SafeBeamCnst:Rate_RBV") {
@@ -1290,7 +274,7 @@ record(longin, "$(PREFIX)SafeBeamCnst:Rate_RBV") {
 }
 
 record(ai, "$(PREFIX)SafeBeamCnst:PulseEnergy_RBV") {
-  field(DESC, "Safe beam constant")
+  field(DESC, "This beam parameter is non-op for now.")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
@@ -1309,342 +293,6 @@ record(longin, "$(PREFIX)SafeBeamCnst:PhotonEnergyRanges_RBV") {
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.neVRange?")
   field(EGU, "eV")
-}
-
-record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:001:Att_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[1].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:002:Att_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[2].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:003:Att_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[3].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:004:Att_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[4].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:005:Att_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[5].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:006:Att_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[6].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:007:Att_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[7].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:008:Att_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[8].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:009:Att_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[9].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:010:Att_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[10].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:011:Att_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[11].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:012:Att_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[12].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:013:Att_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[13].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:014:Att_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[14].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:015:Att_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[15].nAtt?")
-  field(EGU, "%")
-}
-
-record(longin, "$(PREFIX)SafeBeamCnst:AuxAtt:016:Att_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[16].nAtt?")
-  field(EGU, "%")
-}
-
-record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:001:OK_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[1].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:002:OK_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[2].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:003:OK_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[3].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:004:OK_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[4].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:005:OK_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[5].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:006:OK_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[6].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:007:OK_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[7].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:008:OK_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[8].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:009:OK_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[9].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:010:OK_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[10].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:011:OK_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[11].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:012:OK_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[12].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:013:OK_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[13].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:014:OK_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[14].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:015:OK_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[15].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bi, "$(PREFIX)SafeBeamCnst:AuxAtt:016:OK_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.astAttenuators[16].xAttOK?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
 }
 
 record(waveform, "$(PREFIX)SafeBeamCnst:ST_RBV") {
@@ -1678,6 +326,27 @@ record(longin, "$(PREFIX)SafeBeamCnst:Cohort_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.cstSafeBeam.nCohortInt?")
 }
 
+record(ai, "$(PREFIX)eVRangeHyst_RBV") {
+  field(DESC, "eV Range hystersis")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.reVHyst?")
+  field(PREC, "3")
+  field(EGU, "eV")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "$(PREFIX)eVRangeHyst") {
+  field(DESC, "eV Range hystersis")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=853/PMPS_GVL.reVHyst=")
+  field(PREC, "3")
+  field(EGU, "eV")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
 record(waveform, "$(PREFIX)eVRangeCnst_RBV") {
   field(DESC, "eV Range constants")
   field(SCAN, "I/O Intr")
@@ -1686,7 +355,7 @@ record(waveform, "$(PREFIX)eVRangeCnst_RBV") {
   field(DTYP, "asynFloat32ArrayIn")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.g_areVBoundaries?")
   field(FTVL, "FLOAT")
-  field(EGU, "keV")
+  field(EGU, "eV")
   field(NELM, "16")
 }
 
@@ -1695,13 +364,13 @@ record(waveform, "$(PREFIX)eVRangeCnst") {
   field(DTYP, "asynFloat32ArrayOut")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=853/PMPS_GVL.g_areVBoundaries=")
   field(FTVL, "FLOAT")
-  field(EGU, "keV")
+  field(EGU, "eV")
   field(NELM, "16")
   info(autosaveFields_pass0, "VAL")
 }
 
 record(bi, "PLC:KFE:VAC:K0:FF2:ClearFault_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC_FSV_...tOutput2.i_xReset")
+  field(DESC, "Might be overidden by PLC writes")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
@@ -1712,7 +381,7 @@ record(bi, "PLC:KFE:VAC:K0:FF2:ClearFault_RBV") {
 }
 
 record(bo, "PLC:KFE:VAC:K0:FF2:ClearFault") {
-  field(DESC, "ads:GVL_SXR_VAC_FSV_...tOutput2.i_xReset")
+  field(DESC, "Might be overidden by PLC writes")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=853/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.i_xReset=")
   field(ZNAM, "Zero")
@@ -1741,12 +410,2662 @@ record(bo, "PLC:KFE:VAC:K0:FF2:EnableVeto") {
 }
 
 record(bi, "PLC:KFE:VAC:K0:FF2:FaultHWO_RBV") {
-  field(DESC, "ads:GVL_SXR_VAC_FSV_...2.q_xFastFaultOut")
+  field(DESC, "Hardware Output Status")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.q_xFastFaultOut?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:001:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[1].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[1].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:002:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[2].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[2].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:003:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[3].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[3].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:004:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[4].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[4].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:005:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[5].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[5].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:006:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[6].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[6].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:007:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[7].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[7].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:008:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[8].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[8].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:009:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[9].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[9].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:010:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[10].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[10].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:011:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[11].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[11].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:012:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[12].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[12].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:013:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[13].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[13].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:014:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[14].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[14].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:015:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[15].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[15].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:016:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[16].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[16].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:017:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[17].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[17].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:018:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[18].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[18].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:019:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[19].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[19].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:020:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[20].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[20].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:021:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[21].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[21].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:022:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[22].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[22].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:023:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[23].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[23].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:024:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[24].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[24].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:025:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[25].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[25].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:026:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[26].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[26].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:027:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[27].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[27].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:028:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[28].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[28].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:029:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[29].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[29].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:030:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[30].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[30].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:031:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[31].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[31].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:032:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[32].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[32].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:033:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[33].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[33].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:034:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[34].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[34].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:035:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[35].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[35].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:036:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[36].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[36].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:037:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[37].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[37].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:038:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[38].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[38].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:039:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[39].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[39].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:040:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[40].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[40].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:041:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[41].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[41].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:042:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[42].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[42].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:043:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[43].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[43].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:044:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[44].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[44].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:045:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[45].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[45].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:046:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[46].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[46].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:047:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[47].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[47].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:048:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[48].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[48].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:049:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[49].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[49].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:050:Info:Path_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[50].Info.sPath")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[50].Info.sPath?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:001:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...stFF[1].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[1].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:002:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...stFF[2].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[2].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:003:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...stFF[3].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[3].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:004:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...stFF[4].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[4].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:005:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...stFF[5].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[5].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:006:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...stFF[6].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[6].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:007:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...stFF[7].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[7].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:008:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...stFF[8].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[8].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:009:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...stFF[9].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[9].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:010:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[10].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[10].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:011:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[11].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[11].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:012:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[12].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[12].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:013:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[13].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[13].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:014:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[14].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[14].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:015:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[15].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[15].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:016:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[16].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[16].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:017:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[17].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[17].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:018:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[18].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[18].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:019:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[19].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[19].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:020:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[20].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[20].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:021:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[21].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[21].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:022:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[22].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[22].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:023:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[23].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[23].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:024:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[24].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[24].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:025:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[25].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[25].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:026:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[26].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[26].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:027:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[27].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[27].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:028:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[28].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[28].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:029:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[29].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[29].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:030:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[30].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[30].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:031:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[31].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[31].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:032:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[32].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[32].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:033:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[33].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[33].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:034:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[34].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[34].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:035:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[35].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[35].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:036:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[36].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[36].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:037:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[37].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[37].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:038:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[38].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[38].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:039:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[39].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[39].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:040:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[40].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[40].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:041:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[41].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[41].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:042:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[42].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[42].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:043:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[43].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[43].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:044:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[44].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[44].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:045:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[45].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[45].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:046:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[46].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[46].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:047:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[47].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[47].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:048:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[48].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[48].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:049:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[49].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[49].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:050:Info:Desc_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[50].Info.Desc")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[50].Info.Desc?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:001:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...F[1].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[1].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:002:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...F[2].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[2].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:003:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...F[3].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[3].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:004:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...F[4].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[4].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:005:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...F[5].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[5].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:006:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...F[6].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[6].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:007:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...F[7].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[7].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:008:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...F[8].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[8].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:009:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...F[9].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[9].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:010:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[10].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[10].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:011:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[11].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[11].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:012:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[12].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[12].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:013:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[13].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[13].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:014:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[14].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[14].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:015:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[15].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[15].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:016:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[16].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[16].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:017:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[17].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[17].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:018:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[18].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[18].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:019:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[19].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[19].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:020:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[20].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[20].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:021:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[21].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[21].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:022:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[22].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[22].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:023:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[23].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[23].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:024:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[24].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[24].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:025:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[25].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[25].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:026:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[26].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[26].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:027:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[27].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[27].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:028:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[28].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[28].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:029:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[29].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[29].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:030:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[30].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[30].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:031:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[31].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[31].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:032:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[32].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[32].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:033:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[33].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[33].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:034:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[34].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[34].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:035:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[35].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[35].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:036:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[36].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[36].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:037:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[37].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[37].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:038:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[38].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[38].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:039:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[39].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[39].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:040:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[40].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[40].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:041:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[41].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[41].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:042:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[42].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[42].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:043:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[43].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[43].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:044:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[44].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[44].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:045:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[45].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[45].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:046:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[46].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[46].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:047:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[47].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[47].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:048:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[48].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[48].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:049:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[49].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[49].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(waveform, "PLC:KFE:VAC:K0:FF2:FF:050:Info:DevName_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[50].Info.DevName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[50].Info.DevName?")
+  field(FTVL, "CHAR")
+  field(NELM, "255")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:001:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[1].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[1].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:002:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[2].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[2].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:003:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[3].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[3].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:004:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[4].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[4].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:005:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[5].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[5].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:006:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[6].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[6].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:007:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[7].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[7].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:008:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[8].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[8].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:009:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...[9].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[9].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:010:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...10].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[10].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:011:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...11].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[11].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:012:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...12].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[12].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:013:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...13].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[13].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:014:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...14].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[14].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:015:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...15].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[15].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:016:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...16].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[16].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:017:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...17].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[17].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:018:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...18].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[18].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:019:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...19].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[19].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:020:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...20].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[20].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:021:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...21].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[21].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:022:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...22].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[22].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:023:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...23].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[23].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:024:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...24].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[24].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:025:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...25].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[25].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:026:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...26].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[26].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:027:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...27].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[27].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:028:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...28].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[28].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:029:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...29].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[29].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:030:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...30].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[30].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:031:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...31].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[31].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:032:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...32].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[32].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:033:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...33].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[33].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:034:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...34].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[34].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:035:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...35].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[35].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:036:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...36].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[36].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:037:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...37].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[37].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:038:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...38].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[38].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:039:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...39].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[39].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:040:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...40].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[40].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:041:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...41].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[41].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:042:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...42].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[42].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:043:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...43].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[43].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:044:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...44].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[44].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:045:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...45].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[45].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:046:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...46].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[46].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:047:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...47].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[47].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:048:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...48].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[48].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:049:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...49].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[49].Info.TypeCode?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:050:Info:TypeCode_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...50].Info.TypeCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[50].Info.TypeCode?")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:001:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[1].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[1].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:002:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[2].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[2].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:003:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[3].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[3].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:004:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[4].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[4].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:005:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[5].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[5].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:006:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[6].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[6].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:007:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[7].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[7].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:008:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[8].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[8].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:009:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...tFF[9].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[9].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:010:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[10].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[10].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:011:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[11].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[11].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:012:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[12].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[12].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:013:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[13].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[13].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:014:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[14].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[14].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:015:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[15].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[15].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:016:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[16].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[16].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:017:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[17].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[17].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:018:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[18].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[18].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:019:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[19].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[19].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:020:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[20].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[20].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:021:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[21].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[21].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:022:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[22].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[22].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:023:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[23].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[23].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:024:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[24].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[24].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:025:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[25].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[25].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:026:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[26].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[26].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:027:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[27].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[27].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:028:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[28].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[28].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:029:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[29].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[29].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:030:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[30].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[30].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:031:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[31].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[31].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:032:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[32].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[32].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:033:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[33].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[33].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:034:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[34].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[34].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:035:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[35].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[35].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:036:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[36].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[36].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:037:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[37].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[37].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:038:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[38].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[38].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:039:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[39].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[39].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:040:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[40].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[40].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:041:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[41].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[41].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:042:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[42].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[42].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:043:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[43].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[43].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:044:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[44].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[44].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:045:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[45].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[45].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:046:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[46].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[46].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:047:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[47].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[47].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:048:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[48].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[48].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:049:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[49].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[49].Info.InUse?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bi, "PLC:KFE:VAC:K0:FF2:FF:050:Info:InUse_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...FF[50].Info.InUse")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[50].Info.InUse?")
   field(ZNAM, "Zero")
   field(ONAM, "One")
 }
@@ -5549,6 +6868,456 @@ record(longin, "PLC:KFE:VAC:K0:FF2:FF:050:Ovrd:ElapsedTime_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[50].Ovrd.ElapsedTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:001:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[1].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:002:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[2].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:003:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[3].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:004:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[4].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:005:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[5].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:006:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[6].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:007:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[7].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:008:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[8].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:009:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[9].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:010:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[10].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:011:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[11].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:012:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[12].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:013:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[13].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:014:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[14].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:015:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[15].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:016:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[16].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:017:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[17].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:018:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[18].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:019:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[19].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:020:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[20].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:021:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[21].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:022:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[22].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:023:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[23].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:024:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[24].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:025:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[25].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:026:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[26].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:027:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[27].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:028:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[28].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:029:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[29].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:030:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[30].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:031:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[31].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:032:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[32].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:033:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[33].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:034:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[34].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:035:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[35].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:036:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[36].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:037:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[37].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:038:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[38].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:039:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[39].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:040:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[40].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:041:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[41].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:042:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[42].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:043:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[43].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:044:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[44].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:045:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[45].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:046:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[46].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:047:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[47].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:048:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[48].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:049:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[49].Ovrd.RemainingTime?")
+}
+
+record(longin, "PLC:KFE:VAC:K0:FF2:FF:050:Ovrd:RemainingTime_RBV") {
+  field(DESC, "ads:GVL_SXR_VAC_FSV_...vrd.RemainingTime")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.astFF[50].Ovrd.RemainingTime?")
 }
 
 record(bi, "PLC:KFE:VAC:K0:FF2:FF:001:Ovrd:Active_RBV") {

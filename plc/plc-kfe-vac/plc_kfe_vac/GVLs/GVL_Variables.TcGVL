@@ -15,6 +15,12 @@ xSystemOverrideMode : BOOL; (* Global system override for the prototype section*
 {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO (EL2202)]^Channel 1^Output'}
 g_FastFaultOutputK0  :   FB_HardwareFFOutput;
 
+// Dummy FFO for valves not yet allowed to open. To be removed when proper interfaces to TXI and RIX vacuum are implemented. 
+{attribute 'pytmc' := '
+	pv: PLC:KFE:VAC:K0:FF1A
+'}
+g_FastFaultOutputINTF  :   FB_HardwareFFOutput;
+
 {attribute 'pytmc' := '
 pv: PLC:KFE:VAC:K0:RESET:FF1
 '}

@@ -1,0 +1,34 @@
+language: python
+os: linux
+dist: xenial
+python: 3.7
+
+env:
+  global:
+    # Doctr deploy key for pcdshub/lcls-plc-kfe-vac
+    - secure: 
+
+jobs:
+  include:
+    - name: Project summary
+      env: TWINCAT_SUMMARY=1
+    - name: Pragma linting
+      env: TWINCAT_PRAGMALINT=1
+    - name: Documentation building
+      env: TWINCAT_BUILD_DOCS=1
+    - name: Twincat Style
+      env: TWINCAT_STYLE=1
+    - name: Pre-commit Checks
+      env: PRE_COMMIT=1
+  allow_failures:
+    - name: Twincat Style
+      env: TWINCAT_STYLE=1
+    - name: Pre-commit Checks
+      env: PRE_COMMIT=1
+
+install:
+  # Import the helper scripts
+  - git clone --depth 1 git://github.com/pcdshub/pcds-ci-helpers.git
+  # Start the helper-script initialization + run based on environment variables
+  - source pcds-ci-helpers/travis/init.sh
+

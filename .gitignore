@@ -8,3 +8,5 @@ _CompileInfo
 *.tpy
 *.bak
 *.~u
+
+.pytmc_build

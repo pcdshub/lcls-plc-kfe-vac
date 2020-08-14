@@ -6,7 +6,7 @@ python: 3.7
 env:
   global:
     # Doctr deploy key for pcdshub/lcls-plc-kfe-vac
-    - secure: 
+    - secure: "jkzfAZu/13r8ZSs7fHIusYt0/4TbmNfSLyq9CqKFcmsIRjur1MFor36+kzvWx/SVsKz001MSiDtcfhablgP5bFtYOGw0ctiGEd09BV/weOZKD425sRTu0gBBupqpTCC2Y3gxzjaok5p9AHgXr59ULGBTWtLoIZyznZhECNjIFnpIJchtq7ELOjXrYdQjJIEygVHCokwD2gDIbtcuhLYaZ527q480Z/d+kC7hJzlLduc6w2uQblDYHTdXF7Nb/GVpxVG1LKjhOWBBGxEhWB5WT0xrLCUVJokFt6jmCVF017iYbmLNlixdhnacxRmnKBcOC1DKs7GdQ28Thoxn19C5pvR5h9lmekHLGft/kDlIqZ3ReqOJSwowrYkkhOo7IqEyHH0EG0u4vqGkRCtLpFRuK3rZ39X+mvkkArE0UA2MKel1RSsFTkrftdiItdP93PGTtyzoOYjwREF7eRmnRbILxjdJz5QjF6RMR5nhZHtLTClnJPN2yMCljLuCNx7MAX0if4F0aqYXm+zOI6LQbjFl8HqM4OdJgd5e+w5i/JUtD8tZzb+G0+KwgFtGRNrSQKn/5LWsz7t58mTYO8E6PxZb5J4T5UA2y74EoleAVqdktDsjORirLsQYY7uE3VW3Ipe+Osg8Y9pY1sTMww7QEnYLxS4UKGFm88KGFPHM/XSQQUM="
 
 jobs:
   include:

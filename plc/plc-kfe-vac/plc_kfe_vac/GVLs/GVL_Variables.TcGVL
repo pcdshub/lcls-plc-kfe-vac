@@ -10,7 +10,7 @@ xSystemOverrideMode : BOOL; (* Global system override for the prototype section*
 
 //Example implementation of the FFO
 {attribute 'pytmc' := '
-	pv: PLC:KFE:VAC:K0:FF1
+	pv: PLC:KFE:VAC:K0:FFO:01
 '}
 {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO (EL2202)]^Channel 1^Output'}
 g_FastFaultOutputK0  :   FB_HardwareFFOutput;

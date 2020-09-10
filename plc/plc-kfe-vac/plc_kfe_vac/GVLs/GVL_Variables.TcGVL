@@ -4,31 +4,38 @@
     <Declaration><![CDATA[VAR_GLOBAL
 	
 {attribute 'pytmc' := '
-	pv: PLC:KFE:VAC:K0:SYSOVERRIDE
+	pv: @(PREFIX)SYSOVERRIDE
 '}
 xSystemOverrideMode : BOOL; (* Global system override for the prototype section*)
 
 //Example implementation of the FFO
 {attribute 'pytmc' := '
-	pv: PLC:KFE:VAC:K0:FFO:01
+	pv: @(PREFIX)FFO:01
 '}
 {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO (EL2202)]^Channel 1^Output'}
 g_FastFaultOutputK0  :   FB_HardwareFFOutput;
 
 // Dummy FFO for valves not yet allowed to open. To be removed when proper interfaces to TXI and RIX vacuum are implemented. 
 {attribute 'pytmc' := '
-	pv: PLC:KFE:VAC:K0:FF1A
+	pv: @(PREFIX)FF1A
 '}
 g_FastFaultOutputINTF  :   FB_HardwareFFOutput;
 
 {attribute 'pytmc' := '
-pv: PLC:KFE:VAC:K0:RESET:FF1
+pv: @(PREFIX)RESET:FF1
 '}
 xReset_PMPS_FFO_K0	:	BOOL	:=	FALSE;		//FFO RESET for ST1L0_XTES's Upstream Components
 
 
 fbLogHandler : FB_loghandler;
 fbEcatDiagWrapper : FB_EcatDiagWrapper;
+
+
+{attribute 'pytmc' := '
+     pv: @(PREFIX)Arbiter:01
+'}
+g_fbArbiter1    :   FB_Arbiter(01);
+     
 
 END_VAR
 ]]></Declaration>

@@ -37,7 +37,8 @@
 <h1>plc_kfe_vac_fs.tmc<a class="headerlink" href="#plc-kfe-vac-fs-tmc" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="records">
 <h2>Records<a class="headerlink" href="#records" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="s2">&quot;PLC:KFE:VAC:K0:FFO:02:ClearFault&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="s2">&quot;Period_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;PLC:KFE:VAC:K0:FFO:02:ClearFault&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
  <span class="s2">&quot;PLC:KFE:VAC:K0:FFO:02:ClearFault_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;PLC:KFE:VAC:K0:FFO:02:EnableVeto&quot;</span> <span class="p">(</span><span class="n">bo</span><span class="p">)</span>
  <span class="s2">&quot;PLC:KFE:VAC:K0:FFO:02:EnableVeto_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
@@ -1004,8 +1005,6 @@
  <span class="s2">&quot;$(PREFIX)CurrentBP:Transmission_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
  <span class="s2">&quot;$(PREFIX)CurrentBP:Valid_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;$(PREFIX)eVRangeCnst_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
- <span class="s2">&quot;$(PREFIX)eVRangeCnst&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
- <span class="s2">&quot;$(PREFIX)eVRangeHyst&quot;</span> <span class="p">(</span><span class="n">ao</span><span class="p">)</span>
  <span class="s2">&quot;$(PREFIX)eVRangeHyst_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;$(PREFIX)FullBeamCnst:Cohort_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
  <span class="s2">&quot;$(PREFIX)FullBeamCnst:PhotonEnergyRanges_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
@@ -1014,10 +1013,18 @@
  <span class="s2">&quot;$(PREFIX)FullBeamCnst:ST_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
  <span class="s2">&quot;$(PREFIX)FullBeamCnst:Transmission_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
  <span class="s2">&quot;$(PREFIX)FullBeamCnst:Valid_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)K:eVRangeCnst_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)LCLSGeneral:GlobalLogTrickleTrip_RBV&quot;</span> <span class="p">(</span><span class="n">bi</span><span class="p">)</span>
  <span class="s2">&quot;$(PREFIX)LCLSGeneral:LogHost_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
  <span class="s2">&quot;$(PREFIX)LCLSGeneral:LogHost&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)LCLSGeneral:LogMessageCount_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
  <span class="s2">&quot;$(PREFIX)LCLSGeneral:LogPort&quot;</span> <span class="p">(</span><span class="n">longout</span><span class="p">)</span>
  <span class="s2">&quot;$(PREFIX)LCLSGeneral:LogPort_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)L:eVRangeCnst_RBV&quot;</span> <span class="p">(</span><span class="n">waveform</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)L:UND:FirstSegment_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)L:UND:HiK_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)L:UND:LastSegment_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
+ <span class="s2">&quot;$(PREFIX)L:UND:LowK_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
  <span class="s2">&quot;$(PREFIX)RequestedBP:Cohort_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
  <span class="s2">&quot;$(PREFIX)RequestedBP:PhotonEnergyRanges_RBV&quot;</span> <span class="p">(</span><span class="n">longin</span><span class="p">)</span>
  <span class="s2">&quot;$(PREFIX)RequestedBP:PulseEnergy_RBV&quot;</span> <span class="p">(</span><span class="n">ai</span><span class="p">)</span>
@@ -1038,7 +1045,19 @@
 </div>
 <div class="section" id="epics-database">
 <h2>EPICS database<a class="headerlink" href="#epics-database" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>record(longin, &quot;$(PREFIX)LCLSGeneral:LogPort_RBV&quot;) {
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>record(bi, &quot;$(PREFIX)LCLSGeneral:GlobalLogTrickleTrip_RBV&quot;) {
+  field(DESC, &quot;Tripped by overall log count&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_Logger.bTrickleTripped?&quot;)
+  field(ZNAM, &quot;FALSE&quot;)
+  field(ONAM, &quot;TRUE&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)LCLSGeneral:LogPort_RBV&quot;) {
   field(DESC, &quot;The log host UDP port&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
@@ -1078,6 +1097,16 @@ record(waveform, &quot;$(PREFIX)LCLSGeneral:LogHost&quot;) {
   info(archive, &quot;VAL&quot;)
 }
 
+record(longin, &quot;$(PREFIX)LCLSGeneral:LogMessageCount_RBV&quot;) {
+  field(DESC, &quot;Total log messages on the last cycle&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/GVL_Logger.nGlobAccEvents?&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
 record(longin, &quot;$(PREFIX)RequestedBP:Transmission_RBV&quot;) {
   field(DESC, &quot;PMPS_GVL.stRequestedBeamParameters.nTran&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
@@ -1101,7 +1130,6 @@ record(longin, &quot;$(PREFIX)RequestedBP:Rate_RBV&quot;) {
 }
 
 record(ai, &quot;$(PREFIX)RequestedBP:PulseEnergy_RBV&quot;) {
-  # PMPS_GVL.stRequestedBeamParameters.fPP_mJ
   field(DESC, &quot;This beam parameter is non-op for now.&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
@@ -1153,7 +1181,6 @@ record(bi, &quot;$(PREFIX)RequestedBP:Valid_RBV&quot;) {
 }
 
 record(longin, &quot;$(PREFIX)RequestedBP:Cohort_RBV&quot;) {
-  # PMPS_GVL.stRequestedBeamParameters.nCohortInt
   field(DESC, &quot;Cohort inc on each arb cycle&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
@@ -1236,13 +1263,25 @@ record(bi, &quot;$(PREFIX)CurrentBP:Valid_RBV&quot;) {
 }
 
 record(longin, &quot;$(PREFIX)CurrentBP:Cohort_RBV&quot;) {
-  # PMPS_GVL.stCurrentBeamParameters.nCohortInt
   field(DESC, &quot;Cohort inc on each arb cycle&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.stCurrentBeamParameters.nCohortInt?&quot;)
+  info(archive, &quot;monitor 1: VAL&quot;)
+}
+
+record(waveform, &quot;$(PREFIX)eVRangeCnst_RBV&quot;) {
+  field(DESC, &quot;Active eV Range constants&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat32ArrayIn&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.g_areVBoundaries?&quot;)
+  field(FTVL, &quot;FLOAT&quot;)
+  field(EGU, &quot;eV&quot;)
+  field(NELM, &quot;16&quot;)
   info(archive, &quot;monitor 1: VAL&quot;)
 }
 
@@ -1406,6 +1445,26 @@ record(longin, &quot;$(PREFIX)SafeBeamCnst:Cohort_RBV&quot;) {
   info(archive, &quot;monitor 1: VAL&quot;)
 }
 
+record(longin, &quot;$(PREFIX)L:UND:FirstSegment_RBV&quot;) {
+  field(DESC, &quot;PMPS_GVL.iLowBound_LUnd&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.iLowBound_LUnd?&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(longin, &quot;$(PREFIX)L:UND:LastSegment_RBV&quot;) {
+  field(DESC, &quot;PMPS_GVL.iHighBound_LUnd&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynInt32&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.iHighBound_LUnd?&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
 record(ai, &quot;$(PREFIX)eVRangeHyst_RBV&quot;) {
   field(DESC, &quot;eV Range hystersis&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
@@ -1419,42 +1478,70 @@ record(ai, &quot;$(PREFIX)eVRangeHyst_RBV&quot;) {
   info(archive, &quot;monitor 1: VAL&quot;)
 }
 
-record(ao, &quot;$(PREFIX)eVRangeHyst&quot;) {
-  field(DESC, &quot;eV Range hystersis&quot;)
+record(ai, &quot;Period_RBV&quot;) {
+  field(DESC, &quot;PMPS_GVL.fPeriod_mm_LUnd&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynFloat64&quot;)
-  field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=853/PMPS_GVL.reVHyst=&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.fPeriod_mm_LUnd?&quot;)
   field(PREC, &quot;3&quot;)
-  field(EGU, &quot;eV&quot;)
-  info(autosaveFields_pass0, &quot;PREC VAL&quot;)
-  info(archive, &quot;monitor 1: VAL&quot;)
+  field(EGU, &quot;mm&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+  info(archive, &quot;VAL&quot;)
 }
 
-record(waveform, &quot;$(PREFIX)eVRangeCnst_RBV&quot;) {
+record(ai, &quot;$(PREFIX)L:UND:LowK_RBV&quot;) {
+  field(DESC, &quot;PMPS_GVL.fLowK_LUnd&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.fLowK_LUnd?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(ai, &quot;$(PREFIX)L:UND:HiK_RBV&quot;) {
+  field(DESC, &quot;PMPS_GVL.fHiK_LUnd&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat64&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.fHiK_LUnd?&quot;)
+  field(PREC, &quot;3&quot;)
+  info(autosaveFields_pass0, &quot;PREC&quot;)
+  info(archive, &quot;VAL&quot;)
+}
+
+record(waveform, &quot;$(PREFIX)L:eVRangeCnst_RBV&quot;) {
   field(DESC, &quot;eV Range constants&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
   field(TSE, &quot;-2&quot;)
   field(DTYP, &quot;asynFloat32ArrayIn&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.g_areVBoundaries?&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.g_areVBoundariesL?&quot;)
   field(FTVL, &quot;FLOAT&quot;)
   field(EGU, &quot;eV&quot;)
   field(NELM, &quot;16&quot;)
   info(archive, &quot;monitor 1: VAL&quot;)
 }
 
-record(waveform, &quot;$(PREFIX)eVRangeCnst&quot;) {
+record(waveform, &quot;$(PREFIX)K:eVRangeCnst_RBV&quot;) {
   field(DESC, &quot;eV Range constants&quot;)
-  field(DTYP, &quot;asynFloat32ArrayOut&quot;)
-  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=853/PMPS_GVL.g_areVBoundaries=&quot;)
+  field(SCAN, &quot;I/O Intr&quot;)
+  field(PINI, &quot;1&quot;)
+  field(TSE, &quot;-2&quot;)
+  field(DTYP, &quot;asynFloat32ArrayIn&quot;)
+  field(INP, &quot;@asyn($(PORT),0,1)ADSPORT=853/POLL_RATE=1/PMPS_GVL.g_areVBoundariesK?&quot;)
   field(FTVL, &quot;FLOAT&quot;)
   field(EGU, &quot;eV&quot;)
   field(NELM, &quot;16&quot;)
-  info(autosaveFields_pass0, &quot;VAL&quot;)
   info(archive, &quot;monitor 1: VAL&quot;)
 }
 
 record(bi, &quot;PLC:KFE:VAC:K0:FFO:02:ClearFault_RBV&quot;) {
-  # GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.i_xReset
   field(DESC, &quot;Might be overidden by PLC writes&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)
@@ -1467,7 +1554,6 @@ record(bi, &quot;PLC:KFE:VAC:K0:FFO:02:ClearFault_RBV&quot;) {
 }
 
 record(bo, &quot;PLC:KFE:VAC:K0:FFO:02:ClearFault&quot;) {
-  # GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.i_xReset
   field(DESC, &quot;Might be overidden by PLC writes&quot;)
   field(DTYP, &quot;asynInt32&quot;)
   field(OUT, &quot;@asyn($(PORT),0,1)ADSPORT=853/GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.i_xReset=&quot;)
@@ -1502,7 +1588,6 @@ record(bo, &quot;PLC:KFE:VAC:K0:FFO:02:EnableVeto&quot;) {
 }
 
 record(bi, &quot;PLC:KFE:VAC:K0:FFO:02:FaultHWO_RBV&quot;) {
-  # GVL_SXR_VAC_FSV_PMPS.g_FastFaultOutput2.q_xFastFaultOut
   field(DESC, &quot;Hardware Output Status&quot;)
   field(SCAN, &quot;I/O Intr&quot;)
   field(PINI, &quot;1&quot;)

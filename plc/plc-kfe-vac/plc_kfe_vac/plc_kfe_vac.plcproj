@@ -48,6 +48,9 @@
     <Compile Include="POUs\PRG_DIAGNOSTIC.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\PRG_PMPS.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\PRG_SXR_VAC.TcPOU">
       <SubType>Code</SubType>
     </Compile>

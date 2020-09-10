@@ -9,6 +9,7 @@ END_VAR
       <ST><![CDATA[PRG_DIAGNOSTIC();
 PRG_SXR_VAC();
 PRG_VAC_INTF();
+PRG_PMPS();
 fbEcatDiagWrapper();
 fbLogHandler();
 g_FastFaultOutputK0.Execute(bAutoReset:=True);]]></ST>
@@ -16,6 +17,7 @@ g_FastFaultOutputK0.Execute(bAutoReset:=True);]]></ST>
     <LineIds Name="MAIN">
       <LineId Id="6" Count="1" />
       <LineId Id="22" Count="0" />
+      <LineId Id="31" Count="0" />
       <LineId Id="17" Count="0" />
       <LineId Id="12" Count="0" />
       <LineId Id="26" Count="0" />

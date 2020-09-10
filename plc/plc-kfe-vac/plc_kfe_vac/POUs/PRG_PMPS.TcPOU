@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <POU Name="PRG_PMPS" Id="{f7d360c9-1fd6-4e06-b31d-7f5233ed9ceb}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_PMPS
+VAR
+    fbArbiterIO : FB_SubSysToArbiter_IO;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbArbiterIO(Arbiter := g_fbArbiter1, fbFFHWO := g_FastFaultOutputK0);]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_PMPS">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

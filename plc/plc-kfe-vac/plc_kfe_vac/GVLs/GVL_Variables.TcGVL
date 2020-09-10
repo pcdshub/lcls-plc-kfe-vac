@@ -30,6 +30,14 @@ xReset_PMPS_FFO_K0	:	BOOL	:=	FALSE;		//FFO RESET for ST1L0_XTES's Upstream Compo
 fbLogHandler : FB_loghandler;
 fbEcatDiagWrapper : FB_EcatDiagWrapper;
 
+     
+
+{attribute 'pytmc' := '
+     pv: @(PREFIX)Arbiter:01
+'}
+g_fbArbiter1    :   FB_Arbiter(01);
+     
+
 END_VAR
 ]]></Declaration>
   </GVL>

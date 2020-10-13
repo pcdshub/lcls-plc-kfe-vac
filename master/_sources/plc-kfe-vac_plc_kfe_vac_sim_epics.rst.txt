@@ -1,0 +1,96 @@
+
+Data Types
+----------
+
+
+     
+ST_BeamParams_IO
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):Attenuation_RBV
+      - longin
+      - $(SYMBOL).nTran
+      - | io: input
+
+
+    * - $(PREFIX):Attenuation_RBV
+      - longin
+      - $(SYMBOL).nCohortInt
+      - | io: input
+
+
+    * - $(PREFIX):AuxAttenuator_RBV
+      - waveform
+      - $(SYMBOL).aStoppers
+      - | io: input
+
+
+    * - $(PREFIX):PhotonEnergy_RBV
+      - longin
+      - $(SYMBOL).neVRange
+      - | io: input
+
+
+    * - $(PREFIX):PulseEnergy_RBV
+      - ai
+      - $(SYMBOL).fPP_mJ
+      - | io: input
+
+
+    * - $(PREFIX):Rate_RBV
+      - longin
+      - $(SYMBOL).nRate
+      - | io: input
+
+
+    * - $(PREFIX):Valid_RBV
+      - bi
+      - $(SYMBOL).xValid
+      - | io: input
+
+
+  
+ST_PMPS_Aperture_IO
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):Height_RBV
+      - ai
+      - $(SYMBOL).Height
+      - | field: EGU mm
+        | io: input
+
+
+    * - $(PREFIX):OK_RBV
+      - bi
+      - $(SYMBOL).xOK
+      - | io: input
+
+
+    * - $(PREFIX):Width_RBV
+      - ai
+      - $(SYMBOL).Width
+      - | field: EGU mm
+        | io: input
+
+
+                      
+Database Records
+----------------
+
+No records defined.

@@ -252,6 +252,12 @@
 			</Hides>
 		</DataType>
 		<DataType>
+			<Name GUID="{F1C07B37-2D70-463E-B9ED-92089788D29C}" Namespace="Tc2_System" AutoDeleteType="true">T_AmsNetIdArr</Name>
+			<Comment><![CDATA[ TwinCAT AMS netID address bytes. ]]></Comment>
+			<BitSize>48</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</BaseType>
+		</DataType>
+		<DataType>
 			<Name GUID="{91187CB5-D5B5-4DD0-8966-41A4C12CC2DB}" Namespace="LCLS_Vacuum" AutoDeleteType="true">E_VGC</Name>
 			<BitSize>16</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000006}">INT</BaseType>
@@ -299,12 +305,6 @@
 				<Hide GUID="{EFA1748F-C4D4-4C43-B8A6-D3315D094B94}"/>
 				<Hide GUID="{FC584D69-676B-45CE-A79B-6D474BA5B185}"/>
 			</Hides>
-		</DataType>
-		<DataType>
-			<Name GUID="{F1C07B37-2D70-463E-B9ED-92089788D29C}" Namespace="Tc2_System" AutoDeleteType="true">T_AmsNetIdArr</Name>
-			<Comment><![CDATA[ TwinCAT AMS netID address bytes. ]]></Comment>
-			<BitSize>48</BitSize>
-			<BaseType GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</BaseType>
 		</DataType>
 		<DataType>
 			<Name GUID="{18071995-0000-0000-0000-002000000001}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BIT</Name>
@@ -445,6 +445,41 @@
 							<Type>BIT</Type>
 						</Var>
 						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.wFrmXWcState</Name>
+							<Comment><![CDATA[ link to task related ethercat frame state (Frm1WcState)]]></Comment>
+							<Type>WORD</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCount</Name>
+							<Comment><![CDATA[ link to SlaveCount of EtherCAT Master (Inputs)]]></Comment>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterDevState</Name>
+							<Comment><![CDATA[ link to DevState of EtherCAT Master (Inputs)]]></Comment>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterDeviceId</Name>
+							<Comment><![CDATA[ link to DevID of EtherCAT Master (InfoData)]]></Comment>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.arrEcMasterNetId</Name>
+							<Comment><![CDATA[ link to NetID of EtherCAT Master (InfoData)]]></Comment>
+							<Type GUID="{F1C07B37-2D70-463E-B9ED-92089788D29C}" Namespace="Tc2_System">T_AmsNetIdArr</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCountCfg</Name>
+							<Comment><![CDATA[ link to CfgSlaveCount of EtherCAT Master (InfoData)]]></Comment>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_VAC_INTF.fb_TV1K0_INTF_GCC_1.i_xAD_Press_OK</Name>
+							<Comment><![CDATA[ Input from AD's system indicating pressure belopw setpoint. ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_GPI_1.i_iPRESS_R</Name>
 							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 							<Type>INT</Type>
@@ -550,9 +585,29 @@
 							<Type>INT</Type>
 						</Var>
 						<Var>
+							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_GCC_1.i_xHV_ON</Name>
+							<Comment><![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_GCC_1.i_xDisc_Active</Name>
+							<Comment><![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_GCC_1.i_iPRESS_R</Name>
 							<Comment><![CDATA[ Controls and I/Os]]></Comment>
 							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_GCC_1.i_xHV_ON</Name>
+							<Comment><![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_GCC_1.i_xDisc_Active</Name>
+							<Comment><![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_SP1K1_MONO_GCC_1.i_iPRESS_R</Name>
@@ -560,14 +615,44 @@
 							<Type>INT</Type>
 						</Var>
 						<Var>
+							<Name>GVL_SXR_VAC.fb_SP1K1_MONO_GCC_1.i_xHV_ON</Name>
+							<Comment><![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_SP1K1_MONO_GCC_1.i_xDisc_Active</Name>
+							<Comment><![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_SXR_VAC.fb_TV3K0_GCC_1.i_iPRESS_R</Name>
 							<Comment><![CDATA[ Controls and I/Os]]></Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
+							<Name>GVL_SXR_VAC.fb_TV3K0_GCC_1.i_xHV_ON</Name>
+							<Comment><![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_TV3K0_GCC_1.i_xDisc_Active</Name>
+							<Comment><![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_SXR_VAC.fb_MR1K4_SOMS_GCC_1.i_iPRESS_R</Name>
 							<Comment><![CDATA[ Controls and I/Os]]></Comment>
 							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_MR1K4_SOMS_GCC_1.i_xHV_ON</Name>
+							<Comment><![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_MR1K4_SOMS_GCC_1.i_xDisc_Active</Name>
+							<Comment><![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_VGC_1.i_xOpnLS</Name>
@@ -840,47 +925,34 @@
 							<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.wFrmXWcState</Name>
-							<Comment><![CDATA[ link to task related ethercat frame state (Frm1WcState)]]></Comment>
-							<Type>WORD</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCount</Name>
-							<Comment><![CDATA[ link to SlaveCount of EtherCAT Master (Inputs)]]></Comment>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterDevState</Name>
-							<Comment><![CDATA[ link to DevState of EtherCAT Master (Inputs)]]></Comment>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterDeviceId</Name>
-							<Comment><![CDATA[ link to DevID of EtherCAT Master (InfoData)]]></Comment>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.arrEcMasterNetId</Name>
-							<Comment><![CDATA[ link to NetID of EtherCAT Master (InfoData)]]></Comment>
-							<Type GUID="{F1C07B37-2D70-463E-B9ED-92089788D29C}" Namespace="Tc2_System">T_AmsNetIdArr</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCountCfg</Name>
-							<Comment><![CDATA[ link to CfgSlaveCount of EtherCAT Master (InfoData)]]></Comment>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_VAC_INTF.fb_TV1K0_INTF_GCC_1.i_xAD_Press_OK</Name>
-							<Comment><![CDATA[ Input from AD's system indicating pressure belopw setpoint. ]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
 					</Vars>
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>
 						<Var>
 							<Name>PRG_PMPS.fbArbiterIO.q_stRequestedBP</Name>
 							<Type GUID="{5FC92061-002A-45B0-B954-CD8F28B5CE49}">ST_BeamParams_IO</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.g_FastFaultOutputK0.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.g_FastFaultOutputINTF.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_VAC_INTF.fb_RTDSK0_INTF_VGC_1.q_xTREATY_VGC_STATUS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_VAC_INTF.fb_TMO_ILK_Uppper.q_xILK_OK_DO</Name>
+							<Comment><![CDATA[ Send the signal to indicate that the interlock pressure has been met.]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_VAC_INTF.fb_TMO_ILK_Lower.q_xILK_OK_DO</Name>
+							<Comment><![CDATA[ Send the signal to indicate that the interlock pressure has been met.]]></Comment>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_GCC_1.q_xHV_DIS</Name>
@@ -1109,28 +1181,6 @@
 						<Var>
 							<Name>GVL_SXR_VAC.fb_TV3K0_PIP_1.q_xHVEna_DO</Name>
 							<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_VAC_INTF.fb_TMO_ILK_Uppper.q_xILK_OK_DO</Name>
-							<Comment><![CDATA[ Send the signal to indicate that the interlock pressure has been met.]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_VAC_INTF.fb_TMO_ILK_Lower.q_xILK_OK_DO</Name>
-							<Comment><![CDATA[ Send the signal to indicate that the interlock pressure has been met.]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.g_FastFaultOutputK0.q_xFastFaultOut</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.g_FastFaultOutputINTF.q_xFastFaultOut</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_VAC_INTF.fb_RTDSK0_INTF_VGC_1.q_xTREATY_VGC_STATUS</Name>
 							<Type>BOOL</Type>
 						</Var>
 					</Vars>

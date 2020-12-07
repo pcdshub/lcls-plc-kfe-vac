@@ -2,11 +2,21 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <POU Name="PRG_VAC_INTF" Id="{53a728aa-6dbf-4df3-9e27-18c0d8781c72}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_VAC_INTF
+(*
+This PRG governs the interfaces between the SXR Vacuum system and external systems. 
+This includes AD's vacuum system, EM1K0-GMD, AT1K0-GAS, EM2K0-XGMD, the TMO beamline vacuum system, and the RIX Beamline Vacuum System. 
+The Vacuum system for TXI is planned but not yet implemented. When implemented it should go here.
+*)
 VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
+      <ST><![CDATA[// Interface to AD's vacuum system
+
+fb_TV1K0_INTF_GCC_1(); 
+fb_RTDSK0_INTF_VGC_1(TREATY_VGC := fb_RTDSK0_VGC_1.iq_stValve);
+
+
 // Update interlock signals for TMO
 st_TMO_ILK_Upper.rPRO_SP 	:=	1E-4; // Fix the agreed-upon values
 fb_TMO_ILK_Uppper(
@@ -66,6 +76,9 @@ fb_EM2K0_XGMD_GCC_90_reader(
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_VAC_INTF">
+      <LineId Id="115" Count="1" />
+      <LineId Id="113" Count="0" />
+      <LineId Id="111" Count="1" />
       <LineId Id="15" Count="1" />
       <LineId Id="102" Count="0" />
       <LineId Id="94" Count="0" />

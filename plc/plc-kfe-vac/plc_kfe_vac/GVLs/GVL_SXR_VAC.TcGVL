@@ -2,13 +2,6 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <GVL Name="GVL_SXR_VAC" Id="{d38b3a8d-c2e8-4a67-9aeb-873e21370c76}">
     <Declaration><![CDATA[VAR_GLOBAL
-// AD Interface
-
-{attribute 'pytmc' := ' pv: TV1K0:INTF:GCC:1 '}
-fb_TV1K0_INTF_GCC_1 : FB_AD_TREATY_GAUGE;
-
-{attribute 'pytmc' := ' pv: RTDSK0:INTF:VGC:1 '}
-fb_RTDSK0_INTF_VGC_1 : FB_AD_TREATY_VGC;
 
 
 // FB_MKS317

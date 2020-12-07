@@ -6,11 +6,8 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// Treaty interface
+      <ST><![CDATA[
 
-fb_TV1K0_INTF_GCC_1(); 
-
-fb_RTDSK0_INTF_VGC_1(TREATY_VGC := fb_RTDSK0_VGC_1.iq_stValve);
 
 // MKS275 Gauges
 
@@ -98,10 +95,7 @@ fb_MR1K1_BEND_GPI_1(PG=>);
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_SXR_VAC">
-      <LineId Id="95" Count="0" />
       <LineId Id="190" Count="0" />
-      <LineId Id="187" Count="0" />
-      <LineId Id="189" Count="0" />
       <LineId Id="184" Count="1" />
       <LineId Id="96" Count="6" />
       <LineId Id="107" Count="7" />

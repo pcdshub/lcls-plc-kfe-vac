@@ -13,7 +13,7 @@ END_VAR
     <Implementation>
       <ST><![CDATA[// Interface to AD's vacuum system
 
-fb_TV1K0_INTF_GCC_1(); 
+fb_TV1K0_INTF_GCC_1(rTREATY_SIGNAL_PRESS := 5E-6, rNO_SIGNAL_PRESS := 760); 
 fb_RTDSK0_INTF_VGC_1(TREATY_VGC := fb_RTDSK0_VGC_1.iq_stValve);
 
 
@@ -28,6 +28,11 @@ fb_TMO_ILK_Lower(
 	VG	:=	fb_MR1K4_SOMS_GCC_1.IG,
 	ILK	:=	st_TMO_ILK_Lower
 );
+
+
+// Interface to RIX's vacuum system
+
+fb_PC1K1_INTF_GCC_1(rTREATY_SIGNAL_PRESS := 5E-6, rNO_SIGNAL_PRESS := 760);
 
 
 // EM1K0-GMD Vacuum Interface
@@ -88,6 +93,9 @@ fb_EM2K0_XGMD_GCC_90_reader(
       <LineId Id="93" Count="0" />
       <LineId Id="99" Count="1" />
       <LineId Id="96" Count="0" />
+      <LineId Id="121" Count="0" />
+      <LineId Id="118" Count="2" />
+      <LineId Id="117" Count="0" />
       <LineId Id="6" Count="0" />
       <LineId Id="30" Count="0" />
       <LineId Id="19" Count="0" />

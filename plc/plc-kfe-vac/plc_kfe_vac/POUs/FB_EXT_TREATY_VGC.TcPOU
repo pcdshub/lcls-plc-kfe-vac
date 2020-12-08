@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.0">
-  <POU Name="FB_AD_TREATY_VGC" Id="{cc8265de-575f-4e4a-be6e-e4d049fa76c4}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_AD_TREATY_VGC
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <POU Name="FB_EXT_TREATY_VGC" Id="{cc8265de-575f-4e4a-be6e-e4d049fa76c4}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_EXT_TREATY_VGC
 VAR_INPUT
 	TREATY_VGC : ST_VGC;
 END_VAR
@@ -14,7 +14,7 @@ END_VAR
     <Implementation>
       <ST><![CDATA[q_xTREATY_VGC_STATUS := TREATY_VGC.eState = E_ValvePositionState.OPEN;]]></ST>
     </Implementation>
-    <LineIds Name="FB_AD_TREATY_VGC">
+    <LineIds Name="FB_EXT_TREATY_VGC">
       <LineId Id="9" Count="0" />
     </LineIds>
   </POU>

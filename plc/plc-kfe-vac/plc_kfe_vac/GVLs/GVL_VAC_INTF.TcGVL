@@ -5,9 +5,9 @@
 	
     // AD Interface
 	{attribute 'pytmc' := ' pv: TV1K0:INTF:GCC:1 '}
-	fb_TV1K0_INTF_GCC_1 : FB_AD_TREATY_GAUGE;
+	fb_TV1K0_INTF_GCC_1 : FB_EXT_TREATY_GAUGE;
 	{attribute 'pytmc' := ' pv: RTDSK0:INTF:VGC:1 '}
-	fb_RTDSK0_INTF_VGC_1 : FB_AD_TREATY_VGC;
+	fb_RTDSK0_INTF_VGC_1 : FB_EXT_TREATY_VGC;
 
 	
     // TMO vacuum interface 
@@ -18,6 +18,11 @@
     
 	fb_TMO_ILK_Uppper			:	FB_EXT_ILK;
 	fb_TMO_ILK_Lower			:	FB_EXT_ILK;
+	
+	
+    // AD Interface
+	{attribute 'pytmc' := ' pv: PC1K1:INTF:GCC:1 '}
+	fb_PC1K1_INTF_GCC_1 : FB_EXT_TREATY_GAUGE;
 	
     
     // EM1K0-GMD Vacuum Interface

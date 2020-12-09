@@ -42,9 +42,6 @@ g_FastFaultOutputK3  :   FB_HardwareFFOutput;
 g_FastFaultOutputK4  :   FB_HardwareFFOutput;
 
 // Fault aggregator for combined beamline  
-{attribute 'pytmc' := '
-	pv: @(PREFIX)FFO:05
-'}
 {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO (EL2202)]^Channel 1^Output'}
 g_FastFaultOutputAll  :   FB_HardwareFFOutput;
 
@@ -60,6 +57,7 @@ g_FastFaultOutputINTF  :   FB_HardwareFFOutput;
 // ************
 
 g_FastFault		:	FB_FastFault;
+
 
 // *****************
 // Fast fault resets 

@@ -7,14 +7,17 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[g_FastFaultOutputK2.Execute(
+      <ST><![CDATA[g_FastFaultOutputK0.Execute(bAutoReset:=True);
+
+g_FastFaultOutputK2.Execute(
 	i_xVeto:= (  PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K1_OUT] 
 			  ),
 	bAutoReset:=TRUE
 );
 
 g_FastFaultOutputK3.Execute(
-	i_xVeto:= (  PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K3_OUT] 
+	i_xVeto:= (  PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K3_OUT]
+                 OR PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K1_IN] 
 			  ),
 	bAutoReset:=TRUE
 );
@@ -29,13 +32,15 @@ g_FastFaultOutputK4.Execute(
 // Aggregate FastFaultOutputs into a single FastFault
 g_FastFault(
 	io_fbFFHWO := g_FastFaultOutputAll,
-	i_xOK := (  g_FastFaultOutputK0.q_xFastFaultOut 
-				AND g_FastFaultOutputK0.q_xFastFaultOut
+	i_xOK := (  g_FastFaultOutputK0.q_xFastFaultOut
 				AND g_FastFaultOutputK2.q_xFastFaultOut
 				AND g_FastFaultOutputK3.q_xFastFaultOut
 				AND g_FastFaultOutputK4.q_xFastFaultOut
 			 )
 );
+
+g_FastFaultOutputAll.Execute(bAutoReset:=True);
+
 // Arbiter
 fbArbiterIO(Arbiter := g_fbArbiter1, fbFFHWO := g_FastFaultOutputK0);
 
@@ -43,9 +48,11 @@ fbArbiterIO(Arbiter := g_fbArbiter1, fbFFHWO := g_FastFaultOutputK0);
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_PMPS">
+      <LineId Id="61" Count="1" />
       <LineId Id="57" Count="3" />
       <LineId Id="55" Count="1" />
       <LineId Id="49" Count="1" />
+      <LineId Id="66" Count="0" />
       <LineId Id="52" Count="1" />
       <LineId Id="48" Count="0" />
       <LineId Id="54" Count="0" />
@@ -56,9 +63,12 @@ fbArbiterIO(Arbiter := g_fbArbiter1, fbFFHWO := g_FastFaultOutputK0);
       <LineId Id="39" Count="0" />
       <LineId Id="26" Count="0" />
       <LineId Id="15" Count="0" />
-      <LineId Id="17" Count="2" />
+      <LineId Id="17" Count="1" />
       <LineId Id="21" Count="3" />
       <LineId Id="16" Count="0" />
+      <LineId Id="64" Count="0" />
+      <LineId Id="63" Count="0" />
+      <LineId Id="65" Count="0" />
       <LineId Id="14" Count="0" />
       <LineId Id="5" Count="0" />
       <LineId Id="11" Count="1" />

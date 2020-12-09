@@ -36,12 +36,14 @@ g_FastFault(
 				AND g_FastFaultOutputK2.q_xFastFaultOut
 				AND g_FastFaultOutputK3.q_xFastFaultOut
 				AND g_FastFaultOutputK4.q_xFastFaultOut
-			 )
+			 ),
+	i_xAutoReset:=TRUE
 );
 
 g_FastFaultOutputAll.Execute(bAutoReset:=True);
 
 // Arbiter
+g_fbArbiter1.AddRequest(nReqID := 42, stReqBp := PMPS_GVL.cstFullBeam);
 fbArbiterIO(Arbiter := g_fbArbiter1, fbFFHWO := g_FastFaultOutputK0);
 
 
@@ -65,11 +67,13 @@ fbArbiterIO(Arbiter := g_fbArbiter1, fbFFHWO := g_FastFaultOutputK0);
       <LineId Id="15" Count="0" />
       <LineId Id="17" Count="1" />
       <LineId Id="21" Count="3" />
+      <LineId Id="68" Count="0" />
       <LineId Id="16" Count="0" />
       <LineId Id="64" Count="0" />
       <LineId Id="63" Count="0" />
       <LineId Id="65" Count="0" />
       <LineId Id="14" Count="0" />
+      <LineId Id="67" Count="0" />
       <LineId Id="5" Count="0" />
       <LineId Id="11" Count="1" />
       <LineId Id="10" Count="0" />

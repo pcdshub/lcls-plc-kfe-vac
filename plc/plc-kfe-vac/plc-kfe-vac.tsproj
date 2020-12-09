@@ -867,6 +867,15 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
+							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_PIP_1.i_iPRESS</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_PIP_1.i_xSP_DI</Name>
+							<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_SXR_VAC.fb_MR1K3_TXI_PIP_1.i_iPRESS</Name>
 							<Type>INT</Type>
 						</Var>
@@ -878,15 +887,6 @@
 						<Var>
 							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_PIP_1.i_iPRESS</Name>
 							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_PIP_1.i_iPRESS</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_PIP_1.i_xSP_DI</Name>
-							<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
-							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_MR2K3_TXI_PIP_1.i_xSP_DI</Name>
@@ -1186,6 +1186,22 @@
 						<Var>
 							<Name>GVL_VAC_INTF.fb_TMO_ILK_Lower.q_xILK_OK_DO</Name>
 							<Comment><![CDATA[ Send the signal to indicate that the interlock pressure has been met.]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.g_FastFaultOutputK2.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.g_FastFaultOutputK3.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.g_FastFaultOutputK4.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.g_FastFaultOutputAll.q_xFastFaultOut</Name>
 							<Type>BOOL</Type>
 						</Var>
 					</Vars>
@@ -19124,7 +19140,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_PA1K0_GPI_1.i_iPRESS_R" VarB="AI Standard Channel 5^GVL_SXR_VAC.fb_PA1K0_GPI_1.i_iPRESS_R"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_01_00^PMPS_FFO (EL2202)">
-				<Link VarA="PlcTask Outputs^GVL_Variables.g_FastFaultOutputK0.q_xFastFaultOut" VarB="Channel 1^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Variables.g_FastFaultOutputAll.q_xFastFaultOut" VarB="Channel 1^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_01_00^PMPS_PRE">
 				<Link VarA="PlcTask Inputs^PRG_PMPS.fbArbiterIO.i_stCurrentBP" VarB="IO Inputs^CurrentBP" AutoLink="true"/>

@@ -7,10 +7,40 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fbArbiterIO(Arbiter := g_fbArbiter1, fbFFHWO := g_FastFaultOutputK0);]]></ST>
+      <ST><![CDATA[g_FastFaultOutputK0.Execute(
+	i_xVeto:=PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K1_IN] OR PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K3_IN], 
+	bAutoReset:=TRUE
+);
+
+// Aggregate FastFaultOutputs into a single FastFault
+g_FastFault(
+	io_fbFFHWO := g_FastFaultOutputAll,
+	i_xOK := (  g_FastFaultOutputK0.q_xFastFaultOut 
+				AND g_FastFaultOutputK0.q_xFastFaultOut
+				AND g_FastFaultOutputK2.q_xFastFaultOut
+				AND g_FastFaultOutputK3.q_xFastFaultOut
+				AND g_FastFaultOutputK4.q_xFastFaultOut
+			 )
+);
+// Arbiter
+fbArbiterIO(Arbiter := g_fbArbiter1, fbFFHWO := g_FastFaultOutputK0);
+
+
+]]></ST>
     </Implementation>
     <LineIds Name="PRG_PMPS">
+      <LineId Id="36" Count="2" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="39" Count="0" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="17" Count="2" />
+      <LineId Id="21" Count="3" />
+      <LineId Id="16" Count="0" />
+      <LineId Id="14" Count="0" />
       <LineId Id="5" Count="0" />
+      <LineId Id="11" Count="1" />
+      <LineId Id="10" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

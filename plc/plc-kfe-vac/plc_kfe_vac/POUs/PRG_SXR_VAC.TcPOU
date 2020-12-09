@@ -67,8 +67,8 @@ fb_PA1K0(			i_stGauge := fb_PA1K0_GCC_1.IG,			i_xOverrideMode := xSystemOverride
 fb_MR1K1_BEND_PIP_1(i_stGauge := fb_MR1K1_BEND_GCC_1.IG,	i_xOverrideMode := xSystemOverrideMode);
 fb_MR1K3_TXI_PIP_1(	i_stGauge := fb_MR1K3_TXI_GCC_1.IG,		i_xOverrideMode := xSystemOverrideMode);
 fb_MR2K3_TXI_PIP_1(	i_stGauge := fb_MR1K3_TXI_GCC_1.IG,		i_xOverrideMode := xSystemOverrideMode);
-fb_SP1K1_MONO_PIP_1(i_stGauge := fb_SP1K1_MONO_GCC_1.IG,	i_xOverrideMode := xSystemOverrideMode);
-fb_SP1K1_MONO_PIP_2(i_stGauge := fb_SP1K1_MONO_GCC_1.IG,	i_xOverrideMode := xSystemOverrideMode);
+fb_SP1K1_MONO_PIP_1(i_stGauge := fb_SP1K1_MONO_GPI_1.PG,	i_xOverrideMode := xSystemOverrideMode);
+fb_SP1K1_MONO_PIP_2(i_stGauge := fb_SP1K1_MONO_GPI_1.PG,	i_xOverrideMode := xSystemOverrideMode);
 fb_TV3K0_PIP_1(		i_stGauge := fb_TV3K0_GCC_1.IG,			i_xOverrideMode := xSystemOverrideMode);
 
 

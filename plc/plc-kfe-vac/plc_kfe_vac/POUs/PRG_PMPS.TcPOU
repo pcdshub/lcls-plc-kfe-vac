@@ -7,8 +7,22 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[g_FastFaultOutputK0.Execute(
-	i_xVeto:=PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K1_IN] OR PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K3_IN], 
+      <ST><![CDATA[g_FastFaultOutputK2.Execute(
+	i_xVeto:= (  PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K1_OUT] 
+			  ),
+	bAutoReset:=TRUE
+);
+
+g_FastFaultOutputK3.Execute(
+	i_xVeto:= (  PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K3_OUT] 
+			  ),
+	bAutoReset:=TRUE
+);
+
+g_FastFaultOutputK4.Execute(
+	i_xVeto:= (  PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K1_IN] 
+				 OR PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K3_IN]
+			  ),
 	bAutoReset:=TRUE
 );
 
@@ -29,7 +43,15 @@ fbArbiterIO(Arbiter := g_fbArbiter1, fbFFHWO := g_FastFaultOutputK0);
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_PMPS">
-      <LineId Id="36" Count="2" />
+      <LineId Id="57" Count="3" />
+      <LineId Id="55" Count="1" />
+      <LineId Id="49" Count="1" />
+      <LineId Id="52" Count="1" />
+      <LineId Id="48" Count="0" />
+      <LineId Id="54" Count="0" />
+      <LineId Id="36" Count="1" />
+      <LineId Id="45" Count="1" />
+      <LineId Id="38" Count="0" />
       <LineId Id="25" Count="0" />
       <LineId Id="39" Count="0" />
       <LineId Id="26" Count="0" />

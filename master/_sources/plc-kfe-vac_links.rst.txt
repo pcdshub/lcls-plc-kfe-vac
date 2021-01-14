@@ -27,12 +27,11 @@ Links
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xOverrideOpen, TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOverrideOpen
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xTrigger, TIID^Device 1 (EtherCAT)^=+-EK1100_02_00^=+-EL1124_02_08, Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xTrigger
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xVAC_FAULT_Reset, TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xVAC_FAULT_Reset
+        TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_eVFS_State, TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_eVFS_State
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xClose_A, TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES2202_05_03, Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xClose_A
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xClose_B, TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES2202_05_03, Channel 2^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xClose_B
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xClose_C, TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES2202_05_04, Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xClose_C
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xOPN_DO, TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES2202_05_04, Channel 2^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xOPN_DO
-        TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xTrigger, TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xTrigger
-        TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xVFS_Closed, TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVFS_Closed
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Outputs^GVL_Variables.g_FastFaultOutput2.q_xFastFaultOut, TIID^Device 1 (EtherCAT)^=+-EK1100_01_00^PMPS_FFO (EL2202), Channel 2^Output
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.i_xClsLS, TIID^Device 1 (EtherCAT)^=+-EK1100_03_00^=+-EL1004_03_04, Channel 2^Input
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.i_xOpnLS, TIID^Device 1 (EtherCAT)^=+-EK1100_03_00^=+-EL1004_03_04, Channel 1^Input
@@ -106,9 +105,10 @@ Links
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_GCC_2.i_iPRESS_R, TIID^Device 1 (EtherCAT)^=+-EK1100_01_00^=+-ES3068_01_05, AI Standard Channel 3^GVL_SXR_VAC.fb_TV2K0_GCC_2.i_iPRESS_R
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_GPI_1.i_iPRESS_R, TIID^Device 1 (EtherCAT)^=+-EK1100_01_00^=+-ES3068_01_05, AI Standard Channel 5^GVL_SXR_VAC.fb_TV2K0_GPI_1.i_iPRESS_R
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_GPI_2.i_iPRESS_R, TIID^Device 1 (EtherCAT)^=+-EK1100_01_00^=+-ES3068_01_05, AI Standard Channel 6^GVL_SXR_VAC.fb_TV2K0_GPI_2.i_iPRESS_R
-        TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_eVFS_State, TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_eVFS_State
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xMPS_OK, TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xMPS_OK
+        TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xTrigger, TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xTrigger
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVAC_FAULT_OK, TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xVAC_FAULT_OK
+        TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVFS_Closed, TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xVFS_Closed
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVFS_Open, TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xVFS_Open
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VGC_1.i_xClsLS, TIID^Device 1 (EtherCAT)^=+-EP2338_05_00, Channel 2^GVL_SXR_VAC.fb_TV2K0_VGC_1.i_xClsLS
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VGC_1.i_xOpnLS, TIID^Device 1 (EtherCAT)^=+-EP2338_05_00, Channel 1^GVL_SXR_VAC.fb_TV2K0_VGC_1.i_xOpnLS
@@ -123,7 +123,6 @@ Links
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_Variables.fbEcatDiagWrapper.nEcMasterDeviceId, TIID^Device 1 (EtherCAT), InfoData^DevId
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCount, TIID^Device 1 (EtherCAT), Inputs^SlaveCount
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCountCfg, TIID^Device 1 (EtherCAT), InfoData^CfgSlaveCount
-        TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_Variables.fbEcatDiagWrapper.wFrmXWcState, TIID^Device 1 (EtherCAT), Inputs^Frm1WcState
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^PRG_PMPS.fbArbiterIO.i_stCurrentBP, TIID^Device 1 (EtherCAT)^=+-EK1100_01_00^PMPS_PRE, IO Inputs^CurrentBP
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^PRG_PMPS.fbArbiterIO.xTxPDO_state, TIID^Device 1 (EtherCAT)^=+-EK1100_01_00^PMPS_PRE, SYNC Inputs^TxPDO state
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^PRG_PMPS.fbArbiterIO.xTxPDO_toggle, TIID^Device 1 (EtherCAT)^=+-EK1100_01_00^PMPS_PRE, SYNC Inputs^TxPDO toggle

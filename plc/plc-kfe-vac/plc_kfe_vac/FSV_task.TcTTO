@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <Task Name="FSV_task" Id="{a7173df5-643f-4da8-b6cf-37cdcd853deb}">
+    <!--CycleTime in micro seconds.-->
+    <CycleTime>1000</CycleTime>
+    <Priority>13</Priority>
+    <PouCall>
+      <Name>PRG_VFS</Name>
+    </PouCall>
+    <TaskFBGuid>{4831e03c-58ca-4da8-b9a0-e24f9603ec2c}</TaskFBGuid>
+    <Fb_init>{1dde6a92-9a89-41f4-a85c-f3eb5f7f301c}</Fb_init>
+    <Fb_exit>{9a9d30d5-2ab7-49d2-af37-d43d108e9b57}</Fb_exit>
+    <CycleUpdate>{d23c7f3e-b460-48e7-a394-63eb995d0f88}</CycleUpdate>
+    <PostCycleUpdate>{d561af79-ccc6-40f0-96f1-592c673c9a67}</PostCycleUpdate>
+  </Task>
+</TcPlcObject>

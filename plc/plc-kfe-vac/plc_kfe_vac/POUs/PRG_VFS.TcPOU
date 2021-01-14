@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="PRG_VFS" Id="{dc677a88-3d17-4473-be59-840d3553492f}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_VFS
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fb_TV2K0_VFS_1(
+	i_xPMPS_OK:= TRUE, 
+	i_xExt_OK:= TRUE, 
+	i_sDevName:= 'TV2K0:VFS:1',
+	io_fbFFHWO:= g_FastFaultOutput2
+);
+
+(*FastFaultOuput*)	
+g_FastFaultOutput2.Execute(bAutoReset:= TRUE);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

@@ -34,156 +34,6 @@ LCLS_General.FB_LogMessage
 
 
                                                      
-LCLS_Vacuum.LCLSVacuumSerialDriverLib.L2SI_Vacuum_Library.ST_VG
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. list-table::
-    :header-rows: 1
-    :align: center
-
-    * - Record
-      - Type
-      - Description
-      - Pragma
-    * - $(PREFIX):AT_VAC_RBV
-      - bi
-      - $(SYMBOL).xAT_VAC
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - $(PREFIX):DISC_ACTIVE_RBV
-      - bi
-      - $(SYMBOL).i_xDisc_Active
-      - | field: ONAM DISC ACTIVE
-        | field: ZNAM NO DISC
-        | io: input
-
-
-    * - $(PREFIX):HV_DIS_DO_RBV
-      - bi
-      - $(SYMBOL).q_xHV_DIS
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - $(PREFIX):HV_ON_RBV
-      - bi
-      - $(SYMBOL).i_xHV_ON
-      - | io: input
-
-
-    * - $(PREFIX):HV_SW
-      - bo
-      - $(SYMBOL).xHV_SW
-      - | field: ONAM ON
-        | field: ZNAM OFF
-        | io: output
-
-
-    * - $(PREFIX):HV_SW_RBV
-      - bi
-      - $(SYMBOL).xHV_SW
-      - | field: ONAM ON
-        | field: ZNAM OFF
-        | io: output
-
-
-    * - $(PREFIX):ILK_OK_RBV
-      - bi
-      - $(SYMBOL).xILKOk
-      - | field: ONAM OK
-        | field: ZNAM NOT OK
-        | io: input
-
-
-    * - $(PREFIX):PRESS_AI_RBV
-      - longin
-      - $(SYMBOL).i_iPRESS_R
-      - | io: input
-
-
-    * - $(PREFIX):PRESS_OK_RBV
-      - bi
-      - $(SYMBOL).xPRESS_OK
-      - | field: ONAM ON
-        | field: ZNAM OFF
-        | io: input
-
-
-    * - $(PREFIX):PRESS_RBV
-      - ai
-      - $(SYMBOL).rPRESS
-      - | field: EGU "TORR"
-        | field: HOPR 1000
-        | field: LOPR 0
-        | field: PREC 2
-        | io: input
-
-
-    * - $(PREFIX):PRO_SP
-      - ao
-      - $(SYMBOL).rPRO_SP
-      - | field: EGU "TORR"
-        | field: HOPR 1000
-        | field: LOPR 0
-        | field: PREC 2
-        | io: output
-
-
-    * - $(PREFIX):PRO_SP_RBV
-      - ai
-      - $(SYMBOL).rPRO_SP
-      - | field: EGU "TORR"
-        | field: HOPR 1000
-        | field: LOPR 0
-        | field: PREC 2
-        | io: output
-
-
-    * - $(PREFIX):SP_HYS
-      - ao
-      - $(SYMBOL).rHYS_PR
-      - | field: EGU "TORR"
-        | field: HOPR 1000
-        | field: LOPR 0
-        | field: PREC 2
-        | io: output
-
-
-    * - $(PREFIX):SP_HYS_RBV
-      - ai
-      - $(SYMBOL).rHYS_PR
-      - | field: EGU "TORR"
-        | field: HOPR 1000
-        | field: LOPR 0
-        | field: PREC 2
-        | io: output
-
-
-    * - $(PREFIX):VAC_SP
-      - ao
-      - $(SYMBOL).rVAC_SP
-      - | field: EGU "TORR"
-        | field: HOPR 1000
-        | field: LOPR 0
-        | field: PREC 2
-        | io: output
-
-
-    * - $(PREFIX):VAC_SP_RBV
-      - ai
-      - $(SYMBOL).rVAC_SP
-      - | field: EGU "TORR"
-        | field: HOPR 1000
-        | field: LOPR 0
-        | field: PREC 2
-        | io: output
-
-
- 
 LCLS_Vacuum.ST_VG
 ^^^^^^^^^^^^^^^^^
 
@@ -6589,6 +6439,59 @@ Database Records
       - Type
       - Description
       - Pragma
+    * - $(PREFIX)0RateBeamCnst:Cohort_RBV
+      - longin
+      - Cohort inc on each arb cycle
+      - | archive: 1s monitor
+        | io: input
+
+
+    * - $(PREFIX)0RateBeamCnst:PhotonEnergyRanges_RBV
+      - longin
+      - 0-rate beam constant
+      - | archive: 1s monitor
+        | field: EGU eV
+        | io: input
+
+
+    * - $(PREFIX)0RateBeamCnst:PulseEnergy_RBV
+      - ai
+      - This beam parameter is non-op for now.
+      - | archive: 1s monitor
+        | field: EGU mJ
+        | io: input
+
+
+    * - $(PREFIX)0RateBeamCnst:Rate_RBV
+      - longin
+      - 0-rate beam constant
+      - | archive: 1s monitor
+        | field: EGU Hz
+        | io: input
+
+
+    * - $(PREFIX)0RateBeamCnst:ST_RBV
+      - waveform
+      - 0-rate beam constant
+      - | archive: 1s monitor
+        | io: input
+
+
+    * - $(PREFIX)0RateBeamCnst:Transmission_RBV
+      - longin
+      - 0-rate beam constant
+      - | archive: 1s monitor
+        | field: EGU %
+        | io: input
+
+
+    * - $(PREFIX)0RateBeamCnst:Valid_RBV
+      - bi
+      - 0-rate beam constant
+      - | archive: 1s monitor
+        | io: input
+
+
     * - $(PREFIX)AccumulatedFastFaults_RBV
       - longin
       - PMPS_GVL.AccumulatedFF
@@ -6731,30 +6634,6 @@ Database Records
       - | archive: 1s monitor
         | field: EGU eV
         | io: input
-
-
-    * - $(PREFIX)L:UND:FirstSegment_RBV
-      - longin
-      - PMPS_GVL.iLowBound_LUnd
-      - | io: input
-
-
-    * - $(PREFIX)L:UND:HiK_RBV
-      - ai
-      - PMPS_GVL.fHiK_LUnd
-      - | io: input
-
-
-    * - $(PREFIX)L:UND:LastSegment_RBV
-      - longin
-      - PMPS_GVL.iHighBound_LUnd
-      - | io: input
-
-
-    * - $(PREFIX)L:UND:LowK_RBV
-      - ai
-      - PMPS_GVL.fLowK_LUnd
-      - | io: input
 
 
     * - $(PREFIX)LCLSGeneral:GlobalLogTrickleTrip_RBV
@@ -6903,13 +6782,6 @@ Database Records
       - longin
       - PMPS_GVL.SuccessfulPreemption
       - | io: input
-
-
-    * - Period_RBV
-      - ai
-      - PMPS_GVL.fPeriod_mm_LUnd
-      - | field: EGU mm
-        | io: input
 
 
     * - PLC:KFE:VAC:K0:FFO:02:ClearFault

@@ -109,15 +109,15 @@ GVL_SXR_VAC
     // MKS500_EP Gauges
 
     {attribute 'pytmc' := ' pv: MR1K3:TXI:GCC:1 '}
-    fb_MR1K3_TXI_GCC_1 : FB_MKS500_EP;
+    fb_MR1K3_TXI_GCC_1 : FB_MKS500;
     {attribute 'pytmc' := ' pv: MR2K3:TXI:GCC:1 '}
-    fb_MR2K3_TXI_GCC_1 : FB_MKS500_EP;
+    fb_MR2K3_TXI_GCC_1 : FB_MKS500;
     {attribute 'pytmc' := ' pv: SP1K1:MONO:GCC:1 '}
-    fb_SP1K1_MONO_GCC_1 : FB_MKS500_EP;
+    fb_SP1K1_MONO_GCC_1 : FB_MKS500;
     {attribute 'pytmc' := ' pv: TV3K0:GCC:1 '}
-    fb_TV3K0_GCC_1 : FB_MKS500_EP;
+    fb_TV3K0_GCC_1 : FB_MKS500;
     {attribute 'pytmc' := ' pv: MR1K4:SOMS:GCC:1 '}
-    fb_MR1K4_SOMS_GCC_1 : FB_MKS500_EP;
+    fb_MR1K4_SOMS_GCC_1 : FB_MKS500;
 
 
     // VGC Valves
@@ -204,6 +204,8 @@ GVL_SXR_VAC
     fb_TV3K0_PIP_1 : FB_PIP_GAMMA;
 
 
+
+
     END_VAR
 
 
@@ -262,6 +264,13 @@ GVL_Variables
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO (EL2202)]^Channel 1^Output'}
     g_FastFaultOutputK0  :   FB_HardwareFFOutput;
 
+        {attribute 'pytmc' := '
+        	pv: PLC:KFE:VAC:K0:FFO:02
+        '}
+        {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO (EL2202)]^Channel 2^Output'}
+        g_FastFaultOutput2  :	FB_HardwareFFOutput;	//FFO for Fast Shutter Valves upstream of ST1L0_XTES
+    	
+
     // Dummy FFO for valves not yet allowed to open. To be removed when proper interfaces to TXI and RIX vacuum are implemented. 
     {attribute 'pytmc' := '
     	pv: @(PREFIX)FF1A
@@ -284,6 +293,46 @@ GVL_Variables
     g_fbArbiter1    :   FB_Arbiter(01);
          
 
+    END_VAR
+
+
+GVL_VFS
+^^^^^^^
+
+::
+
+    VAR_GLOBAL
+    	
+    //Fast Shutter
+       {attribute 'pytmc' := '
+    		pv: TV2K0:VFS:1
+    	'}
+    	{attribute 'TcLinkTo' := 	'
+    		.q_xClose_A	:=	TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES2202_05_03^Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xClose_A;
+    		.q_xClose_B	:=	TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES2202_05_03^Channel 2^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xClose_B;
+    		.q_xClose_C	:=	TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES2202_05_04^Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xClose_C;
+    		.q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES2202_05_04^Channel 2^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xOPN_DO;
+    		.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES1004_05_02^Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xClsLS;
+    		.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES1004_05_02^Channel 2^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xOpnLS;
+    		.i_xTrigger :=  TIID^Device 1 (EtherCAT)^=+-EK1100_02_00^=+-EL1124_02_08^Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xTrigger '}
+    	{attribute 'TcLinkTo' := 	'
+    		.i_xPress_OK		:= 	TIPC^plc_kfe_vac^plc_kfe_vac Instance^PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xPRESS_OK;
+    		.i_xOPN_SW			:=  TIPC^plc_kfe_vac^plc_kfe_vac Instance^PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOPN_SW;
+    		.i_xCLS_SW			:=  TIPC^plc_kfe_vac^plc_kfe_vac Instance^PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xCLS_SW;
+    		.i_xVAC_FAULT_Reset:= 	TIPC^plc_kfe_vac^plc_kfe_vac Instance^PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xVAC_FAULT_Reset;
+    		.i_xOverrideMode	:= 	TIPC^plc_kfe_vac^plc_kfe_vac Instance^PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOverrideMode;
+    		.i_xOverrideOpen	:= 	TIPC^plc_kfe_vac^plc_kfe_vac Instance^PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOverrideOpen;
+    		.q_xTrigger		:=	TIPC^plc_kfe_vac^plc_kfe_vac Instance^PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xTrigger;
+    		.q_xVFS_Open		:=	TIPC^plc_kfe_vac^plc_kfe_vac Instance^PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVFS_Open;
+    		.q_xVFS_Closed		:=	TIPC^plc_kfe_vac^plc_kfe_vac Instance^PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVFS_Closed;
+    		.q_xVAC_FAULT_OK	:= TIPC^plc_kfe_vac^plc_kfe_vac Instance^PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVAC_FAULT_OK;
+    		.q_xMPS_OK			:=  TIPC^plc_kfe_vac^plc_kfe_vac Instance^PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xMPS_OK;
+    		.q_eVFS_State		:=	TIPC^plc_kfe_vac^plc_kfe_vac Instance^PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_eVFS_State;
+    		.i_xVetoValveOpenDO := ;
+    		.i_xVetoValveClosed := 
+    	'}
+    	fb_TV2K0_VFS_1 : FB_VFS;
+    	
     END_VAR
 
 
@@ -474,11 +523,11 @@ PRG_SXR_VAC
 
     // MKS500_EP Gauges
 
-    fb_MR2K3_TXI_GCC_1(PG := fb_MR2K3_TXI_GPI_1.PG);
-    fb_MR1K3_TXI_GCC_1(PG := fb_MR1K3_TXI_GPI_1.PG);
-    fb_SP1K1_MONO_GCC_1(PG := fb_SP1K1_MONO_GPI_1.PG);
-    fb_TV3K0_GCC_1(PG := fb_TV3K0_GPI_1.PG);
-    fb_MR1K4_SOMS_GCC_1(PG := fb_MR1K4_SOMS_GPI_1.PG);
+    fb_MR2K3_TXI_GCC_1(PG := fb_MR2K3_TXI_GPI_1.PG, bEP:=TRUE);
+    fb_MR1K3_TXI_GCC_1(PG := fb_MR1K3_TXI_GPI_1.PG, bEP:=TRUE);
+    fb_SP1K1_MONO_GCC_1(PG := fb_SP1K1_MONO_GPI_1.PG, bEP:=TRUE);
+    fb_TV3K0_GCC_1(PG := fb_TV3K0_GPI_1.PG, bEP:=TRUE);
+    fb_MR1K4_SOMS_GCC_1(PG := fb_MR1K4_SOMS_GPI_1.PG, bEP:=TRUE);
 
     // VGC Valves
 
@@ -614,6 +663,27 @@ PRG_VAC_INTF
         sVarName    :=  'GVL_GMD.fb_EM2K0_XGMD_GCC_90',
         iWatchdog   :=  n_EM2K0_VAC_counter
     );
+
+    END_PROGRAM
+
+
+PRG_VFS
+^^^^^^^
+
+::
+
+    PROGRAM PRG_VFS
+    VAR
+    END_VAR
+    fb_TV2K0_VFS_1(
+    	i_xPMPS_OK:= TRUE, 
+    	i_xExt_OK:= TRUE, 
+    	i_sDevName:= 'TV2K0:VFS:1',
+    	io_fbFFHWO:= g_FastFaultOutput2
+    );
+
+    (*FastFaultOuput*)	
+    g_FastFaultOutput2.Execute(bAutoReset:= TRUE);
 
     END_PROGRAM
 

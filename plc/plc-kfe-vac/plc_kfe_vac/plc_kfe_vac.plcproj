@@ -18,6 +18,9 @@
     <Compile Include="DUTs\ST_EXT_ILK.TcDUT">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="FSV_task.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="GVLs\GVL_SXR_VAC.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
@@ -27,6 +30,10 @@
       <LinkAlways>true</LinkAlways>
     </Compile>
     <Compile Include="GVLs\GVL_Variables.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="GVLs\GVL_VFS.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
     </Compile>
@@ -55,6 +62,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\PRG_VAC_INTF.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\PRG_VFS.TcPOU">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

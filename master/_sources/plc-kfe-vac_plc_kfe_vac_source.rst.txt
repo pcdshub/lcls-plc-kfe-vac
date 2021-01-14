@@ -314,8 +314,7 @@ GVL_VFS
     		.q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES2202_05_04^Channel 2^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xOPN_DO;
     		.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES1004_05_02^Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xClsLS;
     		.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES1004_05_02^Channel 2^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xOpnLS;
-    		.i_xTrigger :=  TIID^Device 1 (EtherCAT)^=+-EK1100_02_00^=+-EL1124_02_08^Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xTrigger '}
-    	{attribute 'TcLinkTo' := 	'
+    		.i_xTrigger :=  TIID^Device 1 (EtherCAT)^=+-EK1100_02_00^=+-EL1124_02_08^Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xTrigger;
     		.i_xPress_OK		:= 	TIPC^plc_kfe_vac^plc_kfe_vac Instance^PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xPRESS_OK;
     		.i_xOPN_SW			:=  TIPC^plc_kfe_vac^plc_kfe_vac Instance^PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOPN_SW;
     		.i_xCLS_SW			:=  TIPC^plc_kfe_vac^plc_kfe_vac Instance^PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xCLS_SW;

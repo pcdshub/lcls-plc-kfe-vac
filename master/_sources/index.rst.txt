@@ -27,14 +27,6 @@ plc
     plc-kfe-vac_plc_kfe_vac_sim_epics
     plc-kfe-vac_plc_kfe_vac_sim_source
 
-.. toctree::
-    :maxdepth: 2
-    :caption: plc_kfe_vac_fs
-
-    plc-kfe-vac_plc_kfe_vac_fs_summary
-    plc-kfe-vac_plc_kfe_vac_fs_epics
-    plc-kfe-vac_plc_kfe_vac_fs_source
-
 
 
 Indices and tables

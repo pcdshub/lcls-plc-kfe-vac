@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <GVL Name="GVL_SXR_VAC" Id="{d38b3a8d-c2e8-4a67-9aeb-873e21370c76}">
     <Declaration><![CDATA[VAR_GLOBAL
 
@@ -152,6 +152,8 @@ fb_SP1K1_MONO_PIP_1 : FB_PIP_GAMMA;
 fb_SP1K1_MONO_PIP_2 : FB_PIP_GAMMA;
 {attribute 'pytmc' := ' pv: TV3K0:PIP:1 '}
 fb_TV3K0_PIP_1 : FB_PIP_GAMMA;
+
+
 
 
 END_VAR

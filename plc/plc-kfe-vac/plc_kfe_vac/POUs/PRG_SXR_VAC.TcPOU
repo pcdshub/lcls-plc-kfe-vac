@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <POU Name="PRG_SXR_VAC" Id="{7118719b-3077-4104-9acc-cffb49d6edd3}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_SXR_VAC
 VAR
@@ -94,5 +94,9 @@ fb_PA1K0_GPI_1(PG=>);
 fb_MR1K1_BEND_GPI_1(PG=>);
 ]]></ST>
     </Implementation>
+    <LineIds Name="PRG_SXR_VAC">
+      <LineId Id="3" Count="85" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

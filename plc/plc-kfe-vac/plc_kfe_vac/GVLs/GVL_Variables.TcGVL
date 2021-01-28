@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <GVL Name="GVL_Variables" Id="{4e0ea985-29d8-4132-9223-f15e8fa1fe3d}">
     <Declaration><![CDATA[VAR_GLOBAL
 
@@ -23,7 +23,6 @@ xSystemOverrideMode : BOOL; (* Global system override for the prototype section*
 '}
 g_FastFaultOutputK0  :   FB_HardwareFFOutput;
 
-<<<<<<< HEAD
 // K2/RIX specific faults 
 {attribute 'pytmc' := '
 	pv: @(PREFIX)FFO:02

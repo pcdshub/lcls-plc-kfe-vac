@@ -45,13 +45,6 @@ GVL_SXR_VAC
 ::
 
     VAR_GLOBAL
-    // AD Interface
-
-    {attribute 'pytmc' := ' pv: TV1K0:INTF:GCC:1 '}
-    fb_TV1K0_INTF_GCC_1 : FB_AD_TREATY_GAUGE;
-
-    {attribute 'pytmc' := ' pv: RTDSK0:INTF:VGC:1 '}
-    fb_RTDSK0_INTF_VGC_1 : FB_AD_TREATY_VGC;
 
 
     // FB_MKS317
@@ -215,7 +208,14 @@ GVL_VAC_INTF
 ::
 
     VAR_GLOBAL
-        
+    	
+        // AD Interface
+    	{attribute 'pytmc' := ' pv: TV1K0:INTF:GCC:1 '}
+    	fb_TV1K0_INTF_GCC_1 : FB_EXT_TREATY_GAUGE;
+    	{attribute 'pytmc' := ' pv: RTDSK0:INTF:VGC:1 '}
+    	fb_RTDSK0_INTF_VGC_1 : FB_EXT_TREATY_VGC;
+
+    	
         // TMO vacuum interface 
     	{attribute 'pytmc' :=' pv: MR1K4:SOMS:GCC:1:ILK_UPPER'}
     	st_TMO_ILK_Upper			:	ST_EXT_ILK;
@@ -224,6 +224,12 @@ GVL_VAC_INTF
         
     	fb_TMO_ILK_Uppper			:	FB_EXT_ILK;
     	fb_TMO_ILK_Lower			:	FB_EXT_ILK;
+    	
+    	
+        // AD Interface
+    	{attribute 'pytmc' := ' pv: PC1K1:INTF:GCC:1 '}
+    	fb_PC1K1_INTF_GCC_1 : FB_EXT_TREATY_GAUGE;
+    	
         
         // EM1K0-GMD Vacuum Interface
         n_EM1K0_VAC_counter         :   UDINT;
@@ -251,24 +257,54 @@ GVL_Variables
 ::
 
     VAR_GLOBAL
-    	
+
+    // *******************
+    // Interlock overrides 
+    // *******************	
+
     {attribute 'pytmc' := '
     	pv: @(PREFIX)SYSOVERRIDE
     '}
     xSystemOverrideMode : BOOL; (* Global system override for the prototype section*)
 
-    //Example implementation of the FFO
+
+    // ***************************
+    // Hardware Fast fault outputs 
+    // ***************************
+
+    // K0/SXR upstream specific faults
     {attribute 'pytmc' := '
     	pv: @(PREFIX)FFO:01
     '}
-    {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO (EL2202)]^Channel 1^Output'}
     g_FastFaultOutputK0  :   FB_HardwareFFOutput;
 
-        {attribute 'pytmc' := '
-        	pv: PLC:KFE:VAC:K0:FFO:02
-        '}
-        {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO (EL2202)]^Channel 2^Output'}
-        g_FastFaultOutput2  :	FB_HardwareFFOutput;	//FFO for Fast Shutter Valves upstream of ST1L0_XTES
+    // K2/RIX specific faults 
+    {attribute 'pytmc' := '
+    	pv: @(PREFIX)FFO:02
+    '}
+    g_FastFaultOutputK2  :   FB_HardwareFFOutput;
+
+    // K3/TXI specific faults
+    {attribute 'pytmc' := '
+    	pv: @(PREFIX)FFO:03
+    '}
+    g_FastFaultOutputK3  :   FB_HardwareFFOutput;
+
+    // K4/TMO specific faults 
+    {attribute 'pytmc' := '
+    	pv: @(PREFIX)FFO:04
+    '}
+    g_FastFaultOutputK4  :   FB_HardwareFFOutput;
+
+    // Fault aggregator for combined beamline  
+    {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO (EL2202)]^Channel 1^Output'}
+    g_FastFaultOutputAll  :   FB_HardwareFFOutput;
+        
+    {attribute 'pytmc' := '
+    	pv: PLC:KFE:VAC:K0:FFO:02
+    '}
+    {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO (EL2202)]^Channel 2^Output'}
+    g_FastFaultOutput2  :	FB_HardwareFFOutput;	//FFO for Fast Shutter Valves upstream of ST1L0_XTES
     	
 
     // Dummy FFO for valves not yet allowed to open. To be removed when proper interfaces to TXI and RIX vacuum are implemented. 
@@ -277,15 +313,50 @@ GVL_Variables
     '}
     g_FastFaultOutputINTF  :   FB_HardwareFFOutput;
 
+
+    // ************
+    // FB_FastFault 
+    // ************
+
+    g_FastFault		:	FB_FastFault;
+
+
+    // *****************
+    // Fast fault resets 
+    // *****************
+
     {attribute 'pytmc' := '
     pv: @(PREFIX)RESET:FF1
     '}
-    xReset_PMPS_FFO_K0	:	BOOL	:=	FALSE;		//FFO RESET for ST1L0_XTES's Upstream Components
+    xReset_PMPS_FFO_K0	:	BOOL	:=	FALSE;
 
+    {attribute 'pytmc' := '
+    pv: @(PREFIX)RESET:FF2
+    '}
+    xReset_PMPS_FFO_K2	:	BOOL	:=	FALSE;
+
+    {attribute 'pytmc' := '
+    pv: @(PREFIX)RESET:FF3
+    '}
+    xReset_PMPS_FFO_K3	:	BOOL	:=	FALSE;
+
+    {attribute 'pytmc' := '
+    pv: @(PREFIX)RESET:FF4
+    '}
+    xReset_PMPS_FFO_K4	:	BOOL	:=	FALSE;
+
+
+    // *******
+    // Logging 
+    // *******
 
     fbLogHandler : FB_loghandler;
     fbEcatDiagWrapper : FB_EcatDiagWrapper;
 
+
+    // *******
+    // Arbiter 
+    // *******
 
     {attribute 'pytmc' := '
          pv: @(PREFIX)Arbiter:01
@@ -339,60 +410,6 @@ POUs
 ----
 
 
-FB_AD_TREATY_GAUGE
-^^^^^^^^^^^^^^^^^^
-
-::
-
-    FUNCTION_BLOCK FB_AD_TREATY_GAUGE
-    VAR_INPUT
-    END_VAR
-    VAR_OUTPUT
-    	{attribute 'pytmc' := '
-        pv: 
-    	'}
-    	IG : ST_VG;
-    END_VAR
-    VAR
-    	//	Setpoint agreed upon w/ AD signified by the signal they send. 
-    	rTREATY_SIGNAL_PRESS : REAL := 5E-6;
-    	
-    	// Presumed pressure if AD's signal is not received. 
-    	rNO_SIGNAL_PRESS : REAL := 760;
-    	
-    	// Input from AD's system indicating pressure belopw setpoint. 
-    	i_xAD_Press_OK AT %I* : BOOL;
-    END_VAR
-    IF i_xAD_Press_OK = TRUE THEN
-    	IG.rPRESS := rTREATY_SIGNAL_PRESS;
-    	IG.xPRESS_OK := TRUE; 
-    ELSE
-    	IG.rPRESS := rNO_SIGNAL_PRESS;
-    	IG.xPRESS_OK := FALSE; 
-    END_IF
-
-    END_FUNCTION_BLOCK
-
-
-FB_AD_TREATY_VGC
-^^^^^^^^^^^^^^^^
-
-::
-
-    FUNCTION_BLOCK FB_AD_TREATY_VGC
-    VAR_INPUT
-    	TREATY_VGC : ST_VGC;
-    END_VAR
-    VAR_OUTPUT
-    END_VAR
-    VAR
-    	q_xTREATY_VGC_STATUS AT%Q*: BOOL;
-    END_VAR
-    q_xTREATY_VGC_STATUS := TREATY_VGC.eState = E_ValvePositionState.OPEN;
-
-    END_FUNCTION_BLOCK
-
-
 FB_EXT_ILK
 ^^^^^^^^^^
 
@@ -422,6 +439,62 @@ FB_EXT_ILK
     END_FUNCTION_BLOCK
 
 
+FB_EXT_TREATY_GAUGE
+^^^^^^^^^^^^^^^^^^^
+
+::
+
+    FUNCTION_BLOCK FB_EXT_TREATY_GAUGE
+    // Handle external gauge communicated to this PLC by a single dry-contact.
+    VAR_INPUT
+    	
+    	//	Setpoint agreed upon w/ the external system signified by the signal they send. 
+    	rTREATY_SIGNAL_PRESS : REAL;
+    	
+    	// Presumed pressure if the signal is not received. 
+    	rNO_SIGNAL_PRESS : REAL;
+    END_VAR
+    VAR_OUTPUT
+    	{attribute 'pytmc' := '
+        pv: 
+    	'}
+    	IG : ST_VG;
+    END_VAR
+    VAR
+
+    	// Input from AD's system indicating pressure belopw setpoint. 
+    	i_xEXT_Press_OK AT %I* : BOOL;
+    END_VAR
+    IF i_xEXT_Press_OK = TRUE THEN
+    	IG.rPRESS := rTREATY_SIGNAL_PRESS;
+    	IG.xPRESS_OK := TRUE; 
+    ELSE
+    	IG.rPRESS := rNO_SIGNAL_PRESS;
+    	IG.xPRESS_OK := FALSE; 
+    END_IF
+
+    END_FUNCTION_BLOCK
+
+
+FB_EXT_TREATY_VGC
+^^^^^^^^^^^^^^^^^
+
+::
+
+    FUNCTION_BLOCK FB_EXT_TREATY_VGC
+    VAR_INPUT
+    	TREATY_VGC : ST_VGC;
+    END_VAR
+    VAR_OUTPUT
+    END_VAR
+    VAR
+    	q_xTREATY_VGC_STATUS AT%Q*: BOOL;
+    END_VAR
+    q_xTREATY_VGC_STATUS := TREATY_VGC.eState = E_ValvePositionState.OPEN;
+
+    END_FUNCTION_BLOCK
+
+
 MAIN
 ^^^^
 
@@ -436,7 +509,6 @@ MAIN
     PRG_PMPS();
     fbEcatDiagWrapper();
     fbLogHandler();
-    g_FastFaultOutputK0.Execute(bAutoReset:=True);
 
     END_PROGRAM
 
@@ -493,6 +565,43 @@ PRG_PMPS
     VAR
         fbArbiterIO : FB_SubSysToArbiter_IO;
     END_VAR
+    g_FastFaultOutputK0.Execute(bAutoReset:=True);
+
+    g_FastFaultOutputK2.Execute(
+    	i_xVeto:= (  PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K1_OUT] 
+    			  ),
+    	bAutoReset:=TRUE
+    );
+
+    g_FastFaultOutputK3.Execute(
+    	i_xVeto:= (  PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K3_OUT]
+                     OR PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K1_IN] 
+    			  ),
+    	bAutoReset:=TRUE
+    );
+
+    g_FastFaultOutputK4.Execute(
+    	i_xVeto:= (  PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K1_IN] 
+    				 OR PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K3_IN]
+    			  ),
+    	bAutoReset:=TRUE
+    );
+
+    // Aggregate FastFaultOutputs into a single FastFault
+    g_FastFault(
+    	io_fbFFHWO := g_FastFaultOutputAll,
+    	i_xOK := (  g_FastFaultOutputK0.q_xFastFaultOut
+    				AND g_FastFaultOutputK2.q_xFastFaultOut
+    				AND g_FastFaultOutputK3.q_xFastFaultOut
+    				AND g_FastFaultOutputK4.q_xFastFaultOut
+    			 ),
+    	i_xAutoReset:=TRUE
+    );
+
+    g_FastFaultOutputAll.Execute(bAutoReset:=True);
+
+    // Arbiter
+    g_fbArbiter1.AddRequest(nReqID := 42, stReqBp := PMPS_GVL.cstFullBeam);
     fbArbiterIO(Arbiter := g_fbArbiter1, fbFFHWO := g_FastFaultOutputK0);
 
     END_PROGRAM
@@ -506,12 +615,6 @@ PRG_SXR_VAC
     PROGRAM PRG_SXR_VAC
     VAR
     END_VAR
-    // Treaty interface
-
-    fb_TV1K0_INTF_GCC_1(); 
-
-    fb_RTDSK0_INTF_VGC_1(TREATY_VGC := fb_RTDSK0_VGC_1.iq_stValve);
-
     // MKS275 Gauges
 
     fb_MR2K3_TXI_GPI_1(PG=>);
@@ -547,11 +650,11 @@ PRG_SXR_VAC
     fb_TV2K0_VGC_1(i_stUSG := fb_TV2K0_GCC_1.IG, i_stDSG := fb_TV2K0_GCC_2.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := fb_TV2K0_VFS_1_Interface.i_xVAC_FAULT_OK, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K0, io_fbFFHWO := g_FastFaultOutputK0, fbArbiter := g_fbArbiter1);
     fb_MR1K1_BEND_VGC_1(i_stUSG :=  fb_PA1K0.q_IG, i_stDSG :=fb_MR1K3_TXI_PIP_1.q_IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := fb_TV2K0_VFS_1_Interface.i_xVAC_FAULT_OK, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K0, io_fbFFHWO := g_FastFaultOutputK0, fbArbiter := g_fbArbiter1);
     fb_MR1K3_TXI_VGC_1(i_stUSG := fb_MR1K1_BEND_PIP_1.q_IG, i_stDSG := fb_MR1K3_TXI_PIP_1.q_IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K0, io_fbFFHWO := g_FastFaultOutputINTF, fbArbiter := g_fbArbiter1);
-    fb_SP1K1_MONO_VGC_1(i_stUSG := fb_MR2K3_TXI_PIP_1.q_IG, i_stDSG := fb_SP1K1_MONO_PIP_1.q_IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K0, io_fbFFHWO := g_FastFaultOutputK0, fbArbiter := g_fbArbiter1);
-    fb_SP1K1_MONO_VGC_2(i_stUSG := fb_SP1K1_MONO_PIP_1.q_IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K0, io_fbFFHWO := g_FastFaultOutputINTF, fbArbiter := g_fbArbiter1);
-    fb_IM1K2_PPM_VGC_1(i_stUSG := fb_MR2K3_TXI_PIP_1.q_IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K0, io_fbFFHWO := g_FastFaultOutputINTF, fbArbiter := g_fbArbiter1);
-    fb_TV3K0_VGC_1(i_stUSG := fb_MR2K3_TXI_PIP_1.q_IG, i_stDSG := fb_TV3K0_PIP_1.q_IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K0, io_fbFFHWO := g_FastFaultOutputK0, fbArbiter := g_fbArbiter1);
-    fb_MR1K4_SOMS_VGC_1(i_stUSG := fb_TV3K0_PIP_1.q_IG, i_stDSG := fb_MR1K4_SOMS_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K0, io_fbFFHWO := g_FastFaultOutputK0, fbArbiter := g_fbArbiter1);
+    fb_SP1K1_MONO_VGC_1(i_stUSG := fb_MR2K3_TXI_PIP_1.q_IG, i_stDSG := fb_SP1K1_MONO_PIP_1.q_IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K2, io_fbFFHWO := g_FastFaultOutputK2, fbArbiter := g_fbArbiter1);
+    fb_SP1K1_MONO_VGC_2(i_stUSG := fb_SP1K1_MONO_PIP_1.q_IG, i_stDSG := fb_PC1K1_INTF_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K2, io_fbFFHWO := g_FastFaultOutputK2, fbArbiter := g_fbArbiter1);
+    fb_IM1K2_PPM_VGC_1(i_stUSG := fb_MR2K3_TXI_PIP_1.q_IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K3, io_fbFFHWO := g_FastFaultOutputK3, fbArbiter := g_fbArbiter1);
+    fb_TV3K0_VGC_1(i_stUSG := fb_MR2K3_TXI_PIP_1.q_IG, i_stDSG := fb_TV3K0_PIP_1.q_IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K4, io_fbFFHWO := g_FastFaultOutputK4, fbArbiter := g_fbArbiter1);
+    fb_MR1K4_SOMS_VGC_1(i_stUSG := fb_TV3K0_PIP_1.q_IG, i_stDSG := fb_MR1K4_SOMS_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K4, io_fbFFHWO := g_FastFaultOutputK4, fbArbiter := g_fbArbiter1);
 
     // VFS Valves
 
@@ -570,8 +673,8 @@ PRG_SXR_VAC
     fb_MR1K1_BEND_PIP_1(i_stGauge := fb_MR1K1_BEND_GCC_1.IG,	i_xOverrideMode := xSystemOverrideMode);
     fb_MR1K3_TXI_PIP_1(	i_stGauge := fb_MR1K3_TXI_GCC_1.IG,		i_xOverrideMode := xSystemOverrideMode);
     fb_MR2K3_TXI_PIP_1(	i_stGauge := fb_MR1K3_TXI_GCC_1.IG,		i_xOverrideMode := xSystemOverrideMode);
-    fb_SP1K1_MONO_PIP_1(i_stGauge := fb_SP1K1_MONO_GCC_1.IG,	i_xOverrideMode := xSystemOverrideMode);
-    fb_SP1K1_MONO_PIP_2(i_stGauge := fb_SP1K1_MONO_GCC_1.IG,	i_xOverrideMode := xSystemOverrideMode);
+    fb_SP1K1_MONO_PIP_1(i_stGauge := fb_SP1K1_MONO_GPI_1.PG,	i_xOverrideMode := xSystemOverrideMode);
+    fb_SP1K1_MONO_PIP_2(i_stGauge := fb_SP1K1_MONO_GPI_1.PG,	i_xOverrideMode := xSystemOverrideMode);
     fb_TV3K0_PIP_1(		i_stGauge := fb_TV3K0_GCC_1.IG,			i_xOverrideMode := xSystemOverrideMode);
 
 
@@ -605,8 +708,19 @@ PRG_VAC_INTF
 ::
 
     PROGRAM PRG_VAC_INTF
+    (*
+    This PRG governs the interfaces between the SXR Vacuum system and external systems. 
+    This includes AD's vacuum system, EM1K0-GMD, AT1K0-GAS, EM2K0-XGMD, the TMO beamline vacuum system, and the RIX Beamline Vacuum System. 
+    The Vacuum system for TXI is planned but not yet implemented. When implemented it should go here.
+    *)
     VAR
     END_VAR
+    // Interface to AD's vacuum system
+
+    fb_TV1K0_INTF_GCC_1(rTREATY_SIGNAL_PRESS := 5E-6, rNO_SIGNAL_PRESS := 760); 
+    fb_RTDSK0_INTF_VGC_1(TREATY_VGC := fb_RTDSK0_VGC_1.iq_stValve);
+
+
     // Update interlock signals for TMO
     st_TMO_ILK_Upper.rPRO_SP 	:=	1E-4; // Fix the agreed-upon values
     fb_TMO_ILK_Uppper(
@@ -618,6 +732,11 @@ PRG_VAC_INTF
     	VG	:=	fb_MR1K4_SOMS_GCC_1.IG,
     	ILK	:=	st_TMO_ILK_Lower
     );
+
+
+    // Interface to RIX's vacuum system
+
+    fb_PC1K1_INTF_GCC_1(rTREATY_SIGNAL_PRESS := 5E-6, rNO_SIGNAL_PRESS := 760);
 
 
     // EM1K0-GMD Vacuum Interface

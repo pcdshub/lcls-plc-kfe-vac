@@ -3,7 +3,7 @@ Data Types
 ----------
 
 
-     
+
 ST_BeamParams_IO
 ^^^^^^^^^^^^^^^^
 
@@ -57,7 +57,7 @@ ST_BeamParams_IO
       - | io: input
 
 
-  
+ 
 ST_PMPS_Aperture_IO
 ^^^^^^^^^^^^^^^^^^^
 
@@ -89,7 +89,7 @@ ST_PMPS_Aperture_IO
         | io: input
 
 
-                      
+  
 Database Records
 ----------------
 

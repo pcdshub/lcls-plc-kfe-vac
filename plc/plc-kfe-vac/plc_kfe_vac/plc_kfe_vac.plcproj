@@ -40,10 +40,10 @@
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\FB_AD_TREATY_GAUGE.TcPOU">
+    <Compile Include="POUs\FB_EXT_TREATY_GAUGE.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\FB_AD_TREATY_VGC.TcPOU">
+    <Compile Include="POUs\FB_EXT_TREATY_VGC.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\FB_EXT_ILK.TcPOU">
@@ -86,6 +86,12 @@
     <PlaceholderReference Include="PMPS">
       <DefaultResolution>PMPS, * (SLAC - LCLS)</DefaultResolution>
       <Namespace>PMPS</Namespace>
+      <Parameters>
+        <Parameter>
+          <Key>MAX_FAST_FAULTS</Key>
+          <Value>10</Value>
+        </Parameter>
+      </Parameters>
     </PlaceholderReference>
     <PlaceholderReference Include="Tc2_Standard">
       <DefaultResolution>Tc2_Standard, * (Beckhoff Automation GmbH)</DefaultResolution>
@@ -108,6 +114,17 @@
     <None Include="plc_kfe_vac.tmc">
       <SubType>Content</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PlaceholderResolution Include="LCLS General">
+      <Resolution>LCLS General, 2.4.2 (SLAC)</Resolution>
+    </PlaceholderResolution>
+    <PlaceholderResolution Include="LCLS Vacuum">
+      <Resolution>LCLS Vacuum, 1.4.2 (SLAC - LCLS)</Resolution>
+    </PlaceholderResolution>
+    <PlaceholderResolution Include="PMPS">
+      <Resolution>PMPS, 0.17.0 (SLAC - LCLS)</Resolution>
+    </PlaceholderResolution>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>

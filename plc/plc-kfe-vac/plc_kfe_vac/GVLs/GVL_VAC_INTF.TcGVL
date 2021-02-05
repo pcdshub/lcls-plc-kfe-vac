@@ -2,7 +2,14 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <GVL Name="GVL_VAC_INTF" Id="{bdd53724-11cd-4a04-8f7d-c6faba7ad570}">
     <Declaration><![CDATA[VAR_GLOBAL
-    
+	
+    // AD Interface
+	{attribute 'pytmc' := ' pv: TV1K0:INTF:GCC:1 '}
+	fb_TV1K0_INTF_GCC_1 : FB_EXT_TREATY_GAUGE;
+	{attribute 'pytmc' := ' pv: RTDSK0:INTF:VGC:1 '}
+	fb_RTDSK0_INTF_VGC_1 : FB_EXT_TREATY_VGC;
+
+	
     // TMO vacuum interface 
 	{attribute 'pytmc' :=' pv: MR1K4:SOMS:GCC:1:ILK_UPPER'}
 	st_TMO_ILK_Upper			:	ST_EXT_ILK;
@@ -11,6 +18,12 @@
     
 	fb_TMO_ILK_Uppper			:	FB_EXT_ILK;
 	fb_TMO_ILK_Lower			:	FB_EXT_ILK;
+	
+	
+    // AD Interface
+	{attribute 'pytmc' := ' pv: PC1K1:INTF:GCC:1 '}
+	fb_PC1K1_INTF_GCC_1 : FB_EXT_TREATY_GAUGE;
+	
     
     // EM1K0-GMD Vacuum Interface
     n_EM1K0_VAC_counter         :   UDINT;

@@ -1,25 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <GVL Name="GVL_Variables" Id="{4e0ea985-29d8-4132-9223-f15e8fa1fe3d}">
     <Declaration><![CDATA[VAR_GLOBAL
-	
+
+// *******************
+// Interlock overrides 
+// *******************	
+
 {attribute 'pytmc' := '
 	pv: @(PREFIX)SYSOVERRIDE
 '}
 xSystemOverrideMode : BOOL; (* Global system override for the prototype section*)
 
-//Example implementation of the FFO
+
+// ***************************
+// Hardware Fast fault outputs 
+// ***************************
+
+// K0/SXR upstream specific faults
 {attribute 'pytmc' := '
 	pv: @(PREFIX)FFO:01
 '}
-{attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO (EL2202)]^Channel 1^Output'}
 g_FastFaultOutputK0  :   FB_HardwareFFOutput;
 
-    {attribute 'pytmc' := '
-    	pv: PLC:KFE:VAC:K0:FFO:02
-    '}
-    {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO (EL2202)]^Channel 2^Output'}
-    g_FastFaultOutput2  :	FB_HardwareFFOutput;	//FFO for Fast Shutter Valves upstream of ST1L0_XTES
+// K2/RIX specific faults 
+{attribute 'pytmc' := '
+	pv: @(PREFIX)FFO:02
+'}
+g_FastFaultOutputK2  :   FB_HardwareFFOutput;
+
+// K3/TXI specific faults
+{attribute 'pytmc' := '
+	pv: @(PREFIX)FFO:03
+'}
+g_FastFaultOutputK3  :   FB_HardwareFFOutput;
+
+// K4/TMO specific faults 
+{attribute 'pytmc' := '
+	pv: @(PREFIX)FFO:04
+'}
+g_FastFaultOutputK4  :   FB_HardwareFFOutput;
+
+// Fault aggregator for combined beamline  
+{attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO (EL2202)]^Channel 1^Output'}
+g_FastFaultOutputAll  :   FB_HardwareFFOutput;
+    
+{attribute 'pytmc' := '
+	pv: PLC:KFE:VAC:K0:FFO:02
+'}
+{attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO (EL2202)]^Channel 2^Output'}
+g_FastFaultOutput2  :	FB_HardwareFFOutput;	//FFO for Fast Shutter Valves upstream of ST1L0_XTES
 	
 
 // Dummy FFO for valves not yet allowed to open. To be removed when proper interfaces to TXI and RIX vacuum are implemented. 
@@ -28,15 +58,50 @@ g_FastFaultOutputK0  :   FB_HardwareFFOutput;
 '}
 g_FastFaultOutputINTF  :   FB_HardwareFFOutput;
 
+
+// ************
+// FB_FastFault 
+// ************
+
+g_FastFault		:	FB_FastFault;
+
+
+// *****************
+// Fast fault resets 
+// *****************
+
 {attribute 'pytmc' := '
 pv: @(PREFIX)RESET:FF1
 '}
-xReset_PMPS_FFO_K0	:	BOOL	:=	FALSE;		//FFO RESET for ST1L0_XTES's Upstream Components
+xReset_PMPS_FFO_K0	:	BOOL	:=	FALSE;
 
+{attribute 'pytmc' := '
+pv: @(PREFIX)RESET:FF2
+'}
+xReset_PMPS_FFO_K2	:	BOOL	:=	FALSE;
+
+{attribute 'pytmc' := '
+pv: @(PREFIX)RESET:FF3
+'}
+xReset_PMPS_FFO_K3	:	BOOL	:=	FALSE;
+
+{attribute 'pytmc' := '
+pv: @(PREFIX)RESET:FF4
+'}
+xReset_PMPS_FFO_K4	:	BOOL	:=	FALSE;
+
+
+// *******
+// Logging 
+// *******
 
 fbLogHandler : FB_loghandler;
 fbEcatDiagWrapper : FB_EcatDiagWrapper;
 
+
+// *******
+// Arbiter 
+// *******
 
 {attribute 'pytmc' := '
      pv: @(PREFIX)Arbiter:01

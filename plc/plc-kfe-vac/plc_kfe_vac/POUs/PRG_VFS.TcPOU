@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <POU Name="PRG_VFS" Id="{dc677a88-3d17-4473-be59-840d3553492f}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_VFS
 VAR
@@ -16,5 +16,9 @@ END_VAR
 (*FastFaultOuput*)	
 g_FastFaultOutput2.Execute(bAutoReset:= TRUE);]]></ST>
     </Implementation>
+    <LineIds Name="PRG_VFS">
+      <LineId Id="3" Count="7" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

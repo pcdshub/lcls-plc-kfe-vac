@@ -6530,7 +6530,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 								</Entry>
 							</Pdo>
 							<Pdo Name="Channel 3" Index="#x1a02" Flags="#x0011" SyncMan="0">
-								<Entry Name="GVL_SXR_VAC.fb_TV1K0_INTF_GCC_1.i_xAD_Press_OK" Index="#x6020" Sub="#x01">
+								<Entry Name="GVL_VAC_INTF.fb_TV1K0_INTF_GCC_1.i_xEXT_Press_OK" Index="#x6020" Sub="#x01">
 									<Type>BIT</Type>
 								</Entry>
 							</Pdo>
@@ -19135,6 +19135,9 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.i_xOpnLS" VarB="Channel 3^GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.i_xOpnLS"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_RTDSK0_VGC_1.i_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_RTDSK0_VGC_1.i_xClsLS"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_RTDSK0_VGC_1.i_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_RTDSK0_VGC_1.i_xOpnLS"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_03_00^=+-ES1008_03_07">
+				<Link VarA="PlcTask Inputs^GVL_VAC_INTF.fb_TV1K0_INTF_GCC_1.i_xEXT_Press_OK" VarB="Channel 3^GVL_VAC_INTF.fb_TV1K0_INTF_GCC_1.i_xEXT_Press_OK"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_03_00^=+-ES2004_03_02">
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.q_xOPN_DO" VarB="Channel 3^GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.q_xOPN_DO"/>

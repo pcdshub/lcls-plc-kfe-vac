@@ -23,7 +23,7 @@ fb_TMO_ILK_Uppper(
 	VG	:=	fb_MR1K4_SOMS_GCC_1.IG,
 	ILK	:=	st_TMO_ILK_Upper
 );
-st_TMO_ILK_Lower.rPRO_SP	:=	1E-6; // Fix the agreed-upon values
+st_TMO_ILK_Lower.rPRO_SP	:=	1E-8; // Fix the agreed-upon values
 fb_TMO_ILK_Lower(
 	VG	:=	fb_MR1K4_SOMS_GCC_1.IG,
 	ILK	:=	st_TMO_ILK_Lower

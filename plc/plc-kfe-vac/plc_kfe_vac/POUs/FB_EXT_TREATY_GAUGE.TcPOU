@@ -15,16 +15,23 @@ VAR_OUTPUT
 	{attribute 'pytmc' := '
     pv: 
 	'}
-	IG : ST_VG;
+	IG      : ST_VG;
+    {attribute 'pytmc' := '
+    pv: 
+	'}
+    EXT_IG  : ST_EXT_GCC;   
 END_VAR
 VAR
 
 	// Input from AD's system indicating pressure belopw setpoint. 
 	i_xEXT_Press_OK AT %I* : BOOL;
+    
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF i_xEXT_Press_OK = TRUE THEN
+      <ST><![CDATA[EXT_IG.xIlk_Inp := i_xEXT_Press_OK; 
+
+IF i_xEXT_Press_OK = TRUE THEN
 	IG.rPRESS := rTREATY_SIGNAL_PRESS;
 	IG.xPRESS_OK := TRUE; 
 ELSE
@@ -33,6 +40,7 @@ ELSE
 END_IF]]></ST>
     </Implementation>
     <LineIds Name="FB_EXT_TREATY_GAUGE">
+      <LineId Id="59" Count="1" />
       <LineId Id="9" Count="0" />
       <LineId Id="22" Count="0" />
       <LineId Id="30" Count="0" />

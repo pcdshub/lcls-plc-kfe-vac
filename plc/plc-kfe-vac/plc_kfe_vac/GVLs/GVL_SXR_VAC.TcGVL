@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <GVL Name="GVL_SXR_VAC" Id="{d38b3a8d-c2e8-4a67-9aeb-873e21370c76}">
     <Declaration><![CDATA[VAR_GLOBAL
 
@@ -18,12 +18,13 @@ fb_TV2K0_GPI_1 : FB_MKS317;
 fb_TV2K0_GPI_2 : FB_MKS317;
 {attribute 'pytmc' := ' pv: PA1K0:GPI:1 '}
 fb_PA1K0_GPI_1 : FB_MKS317;
-{attribute 'pytmc' := ' pv: MR1K1:BEND:GPI:1 '}
-fb_MR1K1_BEND_GPI_1 : FB_MKS317;
+
 
 
 // MKS275 Gauges
 
+{attribute 'pytmc' := ' pv: MR1K1:BEND:GPI:1 '}
+fb_MR1K1_BEND_GPI_1 : FB_MKS275;
 {attribute 'pytmc' := ' pv: MR1K3:TXI:GPI:1 '}
 fb_MR1K3_TXI_GPI_1 : FB_MKS275;
 {attribute 'pytmc' := ' pv: MR2K3:TXI:GPI:1 '}
@@ -52,12 +53,13 @@ fb_TV2K0_GCC_1 : FB_MKS422;
 fb_TV2K0_GCC_2 : FB_MKS422;
 {attribute 'pytmc' := ' pv: PA1K0:GCC:1 '}
 fb_PA1K0_GCC_1 : FB_MKS422;
-{attribute 'pytmc' := ' pv: MR1K1:BEND:GCC:1 '}
-fb_MR1K1_BEND_GCC_1 : FB_MKS422;
+
 
 
 // MKS500_EP Gauges
 
+{attribute 'pytmc' := ' pv: MR1K1:BEND:GCC:1 '}
+fb_MR1K1_BEND_GCC_1 : FB_MKS500;
 {attribute 'pytmc' := ' pv: MR1K3:TXI:GCC:1 '}
 fb_MR1K3_TXI_GCC_1 : FB_MKS500;
 {attribute 'pytmc' := ' pv: MR2K3:TXI:GCC:1 '}

@@ -15,6 +15,9 @@
     <LibraryReferences>{849d5061-a39c-4acb-88f5-3c3c5906cb0c}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DUTs\ST_EXT_GCC.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DUTs\ST_EXT_ILK.TcDUT">
       <SubType>Code</SubType>
     </Compile>

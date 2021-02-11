@@ -391,8 +391,8 @@
 				<Target BkhfOrder="00359197">
 					<ManualSelect>{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</ManualSelect>
 					<ManualSelect>{E008E3C8-6BD9-491C-B673-DC45CC7AA4F1}</ManualSelect>
-					<TargetSelect TargetId="2">{66689887-CCBD-452C-AC9A-039D997C6E66}</TargetSelect>
 					<TargetSelect TargetId="2">{BCA6EE0A-9CE1-4D3F-98CA-413ABC0D94FD}</TargetSelect>
+					<TargetSelect TargetId="2">{66689887-CCBD-452C-AC9A-039D997C6E66}</TargetSelect>
 					<TargetSelect TargetId="2">{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</TargetSelect>
 					<TargetSelect TargetId="2">{103F30C9-DF25-439E-837B-9DF80CB9356C}</TargetSelect>
 					<TargetSelect TargetId="2">{E008E3C8-6BD9-491C-B673-DC45CC7AA4F1}</TargetSelect>
@@ -558,46 +558,6 @@
 						<Var>
 							<Name>PRG_PMPS.fbArbiterIO.xTxPDO_state</Name>
 							<Type>BIT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_VAC_INTF.fb_TV1K0_INTF_GCC_1.i_xEXT_Press_OK</Name>
-							<Comment><![CDATA[ Input from AD's system indicating pressure belopw setpoint. ]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_VAC_INTF.fb_PC1K1_INTF_GCC_1.i_xEXT_Press_OK</Name>
-							<Comment><![CDATA[ Input from AD's system indicating pressure belopw setpoint. ]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.wFrmXWcState</Name>
-							<Comment><![CDATA[ link to task related ethercat frame state (Frm1WcState)]]></Comment>
-							<Type>WORD</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCount</Name>
-							<Comment><![CDATA[ link to SlaveCount of EtherCAT Master (Inputs)]]></Comment>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterDevState</Name>
-							<Comment><![CDATA[ link to DevState of EtherCAT Master (Inputs)]]></Comment>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterDeviceId</Name>
-							<Comment><![CDATA[ link to DevID of EtherCAT Master (InfoData)]]></Comment>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.arrEcMasterNetId</Name>
-							<Comment><![CDATA[ link to NetID of EtherCAT Master (InfoData)]]></Comment>
-							<Type GUID="{F1C07B37-2D70-463E-B9ED-92089788D29C}" Namespace="Tc2_System">T_AmsNetIdArr</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCountCfg</Name>
-							<Comment><![CDATA[ link to CfgSlaveCount of EtherCAT Master (InfoData)]]></Comment>
-							<Type>UINT</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_GPI_1.i_iPRESS_R</Name>
@@ -1055,50 +1015,52 @@
 							<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
+						<Var>
+							<Name>GVL_VAC_INTF.fb_TV1K0_INTF_GCC_1.i_xEXT_Press_OK</Name>
+							<Comment><![CDATA[ Input from AD's system indicating pressure belopw setpoint. ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_VAC_INTF.fb_PC1K1_INTF_GCC_1.i_xEXT_Press_OK</Name>
+							<Comment><![CDATA[ Input from AD's system indicating pressure belopw setpoint. ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.wFrmXWcState</Name>
+							<Comment><![CDATA[ link to task related ethercat frame state (Frm1WcState)]]></Comment>
+							<Type>WORD</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCount</Name>
+							<Comment><![CDATA[ link to SlaveCount of EtherCAT Master (Inputs)]]></Comment>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterDevState</Name>
+							<Comment><![CDATA[ link to DevState of EtherCAT Master (Inputs)]]></Comment>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterDeviceId</Name>
+							<Comment><![CDATA[ link to DevID of EtherCAT Master (InfoData)]]></Comment>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.arrEcMasterNetId</Name>
+							<Comment><![CDATA[ link to NetID of EtherCAT Master (InfoData)]]></Comment>
+							<Type GUID="{F1C07B37-2D70-463E-B9ED-92089788D29C}" Namespace="Tc2_System">T_AmsNetIdArr</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCountCfg</Name>
+							<Comment><![CDATA[ link to CfgSlaveCount of EtherCAT Master (InfoData)]]></Comment>
+							<Type>UINT</Type>
+						</Var>
 					</Vars>
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>
 						<Var>
 							<Name>PRG_PMPS.fbArbiterIO.q_stRequestedBP</Name>
 							<Type GUID="{5FC92061-002A-45B0-B954-CD8F28B5CE49}">ST_BeamParams_IO</Type>
-						</Var>
-						<Var>
-							<Name>GVL_VAC_INTF.fb_RTDSK0_INTF_VGC_1.q_xTREATY_VGC_STATUS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_VAC_INTF.fb_TMO_ILK_Uppper.q_xILK_OK_DO</Name>
-							<Comment><![CDATA[ Send the signal to indicate that the interlock pressure has been met.]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_VAC_INTF.fb_TMO_ILK_Lower.q_xILK_OK_DO</Name>
-							<Comment><![CDATA[ Send the signal to indicate that the interlock pressure has been met.]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.g_FastFaultOutputK0.q_xFastFaultOut</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.g_FastFaultOutputK2.q_xFastFaultOut</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.g_FastFaultOutputK3.q_xFastFaultOut</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.g_FastFaultOutputK4.q_xFastFaultOut</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.g_FastFaultOutputAll.q_xFastFaultOut</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Variables.g_FastFaultOutputINTF.q_xFastFaultOut</Name>
-							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_RTDSK0_GCC_1.q_xHV_DIS</Name>
@@ -1327,6 +1289,44 @@
 						<Var>
 							<Name>GVL_SXR_VAC.fb_TV3K0_PIP_1.q_xHVEna_DO</Name>
 							<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_VAC_INTF.fb_RTDSK0_INTF_VGC_1.q_xTREATY_VGC_STATUS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_VAC_INTF.fb_TMO_ILK_Uppper.q_xILK_OK_DO</Name>
+							<Comment><![CDATA[ Send the signal to indicate that the interlock pressure has been met.]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_VAC_INTF.fb_TMO_ILK_Lower.q_xILK_OK_DO</Name>
+							<Comment><![CDATA[ Send the signal to indicate that the interlock pressure has been met.]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.g_FastFaultOutputK0.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.g_FastFaultOutputK2.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.g_FastFaultOutputK3.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.g_FastFaultOutputK4.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.g_FastFaultOutputAll.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.g_FastFaultOutputINTF.q_xFastFaultOut</Name>
 							<Type>BOOL</Type>
 						</Var>
 					</Vars>
@@ -19311,16 +19311,16 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV3K0_GPI_1.i_iPRESS_R" VarB="AI Standard Channel 4^GVL_SXR_VAC.fb_TV3K0_GPI_1.i_iPRESS_R"/>
 			</OwnerB>
 			<OwnerB Name="TIPC^plc_kfe_vac^plc_kfe_vac Instance">
-				<Link VarA="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xCLS_SW" VarB="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xCLS_SW" AutoLink="true"/>
+				<Link VarA="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xOPN_SW" VarB="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOPN_SW" AutoLink="true"/>
 				<Link VarA="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xOverrideMode" VarB="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOverrideMode" AutoLink="true"/>
 				<Link VarA="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xVAC_FAULT_Reset" VarB="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xVAC_FAULT_Reset" AutoLink="true"/>
+				<Link VarA="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_eVFS_State" VarB="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_eVFS_State" AutoLink="true"/>
 				<Link VarA="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xVAC_FAULT_OK" VarB="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVAC_FAULT_OK" AutoLink="true"/>
-				<Link VarA="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xVFS_Closed" VarB="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVFS_Closed" AutoLink="true"/>
-				<Link VarA="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xVFS_Open" VarB="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVFS_Open" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_eVFS_State" VarB="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_eVFS_State" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xMPS_OK" VarB="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xMPS_OK" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xTrigger" VarB="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xTrigger" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOPN_SW" VarB="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xOPN_SW" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVFS_Closed" VarB="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xVFS_Closed" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVFS_Open" VarB="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xVFS_Open" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xCLS_SW" VarB="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xCLS_SW" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOverrideOpen" VarB="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xOverrideOpen" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xPRESS_OK" VarB="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xPress_OK" AutoLink="true"/>
 			</OwnerB>

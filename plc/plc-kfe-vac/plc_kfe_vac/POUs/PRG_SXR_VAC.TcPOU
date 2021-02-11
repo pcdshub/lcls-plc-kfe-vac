@@ -11,6 +11,7 @@ END_VAR
 
 // MKS275 Gauges
 
+fb_MR1K1_BEND_GPI_1(PG=>);
 fb_MR2K3_TXI_GPI_1(PG=>);
 fb_MR1K3_TXI_GPI_1(PG=>);
 fb_SP1K1_MONO_GPI_1(PG=>);
@@ -18,7 +19,8 @@ fb_TV3K0_GPI_1(PG=>);
 fb_MR1K4_SOMS_GPI_1(PG=>);
 
 // MKS500_EP Gauges
-
+ 
+fb_MR1K1_BEND_GCC_1(PG := fb_MR1K1_BEND_GPI_1.PG, bEP:=TRUE);
 fb_MR2K3_TXI_GCC_1(PG := fb_MR2K3_TXI_GPI_1.PG, bEP:=TRUE);
 fb_MR1K3_TXI_GCC_1(PG := fb_MR1K3_TXI_GPI_1.PG, bEP:=TRUE);
 fb_SP1K1_MONO_GCC_1(PG := fb_SP1K1_MONO_GPI_1.PG, bEP:=TRUE);
@@ -81,7 +83,6 @@ fb_SL1K0_POWER_GCC_1(PG := fb_SL1K0_POWER_GPI_1.PG);
 fb_TV2K0_GCC_1(PG := fb_TV2K0_GPI_1.PG);
 fb_TV2K0_GCC_2(PG := fb_TV2K0_GPI_2.PG);
 fb_PA1K0_GCC_1(PG := fb_PA1K0_GPI_1.PG);
-fb_MR1K1_BEND_GCC_1(PG := fb_MR1K1_BEND_GPI_1.PG);
 
 // FB_MKS317
 
@@ -91,11 +92,16 @@ fb_SL1K0_POWER_GPI_1(PG=>);
 fb_TV2K0_GPI_1(PG=>);
 fb_TV2K0_GPI_2(PG=>);
 fb_PA1K0_GPI_1(PG=>);
-fb_MR1K1_BEND_GPI_1(PG=>);
+
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_SXR_VAC">
-      <LineId Id="3" Count="85" />
+      <LineId Id="3" Count="3" />
+      <LineId Id="94" Count="0" />
+      <LineId Id="7" Count="7" />
+      <LineId Id="92" Count="0" />
+      <LineId Id="15" Count="62" />
+      <LineId Id="79" Count="9" />
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>

@@ -2220,7 +2220,7 @@ PDO Channel 5 (Index #x1604, Flags #x0011, SyncMan 0)
     :header: Name, Comment, BitLen, Index, Type
     :align: center
 
-        "GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.q_xHV_DIS", "GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.q_xHV_DIS", , "#x7040", "BIT"
+        "Value", "GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.q_xHV_DIS", , "#x7040", "BIT"
 
 
 
@@ -2386,7 +2386,7 @@ PDO AI Standard Channel 3 (Index #x1a04, Flags #x0010, SyncMan 3)
         "Status__", "", , "", "ARRAY [0..5] OF BIT"
         "Status__TxPDO State", "TRUE when this TxPDO is not valid", , "#x6020", "BIT"
         "Status__TxPDO Toggle", "Bit toggles everytime when new value available", , "#x6020", "BIT"
-        "GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.i_iPRESS_R", "GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.i_iPRESS_R", , "#x6020", "INT"
+        "Value", "GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.i_iPRESS_R", , "#x6020", "INT"
 
 
 
@@ -2473,7 +2473,7 @@ PDO AI Standard Channel 6 (Index #x1a0a, Flags #x0010, SyncMan 3)
         "Status__", "", , "", "ARRAY [0..5] OF BIT"
         "Status__TxPDO State", "TRUE when this TxPDO is not valid", , "#x6050", "BIT"
         "Status__TxPDO Toggle", "Bit toggles everytime when new value available", , "#x6050", "BIT"
-        "GVL_SXR_VAC.fb_MR1K1_BEND_GPI_1.i_iPRESS_R", "GVL_SXR_VAC.fb_MR1K1_BEND_GPI_1.i_iPRESS_R", , "#x6050", "INT"
+        "Value", "GVL_SXR_VAC.fb_MR1K1_BEND_GPI_1.i_iPRESS_R", , "#x6050", "INT"
 
 
 
@@ -4095,7 +4095,7 @@ PDO Channel 3 (Index #x1a02, Flags #x0011, SyncMan 0)
     :header: Name, Comment, BitLen, Index, Type
     :align: center
 
-        "GVL_SXR_VAC.fb_TV1K0_INTF_GCC_1.i_xAD_Press_OK", "", , "#x6020", "BIT"
+        "GVL_VAC_INTF.fb_TV1K0_INTF_GCC_1.i_xEXT_Press_OK", "", , "#x6020", "BIT"
 
 
 
@@ -5350,7 +5350,7 @@ PDO AI Standard Channel 3 (Index #x1a04, Flags #x0010, SyncMan 3)
         "Status__Sync error", "", , "#x6020", "BIT"
         "Status__TxPDO State", "", , "#x6020", "BIT"
         "Status__TxPDO Toggle", "", , "#x6020", "BIT"
-        "Value", "", , "#x6020", "INT"
+        "GVL_SXR_VAC.fb_MR1K1_BEND_GPI_1.i_iPRESS_R", "", , "#x6020", "INT"
 
 
 
@@ -5380,7 +5380,7 @@ PDO AI Standard Channel 4 (Index #x1a06, Flags #x0010, SyncMan 3)
         "Status__Sync error", "", , "#x6030", "BIT"
         "Status__TxPDO State", "", , "#x6030", "BIT"
         "Status__TxPDO Toggle", "", , "#x6030", "BIT"
-        "Value", "", , "#x6030", "INT"
+        "GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.i_iPRESS_R", "", , "#x6030", "INT"
 
 
 
@@ -5434,7 +5434,7 @@ PDO Channel 2 (Index #x1601, Flags #x0011, SyncMan 0)
     :header: Name, Comment, BitLen, Index, Type
     :align: center
 
-        "Output", "", , "#x7010", "BIT"
+        "GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.q_xHV_DIS", "", , "#x7010", "BIT"
 
 
 
@@ -6643,7 +6643,7 @@ PDO Channel 2 (Index #x1601, Flags #x0011, SyncMan 0)
     :header: Name, Comment, BitLen, Index, Type
     :align: center
 
-        "Output", "", , "#x7010", "BIT"
+        "GVL_SXR_VAC.fb_MR1K4_SOMS_GCC_1.q_xHV_DIS", "", , "#x7010", "BIT"
 
 
 

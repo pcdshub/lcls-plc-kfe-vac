@@ -4,6 +4,22 @@ DUTs
 ----
 
 
+ST_EXT_GCC
+^^^^^^^^^^
+
+::
+
+    TYPE ST_EXT_GCC :
+    STRUCT
+        {attribute 'pytmc' := '
+            pv: ILK_INP;
+    	    io: io;
+        '}
+    	xIlk_Inp: BOOL; // Report the input signal .
+    END_STRUCT
+    END_TYPE
+
+
 ST_EXT_ILK
 ^^^^^^^^^^
 
@@ -61,12 +77,13 @@ GVL_SXR_VAC
     fb_TV2K0_GPI_2 : FB_MKS317;
     {attribute 'pytmc' := ' pv: PA1K0:GPI:1 '}
     fb_PA1K0_GPI_1 : FB_MKS317;
-    {attribute 'pytmc' := ' pv: MR1K1:BEND:GPI:1 '}
-    fb_MR1K1_BEND_GPI_1 : FB_MKS317;
+
 
 
     // MKS275 Gauges
 
+    {attribute 'pytmc' := ' pv: MR1K1:BEND:GPI:1 '}
+    fb_MR1K1_BEND_GPI_1 : FB_MKS275;
     {attribute 'pytmc' := ' pv: MR1K3:TXI:GPI:1 '}
     fb_MR1K3_TXI_GPI_1 : FB_MKS275;
     {attribute 'pytmc' := ' pv: MR2K3:TXI:GPI:1 '}
@@ -95,12 +112,13 @@ GVL_SXR_VAC
     fb_TV2K0_GCC_2 : FB_MKS422;
     {attribute 'pytmc' := ' pv: PA1K0:GCC:1 '}
     fb_PA1K0_GCC_1 : FB_MKS422;
-    {attribute 'pytmc' := ' pv: MR1K1:BEND:GCC:1 '}
-    fb_MR1K1_BEND_GCC_1 : FB_MKS422;
+
 
 
     // MKS500_EP Gauges
 
+    {attribute 'pytmc' := ' pv: MR1K1:BEND:GCC:1 '}
+    fb_MR1K1_BEND_GCC_1 : FB_MKS500;
     {attribute 'pytmc' := ' pv: MR1K3:TXI:GCC:1 '}
     fb_MR1K3_TXI_GCC_1 : FB_MKS500;
     {attribute 'pytmc' := ' pv: MR2K3:TXI:GCC:1 '}
@@ -458,13 +476,20 @@ FB_EXT_TREATY_GAUGE
     	{attribute 'pytmc' := '
         pv: 
     	'}
-    	IG : ST_VG;
+    	IG      : ST_VG;
+        {attribute 'pytmc' := '
+        pv: 
+    	'}
+        EXT_IG  : ST_EXT_GCC;   
     END_VAR
     VAR
 
     	// Input from AD's system indicating pressure belopw setpoint. 
     	i_xEXT_Press_OK AT %I* : BOOL;
+        
     END_VAR
+    EXT_IG.xIlk_Inp := i_xEXT_Press_OK; 
+
     IF i_xEXT_Press_OK = TRUE THEN
     	IG.rPRESS := rTREATY_SIGNAL_PRESS;
     	IG.xPRESS_OK := TRUE; 
@@ -574,11 +599,20 @@ PRG_PMPS
     );
 
     g_FastFaultOutputK3.Execute(
+    	i_xVeto:= TRUE,
+    	bAutoReset:=TRUE
+    );
+
+    (*
+     ------ DISABLED UNTIL PMPS SIGNALS ARE RECEIVED ------ 
+
+    g_FastFaultOutputK3.Execute(
     	i_xVeto:= (  PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K3_OUT]
                      OR PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K1_IN] 
     			  ),
     	bAutoReset:=TRUE
     );
+    *)
 
     g_FastFaultOutputK4.Execute(
     	i_xVeto:= (  PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K1_IN] 
@@ -617,6 +651,7 @@ PRG_SXR_VAC
     END_VAR
     // MKS275 Gauges
 
+    fb_MR1K1_BEND_GPI_1(PG=>);
     fb_MR2K3_TXI_GPI_1(PG=>);
     fb_MR1K3_TXI_GPI_1(PG=>);
     fb_SP1K1_MONO_GPI_1(PG=>);
@@ -624,7 +659,8 @@ PRG_SXR_VAC
     fb_MR1K4_SOMS_GPI_1(PG=>);
 
     // MKS500_EP Gauges
-
+     
+    fb_MR1K1_BEND_GCC_1(PG := fb_MR1K1_BEND_GPI_1.PG, bEP:=TRUE);
     fb_MR2K3_TXI_GCC_1(PG := fb_MR2K3_TXI_GPI_1.PG, bEP:=TRUE);
     fb_MR1K3_TXI_GCC_1(PG := fb_MR1K3_TXI_GPI_1.PG, bEP:=TRUE);
     fb_SP1K1_MONO_GCC_1(PG := fb_SP1K1_MONO_GPI_1.PG, bEP:=TRUE);
@@ -648,7 +684,7 @@ PRG_SXR_VAC
         i_xExt_OK := (NOT fb_EM2K0_XGMD_GCC_90_reader.bError), 
         i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K0, io_fbFFHWO := g_FastFaultOutputK0, fbArbiter := g_fbArbiter1);
     fb_TV2K0_VGC_1(i_stUSG := fb_TV2K0_GCC_1.IG, i_stDSG := fb_TV2K0_GCC_2.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := fb_TV2K0_VFS_1_Interface.i_xVAC_FAULT_OK, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K0, io_fbFFHWO := g_FastFaultOutputK0, fbArbiter := g_fbArbiter1);
-    fb_MR1K1_BEND_VGC_1(i_stUSG :=  fb_PA1K0.q_IG, i_stDSG :=fb_MR1K3_TXI_PIP_1.q_IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := fb_TV2K0_VFS_1_Interface.i_xVAC_FAULT_OK, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K0, io_fbFFHWO := g_FastFaultOutputK0, fbArbiter := g_fbArbiter1);
+    fb_MR1K1_BEND_VGC_1(i_stUSG :=  fb_PA1K0.q_IG, i_stDSG :=fb_MR1K1_BEND_PIP_1.q_IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := fb_TV2K0_VFS_1_Interface.i_xVAC_FAULT_OK, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K0, io_fbFFHWO := g_FastFaultOutputK0, fbArbiter := g_fbArbiter1);
     fb_MR1K3_TXI_VGC_1(i_stUSG := fb_MR1K1_BEND_PIP_1.q_IG, i_stDSG := fb_MR1K3_TXI_PIP_1.q_IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K0, io_fbFFHWO := g_FastFaultOutputINTF, fbArbiter := g_fbArbiter1);
     fb_SP1K1_MONO_VGC_1(i_stUSG := fb_MR2K3_TXI_PIP_1.q_IG, i_stDSG := fb_SP1K1_MONO_PIP_1.q_IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K2, io_fbFFHWO := g_FastFaultOutputK2, fbArbiter := g_fbArbiter1);
     fb_SP1K1_MONO_VGC_2(i_stUSG := fb_SP1K1_MONO_PIP_1.q_IG, i_stDSG := fb_PC1K1_INTF_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K2, io_fbFFHWO := g_FastFaultOutputK2, fbArbiter := g_fbArbiter1);
@@ -687,7 +723,6 @@ PRG_SXR_VAC
     fb_TV2K0_GCC_1(PG := fb_TV2K0_GPI_1.PG);
     fb_TV2K0_GCC_2(PG := fb_TV2K0_GPI_2.PG);
     fb_PA1K0_GCC_1(PG := fb_PA1K0_GPI_1.PG);
-    fb_MR1K1_BEND_GCC_1(PG := fb_MR1K1_BEND_GPI_1.PG);
 
     // FB_MKS317
 
@@ -697,7 +732,6 @@ PRG_SXR_VAC
     fb_TV2K0_GPI_1(PG=>);
     fb_TV2K0_GPI_2(PG=>);
     fb_PA1K0_GPI_1(PG=>);
-    fb_MR1K1_BEND_GPI_1(PG=>);
 
     END_PROGRAM
 
@@ -727,7 +761,7 @@ PRG_VAC_INTF
     	VG	:=	fb_MR1K4_SOMS_GCC_1.IG,
     	ILK	:=	st_TMO_ILK_Upper
     );
-    st_TMO_ILK_Lower.rPRO_SP	:=	1E-6; // Fix the agreed-upon values
+    st_TMO_ILK_Lower.rPRO_SP	:=	1E-7; // Fix the agreed-upon values
     fb_TMO_ILK_Lower(
     	VG	:=	fb_MR1K4_SOMS_GCC_1.IG,
     	ILK	:=	st_TMO_ILK_Lower

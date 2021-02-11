@@ -16,11 +16,20 @@ g_FastFaultOutputK2.Execute(
 );
 
 g_FastFaultOutputK3.Execute(
+	i_xVeto:= TRUE,
+	bAutoReset:=TRUE
+);
+
+(*
+ ------ DISABLED UNTIL PMPS SIGNALS ARE RECEIVED ------ 
+
+g_FastFaultOutputK3.Execute(
 	i_xVeto:= (  PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K3_OUT]
                  OR PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K1_IN] 
 			  ),
 	bAutoReset:=TRUE
 );
+*)
 
 g_FastFaultOutputK4.Execute(
 	i_xVeto:= (  PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K1_IN] 
@@ -52,12 +61,19 @@ fbArbiterIO(Arbiter := g_fbArbiter1, fbFFHWO := g_FastFaultOutputK0);
     <LineIds Name="PRG_PMPS">
       <LineId Id="61" Count="1" />
       <LineId Id="57" Count="3" />
-      <LineId Id="55" Count="1" />
+      <LineId Id="55" Count="0" />
+      <LineId Id="79" Count="0" />
+      <LineId Id="73" Count="0" />
+      <LineId Id="76" Count="2" />
+      <LineId Id="80" Count="0" />
+      <LineId Id="56" Count="0" />
+      <LineId Id="81" Count="1" />
       <LineId Id="49" Count="1" />
       <LineId Id="66" Count="0" />
       <LineId Id="52" Count="1" />
       <LineId Id="48" Count="0" />
       <LineId Id="54" Count="0" />
+      <LineId Id="83" Count="0" />
       <LineId Id="36" Count="1" />
       <LineId Id="45" Count="1" />
       <LineId Id="38" Count="0" />

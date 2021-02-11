@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <DUT Name="ST_EXT_GCC" Id="{e49f4ea8-86b6-4c66-aa0f-0185e826ca2d}">
+    <Declaration><![CDATA[TYPE ST_EXT_GCC :
+STRUCT
+    {attribute 'pytmc' := '
+        pv: ILK_INP;
+	    io: io;
+    '}
+	xIlk_Inp: BOOL; // Report the input signal .
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

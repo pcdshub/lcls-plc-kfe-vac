@@ -1,0 +1,1154 @@
+
+Settings
+--------
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Setting
+      - Value
+      - Description
+    * - AMS Net ID
+      - 172.21.92.61.1.1
+      -
+    * - Target IP address
+      - 172.21.92.61
+      - Based on AMS Net ID by convention
+    * - AMS Port
+      - 851
+      -
+
+.. _plc_kfe_vac_pragmas:
+
+Pragmas
+-------
+
+Total pragmas found: 86
+Total linter errors: 0
+
+
+
+Libraries
+---------
+
+.. csv-table::
+    :header: Library, Vendor, Default, Version
+    :align: center
+
+        LCLS General, SLAC, Unset, 2.4.2
+        LCLS Vacuum, SLAC - LCLS, Unset, 1.4.2
+        PMPS, SLAC - LCLS, Unset, 0.17.0
+        Tc2_Standard, Beckhoff Automation GmbH, Unset, 
+        Tc2_System, Beckhoff Automation GmbH, Unset, 
+        Tc2_Utilities, Beckhoff Automation GmbH, Unset, 
+        Tc3_Module, Beckhoff Automation GmbH, Unset, 
+
+Symbols
+-------
+
+
+
+
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        .TCPADS_MAXUDP_BUFFSIZE, UDINT, 3363040 (32)
+
+
+Constants
+^^^^^^^^^
+
+.. raw:: html
+
+   <details>
+       <summary>12 Symbols</summary>
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        Constants.bFPUSupport, BOOL, 22414528 (8)
+        Constants.bLittleEndian, BOOL, 15048528 (8)
+        Constants.bMulticoreSupport, BOOL, 22414536 (8)
+        Constants.bSimulationMode, BOOL, 15048536 (8)
+        Constants.CompilerVersion, VERSION, 22414464 (64)
+        Constants.CompilerVersionNumeric, DWORD, 22414592 (32)
+        Constants.gc_GaugeValidState, INT, 7513888 (16)
+        Constants.gc_iSizeOfGGOArray, INT, 3368720 (16)
+        Constants.nPackMode, UINT, 15048560 (16)
+        Constants.nRegisterSize, WORD, 15048544 (16)
+        Constants.RuntimeVersion, VERSION, 22414400 (64)
+        Constants.RuntimeVersionNumeric, DWORD, 22414560 (32)
+
+.. raw:: html
+
+   </details>
+   <br />
+
+
+DefaultGlobals
+^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        DefaultGlobals.fTimeStamp, LREAL, 3072128 (64)
+        DefaultGlobals.stSys, ST_System, 3072000 (88)
+
+
+GVL
+^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL.nLangId_OnlineMonitoring, DINT, 3365280 (32)
+
+
+GVL_INTERNAL
+^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_INTERNAL.UNINITIALIZED_CLASS_GUID, GUID, 3365632 (128)
+
+
+GVL_Logger
+^^^^^^^^^^
+
+.. raw:: html
+
+   <details>
+       <summary>14 Symbols</summary>
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_Logger.bTrickleTripped, BOOL, 3072088 (8)
+        GVL_Logger.cLogHost, STRING(15), 3072192 (128)
+        GVL_Logger.fbRootLogger, FB_LogMessage, 3073216 (81600)
+        GVL_Logger.iLogPort, UINT, 3072096 (16)
+        GVL_Logger.nGlobAccEvents, UDINT, 3154816 (32)
+        GVL_Logger.nLocalTrickleTripThreshold, TIME, 3072416 (32)
+        GVL_Logger.nLocalTripThreshold, TIME, 3072384 (32)
+        GVL_Logger.nMinTimeViolationAcceptable, INT, 3072112 (16)
+        GVL_Logger.nTrickleThreshold, UDINT, 3154848 (32)
+        GVL_Logger.nTrickleTripTime, TIME, 3072448 (32)
+        GVL_Logger.nTripResetPeriod, TIME, 3072480 (32)
+        GVL_Logger.sIpTidbit, STRING(6), 3072320 (56)
+        GVL_Logger.sPlcHostname, STRING(80), 3072512 (648)
+        GVL_Logger.TCPADS_MAXUDP_BUFFSIZE, UDINT, 3073184 (32)
+
+.. raw:: html
+
+   </details>
+   <br />
+
+
+GVL_Param_TcUnit
+^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_Param_TcUnit.MaxNumberOfAsserts, UINT, 3366080 (16)
+        GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite, UINT, 3366064 (16)
+        GVL_Param_TcUnit.MaxNumberOfTestSuites, UINT, 3366048 (16)
+
+
+GVL_PfeifferParameters
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_PfeifferParameters.gcMaxPfeifferPumps, INT, 7515488 (16)
+
+
+GVL_SXR_VAC
+^^^^^^^^^^^
+
+.. raw:: html
+
+   <details>
+       <summary>199 Symbols</summary>
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1, FB_VGC, 10202688 (174080)
+        GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.i_xClsLS, BOOL, 10376680 (8)
+        GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.i_xOpnLS, BOOL, 10376672 (8)
+        GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.q_xOPN_DO, BOOL, 10376688 (8)
+        GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1, FB_VGC, 10028608 (174080)
+        GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.i_xClsLS, BOOL, 10202600 (8)
+        GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.i_xOpnLS, BOOL, 10202592 (8)
+        GVL_SXR_VAC.fb_EM1K0_GMD_VGC_1.q_xOPN_DO, BOOL, 10202608 (8)
+        GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1, FB_VGC, 10376768 (174080)
+        GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xClsLS, BOOL, 10550760 (8)
+        GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.i_xOpnLS, BOOL, 10550752 (8)
+        GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.q_xOPN_DO, BOOL, 10550768 (8)
+        GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2, FB_VGC, 10550848 (174080)
+        GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xClsLS, BOOL, 10724840 (8)
+        GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xOpnLS, BOOL, 10724832 (8)
+        GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.q_xOPN_DO, BOOL, 10724848 (8)
+        GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1, FB_MKS422, 8831552 (85120)
+        GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.i_iPRESS_R, INT, 8916576 (16)
+        GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.q_xHV_DIS, BOOL, 8916592 (8)
+        GVL_SXR_VAC.fb_IM1K0_XTES_GPI_1, FB_MKS317, 7822464 (84032)
+        GVL_SXR_VAC.fb_IM1K0_XTES_GPI_1.i_iPRESS_R, INT, 7906208 (16)
+        GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1, FB_VGC, 11595328 (174080)
+        GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xClsLS, BOOL, 11769320 (8)
+        GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xOpnLS, BOOL, 11769312 (8)
+        GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.q_xOPN_DO, BOOL, 11769328 (8)
+        GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1, FB_MKS500, 9342272 (85376)
+        GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.i_iPRESS_R, INT, 9427312 (16)
+        GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.i_xDisc_Active, BOOL, 9427344 (8)
+        GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.i_xHV_ON, BOOL, 9427336 (8)
+        GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.q_xHV_DIS, BOOL, 9427328 (8)
+        GVL_SXR_VAC.fb_MR1K1_BEND_GPI_1, FB_MKS275, 8242624 (83968)
+        GVL_SXR_VAC.fb_MR1K1_BEND_GPI_1.i_iPRESS_R, INT, 8326400 (16)
+        GVL_SXR_VAC.fb_MR1K1_BEND_PIP_1, FB_PIP_Gamma, 12909504 (87872)
+        GVL_SXR_VAC.fb_MR1K1_BEND_PIP_1.i_iPRESS, INT, 12995696 (16)
+        GVL_SXR_VAC.fb_MR1K1_BEND_PIP_1.i_xSP_DI, BOOL, 12995712 (8)
+        GVL_SXR_VAC.fb_MR1K1_BEND_PIP_1.q_xHVEna_DO, BOOL, 12995680 (8)
+        GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1, FB_VGC, 10899008 (174080)
+        GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.i_xClsLS, BOOL, 11073000 (8)
+        GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.i_xOpnLS, BOOL, 11072992 (8)
+        GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.q_xOPN_DO, BOOL, 11073008 (8)
+        GVL_SXR_VAC.fb_MR1K3_TXI_GCC_1, FB_MKS500, 9427648 (85376)
+        GVL_SXR_VAC.fb_MR1K3_TXI_GCC_1.i_iPRESS_R, INT, 9512688 (16)
+        GVL_SXR_VAC.fb_MR1K3_TXI_GCC_1.i_xDisc_Active, BOOL, 9512720 (8)
+        GVL_SXR_VAC.fb_MR1K3_TXI_GCC_1.i_xHV_ON, BOOL, 9512712 (8)
+        GVL_SXR_VAC.fb_MR1K3_TXI_GCC_1.q_xHV_DIS, BOOL, 9512704 (8)
+        GVL_SXR_VAC.fb_MR1K3_TXI_GPI_1, FB_MKS275, 8326592 (83968)
+        GVL_SXR_VAC.fb_MR1K3_TXI_GPI_1.i_iPRESS_R, INT, 8410368 (16)
+        GVL_SXR_VAC.fb_MR1K3_TXI_PIP_1, FB_PIP_Gamma, 12997376 (87872)
+        GVL_SXR_VAC.fb_MR1K3_TXI_PIP_1.i_iPRESS, INT, 13083568 (16)
+        GVL_SXR_VAC.fb_MR1K3_TXI_PIP_1.i_xSP_DI, BOOL, 13083584 (8)
+        GVL_SXR_VAC.fb_MR1K3_TXI_PIP_1.q_xHVEna_DO, BOOL, 13083552 (8)
+        GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1, FB_VGC, 11073088 (174080)
+        GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.i_xClsLS, BOOL, 11247080 (8)
+        GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.i_xOpnLS, BOOL, 11247072 (8)
+        GVL_SXR_VAC.fb_MR1K3_TXI_VGC_1.q_xOPN_DO, BOOL, 11247088 (8)
+        GVL_SXR_VAC.fb_MR1K4_SOMS_GCC_1, FB_MKS500, 9769152 (85376)
+        GVL_SXR_VAC.fb_MR1K4_SOMS_GCC_1.i_iPRESS_R, INT, 9854192 (16)
+        GVL_SXR_VAC.fb_MR1K4_SOMS_GCC_1.i_xDisc_Active, BOOL, 9854224 (8)
+        GVL_SXR_VAC.fb_MR1K4_SOMS_GCC_1.i_xHV_ON, BOOL, 9854216 (8)
+        GVL_SXR_VAC.fb_MR1K4_SOMS_GCC_1.q_xHV_DIS, BOOL, 9854208 (8)
+        GVL_SXR_VAC.fb_MR1K4_SOMS_GPI_1, FB_MKS275, 8662464 (83968)
+        GVL_SXR_VAC.fb_MR1K4_SOMS_GPI_1.i_iPRESS_R, INT, 8746240 (16)
+        GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1, FB_VGC, 11943488 (174080)
+        GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.i_xClsLS, BOOL, 12117480 (8)
+        GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.i_xOpnLS, BOOL, 12117472 (8)
+        GVL_SXR_VAC.fb_MR1K4_SOMS_VGC_1.q_xOPN_DO, BOOL, 12117488 (8)
+        GVL_SXR_VAC.fb_MR2K3_TXI_GCC_1, FB_MKS500, 9513024 (85376)
+        GVL_SXR_VAC.fb_MR2K3_TXI_GCC_1.i_iPRESS_R, INT, 9598064 (16)
+        GVL_SXR_VAC.fb_MR2K3_TXI_GCC_1.i_xDisc_Active, BOOL, 9598096 (8)
+        GVL_SXR_VAC.fb_MR2K3_TXI_GCC_1.i_xHV_ON, BOOL, 9598088 (8)
+        GVL_SXR_VAC.fb_MR2K3_TXI_GCC_1.q_xHV_DIS, BOOL, 9598080 (8)
+        GVL_SXR_VAC.fb_MR2K3_TXI_GPI_1, FB_MKS275, 8410560 (83968)
+        GVL_SXR_VAC.fb_MR2K3_TXI_GPI_1.i_iPRESS_R, INT, 8494336 (16)
+        GVL_SXR_VAC.fb_MR2K3_TXI_PIP_1, FB_PIP_Gamma, 13085248 (87872)
+        GVL_SXR_VAC.fb_MR2K3_TXI_PIP_1.i_iPRESS, INT, 13171440 (16)
+        GVL_SXR_VAC.fb_MR2K3_TXI_PIP_1.i_xSP_DI, BOOL, 13171456 (8)
+        GVL_SXR_VAC.fb_MR2K3_TXI_PIP_1.q_xHVEna_DO, BOOL, 13171424 (8)
+        GVL_SXR_VAC.fb_PA1K0, FB_PIP_Gamma, 12821632 (87872)
+        GVL_SXR_VAC.fb_PA1K0.i_iPRESS, INT, 12907824 (16)
+        GVL_SXR_VAC.fb_PA1K0.i_xSP_DI, BOOL, 12907840 (8)
+        GVL_SXR_VAC.fb_PA1K0.q_xHVEna_DO, BOOL, 12907808 (8)
+        GVL_SXR_VAC.fb_PA1K0_GCC_1, FB_MKS422, 9257152 (85120)
+        GVL_SXR_VAC.fb_PA1K0_GCC_1.i_iPRESS_R, INT, 9342176 (16)
+        GVL_SXR_VAC.fb_PA1K0_GCC_1.q_xHV_DIS, BOOL, 9342192 (8)
+        GVL_SXR_VAC.fb_PA1K0_GPI_1, FB_MKS317, 8158592 (84032)
+        GVL_SXR_VAC.fb_PA1K0_GPI_1.i_iPRESS_R, INT, 8242336 (16)
+        GVL_SXR_VAC.fb_PA1K0_PIP_1, FB_PIP_Gamma, 12733760 (87872)
+        GVL_SXR_VAC.fb_PA1K0_PIP_1.i_iPRESS, INT, 12819952 (16)
+        GVL_SXR_VAC.fb_PA1K0_PIP_1.i_xSP_DI, BOOL, 12819968 (8)
+        GVL_SXR_VAC.fb_PA1K0_PIP_1.q_xHVEna_DO, BOOL, 12819936 (8)
+        GVL_SXR_VAC.fb_PCPM3B_GFS_1, FB_MKS422, 8916672 (85120)
+        GVL_SXR_VAC.fb_PCPM3B_GFS_1.i_iPRESS_R, INT, 9001696 (16)
+        GVL_SXR_VAC.fb_PCPM3B_GFS_1.q_xHV_DIS, BOOL, 9001712 (8)
+        GVL_SXR_VAC.fb_PCPM3B_PIP_1, FB_PIP_Gamma, 12645888 (87872)
+        GVL_SXR_VAC.fb_PCPM3B_PIP_1.i_iPRESS, INT, 12732080 (16)
+        GVL_SXR_VAC.fb_PCPM3B_PIP_1.i_xSP_DI, BOOL, 12732096 (8)
+        GVL_SXR_VAC.fb_PCPM3B_PIP_1.q_xHVEna_DO, BOOL, 12732064 (8)
+        GVL_SXR_VAC.fb_RTDSK0_GCC_1, FB_MKS422, 8746432 (85120)
+        GVL_SXR_VAC.fb_RTDSK0_GCC_1.i_iPRESS_R, INT, 8831456 (16)
+        GVL_SXR_VAC.fb_RTDSK0_GCC_1.q_xHV_DIS, BOOL, 8831472 (8)
+        GVL_SXR_VAC.fb_RTDSK0_GPI_1, FB_MKS317, 7738432 (84032)
+        GVL_SXR_VAC.fb_RTDSK0_GPI_1.i_iPRESS_R, INT, 7822176 (16)
+        GVL_SXR_VAC.fb_RTDSK0_PIP_1, FB_PIP_Gamma, 12206528 (87872)
+        GVL_SXR_VAC.fb_RTDSK0_PIP_1.i_iPRESS, INT, 12292720 (16)
+        GVL_SXR_VAC.fb_RTDSK0_PIP_1.i_xSP_DI, BOOL, 12292736 (8)
+        GVL_SXR_VAC.fb_RTDSK0_PIP_1.q_xHVEna_DO, BOOL, 12292704 (8)
+        GVL_SXR_VAC.fb_RTDSK0_PIP_2, FB_PIP_Gamma, 12294400 (87872)
+        GVL_SXR_VAC.fb_RTDSK0_PIP_2.i_iPRESS, INT, 12380592 (16)
+        GVL_SXR_VAC.fb_RTDSK0_PIP_2.i_xSP_DI, BOOL, 12380608 (8)
+        GVL_SXR_VAC.fb_RTDSK0_PIP_2.q_xHVEna_DO, BOOL, 12380576 (8)
+        GVL_SXR_VAC.fb_RTDSK0_PIP_3, FB_PIP_Gamma, 12382272 (87872)
+        GVL_SXR_VAC.fb_RTDSK0_PIP_3.i_iPRESS, INT, 12468464 (16)
+        GVL_SXR_VAC.fb_RTDSK0_PIP_3.i_xSP_DI, BOOL, 12468480 (8)
+        GVL_SXR_VAC.fb_RTDSK0_PIP_3.q_xHVEna_DO, BOOL, 12468448 (8)
+        GVL_SXR_VAC.fb_RTDSK0_PIP_4, FB_PIP_Gamma, 12470144 (87872)
+        GVL_SXR_VAC.fb_RTDSK0_PIP_4.i_iPRESS, INT, 12556336 (16)
+        GVL_SXR_VAC.fb_RTDSK0_PIP_4.i_xSP_DI, BOOL, 12556352 (8)
+        GVL_SXR_VAC.fb_RTDSK0_PIP_4.q_xHVEna_DO, BOOL, 12556320 (8)
+        GVL_SXR_VAC.fb_RTDSK0_PIP_5, FB_PIP_Gamma, 12558016 (87872)
+        GVL_SXR_VAC.fb_RTDSK0_PIP_5.i_iPRESS, INT, 12644208 (16)
+        GVL_SXR_VAC.fb_RTDSK0_PIP_5.i_xSP_DI, BOOL, 12644224 (8)
+        GVL_SXR_VAC.fb_RTDSK0_PIP_5.q_xHVEna_DO, BOOL, 12644192 (8)
+        GVL_SXR_VAC.fb_RTDSK0_VGC_1, FB_VGC, 9854528 (174080)
+        GVL_SXR_VAC.fb_RTDSK0_VGC_1.i_xClsLS, BOOL, 10028520 (8)
+        GVL_SXR_VAC.fb_RTDSK0_VGC_1.i_xOpnLS, BOOL, 10028512 (8)
+        GVL_SXR_VAC.fb_RTDSK0_VGC_1.q_xOPN_DO, BOOL, 10028528 (8)
+        GVL_SXR_VAC.fb_SL1K0_POWER_GCC_1, FB_MKS422, 9001792 (85120)
+        GVL_SXR_VAC.fb_SL1K0_POWER_GCC_1.i_iPRESS_R, INT, 9086816 (16)
+        GVL_SXR_VAC.fb_SL1K0_POWER_GCC_1.q_xHV_DIS, BOOL, 9086832 (8)
+        GVL_SXR_VAC.fb_SL1K0_POWER_GPI_1, FB_MKS317, 7906496 (84032)
+        GVL_SXR_VAC.fb_SL1K0_POWER_GPI_1.i_iPRESS_R, INT, 7990240 (16)
+        GVL_SXR_VAC.fb_SP1K1_MONO_GCC_1, FB_MKS500, 9598400 (85376)
+        GVL_SXR_VAC.fb_SP1K1_MONO_GCC_1.i_iPRESS_R, INT, 9683440 (16)
+        GVL_SXR_VAC.fb_SP1K1_MONO_GCC_1.i_xDisc_Active, BOOL, 9683472 (8)
+        GVL_SXR_VAC.fb_SP1K1_MONO_GCC_1.i_xHV_ON, BOOL, 9683464 (8)
+        GVL_SXR_VAC.fb_SP1K1_MONO_GCC_1.q_xHV_DIS, BOOL, 9683456 (8)
+        GVL_SXR_VAC.fb_SP1K1_MONO_GPI_1, FB_MKS275, 8494528 (83968)
+        GVL_SXR_VAC.fb_SP1K1_MONO_GPI_1.i_iPRESS_R, INT, 8578304 (16)
+        GVL_SXR_VAC.fb_SP1K1_MONO_PIP_1, FB_PIP_Gamma, 13173120 (87872)
+        GVL_SXR_VAC.fb_SP1K1_MONO_PIP_1.i_iPRESS, INT, 13259312 (16)
+        GVL_SXR_VAC.fb_SP1K1_MONO_PIP_1.i_xSP_DI, BOOL, 13259328 (8)
+        GVL_SXR_VAC.fb_SP1K1_MONO_PIP_1.q_xHVEna_DO, BOOL, 13259296 (8)
+        GVL_SXR_VAC.fb_SP1K1_MONO_PIP_2, FB_PIP_Gamma, 13260992 (87872)
+        GVL_SXR_VAC.fb_SP1K1_MONO_PIP_2.i_iPRESS, INT, 13347184 (16)
+        GVL_SXR_VAC.fb_SP1K1_MONO_PIP_2.i_xSP_DI, BOOL, 13347200 (8)
+        GVL_SXR_VAC.fb_SP1K1_MONO_PIP_2.q_xHVEna_DO, BOOL, 13347168 (8)
+        GVL_SXR_VAC.fb_SP1K1_MONO_VGC_1, FB_VGC, 11247168 (174080)
+        GVL_SXR_VAC.fb_SP1K1_MONO_VGC_1.i_xClsLS, BOOL, 11421160 (8)
+        GVL_SXR_VAC.fb_SP1K1_MONO_VGC_1.i_xOpnLS, BOOL, 11421152 (8)
+        GVL_SXR_VAC.fb_SP1K1_MONO_VGC_1.q_xOPN_DO, BOOL, 11421168 (8)
+        GVL_SXR_VAC.fb_SP1K1_MONO_VGC_2, FB_VGC, 11421248 (174080)
+        GVL_SXR_VAC.fb_SP1K1_MONO_VGC_2.i_xClsLS, BOOL, 11595240 (8)
+        GVL_SXR_VAC.fb_SP1K1_MONO_VGC_2.i_xOpnLS, BOOL, 11595232 (8)
+        GVL_SXR_VAC.fb_SP1K1_MONO_VGC_2.q_xOPN_DO, BOOL, 11595248 (8)
+        GVL_SXR_VAC.fb_TV2K0_GCC_1, FB_MKS422, 9086912 (85120)
+        GVL_SXR_VAC.fb_TV2K0_GCC_1.i_iPRESS_R, INT, 9171936 (16)
+        GVL_SXR_VAC.fb_TV2K0_GCC_1.q_xHV_DIS, BOOL, 9171952 (8)
+        GVL_SXR_VAC.fb_TV2K0_GCC_2, FB_MKS422, 9172032 (85120)
+        GVL_SXR_VAC.fb_TV2K0_GCC_2.i_iPRESS_R, INT, 9257056 (16)
+        GVL_SXR_VAC.fb_TV2K0_GCC_2.q_xHV_DIS, BOOL, 9257072 (8)
+        GVL_SXR_VAC.fb_TV2K0_GPI_1, FB_MKS317, 7990528 (84032)
+        GVL_SXR_VAC.fb_TV2K0_GPI_1.i_iPRESS_R, INT, 8074272 (16)
+        GVL_SXR_VAC.fb_TV2K0_GPI_2, FB_MKS317, 8074560 (84032)
+        GVL_SXR_VAC.fb_TV2K0_GPI_2.i_iPRESS_R, INT, 8158304 (16)
+        GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface, FB_VFS_Interface, 12117568 (88960)
+        GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_eVFS_State, E_VGC, 12206464 (16)
+        GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xMPS_OK, BOOL, 12206456 (8)
+        GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xTrigger, BOOL, 12206432 (8)
+        GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVAC_FAULT_OK, BOOL, 12205616 (8)
+        GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVFS_Closed, BOOL, 12206448 (8)
+        GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVFS_Open, BOOL, 12206440 (8)
+        GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.iq_stValve.xCLS_SW, BOOL, 12204296 (8)
+        GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xCLS_SW, BOOL, 12206384 (8)
+        GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOPN_SW, BOOL, 12206376 (8)
+        GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOverrideMode, BOOL, 12206400 (8)
+        GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOverrideOpen, BOOL, 12206408 (8)
+        GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xPRESS_OK, BOOL, 12206368 (8)
+        GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xVAC_FAULT_Reset, BOOL, 12206392 (8)
+        GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xVetoValveClosed, BOOL, 12206424 (8)
+        GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xVetoValveOpenDO, BOOL, 12206416 (8)
+        GVL_SXR_VAC.fb_TV2K0_VGC_1, FB_VGC, 10724928 (174080)
+        GVL_SXR_VAC.fb_TV2K0_VGC_1.i_xClsLS, BOOL, 10898920 (8)
+        GVL_SXR_VAC.fb_TV2K0_VGC_1.i_xOpnLS, BOOL, 10898912 (8)
+        GVL_SXR_VAC.fb_TV2K0_VGC_1.q_xOPN_DO, BOOL, 10898928 (8)
+        GVL_SXR_VAC.fb_TV3K0_GCC_1, FB_MKS500, 9683776 (85376)
+        GVL_SXR_VAC.fb_TV3K0_GCC_1.i_iPRESS_R, INT, 9768816 (16)
+        GVL_SXR_VAC.fb_TV3K0_GCC_1.i_xDisc_Active, BOOL, 9768848 (8)
+        GVL_SXR_VAC.fb_TV3K0_GCC_1.i_xHV_ON, BOOL, 9768840 (8)
+        GVL_SXR_VAC.fb_TV3K0_GCC_1.q_xHV_DIS, BOOL, 9768832 (8)
+        GVL_SXR_VAC.fb_TV3K0_GPI_1, FB_MKS275, 8578496 (83968)
+        GVL_SXR_VAC.fb_TV3K0_GPI_1.i_iPRESS_R, INT, 8662272 (16)
+        GVL_SXR_VAC.fb_TV3K0_PIP_1, FB_PIP_Gamma, 13348864 (87872)
+        GVL_SXR_VAC.fb_TV3K0_PIP_1.i_iPRESS, INT, 13435056 (16)
+        GVL_SXR_VAC.fb_TV3K0_PIP_1.i_xSP_DI, BOOL, 13435072 (8)
+        GVL_SXR_VAC.fb_TV3K0_PIP_1.q_xHVEna_DO, BOOL, 13435040 (8)
+        GVL_SXR_VAC.fb_TV3K0_VGC_1, FB_VGC, 11769408 (174080)
+        GVL_SXR_VAC.fb_TV3K0_VGC_1.i_xClsLS, BOOL, 11943400 (8)
+        GVL_SXR_VAC.fb_TV3K0_VGC_1.i_xOpnLS, BOOL, 11943392 (8)
+        GVL_SXR_VAC.fb_TV3K0_VGC_1.q_xOPN_DO, BOOL, 11943408 (8)
+
+.. raw:: html
+
+   </details>
+   <br />
+
+
+GVL_TcUnit
+^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_TcUnit.AdsLogger, FB_ADSLogStringMessageFifoQueue, 3384736 (4128864)
+        GVL_TcUnit.CurrentTestIsFinished, BOOL, 3366096 (8)
+        GVL_TcUnit.CurrentTestNameBeingCalled, STRING(255), 3366656 (2048)
+        GVL_TcUnit.CurrentTestSuiteBeingCalled, POINTER TO FB_TestSuite, 3366624 (32)
+        GVL_TcUnit.IgnoreCurrentTest, BOOL, 3366104 (8)
+        GVL_TcUnit.NumberOfInitializedTestSuites, UINT, 3368704 (16)
+        GVL_TcUnit.TcUnitRunner, FB_TcUnitRunner, 3366112 (512)
+        GVL_TcUnit.TestSuiteAddresses, POINTER TO FB_TestSuite, 3368736 (16000)
+        GVL_TcUnit.TestSuiteIsRegistered, BOOL, 3361704 (8)
+
+
+GVL_VAC_INTF
+^^^^^^^^^^^^
+
+.. raw:: html
+
+   <details>
+       <summary>20 Symbols</summary>
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_VAC_INTF.fb_AT1K0_GAS_GCC_10_reader, FB_TGCC_ADS, 13535296 (90688)
+        GVL_VAC_INTF.fb_AT1K0_GAS_GCC_140_reader, FB_TGCC_ADS, 13625984 (90688)
+        GVL_VAC_INTF.fb_EM1K0_GMD_GCC_10_reader, FB_TGCC_ADS, 13444544 (90688)
+        GVL_VAC_INTF.fb_EM2K0_XGMD_GCC_10_reader, FB_TGCC_ADS, 13716672 (90688)
+        GVL_VAC_INTF.fb_EM2K0_XGMD_GCC_90_reader, FB_TGCC_ADS, 13807360 (90688)
+        GVL_VAC_INTF.fb_PC1K1_INTF_GCC_1, FB_EXT_TREATY_GAUGE, 13443360 (1184)
+        GVL_VAC_INTF.fb_PC1K1_INTF_GCC_1.i_xEXT_Press_OK, BOOL, 13444520 (8)
+        GVL_VAC_INTF.fb_RTDSK0_INTF_VGC_1, FB_EXT_TREATY_VGC, 13437920 (3008)
+        GVL_VAC_INTF.fb_RTDSK0_INTF_VGC_1.q_xTREATY_VGC_STATUS, BOOL, 13440896 (8)
+        GVL_VAC_INTF.fb_TMO_ILK_Lower, FB_EXT_ILK, 13442208 (1152)
+        GVL_VAC_INTF.fb_TMO_ILK_Lower.q_xILK_OK_DO, BOOL, 13443328 (8)
+        GVL_VAC_INTF.fb_TMO_ILK_Uppper, FB_EXT_ILK, 13441056 (1152)
+        GVL_VAC_INTF.fb_TMO_ILK_Uppper.q_xILK_OK_DO, BOOL, 13442176 (8)
+        GVL_VAC_INTF.fb_TV1K0_INTF_GCC_1, FB_EXT_TREATY_GAUGE, 13436736 (1184)
+        GVL_VAC_INTF.fb_TV1K0_INTF_GCC_1.i_xEXT_Press_OK, BOOL, 13437896 (8)
+        GVL_VAC_INTF.n_AT1K0_VAC_counter, UDINT, 13535232 (32)
+        GVL_VAC_INTF.n_EM1K0_VAC_counter, UDINT, 7601184 (32)
+        GVL_VAC_INTF.n_EM2K0_VAC_counter, UDINT, 13535264 (32)
+        GVL_VAC_INTF.st_TMO_ILK_Lower, ST_EXT_ILK, 13440992 (64)
+        GVL_VAC_INTF.st_TMO_ILK_Upper, ST_EXT_ILK, 13440928 (64)
+
+.. raw:: html
+
+   </details>
+   <br />
+
+
+GVL_VFS
+^^^^^^^
+
+.. raw:: html
+
+   <details>
+       <summary>22 Symbols</summary>
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_VFS.fb_TV2K0_VFS_1, FB_VFS, 22303168 (111232)
+        GVL_VFS.fb_TV2K0_VFS_1.i_xCLS_SW, BOOL, 22414264 (8)
+        GVL_VFS.fb_TV2K0_VFS_1.i_xClsLS, BOOL, 22414184 (8)
+        GVL_VFS.fb_TV2K0_VFS_1.i_xOPN_SW, BOOL, 22414256 (8)
+        GVL_VFS.fb_TV2K0_VFS_1.i_xOpnLS, BOOL, 22414176 (8)
+        GVL_VFS.fb_TV2K0_VFS_1.i_xOverrideMode, BOOL, 22414280 (8)
+        GVL_VFS.fb_TV2K0_VFS_1.i_xOverrideOpen, BOOL, 22414288 (8)
+        GVL_VFS.fb_TV2K0_VFS_1.i_xPress_OK, BOOL, 22414248 (8)
+        GVL_VFS.fb_TV2K0_VFS_1.i_xTrigger, BOOL, 22414224 (8)
+        GVL_VFS.fb_TV2K0_VFS_1.i_xVAC_FAULT_Reset, BOOL, 22414272 (8)
+        GVL_VFS.fb_TV2K0_VFS_1.i_xVetoValveClosed, BOOL, 22414240 (8)
+        GVL_VFS.fb_TV2K0_VFS_1.i_xVetoValveOpenDO, BOOL, 22414232 (8)
+        GVL_VFS.fb_TV2K0_VFS_1.q_eVFS_State, E_VGC, 22414336 (16)
+        GVL_VFS.fb_TV2K0_VFS_1.q_xClose_A, BOOL, 22414192 (8)
+        GVL_VFS.fb_TV2K0_VFS_1.q_xClose_B, BOOL, 22414200 (8)
+        GVL_VFS.fb_TV2K0_VFS_1.q_xClose_C, BOOL, 22414208 (8)
+        GVL_VFS.fb_TV2K0_VFS_1.q_xMPS_OK, BOOL, 22414328 (8)
+        GVL_VFS.fb_TV2K0_VFS_1.q_xOPN_DO, BOOL, 22414216 (8)
+        GVL_VFS.fb_TV2K0_VFS_1.q_xTrigger, BOOL, 22414296 (8)
+        GVL_VFS.fb_TV2K0_VFS_1.q_xVAC_FAULT_OK, BOOL, 22414320 (8)
+        GVL_VFS.fb_TV2K0_VFS_1.q_xVFS_Closed, BOOL, 22414312 (8)
+        GVL_VFS.fb_TV2K0_VFS_1.q_xVFS_Open, BOOL, 22414304 (8)
+
+.. raw:: html
+
+   </details>
+   <br />
+
+
+GVL_Variables
+^^^^^^^^^^^^^
+
+.. raw:: html
+
+   <details>
+       <summary>29 Symbols</summary>
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        GVL_Variables.fbEcatDiagWrapper, FB_EcatDiagWrapper, 20834432 (1095872)
+        GVL_Variables.fbEcatDiagWrapper.arrEcMasterNetId, T_AmsNetIdArr, 21917744 (48)
+        GVL_Variables.fbEcatDiagWrapper.nEcMasterDeviceId, UINT, 21917728 (16)
+        GVL_Variables.fbEcatDiagWrapper.nEcMasterDevState, UINT, 21917712 (16)
+        GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCount, UINT, 21917696 (16)
+        GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCountCfg, UINT, 21917984 (16)
+        GVL_Variables.fbEcatDiagWrapper.wFrmXWcState, WORD, 20834848 (16)
+        GVL_Variables.fbLogHandler, FB_LogHandler, 15048576 (5785856)
+        GVL_Variables.g_FastFault, FB_FastFault, 15023424 (25088)
+        GVL_Variables.g_FastFaultOutput2, FB_HardwareFFOutput, 14701888 (160768)
+        GVL_Variables.g_FastFaultOutput2.q_xFastFaultOut, BOOL, 14701960 (8)
+        GVL_Variables.g_FastFaultOutputAll, FB_HardwareFFOutput, 14541120 (160768)
+        GVL_Variables.g_FastFaultOutputAll.q_xFastFaultOut, BOOL, 14541192 (8)
+        GVL_Variables.g_FastFaultOutputINTF, FB_HardwareFFOutput, 14862656 (160768)
+        GVL_Variables.g_FastFaultOutputINTF.q_xFastFaultOut, BOOL, 14862728 (8)
+        GVL_Variables.g_FastFaultOutputK0, FB_HardwareFFOutput, 13898048 (160768)
+        GVL_Variables.g_FastFaultOutputK0.q_xFastFaultOut, BOOL, 13898120 (8)
+        GVL_Variables.g_FastFaultOutputK2, FB_HardwareFFOutput, 14058816 (160768)
+        GVL_Variables.g_FastFaultOutputK2.q_xFastFaultOut, BOOL, 14058888 (8)
+        GVL_Variables.g_FastFaultOutputK3, FB_HardwareFFOutput, 14219584 (160768)
+        GVL_Variables.g_FastFaultOutputK3.q_xFastFaultOut, BOOL, 14219656 (8)
+        GVL_Variables.g_FastFaultOutputK4, FB_HardwareFFOutput, 14380352 (160768)
+        GVL_Variables.g_FastFaultOutputK4.q_xFastFaultOut, BOOL, 14380424 (8)
+        GVL_Variables.g_fbArbiter1, FB_Arbiter, 21930304 (372864)
+        GVL_Variables.xReset_PMPS_FFO_K0, BOOL, 7599984 (8)
+        GVL_Variables.xReset_PMPS_FFO_K2, BOOL, 7599992 (8)
+        GVL_Variables.xReset_PMPS_FFO_K3, BOOL, 7600568 (8)
+        GVL_Variables.xReset_PMPS_FFO_K4, BOOL, 15048512 (8)
+        GVL_Variables.xSystemOverrideMode, BOOL, 7532984 (8)
+
+.. raw:: html
+
+   </details>
+   <br />
+
+
+Global_Constants
+^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        Global_Constants.EMPTY_EVENT_CLASS, GUID, 3364928 (128)
+        Global_Constants.EMPTY_EVENT_ID, UDINT, 3365056 (32)
+        Global_Constants.EMPTY_SEVERITY, TcEventSeverity, 3361712 (16)
+        Global_Constants.SUCCESS_EVENT, TcEventEntry, 3365088 (192)
+
+
+Global_Variables
+^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+   <details>
+       <summary>366 Symbols</summary>
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        Global_Variables.ADSIGRP_DEVICE_DATA, UDINT, 3156576 (32)
+        Global_Variables.ADSIGRP_IOIMAGE_CLEARI, UDINT, 3156480 (32)
+        Global_Variables.ADSIGRP_IOIMAGE_CLEARO, UDINT, 3156512 (32)
+        Global_Variables.ADSIGRP_IOIMAGE_RISIZE, UDINT, 3156352 (32)
+        Global_Variables.ADSIGRP_IOIMAGE_ROSIZE, UDINT, 3156448 (32)
+        Global_Variables.ADSIGRP_IOIMAGE_RWIB, UDINT, 3156288 (32)
+        Global_Variables.ADSIGRP_IOIMAGE_RWIOB, UDINT, 3156544 (32)
+        Global_Variables.ADSIGRP_IOIMAGE_RWIX, UDINT, 3156320 (32)
+        Global_Variables.ADSIGRP_IOIMAGE_RWOB, UDINT, 3156384 (32)
+        Global_Variables.ADSIGRP_IOIMAGE_RWOX, UDINT, 3156416 (32)
+        Global_Variables.ADSIGRP_SYM_DOWNLOAD, UDINT, 3156160 (32)
+        Global_Variables.ADSIGRP_SYM_HNDBYNAME, UDINT, 3155936 (32)
+        Global_Variables.ADSIGRP_SYM_INFOBYNAME, UDINT, 3156064 (32)
+        Global_Variables.ADSIGRP_SYM_INFOBYNAMEEX, UDINT, 3156128 (32)
+        Global_Variables.ADSIGRP_SYM_RELEASEHND, UDINT, 3156032 (32)
+        Global_Variables.ADSIGRP_SYM_UPLOAD, UDINT, 3156192 (32)
+        Global_Variables.ADSIGRP_SYM_UPLOADINFO, UDINT, 3156224 (32)
+        Global_Variables.ADSIGRP_SYM_VALBYHND, UDINT, 3156000 (32)
+        Global_Variables.ADSIGRP_SYM_VALBYNAME, UDINT, 3155968 (32)
+        Global_Variables.ADSIGRP_SYM_VERSION, UDINT, 3156096 (32)
+        Global_Variables.ADSIGRP_SYMNAME, UDINT, 3155872 (32)
+        Global_Variables.ADSIGRP_SYMNOTE, UDINT, 3156256 (32)
+        Global_Variables.ADSIGRP_SYMTAB, UDINT, 3155840 (32)
+        Global_Variables.ADSIGRP_SYMVAL, UDINT, 3155904 (32)
+        Global_Variables.ADSIOFFS_DEVDATA_ADSSTATE, UDINT, 3156608 (32)
+        Global_Variables.ADSIOFFS_DEVDATA_DEVSTATE, UDINT, 3156640 (32)
+        Global_Variables.ADSLOG_MSGTYPE_ERROR, DWORD, 3157696 (32)
+        Global_Variables.ADSLOG_MSGTYPE_HINT, DWORD, 3157632 (32)
+        Global_Variables.ADSLOG_MSGTYPE_LOG, DWORD, 3157728 (32)
+        Global_Variables.ADSLOG_MSGTYPE_MSGBOX, DWORD, 3157760 (32)
+        Global_Variables.ADSLOG_MSGTYPE_RESOURCE, DWORD, 3157792 (32)
+        Global_Variables.ADSLOG_MSGTYPE_STRING, DWORD, 3157824 (32)
+        Global_Variables.ADSLOG_MSGTYPE_WARN, DWORD, 3157664 (32)
+        Global_Variables.ADSSTATE_CONFIG, UINT, 3155728 (16)
+        Global_Variables.ADSSTATE_ERROR, UINT, 3155664 (16)
+        Global_Variables.ADSSTATE_EXCEPTION, UINT, 3155792 (16)
+        Global_Variables.ADSSTATE_IDLE, UINT, 3155504 (16)
+        Global_Variables.ADSSTATE_INCOMPATIBLE, UINT, 3155776 (16)
+        Global_Variables.ADSSTATE_INIT, UINT, 3155536 (16)
+        Global_Variables.ADSSTATE_INVALID, UINT, 3155488 (16)
+        Global_Variables.ADSSTATE_LOADCFG, UINT, 3155616 (16)
+        Global_Variables.ADSSTATE_MAXSTATES, UINT, 3155808 (16)
+        Global_Variables.ADSSTATE_POWERFAILURE, UINT, 3155632 (16)
+        Global_Variables.ADSSTATE_POWERGOOD, UINT, 3155648 (16)
+        Global_Variables.ADSSTATE_RECONFIG, UINT, 3155744 (16)
+        Global_Variables.ADSSTATE_RESET, UINT, 3155520 (16)
+        Global_Variables.ADSSTATE_RESUME, UINT, 3155712 (16)
+        Global_Variables.ADSSTATE_RUN, UINT, 3155568 (16)
+        Global_Variables.ADSSTATE_SAVECFG, UINT, 3155600 (16)
+        Global_Variables.ADSSTATE_SHUTDOWN, UINT, 3155680 (16)
+        Global_Variables.ADSSTATE_START, UINT, 3155552 (16)
+        Global_Variables.ADSSTATE_STOP, UINT, 3155584 (16)
+        Global_Variables.ADSSTATE_STOPPING, UINT, 3155760 (16)
+        Global_Variables.ADSSTATE_SUSPEND, UINT, 3155696 (16)
+        Global_Variables.AMSLOGGER_IGR_GENERAL, UDINT, 3223488 (32)
+        Global_Variables.AMSLOGGER_IOF_MODE, UDINT, 3223520 (32)
+        Global_Variables.AMSPORT_AMSLOGGER, UINT, 3223552 (16)
+        Global_Variables.AMSPORT_EVENTLOG, UINT, 3155200 (16)
+        Global_Variables.AMSPORT_LOGGER, UINT, 3154896 (16)
+        Global_Variables.AMSPORT_R0_CAM, UINT, 3155424 (16)
+        Global_Variables.AMSPORT_R0_CAMTOOL, UINT, 3155440 (16)
+        Global_Variables.AMSPORT_R0_CNC, UINT, 3155312 (16)
+        Global_Variables.AMSPORT_R0_IO, UINT, 3155232 (16)
+        Global_Variables.AMSPORT_R0_ISG, UINT, 3155296 (16)
+        Global_Variables.AMSPORT_R0_LINE, UINT, 3155328 (16)
+        Global_Variables.AMSPORT_R0_NC, UINT, 3155248 (16)
+        Global_Variables.AMSPORT_R0_NCSAF, UINT, 3155264 (16)
+        Global_Variables.AMSPORT_R0_NCSVB, UINT, 3155280 (16)
+        Global_Variables.AMSPORT_R0_PLC, UINT, 3155344 (16)
+        Global_Variables.AMSPORT_R0_PLC_RTS1, UINT, 3155360 (16)
+        Global_Variables.AMSPORT_R0_PLC_RTS2, UINT, 3155376 (16)
+        Global_Variables.AMSPORT_R0_PLC_RTS3, UINT, 3155392 (16)
+        Global_Variables.AMSPORT_R0_PLC_RTS4, UINT, 3155408 (16)
+        Global_Variables.AMSPORT_R0_RTIME, UINT, 3155216 (16)
+        Global_Variables.AMSPORT_R3_SCOPESERVER, UINT, 3155472 (16)
+        Global_Variables.AMSPORT_R3_SYSSERV, UINT, 3155456 (16)
+        Global_Variables.AMSPORT_TCPIPSRV, UINT, 3359984 (16)
+        Global_Variables.bEcFoeOpenFileNameWithFileExt, BOOL, 7532976 (8)
+        Global_Variables.BOOTDATAFLAGS_PERSISTENT_INVALID, BYTE, 3157856 (8)
+        Global_Variables.BOOTDATAFLAGS_PERSISTENT_LOADED, BYTE, 3155832 (8)
+        Global_Variables.BOOTDATAFLAGS_RETAIN_INVALID, BYTE, 3073160 (8)
+        Global_Variables.BOOTDATAFLAGS_RETAIN_LOADED, BYTE, 3072376 (8)
+        Global_Variables.BOOTDATAFLAGS_RETAIN_REQUESTED, BYTE, 3155824 (8)
+        Global_Variables.bSeqReadDrvAttrAndValue, BOOL, 7532968 (8)
+        Global_Variables.CONNECT_MODE_ENABLEDBG, DWORD, 3364032 (32)
+        Global_Variables.DATE_AND_TIME_SECPERDAY, DWORD, 3236448 (32)
+        Global_Variables.DATE_AND_TIME_SECPERWEEK, DWORD, 3236480 (32)
+        Global_Variables.DBG_OUTPUT_FILE, DWORD, 3242752 (32)
+        Global_Variables.DBG_OUTPUT_LOG, DWORD, 3242720 (32)
+        Global_Variables.DBG_OUTPUT_NONE, DWORD, 3242688 (32)
+        Global_Variables.DBG_OUTPUT_VISU, DWORD, 3242784 (32)
+        Global_Variables.DEFAULT_ADS_TIMEOUT, TIME, 3158592 (32)
+        Global_Variables.DEFAULT_BACKLASHVALUE, LREAL, 7531712 (64)
+        Global_Variables.DEFAULT_CSV_FIELD_DOUBLE_QUOTE, BYTE, 3222232 (8)
+        Global_Variables.DEFAULT_CSV_FIELD_SEP, BYTE, 3160256 (8)
+        Global_Variables.DEFAULT_CSV_RECORD_SEP_CR, BYTE, 3359024 (8)
+        Global_Variables.DEFAULT_CSV_RECORD_SEP_LF, BYTE, 3359032 (8)
+        Global_Variables.DEFAULT_HOME_POSITION, LREAL, 7531648 (64)
+        Global_Variables.EC_ADS_IGRP_CANOPEN_SDO, UDINT, 7533216 (32)
+        Global_Variables.EC_ADS_IGRP_CANOPEN_SDO_LASTERROR, UDINT, 7533248 (32)
+        Global_Variables.EC_ADS_IGRP_ECAT_SOE, UDINT, 7532864 (32)
+        Global_Variables.EC_ADS_IGRP_ECAT_SOE_LASTERROR, UDINT, 7532896 (32)
+        Global_Variables.EC_ADS_IGRP_FOE_FCLOSE, UDINT, 7533056 (32)
+        Global_Variables.EC_ADS_IGRP_FOE_FOPENREAD, UDINT, 7532992 (32)
+        Global_Variables.EC_ADS_IGRP_FOE_FOPENWRITE, UDINT, 7533024 (32)
+        Global_Variables.EC_ADS_IGRP_FOE_FREAD, UDINT, 7533088 (32)
+        Global_Variables.EC_ADS_IGRP_FOE_FWRITE, UDINT, 7533120 (32)
+        Global_Variables.EC_ADS_IGRP_FOE_LASTERROR, UDINT, 7533184 (32)
+        Global_Variables.EC_ADS_IGRP_FOE_PROGRESSINFO, UDINT, 7533152 (32)
+        Global_Variables.EC_ADS_IGRP_MASTER_COUNT_FRAME, UDINT, 7532832 (32)
+        Global_Variables.EC_ADS_IGRP_MASTER_COUNT_SLAVE, UDINT, 7532448 (32)
+        Global_Variables.EC_ADS_IGRP_MASTER_DEVICESTATE, UDINT, 7532800 (32)
+        Global_Variables.EC_ADS_IGRP_MASTER_SENDCMD, UDINT, 7532608 (32)
+        Global_Variables.EC_ADS_IGRP_MASTER_SLAVE_ABNORMAL_STATE_CHANGES, UDINT, 7532736 (32)
+        Global_Variables.EC_ADS_IGRP_MASTER_SLAVE_ADDRESSES, UDINT, 7532576 (32)
+        Global_Variables.EC_ADS_IGRP_MASTER_SLAVE_CRC, UDINT, 7532704 (32)
+        Global_Variables.EC_ADS_IGRP_MASTER_SLAVE_IDENTITY, UDINT, 7532672 (32)
+        Global_Variables.EC_ADS_IGRP_MASTER_SLAVE_SETPRESENT_CHANGES, UDINT, 7532768 (32)
+        Global_Variables.EC_ADS_IGRP_MASTER_STATEMACHINE, UDINT, 7532320 (32)
+        Global_Variables.EC_ADS_IGRP_SLAVE_STATEMACHINE, UDINT, 7532640 (32)
+        Global_Variables.EC_ADS_IOFFS_MASTER_COUNT_PORT, UDINT, 7532512 (32)
+        Global_Variables.EC_ADS_IOFFS_MASTER_COUNT_ROUTER, UDINT, 7532544 (32)
+        Global_Variables.EC_ADS_IOFFS_MASTER_COUNT_SLAVE, UDINT, 7532480 (32)
+        Global_Variables.EC_ADS_IOFFS_MASTER_CURSTATE, UDINT, 7532352 (32)
+        Global_Variables.EC_ADS_IOFFS_MASTER_INTERNALSTATE, UDINT, 7532416 (32)
+        Global_Variables.EC_ADS_IOFFS_MASTER_REQSTATE, UDINT, 7532384 (32)
+        Global_Variables.EC_AMSPORT_MASTER, UINT, 7524048 (16)
+        Global_Variables.EC_CMD_TYPE_APRD, BYTE, 7531632 (8)
+        Global_Variables.EC_CMD_TYPE_APRW, BYTE, 7532064 (8)
+        Global_Variables.EC_CMD_TYPE_APWR, BYTE, 7531640 (8)
+        Global_Variables.EC_CMD_TYPE_BRD, BYTE, 7532096 (8)
+        Global_Variables.EC_CMD_TYPE_BRW, BYTE, 7532112 (8)
+        Global_Variables.EC_CMD_TYPE_BWR, BYTE, 7532104 (8)
+        Global_Variables.EC_CMD_TYPE_FPRD, BYTE, 7532072 (8)
+        Global_Variables.EC_CMD_TYPE_FPRW, BYTE, 7532088 (8)
+        Global_Variables.EC_CMD_TYPE_FPWR, BYTE, 7532080 (8)
+        Global_Variables.EC_CMD_TYPE_LRD, BYTE, 7532120 (8)
+        Global_Variables.EC_CMD_TYPE_LRW, BYTE, 7532136 (8)
+        Global_Variables.EC_CMD_TYPE_LWR, BYTE, 7532128 (8)
+        Global_Variables.EC_COE_PROTERR_ACCESS, UDINT, 7533856 (32)
+        Global_Variables.EC_COE_PROTERR_BLK_SIZE, UDINT, 7533728 (32)
+        Global_Variables.EC_COE_PROTERR_CCS_SCS, UDINT, 7533696 (32)
+        Global_Variables.EC_COE_PROTERR_CRC, UDINT, 7533792 (32)
+        Global_Variables.EC_COE_PROTERR_DATA_RANGE, UDINT, 7534272 (32)
+        Global_Variables.EC_COE_PROTERR_DATA_RANGE1, UDINT, 7534304 (32)
+        Global_Variables.EC_COE_PROTERR_DATA_RANGE2, UDINT, 7534336 (32)
+        Global_Variables.EC_COE_PROTERR_DATA_SIZE, UDINT, 7534144 (32)
+        Global_Variables.EC_COE_PROTERR_DATA_SIZE1, UDINT, 7534176 (32)
+        Global_Variables.EC_COE_PROTERR_DATA_SIZE2, UDINT, 7534208 (32)
+        Global_Variables.EC_COE_PROTERR_DICTIONARY, UDINT, 7534528 (32)
+        Global_Variables.EC_COE_PROTERR_GENERAL, UDINT, 7534400 (32)
+        Global_Variables.EC_COE_PROTERR_HARDWARE, UDINT, 7534112 (32)
+        Global_Variables.EC_COE_PROTERR_I_INCOMP, UDINT, 7534080 (32)
+        Global_Variables.EC_COE_PROTERR_INDEX, UDINT, 7533952 (32)
+        Global_Variables.EC_COE_PROTERR_MEMORY, UDINT, 7533824 (32)
+        Global_Variables.EC_COE_PROTERR_MINMAX, UDINT, 7534368 (32)
+        Global_Variables.EC_COE_PROTERR_OFFSET, UDINT, 7534240 (32)
+        Global_Variables.EC_COE_PROTERR_P_INCOMP, UDINT, 7534048 (32)
+        Global_Variables.EC_COE_PROTERR_PDO_LEN, UDINT, 7534016 (32)
+        Global_Variables.EC_COE_PROTERR_PDO_MAP, UDINT, 7533984 (32)
+        Global_Variables.EC_COE_PROTERR_READONLY, UDINT, 7533920 (32)
+        Global_Variables.EC_COE_PROTERR_SEQNO, UDINT, 7533760 (32)
+        Global_Variables.EC_COE_PROTERR_TIMEOUT, UDINT, 7533664 (32)
+        Global_Variables.EC_COE_PROTERR_TOGGLE, UDINT, 7533632 (32)
+        Global_Variables.EC_COE_PROTERR_TRANSFER, UDINT, 7534432 (32)
+        Global_Variables.EC_COE_PROTERR_TRANSFER1, UDINT, 7534464 (32)
+        Global_Variables.EC_COE_PROTERR_TRANSFER2, UDINT, 7534496 (32)
+        Global_Variables.EC_COE_PROTERR_WRITEONLY, UDINT, 7533888 (32)
+        Global_Variables.EC_DCTIME_DATEDELTA_OFFSET, DWORD, 7534560 (32)
+        Global_Variables.EC_DCTIME_DELTA_OFFSET, T_ULARGE_INTEGER, 7534592 (64)
+        Global_Variables.EC_DCTIME_DELTA_OFFSET64, ULINT, 7534848 (64)
+        Global_Variables.EC_DCTIME_TICKSPERDAY, T_ULARGE_INTEGER, 7534784 (64)
+        Global_Variables.EC_DCTIME_TICKSPERDAY64, ULINT, 7535040 (64)
+        Global_Variables.EC_DCTIME_TICKSPERMSEC, T_ULARGE_INTEGER, 7534656 (64)
+        Global_Variables.EC_DCTIME_TICKSPERMSEC64, ULINT, 7534912 (64)
+        Global_Variables.EC_DCTIME_TICKSPERSEC, T_ULARGE_INTEGER, 7534720 (64)
+        Global_Variables.EC_DCTIME_TICKSPERSEC64, ULINT, 7534976 (64)
+        Global_Variables.EC_DEVICE_STATE_BOOTSTRAP, BYTE, 7532168 (8)
+        Global_Variables.EC_DEVICE_STATE_DISABLED, BYTE, 7532216 (8)
+        Global_Variables.EC_DEVICE_STATE_ERROR, BYTE, 7532192 (8)
+        Global_Variables.EC_DEVICE_STATE_INIT, BYTE, 7532152 (8)
+        Global_Variables.EC_DEVICE_STATE_INITCMD_ERROR, BYTE, 7532208 (8)
+        Global_Variables.EC_DEVICE_STATE_INVALID_VPRS, BYTE, 7532200 (8)
+        Global_Variables.EC_DEVICE_STATE_MASK, BYTE, 7532144 (8)
+        Global_Variables.EC_DEVICE_STATE_OP, BYTE, 7532184 (8)
+        Global_Variables.EC_DEVICE_STATE_PREOP, BYTE, 7532160 (8)
+        Global_Variables.EC_DEVICE_STATE_SAFEOP, BYTE, 7532176 (8)
+        Global_Variables.EC_FOE_PROTERR_ACCESS, UDINT, 7533344 (32)
+        Global_Variables.EC_FOE_PROTERR_BOOTSTRAPONLY, UDINT, 7533536 (32)
+        Global_Variables.EC_FOE_PROTERR_DISKFULL, UDINT, 7533376 (32)
+        Global_Variables.EC_FOE_PROTERR_EXISTS, UDINT, 7533472 (32)
+        Global_Variables.EC_FOE_PROTERR_ILLEAGAL, UDINT, 7533408 (32)
+        Global_Variables.EC_FOE_PROTERR_INVALIDPASSWORD, UDINT, 7533600 (32)
+        Global_Variables.EC_FOE_PROTERR_NOTDEFINED, UDINT, 7533280 (32)
+        Global_Variables.EC_FOE_PROTERR_NOTFOUND, UDINT, 7533312 (32)
+        Global_Variables.EC_FOE_PROTERR_NOTINBOOTSTRAP, UDINT, 7533568 (32)
+        Global_Variables.EC_FOE_PROTERR_NOUSER, UDINT, 7533504 (32)
+        Global_Variables.EC_FOE_PROTERR_PACKENO, UDINT, 7533440 (32)
+        Global_Variables.EC_LINK_STATE_ADDITIONAL_LINK, BYTE, 7532256 (8)
+        Global_Variables.EC_LINK_STATE_LINK_WITHOUT_COMM, BYTE, 7532240 (8)
+        Global_Variables.EC_LINK_STATE_MISSING_LINK, BYTE, 7532248 (8)
+        Global_Variables.EC_LINK_STATE_NOT_PRESENT, BYTE, 7532232 (8)
+        Global_Variables.EC_LINK_STATE_OK, BYTE, 7532224 (8)
+        Global_Variables.EC_LINK_STATE_PORT_A, BYTE, 7532264 (8)
+        Global_Variables.EC_LINK_STATE_PORT_B, BYTE, 7532272 (8)
+        Global_Variables.EC_LINK_STATE_PORT_C, BYTE, 7532280 (8)
+        Global_Variables.EC_LINK_STATE_PORT_D, BYTE, 7532288 (8)
+        Global_Variables.EC_MAX_SLAVES, UINT, 7531616 (16)
+        Global_Variables.EC_SOE_ELEMENT_ATTRIBUTE, BYTE, 7532312 (8)
+        Global_Variables.EC_SOE_ELEMENT_DATASTATE, BYTE, 7532296 (8)
+        Global_Variables.EC_SOE_ELEMENT_DEFAULT, BYTE, 7532960 (8)
+        Global_Variables.EC_SOE_ELEMENT_MAX, BYTE, 7532944 (8)
+        Global_Variables.EC_SOE_ELEMENT_MIN, BYTE, 7532936 (8)
+        Global_Variables.EC_SOE_ELEMENT_NAME, BYTE, 7532304 (8)
+        Global_Variables.EC_SOE_ELEMENT_UNIT, BYTE, 7532928 (8)
+        Global_Variables.EC_SOE_ELEMENT_VALUE, BYTE, 7532952 (8)
+        Global_Variables.EMPTY_ARG_VALUE, T_Arg, 3224128 (96)
+        Global_Variables.EMPTY_GUID_REGSTRING, STRING(38), 3362152 (312)
+        Global_Variables.EMPTY_GUID_STRING, STRING(36), 3361856 (296)
+        Global_Variables.EMPTY_GUID_STRUCT, GUID, 3361728 (128)
+        Global_Variables.EMPTY_ROUTE_ENTRY, ST_AmsRouteEntry, 3222240 (1184)
+        Global_Variables.eWatchdogConfig, E_WATCHDOG_TIME_CONFIG, 3158512 (16)
+        Global_Variables.fbGetCurTaskIdx, GETCURTASKINDEX, 7515072 (128)
+        Global_Variables.FLOATREC_EXP_IS_INF, INT, 3223600 (16)
+        Global_Variables.FLOATREC_EXP_IS_NAN, INT, 3223584 (16)
+        Global_Variables.FLOATREC_MAX_DIGITS, INT, 3223616 (16)
+        Global_Variables.FLOATREC_MAX_PRECISION, INT, 3223632 (16)
+        Global_Variables.FLOATREC_MIN_PRECISION, INT, 3223648 (16)
+        Global_Variables.FMTERR_ARGTYPEINVALID, DWORD, 3223968 (32)
+        Global_Variables.FMTERR_ASTERISKPOSITION, DWORD, 3223744 (32)
+        Global_Variables.FMTERR_DESTBUFFOVERFLOW, DWORD, 3224064 (32)
+        Global_Variables.FMTERR_FLAGPOSITION, DWORD, 3223840 (32)
+        Global_Variables.FMTERR_INSUFFICIENTARGS, DWORD, 3224032 (32)
+        Global_Variables.FMTERR_INVALIDPOINTERINPUT, DWORD, 3224096 (32)
+        Global_Variables.FMTERR_NOERROR, DWORD, 3223680 (32)
+        Global_Variables.FMTERR_PERCENTSIGNPOSITION, DWORD, 3223712 (32)
+        Global_Variables.FMTERR_PRECISIONDOTPOSITION, DWORD, 3223904 (32)
+        Global_Variables.FMTERR_PRECISIONVALUE, DWORD, 3223808 (32)
+        Global_Variables.FMTERR_TYPEFIELDVALUE, DWORD, 3223936 (32)
+        Global_Variables.FMTERR_UNACCEPTEDPARAMETER, DWORD, 3224000 (32)
+        Global_Variables.FMTERR_WIDTHPRECISIONVALPOS, DWORD, 3223872 (32)
+        Global_Variables.FMTERR_WIDTHVALUE, DWORD, 3223776 (32)
+        Global_Variables.FOPEN_MODEAPPEND, DWORD, 3157952 (32)
+        Global_Variables.FOPEN_MODEBINARY, DWORD, 3158016 (32)
+        Global_Variables.FOPEN_MODEPLUS, DWORD, 3157984 (32)
+        Global_Variables.FOPEN_MODEREAD, DWORD, 3157888 (32)
+        Global_Variables.FOPEN_MODETEXT, DWORD, 3158048 (32)
+        Global_Variables.FOPEN_MODEWRITE, DWORD, 3157920 (32)
+        Global_Variables.FORMAT_DECASC_CODES, BYTE, 3224480 (80)
+        Global_Variables.FORMAT_HEXASC_CODES, BYTE, 3224224 (256)
+        Global_Variables.FORMAT_MAX_ARGS, INT, 3223568 (16)
+        Global_Variables.g_DummyVG, ST_VG, 7514016 (1056)
+        Global_Variables.g_iSizeOfGGOArray, INT, 7513904 (16)
+        Global_Variables.g_stSystem, ST_System, 7513920 (88)
+        Global_Variables.GLOBAL_DCF77_PULSE_SPLIT, TIME, 3160224 (32)
+        Global_Variables.GLOBAL_DCF77_SEQUENCE_CHECK, BOOL, 3160104 (8)
+        Global_Variables.GLOBAL_FORMAT_HASH_PREFIX_TYPE, E_HashPrefixTypes, 3160192 (16)
+        Global_Variables.GLOBAL_SBCS_TABLE, E_SBCSType, 3160208 (16)
+        Global_Variables.HKEY_MAX_BINARY_DATA_SIZE, UDINT, 3223456 (32)
+        Global_Variables.IPHELPERAPI_ADAPTERSINFO, UDINT, 3221920 (32)
+        Global_Variables.IPHELPERAPI_IPADDRBYHOSTNAME, UDINT, 3221952 (32)
+        Global_Variables.LISTEN_MODE_CLOSEALL, DWORD, 3363968 (32)
+        Global_Variables.LISTEN_MODE_USEOPENED, DWORD, 3364000 (32)
+        Global_Variables.MAX_ADAPTER_ADDRESS_LENGTH, UDINT, 3221824 (32)
+        Global_Variables.MAX_ADAPTER_DESCRIPTION_LENGTH, UDINT, 3221792 (32)
+        Global_Variables.MAX_ADAPTER_NAME_LENGTH, UDINT, 3221760 (32)
+        Global_Variables.MAX_AVERAGE_MEASURES, INT (2..100), 3160112 (16)
+        Global_Variables.MAX_LOCAL_ADAPTERS, UDINT, 3221984 (32)
+        Global_Variables.MAX_REMOTE_PCS, INT, 3160272 (16)
+        Global_Variables.MAX_ROUTE_ADDR_LEN, BYTE, 3222208 (8)
+        Global_Variables.MAX_ROUTE_NAME_LEN, BYTE, 3160264 (8)
+        Global_Variables.MAX_ROUTE_TRANSPORT, BYTE, 3222224 (8)
+        Global_Variables.MAX_STRING_LENGTH, UDINT, 3158624 (32)
+        Global_Variables.MAX_THROTTLE_MODE, DWORD, 3364064 (32)
+        Global_Variables.MIN_ROUTE_TRANSPORT, BYTE, 3222216 (8)
+        Global_Variables.nWatchdogTime, BYTE, 3157880 (8)
+        Global_Variables.PI, LREAL, 3158528 (64)
+        Global_Variables.ROUTE_FLAG_DYNAMIC, DWORD, 3222144 (32)
+        Global_Variables.ROUTE_FLAG_NOOVERRIDE, DWORD, 3222176 (32)
+        Global_Variables.ROUTE_FLAG_TEMPORARY, DWORD, 3222112 (32)
+        Global_Variables.SYSTEMSERVICE_ADDREMOTE, UDINT, 3222016 (32)
+        Global_Variables.SYSTEMSERVICE_CHANGENETID, UDINT, 3157440 (32)
+        Global_Variables.SYSTEMSERVICE_CLOSEHANDLE, UDINT, 3156800 (32)
+        Global_Variables.SYSTEMSERVICE_CREATEFILE, UDINT, 3156768 (32)
+        Global_Variables.SYSTEMSERVICE_DELREMOTE, UDINT, 3222048 (32)
+        Global_Variables.SYSTEMSERVICE_ENUMREMOTE, UDINT, 3222080 (32)
+        Global_Variables.SYSTEMSERVICE_FCLOSE, UDINT, 3156864 (32)
+        Global_Variables.SYSTEMSERVICE_FDELETE, UDINT, 3157184 (32)
+        Global_Variables.SYSTEMSERVICE_FEOF, UDINT, 3157152 (32)
+        Global_Variables.SYSTEMSERVICE_FFILEFIND, UDINT, 3223424 (32)
+        Global_Variables.SYSTEMSERVICE_FGETS, UDINT, 3157024 (32)
+        Global_Variables.SYSTEMSERVICE_FOPEN, UDINT, 3156832 (32)
+        Global_Variables.SYSTEMSERVICE_FPRINTF, UDINT, 3157120 (32)
+        Global_Variables.SYSTEMSERVICE_FPUTS, UDINT, 3157056 (32)
+        Global_Variables.SYSTEMSERVICE_FREAD, UDINT, 3156896 (32)
+        Global_Variables.SYSTEMSERVICE_FRENAME, UDINT, 3157216 (32)
+        Global_Variables.SYSTEMSERVICE_FSCANF, UDINT, 3157088 (32)
+        Global_Variables.SYSTEMSERVICE_FSEEK, UDINT, 3156960 (32)
+        Global_Variables.SYSTEMSERVICE_FTELL, UDINT, 3156992 (32)
+        Global_Variables.SYSTEMSERVICE_FWRITE, UDINT, 3156928 (32)
+        Global_Variables.SYSTEMSERVICE_IPHELPERAPI, UDINT, 3221856 (32)
+        Global_Variables.SYSTEMSERVICE_IPHOSTNAME, UDINT, 3221888 (32)
+        Global_Variables.SYSTEMSERVICE_MKDIR, UDINT, 3157248 (32)
+        Global_Variables.SYSTEMSERVICE_OPENCREATE, UDINT, 3156672 (32)
+        Global_Variables.SYSTEMSERVICE_OPENREAD, UDINT, 3156704 (32)
+        Global_Variables.SYSTEMSERVICE_OPENWRITE, UDINT, 3156736 (32)
+        Global_Variables.SYSTEMSERVICE_REG_HKEYLOCALMACHINE, UDINT, 3157312 (32)
+        Global_Variables.SYSTEMSERVICE_RMDIR, UDINT, 3157280 (32)
+        Global_Variables.SYSTEMSERVICE_SENDEMAIL, UDINT, 3157344 (32)
+        Global_Variables.SYSTEMSERVICE_STARTPROCESS, UDINT, 3157408 (32)
+        Global_Variables.SYSTEMSERVICE_TIMESERVICES, UDINT, 3157376 (32)
+        Global_Variables.SYSTEMSTATEFLAGS_BSOD, BYTE, 3157864 (8)
+        Global_Variables.SYSTEMSTATEFLAGS_RTVIOLATION, BYTE, 3157872 (8)
+        Global_Variables.SYSTEMTIME_DATE_AND_TIME_MAX, T_ULARGE_INTEGER, 3231104 (64)
+        Global_Variables.SYSTEMTIME_DATE_AND_TIME_MAX64, ULINT, 3231424 (64)
+        Global_Variables.SYSTEMTIME_DATE_AND_TIME_MIN, T_ULARGE_INTEGER, 3231040 (64)
+        Global_Variables.SYSTEMTIME_DATE_AND_TIME_MIN64, ULINT, 3231360 (64)
+        Global_Variables.SYSTEMTIME_DATEDELTA_OFFSET, DWORD, 3230816 (32)
+        Global_Variables.SYSTEMTIME_MAX_MONTHDAYS, WORD, 3229968 (384)
+        Global_Variables.SYSTEMTIME_MAX_YEARSDAY, WORD, 3230352 (448)
+        Global_Variables.SYSTEMTIME_TICKSPERDAY, T_ULARGE_INTEGER, 3230976 (64)
+        Global_Variables.SYSTEMTIME_TICKSPERDAY64, ULINT, 3231296 (64)
+        Global_Variables.SYSTEMTIME_TICKSPERMSEC, T_ULARGE_INTEGER, 3230848 (64)
+        Global_Variables.SYSTEMTIME_TICKSPERMSEC64, ULINT, 3231168 (64)
+        Global_Variables.SYSTEMTIME_TICKSPERSEC, T_ULARGE_INTEGER, 3230912 (64)
+        Global_Variables.SYSTEMTIME_TICKSPERSEC64, ULINT, 3231232 (64)
+        Global_Variables.TCEVENT_FMTPRGSIZE, INT, 3158496 (16)
+        Global_Variables.TCEVENT_SRCNAMESIZE, INT, 3158480 (16)
+        Global_Variables.TCEVENTFLAG_AUTOFMTALL, WORD, 3158384 (16)
+        Global_Variables.TCEVENTFLAG_FMTSELF, WORD, 3158320 (16)
+        Global_Variables.TCEVENTFLAG_LOG, WORD, 3158336 (16)
+        Global_Variables.TCEVENTFLAG_MSGBOX, WORD, 3158352 (16)
+        Global_Variables.TCEVENTFLAG_PRIOCLASS, WORD, 3158304 (16)
+        Global_Variables.TCEVENTFLAG_SRCID, WORD, 3158368 (16)
+        Global_Variables.TCEVENTSTATE_CONFIRMED, WORD, 3158448 (16)
+        Global_Variables.TCEVENTSTATE_INVALID, WORD, 3158400 (16)
+        Global_Variables.TCEVENTSTATE_RESET, WORD, 3158432 (16)
+        Global_Variables.TCEVENTSTATE_RESETCON, WORD, 3158464 (16)
+        Global_Variables.TCEVENTSTATE_SIGNALED, WORD, 3158416 (16)
+        Global_Variables.TcMcGlobal, _TCMCGLOBAL, 7524640 (6976)
+        Global_Variables.TCPADS_IGR_ADAPTER_LINKSTATUS, UDINT, 3363360 (32)
+        Global_Variables.TCPADS_IGR_CLOSEBYHDL, UDINT, 3363104 (32)
+        Global_Variables.TCPADS_IGR_CONLIST, UDINT, 3363072 (32)
+        Global_Variables.TCPADS_IGR_MULTICAST_ADDBYHDL, UDINT, 3363296 (32)
+        Global_Variables.TCPADS_IGR_MULTICAST_DROPBYHDL, UDINT, 3363328 (32)
+        Global_Variables.TCPADS_IGR_PEERBYHDL, UDINT, 3363168 (32)
+        Global_Variables.TCPADS_IGR_RECVBYHDL, UDINT, 3363200 (32)
+        Global_Variables.TCPADS_IGR_RECVFROMBYHDL, UDINT, 3363232 (32)
+        Global_Variables.TCPADS_IGR_SENDBYHDL, UDINT, 3363136 (32)
+        Global_Variables.TCPADS_IGR_SENDTOBYHDL, UDINT, 3363264 (32)
+        Global_Variables.TCPADS_NULL_HSOCKET, T_HSOCKET, 3363616 (352)
+        Global_Variables.TCPADSCONLST_IOF_ACCEPT, UDINT, 3363488 (32)
+        Global_Variables.TCPADSCONLST_IOF_CLOSEALL, UDINT, 3363456 (32)
+        Global_Variables.TCPADSCONLST_IOF_CONNECT, UDINT, 3363392 (32)
+        Global_Variables.TCPADSCONLST_IOF_GETHNDLBYADDR, UDINT, 3363552 (32)
+        Global_Variables.TCPADSCONLST_IOF_GETLINKSTATUS, UDINT, 3363584 (32)
+        Global_Variables.TCPADSCONLST_IOF_LISTEN, UDINT, 3363424 (32)
+        Global_Variables.TCPADSCONLST_IOF_UDPBIND, UDINT, 3363520 (32)
+        Global_Variables.THROTTLE_MODE_DEFAULT, T_ThrottleTimes, 3364512 (416)
+        Global_Variables.THROTTLE_MODE_OFF, T_ThrottleTimes, 3364096 (416)
+        Global_Variables.TIMESERVICE_ADJUSTTIMETORTC, UDINT, 3157568 (32)
+        Global_Variables.TIMESERVICE_DATEANDTIME, UDINT, 3157472 (32)
+        Global_Variables.TIMESERVICE_RTCTIMEDIFF, UDINT, 3157536 (32)
+        Global_Variables.TIMESERVICE_SYSTEMTIMES, UDINT, 3157504 (32)
+        Global_Variables.TIMESERVICE_TIMEZONINFORMATION, UDINT, 3157600 (32)
+        Global_Variables.WEST_EUROPE_TZI, ST_TimeZoneInformation, 3231488 (864)
+
+.. raw:: html
+
+   </details>
+   <br />
+
+
+Global_Variables_EtherCAT
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        Global_Variables_EtherCAT.ESC_MAX_PORTS, UINT, 3154880 (16)
+        Global_Variables_EtherCAT.iSLAVEADDR_ARR_SIZE, UINT, 3073168 (16)
+
+
+Global_Version
+^^^^^^^^^^^^^^
+
+.. raw:: html
+
+   <details>
+       <summary>11 Symbols</summary>
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        Global_Version.stLibVersion_LCLS_Vacuum, ST_LibVersion, 7515200 (288)
+        Global_Version.stLibVersion_Tc2_IoFunctions, ST_LibVersion, 3362464 (288)
+        Global_Version.stLibVersion_Tc2_Math, ST_LibVersion, 7531776 (288)
+        Global_Version.stLibVersion_Tc2_MC2, ST_LibVersion, 7524352 (288)
+        Global_Version.stLibVersion_Tc2_ModbusSrv, ST_LibVersion, 3362752 (288)
+        Global_Version.stLibVersion_Tc2_System, ST_LibVersion, 3154912 (288)
+        Global_Version.stLibVersion_Tc2_Utilities, ST_LibVersion, 3159776 (288)
+        Global_Version.stLibVersion_Tc3_EventLogger, ST_LibVersion, 3365344 (288)
+        Global_Version.stLibVersion_Tc3_JsonXml, ST_LibVersion, 3365760 (288)
+        Global_Version.stLibVersion_Tc3_Module, ST_LibVersion, 3159168 (288)
+        Global_Version.stLibVersion_TcUnit, ST_LibVersion, 7513600 (288)
+
+.. raw:: html
+
+   </details>
+   <br />
+
+
+LCLS_General
+^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        LCLS_General.DefaultGlobals.stSys.I_EcatMaster1, AMSNETID, 3072040 (48)
+
+
+LCLS_Vacuum
+^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        LCLS_Vacuum.Global_Variables.g_stSystem.I_EcatMaster1, AMSNETID, 7513960 (48)
+
+
+PMPS_GVL
+^^^^^^^^
+
+.. raw:: html
+
+   <details>
+       <summary>22 Symbols</summary>
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        PMPS_GVL.AccumulatedFF, UDINT, 7518528 (32)
+        PMPS_GVL.AUX_ATTENUATORS, UINT, 7522416 (16)
+        PMPS_GVL.cnMaxStateArrayLen, INT, 7522400 (16)
+        PMPS_GVL.cst0RateBeam, ST_BeamParams, 7519968 (1216)
+        PMPS_GVL.cstFullBeam, ST_BeamParams, 7518752 (1216)
+        PMPS_GVL.cstSafeBeam, ST_BeamParams, 7521184 (1216)
+        PMPS_GVL.DUMMY_AUX_ATT_ARRAY, ST_PMPS_Attenuator, 7522448 (512)
+        PMPS_GVL.EXCLUDED_ASSERTION_ID, UDINT, 7518560 (32)
+        PMPS_GVL.FAST_TEST_VELOCITY, LREAL, 7518656 (64)
+        PMPS_GVL.g_areVBoundaries, REAL, 7517952 (512)
+        PMPS_GVL.g_areVBoundariesK, REAL, 7523520 (512)
+        PMPS_GVL.g_areVBoundariesL, REAL, 7523008 (512)
+        PMPS_GVL.g_cBoundaries, INT, 7522960 (16)
+        PMPS_GVL.MAX_APERTURES, UINT, 7522432 (16)
+        PMPS_GVL.MAX_DEVICE_STATES, UDINT, 7518720 (32)
+        PMPS_GVL.MAX_STOPPERS, UINT, 7515504 (16)
+        PMPS_GVL.PERange, PE_Ranges, 7518464 (32)
+        PMPS_GVL.reVHyst, REAL, 7522976 (32)
+        PMPS_GVL.stCurrentBeamParameters, ST_BeamParams, 7516736 (1216)
+        PMPS_GVL.stRequestedBeamParameters, ST_BeamParams, 7515520 (1216)
+        PMPS_GVL.SuccessfulPreemption, UDINT, 7518496 (32)
+        PMPS_GVL.VISIBLE_TEST_VELOCITY, LREAL, 7518592 (64)
+
+.. raw:: html
+
+   </details>
+   <br />
+
+
+PMPS_PARAM
+^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        PMPS_PARAM.MAX_ASSERTIONS, UDINT, 7524064 (32)
+        PMPS_PARAM.MAX_FAST_FAULTS, UINT, 7524032 (16)
+
+
+PMPS_TOOLS
+^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        PMPS_TOOLS.fbJson, FB_JsonSaxWriter, 7524096 (256)
+
+
+PRG_DIAGNOSTIC
+^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        PRG_DIAGNOSTIC.fbTime, FB_LocalSystemTime, 7580576 (19040)
+        PRG_DIAGNOSTIC.logTimer, TON, 7599616 (224)
+        PRG_DIAGNOSTIC.plcHeartbeat, UDINT, 7600000 (32)
+        PRG_DIAGNOSTIC.plcInfo, STRING(40), 7600032 (328)
+        PRG_DIAGNOSTIC.plcLocalTime, STRING(25), 7600360 (208)
+        PRG_DIAGNOSTIC.plcName, STRING(15), 7599840 (128)
+        PRG_DIAGNOSTIC.simHeartbeat, UINT, 7599968 (16)
+
+
+PRG_PMPS
+^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        PRG_PMPS.fbArbiterIO, FB_SubSysToArbiter_IO, 7601216 (136704)
+        PRG_PMPS.fbArbiterIO.i_stCurrentBP, ST_BeamParams_IO, 7602016 (1216)
+        PRG_PMPS.fbArbiterIO.q_stRequestedBP, ST_BeamParams_IO, 7603232 (1216)
+        PRG_PMPS.fbArbiterIO.xTxPDO_state, BIT, 7604449 (1)
+        PRG_PMPS.fbArbiterIO.xTxPDO_toggle, BIT, 7604448 (1)
+
+
+ParameterList
+^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        ParameterList.cSourceNameSize, UDINT (81..Tc2_Utilities.ParameterList.cMaxCharacters), 3365312 (32)
+
+
+TC_EVENTS
+^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        TC_EVENTS.LCLSGeneralEventClass, LCLSGeneralEventClass, 22465312 (960)
+
+
+TC_EVENT_CLASSES
+^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        TC_EVENT_CLASSES.LCLSGeneralEventClass, GUID, 22435232 (128)
+        TC_EVENT_CLASSES.TcGeneralAdsEventClass, GUID, 22434720 (128)
+        TC_EVENT_CLASSES.TcRouterEventClass, GUID, 22434848 (128)
+        TC_EVENT_CLASSES.TcRTimeEventClass, GUID, 22434976 (128)
+        TC_EVENT_CLASSES.TcSystemEventClass, GUID, 22434592 (128)
+        TC_EVENT_CLASSES.Win32EventClass, GUID, 22435104 (128)
+
+
+TwinCAT_LicenseInfoVarList
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        TwinCAT_LicenseInfoVarList._LicenseInfo, PlcLicenseInfo, 22414624 (1024)
+
+
+TwinCAT_SystemInfoVarList
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Symbol, Type, Offset/Size
+    :align: center
+
+        TwinCAT_SystemInfoVarList.__FSV_task, _Implicit_Task_Info, 22419872 (704)
+        TwinCAT_SystemInfoVarList.__PlcTask, _Implicit_Task_Info, 22420576 (704)
+        TwinCAT_SystemInfoVarList._AppInfo, PlcAppSystemInfo, 22415648 (2048)
+        TwinCAT_SystemInfoVarList._TaskInfo, PlcTaskSystemInfo, 22417728 (2048)
+        TwinCAT_SystemInfoVarList._TaskOid_FSV_task, OTCID, 22419776 (32)
+        TwinCAT_SystemInfoVarList._TaskOid_PlcTask, OTCID, 22419840 (32)
+        TwinCAT_SystemInfoVarList._TaskPouOid_FSV_task, OTCID, 22417696 (32)
+        TwinCAT_SystemInfoVarList._TaskPouOid_PlcTask, OTCID, 22419808 (32)
+
+

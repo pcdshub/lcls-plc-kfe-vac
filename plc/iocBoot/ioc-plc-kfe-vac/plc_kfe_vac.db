@@ -22537,6 +22537,30 @@ record(bo, "TV1K0:INTF:GCC:1:LOGGER") {
   info(archive, "VAL")
 }
 
+record(bi, "TV1K0:INTF:GCC:1:ILK_INP_RBV") {
+  # GVL_VAC_INTF.fb_TV1K0_INTF_GCC_1.EXT_IG.xIlk_Inp
+  field(DESC, "GVL_VAC_INTF.fb_TV1K...1.EXT_IG.xIlk_Inp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_VAC_INTF.fb_TV1K0_INTF_GCC_1.EXT_IG.xIlk_Inp?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bo, "TV1K0:INTF:GCC:1:ILK_INP") {
+  # GVL_VAC_INTF.fb_TV1K0_INTF_GCC_1.EXT_IG.xIlk_Inp
+  field(DESC, "GVL_VAC_INTF.fb_TV1K...1.EXT_IG.xIlk_Inp")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_VAC_INTF.fb_TV1K0_INTF_GCC_1.EXT_IG.xIlk_Inp=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
+}
+
 record(bi, "MR1K4:SOMS:GCC:1:ILK_UPPER:HV_SW_RBV") {
   field(DESC, "GVL_VAC_INTF.st_TMO_ILK_Upper.xIlk_sw")
   field(SCAN, "I/O Intr")
@@ -22943,6 +22967,30 @@ record(bo, "PC1K1:INTF:GCC:1:LOGGER") {
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_VAC_INTF.fb_PC1K1_INTF_GCC_1.IG.xLog=")
   field(ZNAM, "OFF")
   field(ONAM, "ON")
+  info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "PC1K1:INTF:GCC:1:ILK_INP_RBV") {
+  # GVL_VAC_INTF.fb_PC1K1_INTF_GCC_1.EXT_IG.xIlk_Inp
+  field(DESC, "GVL_VAC_INTF.fb_PC1K...1.EXT_IG.xIlk_Inp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_VAC_INTF.fb_PC1K1_INTF_GCC_1.EXT_IG.xIlk_Inp?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bo, "PC1K1:INTF:GCC:1:ILK_INP") {
+  # GVL_VAC_INTF.fb_PC1K1_INTF_GCC_1.EXT_IG.xIlk_Inp
+  field(DESC, "GVL_VAC_INTF.fb_PC1K...1.EXT_IG.xIlk_Inp")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_VAC_INTF.fb_PC1K1_INTF_GCC_1.EXT_IG.xIlk_Inp=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
   info(autosaveFields_pass0, "VAL")
   info(archive, "VAL")
 }

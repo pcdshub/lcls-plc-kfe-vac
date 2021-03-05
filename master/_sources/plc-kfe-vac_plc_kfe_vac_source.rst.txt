@@ -79,7 +79,6 @@ GVL_SXR_VAC
     fb_PA1K0_GPI_1 : FB_MKS317;
 
 
-
     // MKS275 Gauges
 
     {attribute 'pytmc' := ' pv: MR1K1:BEND:GPI:1 '}
@@ -153,8 +152,8 @@ GVL_SXR_VAC
     fb_SP1K1_MONO_VGC_1 : FB_VGC;
     {attribute 'pytmc' := ' pv: SP1K1:MONO:VGC:2 '}
     fb_SP1K1_MONO_VGC_2 : FB_VGC;
-    {attribute 'pytmc' := ' pv: IM1K2:PPM:VGC:1 '}
-    fb_IM1K2_PPM_VGC_1 : FB_VGC;
+    {attribute 'pytmc' := ' pv: IM1K3:PPM:VGC:1 '}
+    fb_IM1K3_PPM_VGC_1 : FB_VGC;
     {attribute 'pytmc' := ' pv: TV3K0:VGC:1 '}
     fb_TV3K0_VGC_1 : FB_VGC;
     {attribute 'pytmc' := ' pv: MR1K4:VGC:1 '}
@@ -377,7 +376,7 @@ GVL_Variables
     // *******
 
     {attribute 'pytmc' := '
-         pv: @(PREFIX)Arbiter:01
+         pv: @(PREFIX)Arb:01
     '}
     g_fbArbiter1    :   FB_Arbiter(01);
          
@@ -688,7 +687,7 @@ PRG_SXR_VAC
     fb_MR1K3_TXI_VGC_1(i_stUSG := fb_MR1K1_BEND_PIP_1.q_IG, i_stDSG := fb_MR1K3_TXI_PIP_1.q_IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K0, io_fbFFHWO := g_FastFaultOutputK0, fbArbiter := g_fbArbiter1);
     fb_SP1K1_MONO_VGC_1(i_stUSG := fb_MR2K3_TXI_PIP_1.q_IG, i_stDSG := fb_SP1K1_MONO_PIP_1.q_IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K2, io_fbFFHWO := g_FastFaultOutputK2, fbArbiter := g_fbArbiter1);
     fb_SP1K1_MONO_VGC_2(i_stUSG := fb_SP1K1_MONO_PIP_1.q_IG, i_stDSG := fb_PC1K1_INTF_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K2, io_fbFFHWO := g_FastFaultOutputK2, fbArbiter := g_fbArbiter1);
-    fb_IM1K2_PPM_VGC_1(i_stUSG := fb_MR2K3_TXI_PIP_1.q_IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K3, io_fbFFHWO := g_FastFaultOutputK3, fbArbiter := g_fbArbiter1);
+    fb_IM1K3_PPM_VGC_1(i_stUSG := fb_MR2K3_TXI_PIP_1.q_IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K3, io_fbFFHWO := g_FastFaultOutputK3, fbArbiter := g_fbArbiter1);
     fb_TV3K0_VGC_1(i_stUSG := fb_MR2K3_TXI_PIP_1.q_IG, i_stDSG := fb_TV3K0_PIP_1.q_IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K4, io_fbFFHWO := g_FastFaultOutputK4, fbArbiter := g_fbArbiter1);
     fb_MR1K4_SOMS_VGC_1(i_stUSG := fb_TV3K0_PIP_1.q_IG, i_stDSG := fb_MR1K4_SOMS_GCC_1.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K4, io_fbFFHWO := g_FastFaultOutputK4, fbArbiter := g_fbArbiter1);
 

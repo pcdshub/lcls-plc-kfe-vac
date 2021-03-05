@@ -6296,7 +6296,7 @@ PDO Channel 1 (Index #x1a00, Flags #x0011, SyncMan 1)
     :header: Name, Comment, BitLen, Index, Type
     :align: center
 
-        "GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xOpnLS", "GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xOpnLS", , "#x6000", "BIT"
+        "GVL_SXR_VAC.fb_IM1K3_PPM_VGC_1.i_xOpnLS", "GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xOpnLS", , "#x6000", "BIT"
 
 
 
@@ -6306,7 +6306,7 @@ PDO Channel 2 (Index #x1a01, Flags #x0011, SyncMan 1)
     :header: Name, Comment, BitLen, Index, Type
     :align: center
 
-        "GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xClsLS", "GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xClsLS", , "#x6010", "BIT"
+        "GVL_SXR_VAC.fb_IM1K3_PPM_VGC_1.i_xClsLS", "GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xClsLS", , "#x6010", "BIT"
 
 
 
@@ -6396,7 +6396,7 @@ PDO Channel 11 (Index #x1602, Flags #x0011, SyncMan 0)
     :header: Name, Comment, BitLen, Index, Type
     :align: center
 
-        "GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.q_xOPN_DO", "GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.q_xOPN_DO", , "#x7020", "BIT"
+        "GVL_SXR_VAC.fb_IM1K3_PPM_VGC_1.q_xOPN_DO", "GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.q_xOPN_DO", , "#x7020", "BIT"
 
 
 

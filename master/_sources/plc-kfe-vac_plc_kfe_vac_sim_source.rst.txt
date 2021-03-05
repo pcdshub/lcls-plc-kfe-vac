@@ -29,7 +29,7 @@ GVL_SXR_VAC
     st_MR_K3_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
     st_SP1K1_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
     st_SP1K1_MONO_VGC_2_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
-    st_IM1K2_PPM_VGC_1_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
+    st_IM1K3_PPM_VGC_1_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
     st_TV3K0_VGC_1_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
     st_MR1K4_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
     st_TV1K4_VGC_1_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
@@ -48,7 +48,7 @@ GVL_SXR_VAC
     st_MR1K3_TXI_VGC_1 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
     st_SP1K1_MONO_VGC_1 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
     st_SP1K1_MONO_VGC_2 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
-    st_IM1K2_PPM_VGC_1 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
+    st_IM1K3_PPM_VGC_1 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
     st_TV3K0_VGC_1 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
     st_MR1K4_SOMS_VGC_1 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
     st_TV1K4_VGC_1 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
@@ -67,7 +67,7 @@ GVL_SXR_VAC
     fb_MR1K3_TXI_VGC_1 : FB_VacuumValve;
     fb_SP1K1_MONO_VGC_1 : FB_VacuumValve;
     fb_SP1K1_MONO_VGC_2 : FB_VacuumValve;
-    fb_IM1K2_PPM_VGC_1 : FB_VacuumValve;
+    fb_IM1K3_PPM_VGC_1 : FB_VacuumValve;
     fb_TV3K0_VGC_1 : FB_VacuumValve;
     fb_MR1K4_SOMS_VGC_1 : FB_VacuumValve;
     fb_TV1K4_VGC_1 : FB_VacuumValve;
@@ -276,7 +276,7 @@ PRG_SXR_VAC
     fb_MR1K3_TXI_VGC_1(stAVol := st_MR1K1_VOL, stBvol := st_MR_K3_VOL, stValve := st_MR1K3_TXI_VGC_1);
     fb_SP1K1_MONO_VGC_1(stAVol := st_MR_K3_VOL, stBvol := st_SP1K1_VOL, stValve := st_SP1K1_MONO_VGC_1);
     fb_SP1K1_MONO_VGC_2(stAVol := st_SP1K1_VOL, stBvol := st_SP1K1_MONO_VGC_2_VOL, stValve := st_SP1K1_MONO_VGC_2);
-    fb_IM1K2_PPM_VGC_1(stAVol := st_MR_K3_VOL, stBvol := st_IM1K2_PPM_VGC_1_VOL, stValve := st_IM1K2_PPM_VGC_1);
+    fb_IM1K3_PPM_VGC_1(stAVol := st_MR_K3_VOL, stBvol := st_IM1K3_PPM_VGC_1_VOL, stValve := st_IM1K3_PPM_VGC_1);
     fb_TV3K0_VGC_1(stAVol := st_MR_K3_VOL, stBvol := st_TV3K0_VGC_1_VOL, stValve := st_TV3K0_VGC_1);
     fb_MR1K4_SOMS_VGC_1(stAVol := st_TV3K0_VGC_1_VOL, stBvol := st_MR1K4_VOL, stValve := st_MR1K4_SOMS_VGC_1);
     fb_TV1K4_VGC_1(stAVol := st_MR1K4_VOL, stBvol := st_TV1K4_VGC_1_VOL, stValve := st_TV1K4_VGC_1);

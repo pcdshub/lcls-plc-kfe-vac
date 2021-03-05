@@ -20,7 +20,6 @@ fb_TV2K0_GPI_2 : FB_MKS317;
 fb_PA1K0_GPI_1 : FB_MKS317;
 
 
-
 // MKS275 Gauges
 
 {attribute 'pytmc' := ' pv: MR1K1:BEND:GPI:1 '}
@@ -94,8 +93,8 @@ fb_MR1K3_TXI_VGC_1 : FB_VGC;
 fb_SP1K1_MONO_VGC_1 : FB_VGC;
 {attribute 'pytmc' := ' pv: SP1K1:MONO:VGC:2 '}
 fb_SP1K1_MONO_VGC_2 : FB_VGC;
-{attribute 'pytmc' := ' pv: IM1K2:PPM:VGC:1 '}
-fb_IM1K2_PPM_VGC_1 : FB_VGC;
+{attribute 'pytmc' := ' pv: IM1K3:PPM:VGC:1 '}
+fb_IM1K3_PPM_VGC_1 : FB_VGC;
 {attribute 'pytmc' := ' pv: TV3K0:VGC:1 '}
 fb_TV3K0_VGC_1 : FB_VGC;
 {attribute 'pytmc' := ' pv: MR1K4:VGC:1 '}

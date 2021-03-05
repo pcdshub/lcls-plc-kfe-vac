@@ -104,7 +104,7 @@ fbEcatDiagWrapper : FB_EcatDiagWrapper;
 // *******
 
 {attribute 'pytmc' := '
-     pv: @(PREFIX)Arbiter:01
+     pv: @(PREFIX)Arb:01
 '}
 g_fbArbiter1    :   FB_Arbiter(01);
      

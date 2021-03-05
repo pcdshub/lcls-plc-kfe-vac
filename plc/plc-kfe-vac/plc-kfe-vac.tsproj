@@ -419,33 +419,6 @@
 					<Vars VarGrpType="1">
 						<Name>FSV_task Inputs</Name>
 						<Var>
-							<Name>GVL_VFS.fb_TV2K0_VFS_1.i_xVetoValveClosed</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_VFS.fb_TV2K0_VFS_1.i_xPress_OK</Name>
-							<Comment><![CDATA[To be linked to the Fast sensor structure signal IG.xPRESS_OK, to make sure that the device is connected]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_VFS.fb_TV2K0_VFS_1.i_xOPN_SW</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_VFS.fb_TV2K0_VFS_1.i_xVAC_FAULT_Reset</Name>
-							<Comment><![CDATA[Valve Vacuum OK, is set to False when there is Vacuum Fault]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_VFS.fb_TV2K0_VFS_1.i_xOverrideMode</Name>
-							<Comment><![CDATA[To be linked to global override bit. This Overrides Vacuum logic only, EPS, MPS and PMPS are still enforces]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_VFS.fb_TV2K0_VFS_1.i_xOverrideOpen</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_VFS.fb_TV2K0_VFS_1.i_xOpnLS</Name>
 							<Comment><![CDATA[IO]]></Comment>
 							<Type>BOOL</Type>
@@ -464,17 +437,40 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
+							<Name>GVL_VFS.fb_TV2K0_VFS_1.i_xVetoValveClosed</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_VFS.fb_TV2K0_VFS_1.i_xPress_OK</Name>
+							<Comment><![CDATA[To be linked to the Fast sensor structure signal IG.xPRESS_OK, to make sure that the device is connected]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_VFS.fb_TV2K0_VFS_1.i_xOPN_SW</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_VFS.fb_TV2K0_VFS_1.i_xCLS_SW</Name>
 							<Comment><![CDATA[external open signal e.g epics]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_VFS.fb_TV2K0_VFS_1.i_xVAC_FAULT_Reset</Name>
+							<Comment><![CDATA[Valve Vacuum OK, is set to False when there is Vacuum Fault]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_VFS.fb_TV2K0_VFS_1.i_xOverrideMode</Name>
+							<Comment><![CDATA[To be linked to global override bit. This Overrides Vacuum logic only, EPS, MPS and PMPS are still enforces]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_VFS.fb_TV2K0_VFS_1.i_xOverrideOpen</Name>
 							<Type>BOOL</Type>
 						</Var>
 					</Vars>
 					<Vars VarGrpType="2">
 						<Name>FSV_task Outputs</Name>
-						<Var>
-							<Name>GVL_Variables.g_FastFaultOutput2.q_xFastFaultOut</Name>
-							<Type>BOOL</Type>
-						</Var>
 						<Var>
 							<Name>GVL_VFS.fb_TV2K0_VFS_1.q_xClose_A</Name>
 							<Type>BOOL</Type>
@@ -520,6 +516,10 @@
 							<Name>GVL_VFS.fb_TV2K0_VFS_1.q_eVFS_State</Name>
 							<Comment><![CDATA[Interface]]></Comment>
 							<Type GUID="{91187CB5-D5B5-4DD0-8966-41A4C12CC2DB}" Namespace="LCLS_Vacuum">E_VGC</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.g_FastFaultOutput2.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
 						</Var>
 					</Vars>
 					<Vars VarGrpType="8">
@@ -835,12 +835,12 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xOpnLS</Name>
+							<Name>GVL_SXR_VAC.fb_IM1K3_PPM_VGC_1.i_xOpnLS</Name>
 							<Comment><![CDATA[IO]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xClsLS</Name>
+							<Name>GVL_SXR_VAC.fb_IM1K3_PPM_VGC_1.i_xClsLS</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -1144,15 +1144,15 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
+							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.q_xOPN_DO</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_SXR_VAC.fb_TV2K0_VGC_1.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_SXR_VAC.fb_MR1K1_BEND_VGC_1.q_xOPN_DO</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -1168,7 +1168,7 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.q_xOPN_DO</Name>
+							<Name>GVL_SXR_VAC.fb_IM1K3_PPM_VGC_1.q_xOPN_DO</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -1395,6 +1395,19 @@
 						<OwnerA Name="OutputSrc" Prefix="TIPC^plc_kfe_vac^plc_kfe_vac Instance" Type="2">
 							<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_03_00^=+-EL2798_03_10">
 								<Link VarA="GVL_SXR_VAC.fb_RTDSK0_INTF_VGC_1.q_xTREATY_VGC_STATUS" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^GVL_SXR_VAC.fb_RTDSK0_INTF_VGC_1.q_xTREATY_VGC_STATUS" Size="1" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+					</UnrestoredVarLinks>
+					<UnrestoredVarLinks ImportTime="2021-03-04T12:09:55">
+						<OwnerA Name="InputDst" Prefix="TIPC^plc_kfe_vac^plc_kfe_vac Instance" Type="1">
+							<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EP2338_09_03">
+								<Link VarA="GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xClsLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 2^GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xClsLS" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xOpnLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xOpnLS" Size="1" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+						<OwnerA Name="OutputSrc" Prefix="TIPC^plc_kfe_vac^plc_kfe_vac Instance" Type="2">
+							<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EP2338_09_03">
+								<Link VarA="GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.q_xOPN_DO" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 11^GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.q_xOPN_DO" Size="1" RestoreInfo="ANotFound"/>
 							</OwnerB>
 						</OwnerA>
 					</UnrestoredVarLinks>
@@ -8073,13 +8086,13 @@ Bit1: Value smaller than Limit2]]></Comment>
 						<Fmmu>0000000000000000000f00020100000001000000000000000000000000000000</Fmmu>
 						<Fmmu>0000000000000000001000010100000002000000000000000000000000000000</Fmmu>
 						<Pdo Name="Channel 1" Index="#x1a00" Flags="#x0011" SyncMan="1">
-							<Entry Name="GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xOpnLS" Index="#x6000" Sub="#x01">
+							<Entry Name="GVL_SXR_VAC.fb_IM1K3_PPM_VGC_1.i_xOpnLS" Index="#x6000" Sub="#x01">
 								<Type>BIT</Type>
 								<Comment><![CDATA[GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xOpnLS]]></Comment>
 							</Entry>
 						</Pdo>
 						<Pdo Name="Channel 2" Index="#x1a01" Flags="#x0011" SyncMan="1">
-							<Entry Name="GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xClsLS" Index="#x6010" Sub="#x01">
+							<Entry Name="GVL_SXR_VAC.fb_IM1K3_PPM_VGC_1.i_xClsLS" Index="#x6010" Sub="#x01">
 								<Type>BIT</Type>
 								<Comment><![CDATA[GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xClsLS]]></Comment>
 							</Entry>
@@ -8127,7 +8140,7 @@ Bit1: Value smaller than Limit2]]></Comment>
 							</Entry>
 						</Pdo>
 						<Pdo Name="Channel 11" Index="#x1602" InOut="1" Flags="#x0011" SyncMan="0">
-							<Entry Name="GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.q_xOPN_DO" Index="#x7020" Sub="#x01">
+							<Entry Name="GVL_SXR_VAC.fb_IM1K3_PPM_VGC_1.q_xOPN_DO" Index="#x7020" Sub="#x01">
 								<Type>BIT</Type>
 								<Comment><![CDATA[GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.q_xOPN_DO]]></Comment>
 							</Entry>
@@ -19268,11 +19281,11 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_SP1K1_MONO_VGC_2.q_xOPN_DO" VarB="Channel 11^GVL_SXR_VAC.fb_SP1K1_MONO_VGC_2.q_xOPN_DO"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EP2338_09_03">
-				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xClsLS"/>
-				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.i_xOpnLS"/>
+				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_IM1K3_PPM_VGC_1.i_xClsLS" VarB="Channel 2^GVL_SXR_VAC.fb_IM1K3_PPM_VGC_1.i_xClsLS"/>
+				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_IM1K3_PPM_VGC_1.i_xOpnLS" VarB="Channel 1^GVL_SXR_VAC.fb_IM1K3_PPM_VGC_1.i_xOpnLS"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV3K0_VGC_1.i_xClsLS" VarB="Channel 6^GVL_SXR_VAC.fb_TV3K0_VGC_1.i_xClsLS"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV3K0_VGC_1.i_xOpnLS" VarB="Channel 5^GVL_SXR_VAC.fb_TV3K0_VGC_1.i_xOpnLS"/>
-				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.q_xOPN_DO" VarB="Channel 11^GVL_SXR_VAC.fb_IM1K2_PPM_VGC_1.q_xOPN_DO"/>
+				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_IM1K3_PPM_VGC_1.q_xOPN_DO" VarB="Channel 11^GVL_SXR_VAC.fb_IM1K3_PPM_VGC_1.q_xOPN_DO"/>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV3K0_VGC_1.q_xOPN_DO" VarB="Channel 15^GVL_SXR_VAC.fb_TV3K0_VGC_1.q_xOPN_DO"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EP2338_10_02">
@@ -19311,16 +19324,16 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV3K0_GPI_1.i_iPRESS_R" VarB="AI Standard Channel 4^GVL_SXR_VAC.fb_TV3K0_GPI_1.i_iPRESS_R"/>
 			</OwnerB>
 			<OwnerB Name="TIPC^plc_kfe_vac^plc_kfe_vac Instance">
+				<Link VarA="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xCLS_SW" VarB="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xCLS_SW" AutoLink="true"/>
 				<Link VarA="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xOPN_SW" VarB="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOPN_SW" AutoLink="true"/>
 				<Link VarA="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xOverrideMode" VarB="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOverrideMode" AutoLink="true"/>
 				<Link VarA="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xVAC_FAULT_Reset" VarB="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xVAC_FAULT_Reset" AutoLink="true"/>
-				<Link VarA="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_eVFS_State" VarB="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_eVFS_State" AutoLink="true"/>
 				<Link VarA="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xVAC_FAULT_OK" VarB="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVAC_FAULT_OK" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_eVFS_State" VarB="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_eVFS_State" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xMPS_OK" VarB="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xMPS_OK" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xTrigger" VarB="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xTrigger" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVFS_Closed" VarB="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xVFS_Closed" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVFS_Open" VarB="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xVFS_Open" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xCLS_SW" VarB="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xCLS_SW" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOverrideOpen" VarB="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xOverrideOpen" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xPRESS_OK" VarB="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xPress_OK" AutoLink="true"/>
 			</OwnerB>

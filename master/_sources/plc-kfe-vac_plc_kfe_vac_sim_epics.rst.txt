@@ -16,7 +16,7 @@ ST_BeamParams_IO
       - Description
       - Pragma
     * - $(PREFIX):Attenuation_RBV
-      - longin
+      - ai
       - $(SYMBOL).nTran
       - | io: input
 
@@ -29,19 +29,13 @@ ST_BeamParams_IO
 
     * - $(PREFIX):AuxAttenuator_RBV
       - waveform
-      - $(SYMBOL).aStoppers
+      - $(SYMBOL).aVetoDevices
       - | io: input
 
 
     * - $(PREFIX):PhotonEnergy_RBV
       - longin
       - $(SYMBOL).neVRange
-      - | io: input
-
-
-    * - $(PREFIX):PulseEnergy_RBV
-      - ai
-      - $(SYMBOL).fPP_mJ
       - | io: input
 
 

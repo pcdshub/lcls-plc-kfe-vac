@@ -36,10 +36,10 @@ Libraries
     :header: Library, Vendor, Default, Version
     :align: center
 
-        Tc2_Standard, Beckhoff Automation GmbH, Unset, 
-        Tc2_System, Beckhoff Automation GmbH, Unset, 
-        Tc2_Utilities, Beckhoff Automation GmbH, Unset, 
-        Tc3_Module, Beckhoff Automation GmbH, Unset, 
+        Tc2_Standard, Beckhoff Automation GmbH, Unset, Unset
+        Tc2_System, Beckhoff Automation GmbH, Unset, Unset
+        Tc2_Utilities, Beckhoff Automation GmbH, Unset, Unset
+        Tc3_Module, Beckhoff Automation GmbH, Unset, Unset
         Vacuum System Simulator Library, SLAC, Unset, Unset
 
 Symbols

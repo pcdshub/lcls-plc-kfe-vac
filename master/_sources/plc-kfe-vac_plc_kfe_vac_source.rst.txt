@@ -293,42 +293,42 @@ GVL_Variables
     {attribute 'pytmc' := '
     	pv: @(PREFIX)FFO:01
     '}
-    g_FastFaultOutputK0  :   FB_HardwareFFOutput;
+    g_FastFaultOutputK0  :   FB_HardwareFFOutput :=(i_sNetID:='172.21.92.73.1.1');
 
     // K2/RIX specific faults 
     {attribute 'pytmc' := '
     	pv: @(PREFIX)FFO:02
     '}
-    g_FastFaultOutputK2  :   FB_HardwareFFOutput;
+    g_FastFaultOutputK2  :   FB_HardwareFFOutput :=(i_sNetID:='172.21.92.73.1.1');
 
     // K3/TXI specific faults
     {attribute 'pytmc' := '
     	pv: @(PREFIX)FFO:03
     '}
-    g_FastFaultOutputK3  :   FB_HardwareFFOutput;
+    g_FastFaultOutputK3  :   FB_HardwareFFOutput :=(i_sNetID:='172.21.92.73.1.1');
 
     // K4/TMO specific faults 
     {attribute 'pytmc' := '
     	pv: @(PREFIX)FFO:04
     '}
-    g_FastFaultOutputK4  :   FB_HardwareFFOutput;
+    g_FastFaultOutputK4  :   FB_HardwareFFOutput :=(i_sNetID:='172.21.92.73.1.1');
 
     // Fault aggregator for combined beamline  
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO (EL2202)]^Channel 1^Output'}
-    g_FastFaultOutputAll  :   FB_HardwareFFOutput;
+    g_FastFaultOutputAll  :   FB_HardwareFFOutput :=(i_sNetID:='172.21.92.73.1.1');
         
     {attribute 'pytmc' := '
     	pv: PLC:KFE:VAC:K0:FFO:02
     '}
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO (EL2202)]^Channel 2^Output'}
-    g_FastFaultOutput2  :	FB_HardwareFFOutput;	//FFO for Fast Shutter Valves upstream of ST1L0_XTES
+    g_FastFaultOutput2  :	FB_HardwareFFOutput :=(i_sNetID:='172.21.92.73.1.1');	//FFO for Fast Shutter Valves upstream of ST1L0_XTES
     	
 
     // Dummy FFO for valves not yet allowed to open. To be removed when proper interfaces to TXI and RIX vacuum are implemented. 
     {attribute 'pytmc' := '
     	pv: @(PREFIX)FF1A
     '}
-    g_FastFaultOutputINTF  :   FB_HardwareFFOutput;
+    g_FastFaultOutputINTF  :   FB_HardwareFFOutput :=(i_sNetID:='172.21.92.73.1.1');
 
 
     // ************
@@ -592,7 +592,7 @@ PRG_PMPS
     g_FastFaultOutputK0.Execute(bAutoReset:=True);
 
     g_FastFaultOutputK2.Execute(
-    	i_xVeto:= (  PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K1_OUT] 
+    	i_xVeto:= (  PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT] 
     			  ),
     	bAutoReset:=TRUE
     );
@@ -614,8 +614,8 @@ PRG_PMPS
     *)
 
     g_FastFaultOutputK4.Execute(
-    	i_xVeto:= (  PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K1_IN] 
-    				 OR PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K3_IN]
+    	i_xVeto:= (  PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN] 
+    				 OR PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K3_IN]
     			  ),
     	bAutoReset:=TRUE
     );
@@ -634,7 +634,7 @@ PRG_PMPS
     g_FastFaultOutputAll.Execute(bAutoReset:=True);
 
     // Arbiter
-    g_fbArbiter1.AddRequest(nReqID := 42, stReqBp := PMPS_GVL.cstFullBeam);
+    g_fbArbiter1.AddRequest(nReqID := 42, stReqBp := PMPS_GVL.cstFullBeam, sDevName := 'plc-kfe-vac');
     fbArbiterIO(Arbiter := g_fbArbiter1, fbFFHWO := g_FastFaultOutputK0);
 
     END_PROGRAM
@@ -705,7 +705,7 @@ PRG_SXR_VAC
     fb_PCPM3B_PIP_1(	i_stGauge := fb_PCPM3B_GFS_1.IG,		i_xOverrideMode := xSystemOverrideMode);
     fb_PA1K0_PIP_1(		i_stGauge := fb_PA1K0_GCC_1.IG,			i_xOverrideMode := xSystemOverrideMode);
     fb_PA1K0(			i_stGauge := fb_PA1K0_GCC_1.IG,			i_xOverrideMode := xSystemOverrideMode);
-    fb_MR1K1_BEND_PIP_1(i_stGauge := fb_MR1K1_BEND_GCC_1.IG,	i_xOverrideMode := xSystemOverrideMode);
+    fb_MR1K1_BEND_PIP_1(i_stGauge := fb_MR1K1_BEND_GPI_1.PG,	i_xOverrideMode := xSystemOverrideMode);
     fb_MR1K3_TXI_PIP_1(	i_stGauge := fb_MR1K3_TXI_GCC_1.IG,		i_xOverrideMode := xSystemOverrideMode);
     fb_MR2K3_TXI_PIP_1(	i_stGauge := fb_MR1K3_TXI_GCC_1.IG,		i_xOverrideMode := xSystemOverrideMode);
     fb_SP1K1_MONO_PIP_1(i_stGauge := fb_SP1K1_MONO_GPI_1.PG,	i_xOverrideMode := xSystemOverrideMode);

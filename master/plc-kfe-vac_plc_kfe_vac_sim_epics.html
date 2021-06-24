@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
@@ -206,7 +209,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>$(PREFIX):Attenuation_RBV</p></td>
-<td><p>longin</p></td>
+<td><p>ai</p></td>
 <td><p>$(SYMBOL).nTran</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
@@ -223,7 +226,7 @@
 </tr>
 <tr class="row-even"><td><p>$(PREFIX):AuxAttenuator_RBV</p></td>
 <td><p>waveform</p></td>
-<td><p>$(SYMBOL).aStoppers</p></td>
+<td><p>$(SYMBOL).aVetoDevices</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
 </div>
@@ -237,15 +240,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):PulseEnergy_RBV</p></td>
-<td><p>ai</p></td>
-<td><p>$(SYMBOL).fPP_mJ</p></td>
-<td><div class="line-block">
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
-<tr class="row-odd"><td><p>$(PREFIX):Rate_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):Rate_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>$(SYMBOL).nRate</p></td>
 <td><div class="line-block">
@@ -253,7 +248,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):Valid_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):Valid_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).xValid</p></td>
 <td><div class="line-block">

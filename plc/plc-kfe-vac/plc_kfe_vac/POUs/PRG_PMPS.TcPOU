@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_PMPS" Id="{f7d360c9-1fd6-4e06-b31d-7f5233ed9ceb}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_PMPS
 VAR
@@ -10,7 +10,7 @@ END_VAR
       <ST><![CDATA[g_FastFaultOutputK0.Execute(bAutoReset:=True);
 
 g_FastFaultOutputK2.Execute(
-	i_xVeto:= (  PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K1_OUT] 
+	i_xVeto:= (  PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT] 
 			  ),
 	bAutoReset:=TRUE
 );
@@ -32,8 +32,8 @@ g_FastFaultOutputK3.Execute(
 *)
 
 g_FastFaultOutputK4.Execute(
-	i_xVeto:= (  PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K1_IN] 
-				 OR PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.K_Stopper.MR1K3_IN]
+	i_xVeto:= (  PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN] 
+				 OR PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K3_IN]
 			  ),
 	bAutoReset:=TRUE
 );
@@ -52,47 +52,11 @@ g_FastFault(
 g_FastFaultOutputAll.Execute(bAutoReset:=True);
 
 // Arbiter
-g_fbArbiter1.AddRequest(nReqID := 42, stReqBp := PMPS_GVL.cstFullBeam);
+g_fbArbiter1.AddRequest(nReqID := 42, stReqBp := PMPS_GVL.cstFullBeam, sDevName := 'plc-kfe-vac');
 fbArbiterIO(Arbiter := g_fbArbiter1, fbFFHWO := g_FastFaultOutputK0);
 
 
 ]]></ST>
     </Implementation>
-    <LineIds Name="PRG_PMPS">
-      <LineId Id="61" Count="1" />
-      <LineId Id="57" Count="3" />
-      <LineId Id="55" Count="0" />
-      <LineId Id="79" Count="0" />
-      <LineId Id="73" Count="0" />
-      <LineId Id="76" Count="2" />
-      <LineId Id="80" Count="0" />
-      <LineId Id="56" Count="0" />
-      <LineId Id="81" Count="1" />
-      <LineId Id="49" Count="1" />
-      <LineId Id="66" Count="0" />
-      <LineId Id="52" Count="1" />
-      <LineId Id="48" Count="0" />
-      <LineId Id="54" Count="0" />
-      <LineId Id="83" Count="0" />
-      <LineId Id="36" Count="1" />
-      <LineId Id="45" Count="1" />
-      <LineId Id="38" Count="0" />
-      <LineId Id="25" Count="0" />
-      <LineId Id="39" Count="0" />
-      <LineId Id="26" Count="0" />
-      <LineId Id="15" Count="0" />
-      <LineId Id="17" Count="1" />
-      <LineId Id="21" Count="3" />
-      <LineId Id="68" Count="0" />
-      <LineId Id="16" Count="0" />
-      <LineId Id="64" Count="0" />
-      <LineId Id="63" Count="0" />
-      <LineId Id="65" Count="0" />
-      <LineId Id="14" Count="0" />
-      <LineId Id="67" Count="0" />
-      <LineId Id="5" Count="0" />
-      <LineId Id="11" Count="1" />
-      <LineId Id="10" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

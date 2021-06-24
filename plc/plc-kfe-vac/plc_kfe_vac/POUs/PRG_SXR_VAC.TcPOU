@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_SXR_VAC" Id="{7118719b-3077-4104-9acc-cffb49d6edd3}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_SXR_VAC
 VAR
@@ -66,7 +66,7 @@ fb_RTDSK0_PIP_5(	i_stGauge := fb_RTDSK0_GCC_1.IG,		i_xOverrideMode := xSystemOve
 fb_PCPM3B_PIP_1(	i_stGauge := fb_PCPM3B_GFS_1.IG,		i_xOverrideMode := xSystemOverrideMode);
 fb_PA1K0_PIP_1(		i_stGauge := fb_PA1K0_GCC_1.IG,			i_xOverrideMode := xSystemOverrideMode);
 fb_PA1K0(			i_stGauge := fb_PA1K0_GCC_1.IG,			i_xOverrideMode := xSystemOverrideMode);
-fb_MR1K1_BEND_PIP_1(i_stGauge := fb_MR1K1_BEND_GCC_1.IG,	i_xOverrideMode := xSystemOverrideMode);
+fb_MR1K1_BEND_PIP_1(i_stGauge := fb_MR1K1_BEND_GPI_1.PG,	i_xOverrideMode := xSystemOverrideMode);
 fb_MR1K3_TXI_PIP_1(	i_stGauge := fb_MR1K3_TXI_GCC_1.IG,		i_xOverrideMode := xSystemOverrideMode);
 fb_MR2K3_TXI_PIP_1(	i_stGauge := fb_MR1K3_TXI_GCC_1.IG,		i_xOverrideMode := xSystemOverrideMode);
 fb_SP1K1_MONO_PIP_1(i_stGauge := fb_SP1K1_MONO_GPI_1.PG,	i_xOverrideMode := xSystemOverrideMode);
@@ -95,14 +95,5 @@ fb_PA1K0_GPI_1(PG=>);
 
 ]]></ST>
     </Implementation>
-    <LineIds Name="PRG_SXR_VAC">
-      <LineId Id="3" Count="3" />
-      <LineId Id="94" Count="0" />
-      <LineId Id="7" Count="7" />
-      <LineId Id="92" Count="0" />
-      <LineId Id="15" Count="62" />
-      <LineId Id="79" Count="9" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

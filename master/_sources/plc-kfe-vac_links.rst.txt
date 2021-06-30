@@ -122,6 +122,7 @@ Links
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_TV3K0_PIP_1.i_xSP_DI, TIID^Device 1 (EtherCAT)^=+-EK1200_00_00^=+-ES1004_00_09, Channel 4^GVL_SXR_VAC.fb_TV3K0_PIP_1.i_xSP_DI
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_TV3K0_VGC_1.i_xClsLS, TIID^Device 1 (EtherCAT)^=+-EP2338_09_03, Channel 6^GVL_SXR_VAC.fb_TV3K0_VGC_1.i_xClsLS
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_TV3K0_VGC_1.i_xOpnLS, TIID^Device 1 (EtherCAT)^=+-EP2338_09_03, Channel 5^GVL_SXR_VAC.fb_TV3K0_VGC_1.i_xOpnLS
+        TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_VAC_INTF.fb_PC1K1_INTF_GCC_1.i_xEXT_Press_OK, TIID^Device 1 (EtherCAT)^=+-EK1100_02_00^=+-ES1008_02_03, Channel 1^GVL_VAC_INTF.fb_PC1K1_INTF_GCC_1.i_xEXT_Press_OK
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_VAC_INTF.fb_TV1K0_INTF_GCC_1.i_xEXT_Press_OK, TIID^Device 1 (EtherCAT)^=+-EK1100_03_00^=+-ES1008_03_07, Channel 3^GVL_VAC_INTF.fb_TV1K0_INTF_GCC_1.i_xEXT_Press_OK
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_Variables.fbEcatDiagWrapper.arrEcMasterNetId, TIID^Device 1 (EtherCAT), InfoData^AmsNetId
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_Variables.fbEcatDiagWrapper.nEcMasterDevState, TIID^Device 1 (EtherCAT), Inputs^DevState

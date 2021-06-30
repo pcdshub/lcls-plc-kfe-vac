@@ -677,9 +677,11 @@
 <span class="n">IF</span> <span class="n">i_xEXT_Press_OK</span> <span class="o">=</span> <span class="n">TRUE</span> <span class="n">THEN</span>
     <span class="n">IG</span><span class="o">.</span><span class="n">rPRESS</span> <span class="o">:=</span> <span class="n">rTREATY_SIGNAL_PRESS</span><span class="p">;</span>
     <span class="n">IG</span><span class="o">.</span><span class="n">xPRESS_OK</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+    <span class="n">IG</span><span class="o">.</span><span class="n">xAT_VAC</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
 <span class="n">ELSE</span>
     <span class="n">IG</span><span class="o">.</span><span class="n">rPRESS</span> <span class="o">:=</span> <span class="n">rNO_SIGNAL_PRESS</span><span class="p">;</span>
     <span class="n">IG</span><span class="o">.</span><span class="n">xPRESS_OK</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span>
+    <span class="n">IG</span><span class="o">.</span><span class="n">xAT_VAC</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span>
 <span class="n">END_IF</span>
 
 <span class="n">END_FUNCTION_BLOCK</span>

@@ -491,10 +491,12 @@ FB_EXT_TREATY_GAUGE
 
     IF i_xEXT_Press_OK = TRUE THEN
     	IG.rPRESS := rTREATY_SIGNAL_PRESS;
-    	IG.xPRESS_OK := TRUE; 
+    	IG.xPRESS_OK := TRUE;
+    	IG.xAT_VAC := TRUE;
     ELSE
     	IG.rPRESS := rNO_SIGNAL_PRESS;
-    	IG.xPRESS_OK := FALSE; 
+    	IG.xPRESS_OK := FALSE;
+    	IG.xAT_VAC := FALSE; 
     END_IF
 
     END_FUNCTION_BLOCK

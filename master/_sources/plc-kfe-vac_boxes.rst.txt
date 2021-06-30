@@ -3252,7 +3252,7 @@ PDO Channel 1 (Index #x1a00, Flags #x0011, SyncMan 0)
     :header: Name, Comment, BitLen, Index, Type
     :align: center
 
-        "Input", "", , "#x6000", "BIT"
+        "GVL_VAC_INTF.fb_PC1K1_INTF_GCC_1.i_xEXT_Press_OK", "", , "#x6000", "BIT"
 
 
 

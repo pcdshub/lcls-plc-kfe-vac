@@ -4,6 +4,7 @@ _CompileInfo
 
 
 *.suo
+*.swp
 *~
 *.tpy
 *.bak

@@ -1,0 +1,11 @@
+### Open valves along the beamline to TMO ###
+caput RTDSK0:VGC:1:OPN_SW "OPEN"
+caput EM1K0:GMD:VGC:1:OPN_SW "OPEN"
+caput AT1K0:GAS:VGC:1:OPN_SW "OPEN"
+caput EM2K0:XGMD:VGC:1:OPN_SW "OPEN"
+caput EM2K0:XGMD:VGC:2:OPN_SW "OPEN"
+caput TV2K0:VGC:1:OPN_SW "OPEN"
+caput MR1K1:VGC:1:OPN_SW "OPEN"
+caput MR1K3:VGC:1:OPN_SW "OPEN"
+caput TV3K0:VGC:1:OPN_SW "OPEN"
+caput MR1K4:VGC:1:OPN_SW "OPEN"

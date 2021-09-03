@@ -95,5 +95,9 @@ fb_PA1K0_GPI_1(PG=>);
 
 ]]></ST>
     </Implementation>
+    <LineIds Name="PRG_SXR_VAC">
+      <LineId Id="3" Count="86" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

@@ -5,14 +5,14 @@
 VAR
 		
 	fbGetCurTaskIdx  : GETCURTASKINDEX;
-	tRecover_pip: TON;
-	tRecover_gcc: TON;
-	bRecover_pip : BOOL ;
-	bRecover_gcc : BOOL ;
+//	tRecover_pip: TON;
+//	tRecover_gcc: TON;
+//	bRecover_pip : BOOL ;
+//	bRecover_gcc : BOOL ;
 	// For Persistent Data
 	fbWritePersistentData           : WritePersistentData;
-	tWait_pip:TIME:=T#900S;
-	tWait_gcc:TIME:=T#600S;
+//	tWait_pip:TIME:=T#900S;
+//	tWait_gcc:TIME:=T#600S;
 	
 END_VAR
 

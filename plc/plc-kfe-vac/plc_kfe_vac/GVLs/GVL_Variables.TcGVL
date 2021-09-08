@@ -107,7 +107,7 @@ fbEcatDiagWrapper : FB_EcatDiagWrapper;
      pv: @(PREFIX)Arb:01
 '}
 g_fbArbiter1    :   FB_Arbiter(01);
-     
+
 
 END_VAR
 ]]></Declaration>

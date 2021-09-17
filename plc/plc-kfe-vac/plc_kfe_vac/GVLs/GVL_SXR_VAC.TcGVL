@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <GVL Name="GVL_SXR_VAC" Id="{d38b3a8d-c2e8-4a67-9aeb-873e21370c76}">
     <Declaration><![CDATA[VAR_GLOBAL
 
@@ -99,7 +99,13 @@ fb_IM1K3_PPM_VGC_1 : FB_VGC;
 fb_TV3K0_VGC_1 : FB_VGC;
 {attribute 'pytmc' := ' pv: MR1K4:VGC:1 '}
 fb_MR1K4_SOMS_VGC_1 : FB_VGC;
-
+{attribute 'pytmc' := ' pv: IM1K0:XTES:VGC:1 '}
+//linking pragma needed
+{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[=+-EL1004_03_04]^Channel 3^Input;
+							.i_xClsLS	:=	TIIB[=+-EL1004_03_04]^Channel 4^Input;
+							.q_xOPN_DO	:=	TIIB[=+-ES2004_03_03]^Channel 3^Output;
+							.q_xOPN_DO	:=	TIIB[=+-ES2004_03_03]^Channel 4^Output	'}
+fb_IM1K0_XTES_VGC_1 : FB_VGC;
 
 // VFS valves 
 

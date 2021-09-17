@@ -16,17 +16,7 @@ VAR
 	
 END_VAR
 
-
-VAR PERSISTENT
-//	bWasOn : BOOL;
-//{attribute 'pytmc' := '
-//	pv: @(PREFIX)RECOVER_ENB
-//'}
-//bRecoverEnable : BOOL := TRUE; (*Enable GCC PIP recover after power outage*)
-
-
-
-END_VAR]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[PRG_DIAGNOSTIC();
 PRG_SXR_VAC();
@@ -46,21 +36,5 @@ ACT_Recover();
 END_IF
 *)]]></ST>
     </Implementation>
-    <LineIds Name="MAIN">
-      <LineId Id="6" Count="1" />
-      <LineId Id="22" Count="0" />
-      <LineId Id="31" Count="0" />
-      <LineId Id="17" Count="0" />
-      <LineId Id="12" Count="0" />
-      <LineId Id="56" Count="1" />
-      <LineId Id="55" Count="0" />
-      <LineId Id="60" Count="0" />
-      <LineId Id="80" Count="0" />
-      <LineId Id="79" Count="0" />
-      <LineId Id="83" Count="0" />
-      <LineId Id="59" Count="0" />
-      <LineId Id="81" Count="1" />
-      <LineId Id="26" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -205,6 +205,8 @@ GVL_SXR_VAC
     END_VAR
 
 
+
+
 GVL_Variables
 ^^^^^^^^^^^^^
 
@@ -219,6 +221,8 @@ GVL_Variables
     Global_OverridePressure : BOOL := FALSE;
 
     END_VAR
+
+
 
 
 POUs
@@ -239,6 +243,11 @@ MAIN
     END_PROGRAM
 
 
+Related:
+    * `PRG_DIAGNOSTIC`_
+    * `PRG_SXR_VAC`_
+
+
 PRG_DIAGNOSTIC
 ^^^^^^^^^^^^^^
 
@@ -254,6 +263,8 @@ PRG_DIAGNOSTIC
     END_IF
 
     END_PROGRAM
+
+
 
 
 PRG_SXR_VAC
@@ -348,4 +359,6 @@ PRG_SXR_VAC
     fb_PC4K4_XTES_GCC_1(stVolume := st_PC4K4_VOL, stGauge := st_PC4K4_XTES_GCC_1);
 
     END_PROGRAM
+
+
 

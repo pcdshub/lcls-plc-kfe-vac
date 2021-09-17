@@ -27,11 +27,8 @@ Links
         OutputSrc, GVL_SXR_VAC.fb_RTDSK0_INTF_VGC_1.q_xTREATY_VGC_STATUS, TIID^Device 1 (EtherCAT)^=+-EK1100_03_00^=+-EL2798_03_10, Channel 1^GVL_SXR_VAC.fb_RTDSK0_INTF_VGC_1.q_xTREATY_VGC_STATUS
         OutputSrc, GVL_SXR_VAC.fb_SL1K0_GCC_1.q_xHV_DIS, TIID^=+-EK1200_00_00-CPU/EtherCAT1^=+-EK1100_01_00^=+-EL2798_01_02, Channel 4^GVL_SXR_VAC.fb_SL1K0_GCC_1.q_xHV_DIS
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xClsLS, TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES1004_05_02, Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xClsLS
-        TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xOPN_SW, TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOPN_SW
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xOpnLS, TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES1004_05_02, Channel 2^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xOpnLS
-        TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xOverrideOpen, TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOverrideOpen
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xTrigger, TIID^Device 1 (EtherCAT)^=+-EK1100_02_00^=+-EL1124_02_08, Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xTrigger
-        TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xVAC_FAULT_Reset, TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xVAC_FAULT_Reset
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xClose_A, TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES2202_05_03, Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xClose_A
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xClose_B, TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES2202_05_03, Channel 2^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xClose_B
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xClose_C, TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES2202_05_04, Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xClose_C
@@ -49,6 +46,8 @@ Links
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xOpnLS, TIID^Device 1 (EtherCAT)^=+-EP2338_04_00, Channel 5^GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.i_xOpnLS
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.i_iPRESS_R, TIID^Device 1 (EtherCAT)^=+-EK1100_01_00^=+-ES3068_01_01, AI Standard Channel 3^GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.i_iPRESS_R
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_IM1K0_XTES_GPI_1.i_iPRESS_R, TIID^Device 1 (EtherCAT)^=+-EK1100_01_00^=+-ES3068_01_01, AI Standard Channel 6^GVL_SXR_VAC.fb_IM1K0_XTES_GPI_1.i_iPRESS_R
+        TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_IM1K0_XTES_VGC_1.i_xClsLS, TIID^Device 1 (EtherCAT)^=+-EK1100_03_00^=+-EL1004_03_04, Channel 4^Input
+        TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_IM1K0_XTES_VGC_1.i_xOpnLS, TIID^Device 1 (EtherCAT)^=+-EK1100_03_00^=+-EL1004_03_04, Channel 3^Input
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_IM1K3_PPM_VGC_1.i_xClsLS, TIID^Device 1 (EtherCAT)^=+-EP2338_09_03, Channel 2^GVL_SXR_VAC.fb_IM1K3_PPM_VGC_1.i_xClsLS
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_IM1K3_PPM_VGC_1.i_xOpnLS, TIID^Device 1 (EtherCAT)^=+-EP2338_09_03, Channel 1^GVL_SXR_VAC.fb_IM1K3_PPM_VGC_1.i_xOpnLS
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.i_iPRESS_R, TIID^Device 1 (EtherCAT)^=+-EP3174_07_01, AI Standard Channel 4^GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.i_iPRESS_R
@@ -140,6 +139,8 @@ Links
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.q_xOPN_DO, TIID^Device 1 (EtherCAT)^=+-EP2338_04_00, Channel 11^GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_1.q_xOPN_DO
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.q_xOPN_DO, TIID^Device 1 (EtherCAT)^=+-EP2338_04_00, Channel 15^GVL_SXR_VAC.fb_EM2K0_XGMD_VGC_2.q_xOPN_DO
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.q_xHV_DIS, TIID^Device 1 (EtherCAT)^=+-EK1100_01_00^=+-EL2798_01_02, Channel 2^GVL_SXR_VAC.fb_IM1K0_XTES_GCC_1.q_xHV_DIS
+        TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_IM1K0_XTES_VGC_1.q_xOPN_DO, TIID^SimDevice 2 (EtherCAT Simulation)^=+-ES2004_03_03, Channel 3^Output
+        TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_IM1K0_XTES_VGC_1.q_xOPN_DO, TIID^SimDevice 2 (EtherCAT Simulation)^=+-ES2004_03_03, Channel 4^Output
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_IM1K3_PPM_VGC_1.q_xOPN_DO, TIID^Device 1 (EtherCAT)^=+-EP2338_09_03, Channel 11^GVL_SXR_VAC.fb_IM1K3_PPM_VGC_1.q_xOPN_DO
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.q_xHV_DIS, TIID^Device 1 (EtherCAT)^=+-EP2624_07_02, Channel 2^GVL_SXR_VAC.fb_MR1K1_BEND_GCC_1.q_xHV_DIS
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_MR1K1_BEND_PIP_1.q_xHVEna_DO, TIID^Device 1 (EtherCAT)^=+-EK1200_00_00^=+-EL2794_00_06, Channel 3^GVL_SXR_VAC.fb_MR1K1_BEND_PIP_1.q_xHVEna_DO
@@ -173,8 +174,11 @@ Links
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_GCC_1.q_xHV_DIS, TIID^Device 1 (EtherCAT)^=+-EK1100_01_00^=+-EL2798_01_06, Channel 1^GVL_SXR_VAC.fb_TV2K0_GCC_1.q_xHV_DIS
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_GCC_2.q_xHV_DIS, TIID^Device 1 (EtherCAT)^=+-EK1100_01_00^=+-EL2798_01_06, Channel 2^GVL_SXR_VAC.fb_TV2K0_GCC_2.q_xHV_DIS
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xCLS_SW, TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xCLS_SW
+        TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOPN_SW, TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xOPN_SW
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOverrideMode, TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xOverrideMode
+        TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOverrideOpen, TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xOverrideOpen
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xPRESS_OK, TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xPress_OK
+        TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xVAC_FAULT_Reset, TIPC^plc_kfe_vac^plc_kfe_vac Instance, FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xVAC_FAULT_Reset
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VGC_1.q_xOPN_DO, TIID^Device 1 (EtherCAT)^=+-EP2338_05_00, Channel 11^GVL_SXR_VAC.fb_TV2K0_VGC_1.q_xOPN_DO
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_TV3K0_GCC_1.q_xHV_DIS, TIID^Device 1 (EtherCAT)^=+-EP2624_10_01, Channel 1^GVL_SXR_VAC.fb_TV3K0_GCC_1.q_xHV_DIS
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Outputs^GVL_SXR_VAC.fb_TV3K0_PIP_1.q_xHVEna_DO, TIID^Device 1 (EtherCAT)^=+-EK1200_00_00^=+-EL2794_00_10, Channel 4^GVL_SXR_VAC.fb_TV3K0_PIP_1.q_xHVEna_DO

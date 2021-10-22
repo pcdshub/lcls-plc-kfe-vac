@@ -104,7 +104,7 @@ fb_MR1K4_SOMS_VGC_1 : FB_VGC;
 {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[=+-EL1004_03_04]^Channel 3^Input;
 							.i_xClsLS	:=	TIIB[=+-EL1004_03_04]^Channel 4^Input;
 							.q_xOPN_DO	:=	TIIB[=+-ES2004_03_03]^Channel 3^Output;
-							.q_xOPN_DO	:=	TIIB[=+-ES2004_03_03]^Channel 4^Output	'}
+							.q_xOPN_DO	:=	TIIB[=+-ES2004_03_03]^Channel 4^Output'}
 fb_IM1K0_XTES_VGC_1 : FB_VGC;
 
 // VFS valves 

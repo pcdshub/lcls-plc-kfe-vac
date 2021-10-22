@@ -439,8 +439,8 @@
 					<ManualSelect>{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</ManualSelect>
 					<ManualSelect>{E008E3C8-6BD9-491C-B673-DC45CC7AA4F1}</ManualSelect>
 					<TargetSelect TargetId="2">{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</TargetSelect>
-					<TargetSelect TargetId="2">{BCA6EE0A-9CE1-4D3F-98CA-413ABC0D94FD}</TargetSelect>
 					<TargetSelect TargetId="2">{66689887-CCBD-452C-AC9A-039D997C6E66}</TargetSelect>
+					<TargetSelect TargetId="2">{BCA6EE0A-9CE1-4D3F-98CA-413ABC0D94FD}</TargetSelect>
 					<TargetSelect TargetId="2">{103F30C9-DF25-439E-837B-9DF80CB9356C}</TargetSelect>
 					<TargetSelect TargetId="2">{E008E3C8-6BD9-491C-B673-DC45CC7AA4F1}</TargetSelect>
 					<LicenseDevice DongleHardwareId="2" DongleDevice="#x03020051" DongleLevel="40" DongleSystemId="{62B700F4-724D-86FD-6BD6-9B13C29CAAEA}"/>
@@ -531,10 +531,6 @@
 					<Vars VarGrpType="2">
 						<Name>FSV_task Outputs</Name>
 						<Var>
-							<Name>GVL_Variables.g_FastFaultOutput2.q_xFastFaultOut</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_VFS.fb_TV2K0_VFS_1.q_xClose_A</Name>
 							<Type>BOOL</Type>
 						</Var>
@@ -591,6 +587,10 @@
 								<![CDATA[Interface]]>
 							</Comment>
 							<Type GUID="{91187CB5-D5B5-4DD0-8966-41A4C12CC2DB}" Namespace="LCLS_Vacuum">E_VGC</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Variables.g_FastFaultOutput2.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
 						</Var>
 					</Vars>
 					<Vars VarGrpType="8">
@@ -23069,6 +23069,8 @@ Bit1: Value bigger/equal Limit2]]>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_03_00^=+-ES2004_03_03">
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.q_xOPN_DO" VarB="Channel 1^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.q_xOPN_DO"/>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.q_xOPN_DO" VarB="Channel 2^GVL_SXR_VAC.fb_AT1K0_GAS_VGC_1.q_xOPN_DO"/>
+				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_IM1K0_XTES_VGC_1.q_xOPN_DO" VarB="Channel 3^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_IM1K0_XTES_VGC_1.q_xOPN_DO" VarB="Channel 4^Output"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES1004_05_02">
 				<Link VarA="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xClsLS" VarB="Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xClsLS" AutoLink="true"/>
@@ -23229,11 +23231,11 @@ Bit1: Value bigger/equal Limit2]]>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_IM1K0_XTES_VGC_1.q_xOPN_DO" VarB="Channel 4^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIPC^plc_kfe_vac^plc_kfe_vac Instance">
-				<Link VarA="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xTrigger" VarB="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xTrigger" AutoLink="true"/>
-				<Link VarA="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xVFS_Closed" VarB="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVFS_Closed" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_eVFS_State" VarB="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_eVFS_State" AutoLink="true"/>
+				<Link VarA="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_eVFS_State" VarB="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_eVFS_State" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xMPS_OK" VarB="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xMPS_OK" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xTrigger" VarB="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xTrigger" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVAC_FAULT_OK" VarB="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xVAC_FAULT_OK" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVFS_Closed" VarB="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xVFS_Closed" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVFS_Open" VarB="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xVFS_Open" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xCLS_SW" VarB="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xCLS_SW" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOPN_SW" VarB="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xOPN_SW" AutoLink="true"/>

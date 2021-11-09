@@ -163,7 +163,7 @@ fb_TV3K0_PIP_1 : FB_PIP_GAMMA;
 								 .i_xSP_DI		:= 	TIIB[=+-EL1004_02_11]^Channel 1^Input;
 								 .q_xHVEna_DO	:= 	TIIB[=+-EL2794_02_10]^Channel 1^Output
 	'}	
-{attribute 'pytmc' := 'pv: SL1K0:PIP:01	'}
+{attribute 'pytmc' := 'pv: SL1K0:POWER:PIP:01	'}
 fb_SL1K0_PIP_1 : FB_PIP_GAMMA;
 
 

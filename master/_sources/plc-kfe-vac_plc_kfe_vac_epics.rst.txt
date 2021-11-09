@@ -38263,6 +38263,229 @@ Database Records
         | io: output
 
 
+    * - SL1K0:POWER:PIP:01:AI_Offset
+      - longout
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.iOffset
+      - | io: output
+
+
+    * - SL1K0:POWER:PIP:01:AI_Offset_RBV
+      - longin
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.iOffset
+      - | io: output
+
+
+    * - SL1K0:POWER:PIP:01:AT_VAC_SP
+      - ao
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.rHVEna_SP
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - SL1K0:POWER:PIP:01:AT_VAC_SP_RBV
+      - ai
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.rHVEna_SP
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - SL1K0:POWER:PIP:01:Auto_On
+      - bo
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.xAutoOn
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - SL1K0:POWER:PIP:01:Auto_On_RBV
+      - bi
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.xAutoOn
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - SL1K0:POWER:PIP:01:AutoOn_timer_RBV
+      - longin
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.iAutoOnTimer
+      - | io: input
+
+
+    * - SL1K0:POWER:PIP:01:ERROR_RBV
+      - bi
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.xError
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - SL1K0:POWER:PIP:01:FORCE_START
+      - bo
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.pv_xOvrdStart
+      - | field: ONAM FORCE START
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - SL1K0:POWER:PIP:01:FORCE_START_RBV
+      - bi
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.pv_xOvrdStart
+      - | field: ONAM FORCE START
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - SL1K0:POWER:PIP:01:HV_DI_RBV
+      - bi
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.i_xHV_DI
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - SL1K0:POWER:PIP:01:HV_DO_RBV
+      - bi
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.q_xHVEna_DO
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: input
+
+
+    * - SL1K0:POWER:PIP:01:HV_SW
+      - bo
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.xHVEna_SW
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - SL1K0:POWER:PIP:01:HV_SW_RBV
+      - bi
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.xHVEna_SW
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - SL1K0:POWER:PIP:01:ILK_DEVICE_RBV
+      - waveform
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.sIlkDeviceName
+      - | io: input
+
+
+    * - SL1K0:POWER:PIP:01:ILK_OK_RBV
+      - bi
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.xILKOk
+      - | field: ONAM OK
+        | field: ZNAM NOT OK
+        | io: input
+
+
+    * - SL1K0:POWER:PIP:01:Inverted
+      - bo
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.bOutputInverted
+      - | field: ONAM INVERTED
+        | field: ZNAM NORMAL
+        | io: output
+
+
+    * - SL1K0:POWER:PIP:01:Inverted_RBV
+      - bi
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.bOutputInverted
+      - | field: ONAM INVERTED
+        | field: ZNAM NORMAL
+        | io: output
+
+
+    * - SL1K0:POWER:PIP:01:LOGGER
+      - bo
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.xLog
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - SL1K0:POWER:PIP:01:LOGGER_RBV
+      - bi
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.xLog
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - SL1K0:POWER:PIP:01:OVRD_ON
+      - bo
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.xOverrideMode
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
+        | io: output
+
+
+    * - SL1K0:POWER:PIP:01:OVRD_ON_RBV
+      - bi
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.xOverrideMode
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
+        | io: output
+
+
+    * - SL1K0:POWER:PIP:01:PRESS_AI_RBV
+      - ai
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.i_iPRESS
+      - | io: input
+
+
+    * - SL1K0:POWER:PIP:01:PRESS_RBV
+      - ai
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.rPRESS
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: input
+
+
+    * - SL1K0:POWER:PIP:01:SP_HYS
+      - ao
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.rHYS_PR
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - SL1K0:POWER:PIP:01:SP_HYS_RBV
+      - ai
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.rHYS_PR
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - SL1K0:POWER:PIP:01:STATE_RBV
+      - mbbi
+      - GVL_SXR_VAC.fb_SL1K0_PIP_1.stPump.eState
+      - | field: FRST STOPPING
+        | field: ONST STARTING
+        | field: THST FAULT
+        | field: TWST RUNNING
+        | field: ZRST STOPPED
+        | io: input
+
+
     * - SP1K1:MONO:GCC:1:AT_VAC_RBV
       - bi
       - GVL_SXR_VAC.fb_SP1K1_MONO_GCC_1.IG.xAT_VAC

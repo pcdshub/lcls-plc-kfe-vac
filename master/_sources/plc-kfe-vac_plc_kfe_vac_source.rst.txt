@@ -224,6 +224,13 @@ GVL_SXR_VAC
     fb_SP1K1_MONO_PIP_2 : FB_PIP_GAMMA;
     {attribute 'pytmc' := ' pv: TV3K0:PIP:1 '}
     fb_TV3K0_PIP_1 : FB_PIP_GAMMA;
+    {attribute 'TcLinkTo' := 	'.i_iPRESS		:=	TIIB[=+-EL3064_02_09]^AI Standard Channel 1^Value;
+    								 .i_xSP_DI		:= 	TIIB[=+-EL1004_02_11]^Channel 1^Input;
+    								 .q_xHVEna_DO	:= 	TIIB[=+-EL2794_02_10]^Channel 1^Output
+    	'}	
+    {attribute 'pytmc' := 'pv: SL1K0:POWER:PIP:01	'}
+    fb_SL1K0_PIP_1 : FB_PIP_GAMMA;
+
 
 
 
@@ -818,6 +825,8 @@ PRG_SXR_VAC
     fb_SP1K1_MONO_PIP_1(i_stGauge := fb_SP1K1_MONO_GPI_1.PG,	i_xOverrideMode := xSystemOverrideMode);
     fb_SP1K1_MONO_PIP_2(i_stGauge := fb_SP1K1_MONO_GPI_1.PG,	i_xOverrideMode := xSystemOverrideMode);
     fb_TV3K0_PIP_1(		i_stGauge := fb_TV3K0_GCC_1.IG,			i_xOverrideMode := xSystemOverrideMode);
+    fb_SL1K0_PIP_1( 	i_stGauge := fb_SL1K0_POWER_GPI_1.PG,	i_xOverrideMode := xSystemOverrideMode); // New Ion Pump 
+
 
 
     // FB_MKS422

@@ -329,6 +329,13 @@
 <span class="n">fb_SP1K1_MONO_PIP_2</span> <span class="p">:</span> <span class="n">FB_PIP_GAMMA</span><span class="p">;</span>
 <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39; pv: TV3K0:PIP:1 &#39;</span><span class="p">}</span>
 <span class="n">fb_TV3K0_PIP_1</span> <span class="p">:</span> <span class="n">FB_PIP_GAMMA</span><span class="p">;</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>    <span class="s1">&#39;.i_iPRESS              :=      TIIB[=+-EL3064_02_09]^AI Standard Channel 1^Value;</span>
+                                                             <span class="o">.</span><span class="n">i_xSP_DI</span>              <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="o">=+-</span><span class="n">EL1004_02_11</span><span class="p">]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">q_xHVEna_DO</span>   <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="o">=+-</span><span class="n">EL2794_02_10</span><span class="p">]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Output</span>
+    <span class="s1">&#39;}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: SL1K0:POWER:PIP:01       &#39;</span><span class="p">}</span>
+<span class="n">fb_SL1K0_PIP_1</span> <span class="p">:</span> <span class="n">FB_PIP_GAMMA</span><span class="p">;</span>
+
 
 
 
@@ -902,6 +909,8 @@
 <span class="n">fb_SP1K1_MONO_PIP_1</span><span class="p">(</span><span class="n">i_stGauge</span> <span class="o">:=</span> <span class="n">fb_SP1K1_MONO_GPI_1</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span>    <span class="n">i_xOverrideMode</span> <span class="o">:=</span> <span class="n">xSystemOverrideMode</span><span class="p">);</span>
 <span class="n">fb_SP1K1_MONO_PIP_2</span><span class="p">(</span><span class="n">i_stGauge</span> <span class="o">:=</span> <span class="n">fb_SP1K1_MONO_GPI_1</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span>    <span class="n">i_xOverrideMode</span> <span class="o">:=</span> <span class="n">xSystemOverrideMode</span><span class="p">);</span>
 <span class="n">fb_TV3K0_PIP_1</span><span class="p">(</span>             <span class="n">i_stGauge</span> <span class="o">:=</span> <span class="n">fb_TV3K0_GCC_1</span><span class="o">.</span><span class="n">IG</span><span class="p">,</span>                 <span class="n">i_xOverrideMode</span> <span class="o">:=</span> <span class="n">xSystemOverrideMode</span><span class="p">);</span>
+<span class="n">fb_SL1K0_PIP_1</span><span class="p">(</span>     <span class="n">i_stGauge</span> <span class="o">:=</span> <span class="n">fb_SL1K0_POWER_GPI_1</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span>   <span class="n">i_xOverrideMode</span> <span class="o">:=</span> <span class="n">xSystemOverrideMode</span><span class="p">);</span> <span class="o">//</span> <span class="n">New</span> <span class="n">Ion</span> <span class="n">Pump</span>
+
 
 
 <span class="o">//</span> <span class="n">FB_MKS422</span>

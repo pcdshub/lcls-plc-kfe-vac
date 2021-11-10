@@ -1136,7 +1136,7 @@ TC_EVENTS
     :header: Symbol, Type, Offset/Size
     :align: center
 
-        TC_EVENTS.LCLSGeneralEventClass, LCLSGeneralEventClass, 650767008 (960)
+        TC_EVENTS.LCLSGeneralEventClass, LCLSGeneralEventClass, 650765984 (960)
 
 
 TC_EVENT_CLASSES
@@ -1146,12 +1146,12 @@ TC_EVENT_CLASSES
     :header: Symbol, Type, Offset/Size
     :align: center
 
-        TC_EVENT_CLASSES.LCLSGeneralEventClass, GUID, 650736672 (128)
-        TC_EVENT_CLASSES.TcGeneralAdsEventClass, GUID, 650736160 (128)
-        TC_EVENT_CLASSES.TcRouterEventClass, GUID, 650736288 (128)
-        TC_EVENT_CLASSES.TcRTimeEventClass, GUID, 650736416 (128)
-        TC_EVENT_CLASSES.TcSystemEventClass, GUID, 650736032 (128)
-        TC_EVENT_CLASSES.Win32EventClass, GUID, 650736544 (128)
+        TC_EVENT_CLASSES.LCLSGeneralEventClass, GUID, 650775648 (128)
+        TC_EVENT_CLASSES.TcGeneralAdsEventClass, GUID, 650775136 (128)
+        TC_EVENT_CLASSES.TcRouterEventClass, GUID, 650775264 (128)
+        TC_EVENT_CLASSES.TcRTimeEventClass, GUID, 650775392 (128)
+        TC_EVENT_CLASSES.TcSystemEventClass, GUID, 650775008 (128)
+        TC_EVENT_CLASSES.Win32EventClass, GUID, 650775520 (128)
 
 
 TwinCAT_SystemInfoVarList

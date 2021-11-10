@@ -224,9 +224,9 @@ GVL_SXR_VAC
     fb_SP1K1_MONO_PIP_2 : FB_PIP_GAMMA;
     {attribute 'pytmc' := ' pv: TV3K0:PIP:1 '}
     fb_TV3K0_PIP_1 : FB_PIP_GAMMA;
-    {attribute 'TcLinkTo' := 	'.i_iPRESS		:=	TIIB[=+-EL3064_02_09]^AI Standard Channel 1^Value;
-    								 .i_xSP_DI		:= 	TIIB[=+-EL1004_02_11]^Channel 1^Input;
-    								 .q_xHVEna_DO	:= 	TIIB[=+-EL2794_02_10]^Channel 1^Output
+    {attribute 'TcLinkTo' := 	'.i_iPRESS		:=	TIIB[=+-EL3064_02_07]^AI Standard Channel 1^Value;
+    								 .i_xSP_DI		:= 	TIIB[=+-EL1004_02_09]^Channel 1^Input;
+    								 .q_xHVEna_DO	:= 	TIIB[=+-EL2794_02_08]^Channel 1^Output
     	'}	
     {attribute 'pytmc' := 'pv: SL1K0:POWER:PIP:01	'}
     fb_SL1K0_PIP_1 : FB_PIP_GAMMA;
@@ -432,7 +432,7 @@ GVL_VFS
     		.q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES2202_05_04^Channel 2^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xOPN_DO;
     		.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES1004_05_02^Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xClsLS;
     		.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^=+-EK1100_05_01^=+-ES1004_05_02^Channel 2^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xOpnLS;
-    		.i_xTrigger :=  TIID^Device 1 (EtherCAT)^=+-EK1100_02_00^=+-EL1124_02_08^Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xTrigger;
+    		.i_xTrigger :=  TIID^Device 1 (EtherCAT)^=+-EK1100_02_00^=+-EL1124_02_11^Channel 1^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xTrigger;
     		.i_xPress_OK		:= 	TIPC^plc_kfe_vac^plc_kfe_vac Instance^PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xPRESS_OK;
     		.i_xOPN_SW			:=  TIPC^plc_kfe_vac^plc_kfe_vac Instance^PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOPN_SW;
     		.i_xCLS_SW			:=  TIPC^plc_kfe_vac^plc_kfe_vac Instance^PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xCLS_SW;

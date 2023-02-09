@@ -17,7 +17,7 @@
     <Company>SLAC</Company>
     <Released>true</Released>
     <Title>plc_kfe_vac</Title>
-    <ProjectVersion>1.6.0</ProjectVersion>
+    <ProjectVersion>0.0.0</ProjectVersion>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DUTs\ST_EXT_GCC.TcDUT">

@@ -130,7 +130,6 @@ Links
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_Variables.fbEcatDiagWrapper.nEcMasterDeviceId, TIID^Device 1 (EtherCAT), InfoData^DevId
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCount, TIID^Device 1 (EtherCAT), Inputs^SlaveCount
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_Variables.fbEcatDiagWrapper.nEcMasterSlaveCountCfg, TIID^Device 1 (EtherCAT), InfoData^CfgSlaveCount
-        TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^GVL_Variables.fbEcatDiagWrapper.wFrmXWcState, TIID^Device 1 (EtherCAT), Inputs^Frm1WcState
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^PRG_PMPS.fbArbiterIO.i_stCurrentBP, TIID^Device 1 (EtherCAT)^=+-EK1100_01_00^PMPS_PRE, IO Inputs^CurrentBP
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^PRG_PMPS.fbArbiterIO.xTxPDO_state, TIID^Device 1 (EtherCAT)^=+-EK1100_01_00^PMPS_PRE, SYNC Inputs^TxPDO state
         TIPC^plc_kfe_vac^plc_kfe_vac Instance, PlcTask Inputs^PRG_PMPS.fbArbiterIO.xTxPDO_toggle, TIID^Device 1 (EtherCAT)^=+-EK1100_01_00^PMPS_PRE, SYNC Inputs^TxPDO toggle

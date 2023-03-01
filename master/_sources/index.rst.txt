@@ -7,6 +7,7 @@ plc
 
     plc-kfe-vac_pragmas
     plc-kfe-vac_nc
+    plc-kfe-vac_ethercat
     plc-kfe-vac_boxes
     plc-kfe-vac_links
 

@@ -4,54 +4,42 @@
     <Declaration><![CDATA[FUNCTION_BLOCK FB_EXT_TREATY_GAUGE
 // Handle external gauge communicated to this PLC by a single dry-contact.
 VAR_INPUT
-	
-	//	Setpoint agreed upon w/ the external system signified by the signal they send. 
-	rTREATY_SIGNAL_PRESS : REAL;
-	
-	// Presumed pressure if the signal is not received. 
-	rNO_SIGNAL_PRESS : REAL;
+
+    //	Setpoint agreed upon w/ the external system signified by the signal they send.
+    rTREATY_SIGNAL_PRESS : REAL;
+
+    // Presumed pressure if the signal is not received.
+    rNO_SIGNAL_PRESS : REAL;
 END_VAR
 VAR_OUTPUT
-	{attribute 'pytmc' := '
-    pv: 
-	'}
-	IG      : ST_VG;
     {attribute 'pytmc' := '
-    pv: 
-	'}
-    EXT_IG  : ST_EXT_GCC;   
+    pv:
+    '}
+    IG      : ST_VG;
+    {attribute 'pytmc' := '
+    pv:
+    '}
+    EXT_IG  : ST_EXT_GCC;
 END_VAR
 VAR
 
-	// Input from AD's system indicating pressure belopw setpoint. 
-	i_xEXT_Press_OK AT %I* : BOOL;
-    
+    // Input from AD's system indicating pressure belopw setpoint.
+    i_xEXT_Press_OK AT %I* : BOOL;
+
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[EXT_IG.xIlk_Inp := i_xEXT_Press_OK; 
+      <ST><![CDATA[EXT_IG.xIlk_Inp := i_xEXT_Press_OK;
 
 IF i_xEXT_Press_OK = TRUE THEN
-	IG.rPRESS := rTREATY_SIGNAL_PRESS;
-	IG.xPRESS_OK := TRUE;
-	IG.xAT_VAC := TRUE;
+    IG.rPRESS := rTREATY_SIGNAL_PRESS;
+    IG.xPRESS_OK := TRUE;
+    IG.xAT_VAC := TRUE;
 ELSE
-	IG.rPRESS := rNO_SIGNAL_PRESS;
-	IG.xPRESS_OK := FALSE;
-	IG.xAT_VAC := FALSE; 
+    IG.rPRESS := rNO_SIGNAL_PRESS;
+    IG.xPRESS_OK := FALSE;
+    IG.xAT_VAC := FALSE;
 END_IF]]></ST>
     </Implementation>
-    <LineIds Name="FB_EXT_TREATY_GAUGE">
-      <LineId Id="59" Count="1" />
-      <LineId Id="9" Count="0" />
-      <LineId Id="22" Count="0" />
-      <LineId Id="30" Count="0" />
-      <LineId Id="87" Count="0" />
-      <LineId Id="19" Count="0" />
-      <LineId Id="21" Count="0" />
-      <LineId Id="31" Count="0" />
-      <LineId Id="88" Count="0" />
-      <LineId Id="20" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

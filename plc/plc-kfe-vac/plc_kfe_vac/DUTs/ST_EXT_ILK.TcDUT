@@ -3,26 +3,26 @@
   <DUT Name="ST_EXT_ILK" Id="{bd111509-9bd5-46aa-aa0b-6bb3eb4d0176}">
     <Declaration><![CDATA[TYPE ST_EXT_ILK :
 STRUCT
-	{attribute 'pytmc' := '
+    {attribute 'pytmc' := '
     pv: HV_SW;
-	io: io;
+    io: io;
     '}
-	xIlk_sw: BOOL:=True; // EPICS control for switching the interlock on or off. 
-	{attribute 'pytmc' := '
+    xIlk_sw: BOOL:=True; // EPICS control for switching the interlock on or off.
+    {attribute 'pytmc' := '
     pv: ILK_DO;
-	io: i;
+    io: i;
     '}
-	q_xILK_OK_DO: BOOL; // Readout of the external interlock's ouput value
-	{attribute 'pytmc' := '
+    q_xILK_OK_DO: BOOL; // Readout of the external interlock's ouput value
+    {attribute 'pytmc' := '
     pv: ILK_OK;
-	io: i;
+    io: i;
     '}
-	xIlkOK	:	BOOL := FALSE; // Interlock Bit
-	{attribute 'pytmc' := '
+    xIlkOK	:	BOOL := FALSE; // Interlock Bit
+    {attribute 'pytmc' := '
     pv: PRO_SP;
-	io: io;
-    '}		
-	rPRO_SP: REAL	:= 1e-6; // Pressure below which the HV signal may turn on
+    io: io;
+    '}
+    rPRO_SP: REAL	:= 1e-6; // Pressure below which the HV signal may turn on
 END_STRUCT
 END_TYPE
 ]]></Declaration>

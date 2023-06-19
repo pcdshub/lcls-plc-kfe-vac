@@ -5,9 +5,9 @@
 STRUCT
     {attribute 'pytmc' := '
         pv: ILK_INP;
-	    io: io;
+        io: io;
     '}
-	xIlk_Inp: BOOL; // Report the input signal .
+    xIlk_Inp: BOOL; // Report the input signal .
 END_STRUCT
 END_TYPE
 ]]></Declaration>

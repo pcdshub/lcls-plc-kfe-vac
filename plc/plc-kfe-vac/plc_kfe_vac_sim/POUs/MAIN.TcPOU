@@ -10,9 +10,5 @@ END_VAR
 PRG_SXR_VAC();
 ]]></ST>
     </Implementation>
-    <LineIds Name="MAIN">
-      <LineId Id="6" Count="1" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

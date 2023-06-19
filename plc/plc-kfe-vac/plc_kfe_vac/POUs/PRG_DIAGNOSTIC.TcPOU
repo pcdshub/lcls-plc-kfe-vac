@@ -39,9 +39,5 @@ plcName := 'Prototype PLC: ';
 plcInfo := CONCAT(plcName, plcLocalTime);
 ]]></ST>
     </Implementation>
-    <LineIds Name="PRG_DIAGNOSTIC">
-      <LineId Id="23" Count="15" />
-      <LineId Id="5" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

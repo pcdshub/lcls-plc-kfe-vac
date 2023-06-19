@@ -102,30 +102,30 @@ fb_MR1K4_SOMS_VGC_1 : FB_VGC;
 {attribute 'pytmc' := ' pv: IM1K0:XTES:VGC:1 '}
 //linking pragma needed
 {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[=+-EL1004_03_04]^Channel 3^Input;
-							.i_xClsLS	:=	TIIB[=+-EL1004_03_04]^Channel 4^Input;
-							.q_xOPN_DO	:=	TIIB[=+-ES2004_03_03]^Channel 3^Output;
-							.q_xOPN_DO	:=	TIIB[=+-ES2004_03_03]^Channel 4^Output'}
+                            .i_xClsLS	:=	TIIB[=+-EL1004_03_04]^Channel 4^Input;
+                            .q_xOPN_DO	:=	TIIB[=+-ES2004_03_03]^Channel 3^Output;
+                            .q_xOPN_DO	:=	TIIB[=+-ES2004_03_03]^Channel 4^Output'}
 fb_IM1K0_XTES_VGC_1 : FB_VGC;
 
-// VFS valves 
+// VFS valves
 
    {attribute 'TcLinkTo' := '.q_xPress_OK		:= 	TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Inputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xPress_OK;
-							 .q_xOPN_SW			:=  TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Inputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xOPN_SW;
-							 .q_xCLS_SW			:=  TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Inputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xCLS_SW;
-							 .q_xVAC_FAULT_Reset:= 	TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Inputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xVAC_FAULT_Reset;
-							 .q_xOverrideMode	:= 	TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Inputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xOverrideMode;
-							 .q_xOverrideOpen	:= 	TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Inputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xOverrideOpen;
-							 .i_xTrigger		:=	TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Outputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xTrigger;
-							 .i_xVFS_Open		:=	TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Outputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xVFS_Open;
-							 .i_xVFS_Closed		:=	TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Outputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xVFS_Closed;
-							 .i_xVAC_FAULT_OK	:=	TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Outputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xVAC_FAULT_OK;
-							 .i_xMPS_OK			:=  TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Outputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xMPS_OK;
-							 .i_eVFS_State		:=	TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Outputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_eVFS_State
+                             .q_xOPN_SW			:=  TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Inputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xOPN_SW;
+                             .q_xCLS_SW			:=  TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Inputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xCLS_SW;
+                             .q_xVAC_FAULT_Reset:= 	TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Inputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xVAC_FAULT_Reset;
+                             .q_xOverrideMode	:= 	TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Inputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xOverrideMode;
+                             .q_xOverrideOpen	:= 	TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Inputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.i_xOverrideOpen;
+                             .i_xTrigger		:=	TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Outputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xTrigger;
+                             .i_xVFS_Open		:=	TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Outputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xVFS_Open;
+                             .i_xVFS_Closed		:=	TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Outputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xVFS_Closed;
+                             .i_xVAC_FAULT_OK	:=	TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Outputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xVAC_FAULT_OK;
+                             .i_xMPS_OK			:=  TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Outputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_xMPS_OK;
+                             .i_eVFS_State		:=	TIPC^plc_kfe_vac_fs^plc_kfe_vac_fs Instance^PlcTask Outputs^GVL_SXR_VAC_FS_DEVICES.fb_TV2K0_VFS_1.q_eVFS_State
 '}
 {attribute 'pytmc' := '
-	pv: TV2K0:VFS:1
-	io: io
-'}	
+    pv: TV2K0:VFS:1
+    io: io
+'}
 fb_TV2K0_VFS_1_Interface : FB_VFS_Interface;
 
 
@@ -160,9 +160,9 @@ fb_SP1K1_MONO_PIP_2 : FB_PIP_GAMMA;
 {attribute 'pytmc' := ' pv: TV3K0:PIP:1 '}
 fb_TV3K0_PIP_1 : FB_PIP_GAMMA;
 {attribute 'TcLinkTo' := 	'.i_iPRESS		:=	TIIB[=+-EL3064_02_07]^AI Standard Channel 1^Value;
-								 .i_xSP_DI		:= 	TIIB[=+-EL1004_02_09]^Channel 1^Input;
-								 .q_xHVEna_DO	:= 	TIIB[=+-EL2794_02_08]^Channel 1^Output
-	'}	
+                                 .i_xSP_DI		:= 	TIIB[=+-EL1004_02_09]^Channel 1^Input;
+                                 .q_xHVEna_DO	:= 	TIIB[=+-EL2794_02_08]^Channel 1^Output
+    '}
 {attribute 'pytmc' := 'pv: SL1K0:POWER:PIP:01	'}
 fb_SL1K0_PIP_1 : FB_PIP_GAMMA;
 

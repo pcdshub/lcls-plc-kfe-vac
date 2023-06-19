@@ -3,17 +3,17 @@
   <POU Name="MAIN" Id="{514fb895-bcbe-4717-9c32-df3e61678814}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
-		
-	fbGetCurTaskIdx  : GETCURTASKINDEX;
+
+    fbGetCurTaskIdx  : GETCURTASKINDEX;
 //	tRecover_pip: TON;
 //	tRecover_gcc: TON;
 //	bRecover_pip : BOOL ;
 //	bRecover_gcc : BOOL ;
-	// For Persistent Data
-	fbWritePersistentData           : WritePersistentData;
+    // For Persistent Data
+    fbWritePersistentData           : WritePersistentData;
 //	tWait_pip:TIME:=T#900S;
 //	tWait_gcc:TIME:=T#600S;
-	
+
 END_VAR
 
 ]]></Declaration>
@@ -30,15 +30,11 @@ fbLogHandler();
 fbWritePersistentData(NETID:='', PORT:=851, START:=TRUE, TMOUT:=T#1s );
 
 IF (bRecoverEnable) THEN
-	
+
 ACT_Recover();
 
 END_IF
 *)]]></ST>
     </Implementation>
-    <LineIds Name="MAIN">
-      <LineId Id="3" Count="15" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

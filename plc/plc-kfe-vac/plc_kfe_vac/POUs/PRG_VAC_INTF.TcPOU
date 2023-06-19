@@ -3,8 +3,8 @@
   <POU Name="PRG_VAC_INTF" Id="{53a728aa-6dbf-4df3-9e27-18c0d8781c72}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_VAC_INTF
 (*
-This PRG governs the interfaces between the SXR Vacuum system and external systems. 
-This includes AD's vacuum system, EM1K0-GMD, AT1K0-GAS, EM2K0-XGMD, the TMO beamline vacuum system, and the RIX Beamline Vacuum System. 
+This PRG governs the interfaces between the SXR Vacuum system and external systems.
+This includes AD's vacuum system, EM1K0-GMD, AT1K0-GAS, EM2K0-XGMD, the TMO beamline vacuum system, and the RIX Beamline Vacuum System.
 The Vacuum system for TXI is planned but not yet implemented. When implemented it should go here.
 *)
 VAR
@@ -13,20 +13,20 @@ END_VAR
     <Implementation>
       <ST><![CDATA[// Interface to AD's vacuum system
 
-fb_TV1K0_INTF_GCC_1(rTREATY_SIGNAL_PRESS := 5E-6, rNO_SIGNAL_PRESS := 760); 
+fb_TV1K0_INTF_GCC_1(rTREATY_SIGNAL_PRESS := 5E-6, rNO_SIGNAL_PRESS := 760);
 fb_RTDSK0_INTF_VGC_1(TREATY_VGC := fb_RTDSK0_VGC_1.iq_stValve);
 
 
 // Update interlock signals for TMO
 st_TMO_ILK_Upper.rPRO_SP 	:=	1E-4; // Fix the agreed-upon values
 fb_TMO_ILK_Uppper(
-	VG	:=	fb_MR1K4_SOMS_GCC_1.IG,
-	ILK	:=	st_TMO_ILK_Upper
+    VG	:=	fb_MR1K4_SOMS_GCC_1.IG,
+    ILK	:=	st_TMO_ILK_Upper
 );
 st_TMO_ILK_Lower.rPRO_SP	:=	1E-7; // Fix the agreed-upon values
 fb_TMO_ILK_Lower(
-	VG	:=	fb_MR1K4_SOMS_GCC_1.IG,
-	ILK	:=	st_TMO_ILK_Lower
+    VG	:=	fb_MR1K4_SOMS_GCC_1.IG,
+    ILK	:=	st_TMO_ILK_Lower
 );
 
 
@@ -46,7 +46,7 @@ fb_EM1K0_GMD_GCC_10_reader(
 
 
 // AT1K0-GAS Vacuum Interface
-    
+
 fb_AT1K0_GAS_GCC_10_reader(
     sNetId      :=  '172.21.92.57.1.1',
     nPort       :=  851,
@@ -62,8 +62,8 @@ fb_AT1K0_GAS_GCC_140_reader(
 );
 
 
-// EM2K0-XGMD Vacuum Interface 
-    
+// EM2K0-XGMD Vacuum Interface
+
 fb_EM2K0_XGMD_GCC_10_reader(
     sNetId      :=  '172.21.92.60.1.1',
     nPort       :=  851,
@@ -80,42 +80,5 @@ fb_EM2K0_XGMD_GCC_90_reader(
 
 ]]></ST>
     </Implementation>
-    <LineIds Name="PRG_VAC_INTF">
-      <LineId Id="115" Count="1" />
-      <LineId Id="113" Count="0" />
-      <LineId Id="111" Count="1" />
-      <LineId Id="15" Count="1" />
-      <LineId Id="102" Count="0" />
-      <LineId Id="94" Count="0" />
-      <LineId Id="97" Count="1" />
-      <LineId Id="95" Count="0" />
-      <LineId Id="101" Count="0" />
-      <LineId Id="93" Count="0" />
-      <LineId Id="99" Count="1" />
-      <LineId Id="96" Count="0" />
-      <LineId Id="121" Count="0" />
-      <LineId Id="118" Count="2" />
-      <LineId Id="117" Count="0" />
-      <LineId Id="6" Count="0" />
-      <LineId Id="30" Count="0" />
-      <LineId Id="19" Count="0" />
-      <LineId Id="56" Count="5" />
-      <LineId Id="55" Count="0" />
-      <LineId Id="87" Count="0" />
-      <LineId Id="86" Count="0" />
-      <LineId Id="70" Count="14" />
-      <LineId Id="25" Count="0" />
-      <LineId Id="88" Count="0" />
-      <LineId Id="26" Count="0" />
-      <LineId Id="28" Count="1" />
-      <LineId Id="38" Count="3" />
-      <LineId Id="37" Count="0" />
-      <LineId Id="50" Count="0" />
-      <LineId Id="17" Count="0" />
-      <LineId Id="43" Count="3" />
-      <LineId Id="42" Count="0" />
-      <LineId Id="14" Count="0" />
-      <LineId Id="13" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

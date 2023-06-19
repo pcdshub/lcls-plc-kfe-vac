@@ -13,6 +13,11 @@
     <Implicit_KindOfTask>{e9c627d4-0ea8-43f0-bbee-578bcf242f64}</Implicit_KindOfTask>
     <Implicit_Jitter_Distribution>{4018e989-1836-4f6e-94c6-2e28d08829e5}</Implicit_Jitter_Distribution>
     <LibraryReferences>{849d5061-a39c-4acb-88f5-3c3c5906cb0c}</LibraryReferences>
+    <CombineIds>false</CombineIds>
+    <Company>SLAC</Company>
+    <Released>true</Released>
+    <Title>plc_kfe_vac</Title>
+    <ProjectVersion>0.0.0</ProjectVersion>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DUTs\ST_EXT_GCC.TcDUT">

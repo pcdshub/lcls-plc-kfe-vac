@@ -91,9 +91,5 @@ fb_ST2K4_BCS_GCC_1(stVolume := st_TV1K4_VGC_2_VOL, stGauge := st_ST2K4_BCS_GCC_1
 fb_PC4K4_XTES_GCC_1(stVolume := st_PC4K4_VOL, stGauge := st_PC4K4_XTES_GCC_1);
 ]]></ST>
     </Implementation>
-    <LineIds Name="PRG_SXR_VAC">
-      <LineId Id="6" Count="82" />
-      <LineId Id="5" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

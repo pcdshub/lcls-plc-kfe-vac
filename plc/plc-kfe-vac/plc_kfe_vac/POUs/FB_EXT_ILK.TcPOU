@@ -3,15 +3,15 @@
   <POU Name="FB_EXT_ILK" Id="{f621eba5-f997-4ff5-a98e-e92368e01a32}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_EXT_ILK
 VAR_INPUT
-	VG	:	ST_VG;
+    VG	:	ST_VG;
 END_VAR
 VAR_IN_OUT
-	ILK	:	ST_EXT_ILK;
+    ILK	:	ST_EXT_ILK;
 END_VAR
 VAR_OUTPUT
 END_VAR
 VAR
-	q_xILK_OK_DO	 AT%Q*	:	BOOL; // Send the signal to indicate that the interlock pressure has been met.
+    q_xILK_OK_DO	 AT%Q*	:	BOOL; // Send the signal to indicate that the interlock pressure has been met.
 END_VAR
 
 ]]></Declaration>
@@ -25,19 +25,7 @@ q_xILK_OK_DO		:= (VG.rPRESS < ILK.rPRO_SP) AND (VG.xPRESS_OK) AND (ILK.xIlk_sw);
 // Se PV  indicating the output status
 ILK.q_xILK_OK_DO	:= q_xILK_OK_DO;
 
-	]]></ST>
+    ]]></ST>
     </Implementation>
-    <LineIds Name="FB_EXT_ILK">
-      <LineId Id="41" Count="0" />
-      <LineId Id="45" Count="0" />
-      <LineId Id="50" Count="0" />
-      <LineId Id="47" Count="0" />
-      <LineId Id="46" Count="0" />
-      <LineId Id="51" Count="0" />
-      <LineId Id="48" Count="0" />
-      <LineId Id="44" Count="0" />
-      <LineId Id="40" Count="0" />
-      <LineId Id="43" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

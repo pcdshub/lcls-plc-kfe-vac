@@ -620,6 +620,13 @@
 							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 						</Var>
 						<Var>
+							<Name>LCLS_Vacuum.PMPS.LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
+							<Comment>
+								<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
+							</Comment>
+							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+						</Var>
+						<Var>
 							<Name>PRG_DIAGNOSTIC.simHeartbeat</Name>
 							<Type>UINT</Type>
 						</Var>
@@ -23578,18 +23585,18 @@ Bit1: Value bigger/equal Limit2]]>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_IM1K0_XTES_VGC_1.q_xOPN_DO" VarB="Channel 4^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIPC^plc_kfe_vac^plc_kfe_vac Instance">
-				<Link VarA="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xTrigger" VarB="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xTrigger" AutoLink="true"/>
-				<Link VarA="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xVFS_Closed" VarB="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVFS_Closed" AutoLink="true"/>
+				<Link VarA="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xOPN_SW" VarB="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOPN_SW" AutoLink="true"/>
+				<Link VarA="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xOverrideOpen" VarB="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOverrideOpen" AutoLink="true"/>
+				<Link VarA="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xVAC_FAULT_Reset" VarB="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xVAC_FAULT_Reset" AutoLink="true"/>
+				<Link VarA="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xMPS_OK" VarB="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xMPS_OK" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_eVFS_State" VarB="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_eVFS_State" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xMPS_OK" VarB="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xMPS_OK" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xTrigger" VarB="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xTrigger" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVAC_FAULT_OK" VarB="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xVAC_FAULT_OK" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVFS_Closed" VarB="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xVFS_Closed" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.i_xVFS_Open" VarB="FSV_task Outputs^GVL_VFS.fb_TV2K0_VFS_1.q_xVFS_Open" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xCLS_SW" VarB="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xCLS_SW" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOPN_SW" VarB="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xOPN_SW" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOverrideMode" VarB="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xOverrideMode" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xOverrideOpen" VarB="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xOverrideOpen" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xPRESS_OK" VarB="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xPress_OK" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_SXR_VAC.fb_TV2K0_VFS_1_Interface.q_xVAC_FAULT_Reset" VarB="FSV_task Inputs^GVL_VFS.fb_TV2K0_VFS_1.i_xVAC_FAULT_Reset" AutoLink="true"/>
 			</OwnerB>
 		</OwnerA>
 		<OwnerA Name="TIPC^plc_kfe_vac_sim^plc_kfe_vac_sim Instance">

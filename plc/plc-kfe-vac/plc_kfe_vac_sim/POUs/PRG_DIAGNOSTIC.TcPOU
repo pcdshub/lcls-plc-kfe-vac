@@ -13,9 +13,5 @@ IF heartbeat > 65000
 END_IF
 ]]></ST>
     </Implementation>
-    <LineIds Name="PRG_DIAGNOSTIC">
-      <LineId Id="7" Count="3" />
-      <LineId Id="5" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

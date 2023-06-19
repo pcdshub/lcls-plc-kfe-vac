@@ -7,18 +7,14 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[fb_TV2K0_VFS_1(
-	i_xPMPS_OK:= TRUE, 
-	i_xExt_OK:= TRUE, 
-	i_sDevName:= 'TV2K0:VFS:1',
-	io_fbFFHWO:= g_FastFaultOutput2
+    i_xPMPS_OK:= TRUE,
+    i_xExt_OK:= TRUE,
+    i_sDevName:= 'TV2K0:VFS:1',
+    io_fbFFHWO:= g_FastFaultOutput2
 );
 
-(*FastFaultOuput*)	
+(*FastFaultOuput*)
 g_FastFaultOutput2.Execute(bAutoReset:= TRUE);]]></ST>
     </Implementation>
-    <LineIds Name="PRG_VFS">
-      <LineId Id="3" Count="7" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

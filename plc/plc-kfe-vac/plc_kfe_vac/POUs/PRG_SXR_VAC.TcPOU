@@ -29,12 +29,12 @@ fb_MR1K4_SOMS_GCC_1(PG := fb_MR1K4_SOMS_GPI_1.PG, bEP:=TRUE);
 
 // VGC Valves
 
-fb_RTDSK0_VGC_1( i_stUSG := fb_TV1K0_INTF_GCC_1.IG, i_stDSG := fb_RTDSK0_PIP_1.q_IG, i_xDis_DPIlk := FALSE,
+fb_RTDSK0_VGC_1( i_stUSG := fb_TV1K0_INTF_GCC_1.IG, i_stDSG := fb_RTDSK0_GCC_1.IG, i_xDis_DPIlk := FALSE,
                 i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode,
                 i_xReset := xReset_PMPS_FFO_K0, io_fbFFHWO := g_FastFaultOutputK0, fbArbiter := g_fbArbiter1 ,
                 i_sDevName := 'RTDSK0:VGC:1' );
 
-fb_EM1K0_GMD_VGC_1(i_stUSG := fb_RTDSK0_PIP_3.q_IG, i_stDSG := fb_EM1K0_GMD_GCC_10_reader.IG, i_xDis_DPIlk := FALSE,
+fb_EM1K0_GMD_VGC_1(i_stUSG := fb_RTDSK0_GCC_1.IG, i_stDSG := fb_EM1K0_GMD_GCC_10_reader.IG, i_xDis_DPIlk := FALSE,
                 i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := (NOT fb_EM1K0_GMD_GCC_10_reader.bError),
                    i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K0, io_fbFFHWO := g_FastFaultOutputK0,
                 fbArbiter := g_fbArbiter1,  i_sDevName := 'EM1K0:GMD:VGC:1');
@@ -132,5 +132,9 @@ fb_PA1K0_GPI_1(PG=>);
 
 ]]></ST>
     </Implementation>
+    <LineIds Name="PRG_SXR_VAC">
+      <LineId Id="3" Count="123" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

@@ -46,7 +46,7 @@ g_FastFaultOutputK4  :   FB_HardwareFFOutput :=(i_sNetID:='172.21.92.73.1.1');
 g_FastFaultOutputAll  :   FB_HardwareFFOutput :=(i_sNetID:='172.21.92.73.1.1');
 
 {attribute 'pytmc' := '
-    pv: PLC:KFE:VAC:K0:FFO:02
+    pv: @(PREFIX)FFO:05
 '}
 {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO (EL2202)]^Channel 2^Output'}
 g_FastFaultOutput2  :	FB_HardwareFFOutput :=(i_sNetID:='172.21.92.73.1.1');	//FFO for Fast Shutter Valves upstream of ST1L0_XTES

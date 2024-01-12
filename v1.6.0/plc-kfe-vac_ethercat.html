@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EtherCAT Terminals &mdash; pcdshub/lcls-plc-kfe-vac  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/tree.css?v=837a00b9" />
+      <link rel="stylesheet" type="text/css" href="_static/width.css?v=ab210c7a" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/docs-versions-menu.js?v=3d6a1aea"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Boxes" href="plc-kfe-vac_boxes.html" />
+    <link rel="prev" title="NC Settings" href="plc-kfe-vac_nc.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pcdshub/lcls-plc-kfe-vac
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">plc-kfe-vac</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="plc-kfe-vac_pragmas.html">Pragmas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-kfe-vac_nc.html">NC Settings</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">EtherCAT Terminals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-kfe-vac_boxes.html">Boxes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-kfe-vac_links.html">Links</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">plc_kfe_vac</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="plc-kfe-vac_plc_kfe_vac_summary.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-kfe-vac_plc_kfe_vac_summary.html#pragmas">Pragmas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-kfe-vac_plc_kfe_vac_summary.html#libraries">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-kfe-vac_plc_kfe_vac_summary.html#symbols">Symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-kfe-vac_plc_kfe_vac_epics.html">Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-kfe-vac_plc_kfe_vac_epics.html#database-records">Database Records</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-kfe-vac_plc_kfe_vac_source.html">DUTs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-kfe-vac_plc_kfe_vac_source.html#gvls">GVLs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-kfe-vac_plc_kfe_vac_source.html#pous">POUs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">plc_kfe_vac_sim</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="plc-kfe-vac_plc_kfe_vac_sim_summary.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-kfe-vac_plc_kfe_vac_sim_summary.html#pragmas">Pragmas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-kfe-vac_plc_kfe_vac_sim_summary.html#libraries">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-kfe-vac_plc_kfe_vac_sim_summary.html#symbols">Symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-kfe-vac_plc_kfe_vac_sim_epics.html">Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-kfe-vac_plc_kfe_vac_sim_epics.html#database-records">Database Records</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-kfe-vac_plc_kfe_vac_sim_source.html">DUTs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-kfe-vac_plc_kfe_vac_sim_source.html#gvls">GVLs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-kfe-vac_plc_kfe_vac_sim_source.html#pous">POUs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pcdshub/lcls-plc-kfe-vac</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">EtherCAT Terminals</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/plc-kfe-vac_ethercat.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ethercat-terminals">
+<h1>EtherCAT Terminals<a class="headerlink" href="#ethercat-terminals" title="Link to this heading"></a></h1>
+  <ul class="tree">
+
+
+
+    <li>
+  <details open>
+    <summary>
+          <table width="100%">
+    <tr>
+      <td width="10%">
+        ID=1:
+      </td>
+      <td width="75%">EK1200_00_00
+      </td>
+      <td>        </td>
+    </tr>
+    <tr>
+      <td>
+                </td>
+      <td colspan="2">
+        EK1200-5000 EtherCAT Power supply (2A E-Bus)
+      </td>
+    </tr>
+  </table>
+    </summary>
+    <ul>
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=2:
+                </td>
+                <td width="75%">ES3064_00_01
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL3064 4Ch. Ana. Input 0-10V
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=3:
+                </td>
+                <td width="75%">ES1004_00_02
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL1004 4Ch. Dig. Input 24V, 3ms
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=4:
+                </td>
+                <td width="75%">EL2794_00_03
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL2794 4Ch. Dig. Output 24V AC/DC, 2A, short-circuit-proof
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=5:
+                </td>
+                <td width="75%">ES3064_00_04
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL3064 4Ch. Ana. Input 0-10V
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=6:
+                </td>
+                <td width="75%">ES1004_00_05
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL1004 4Ch. Dig. Input 24V, 3ms
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=7:
+                </td>
+                <td width="75%">EL2794_00_06
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL2794 4Ch. Dig. Output 24V AC/DC, 2A, short-circuit-proof
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=8:
+                </td>
+                <td width="75%">EL9410_00_07
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL9410 E-Bus Power Supplier  (Diagnostics)
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=9:
+                </td>
+                <td width="75%">ES3064_00_08
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL3064 4Ch. Ana. Input 0-10V
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=10:
+                </td>
+                <td width="75%">ES1004_00_09
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL1004 4Ch. Dig. Input 24V, 3ms
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=11:
+                </td>
+                <td width="75%">EL2794_00_10
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL2794 4Ch. Dig. Output 24V AC/DC, 2A, short-circuit-proof
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=12:
+                </td>
+                <td width="75%">ES3064_00_11
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL3064 4Ch. Ana. Input 0-10V
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=13:
+                </td>
+                <td width="75%">ES1004_00_12
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL1004 4Ch. Dig. Input 24V, 3ms
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=14:
+                </td>
+                <td width="75%">EL2794_00_13
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL2794 4Ch. Dig. Output 24V AC/DC, 2A, short-circuit-proof
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=81:
+                </td>
+                <td width="75%">Term 81 (EL6070)
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL6070 1Ch. Licensing-Terminal
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=15:
+                </td>
+                <td width="75%">EK1110_00_14
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EK1110 EtherCAT extension
+                </td>
+              </tr>
+            </table>
+          </li>
+
+    </ul>
+  </details>
+</li>
+
+
+
+    <li>
+  <details open>
+    <summary>
+          <table width="100%">
+    <tr>
+      <td width="10%">
+        ID=16:
+      </td>
+      <td width="75%">EK1100_01_00
+      </td>
+      <td>        </td>
+    </tr>
+    <tr>
+      <td>
+                </td>
+      <td colspan="2">
+        EK1100 EtherCAT Coupler (2A E-Bus)
+      </td>
+    </tr>
+  </table>
+    </summary>
+    <ul>
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=17:
+                </td>
+                <td width="75%">ES3068_01_01
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL3068 8Ch. Ana. Input 0-10V
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=18:
+                </td>
+                <td width="75%">EL2798_01_02
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL2798 8Ch. Dig. Output 24V AC/DC, 2A, potential-free
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=19:
+                </td>
+                <td width="75%">ES9187_01_03
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL9187 Potential Connection, 8 x Ground
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=20:
+                </td>
+                <td width="75%">ES3068_01_04
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL3068 8Ch. Ana. Input 0-10V
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=21:
+                </td>
+                <td width="75%">ES3068_01_05
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL3068 8Ch. Ana. Input 0-10V
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=22:
+                </td>
+                <td width="75%">EL2798_01_06
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL2798 8Ch. Dig. Output 24V AC/DC, 2A, potential-free
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=23:
+                </td>
+                <td width="75%">ES9187_01_07
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL9187 Potential Connection, 8 x Ground
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=24:
+                </td>
+                <td width="75%">ES3068_01_08
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL3068 8Ch. Ana. Input 0-10V
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=25:
+                </td>
+                <td width="75%">EL9410_01_09
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL9410 E-Bus Power Supplier  (Diagnostics)
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=26:
+                </td>
+                <td width="75%">EL2022_01_10
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                              <b>
+                      Disabled
+                    </b>        </td>
+                <td colspan="2">
+                  EL2022 2Ch. Dig. Output 24V, 2A
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=71:
+                </td>
+                <td width="75%">PMPS_FFO (EL2202)
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL2202 2Ch. Dig. Output 24V, 0.5A
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=72:
+                </td>
+                <td width="75%">PMPS_PRE
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL6692 EtherCAT Bridge terminal (Primary)
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=27:
+                </td>
+                <td width="75%">EL6695_01_11
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                              <b>
+                      Disabled
+                    </b>        </td>
+                <td colspan="2">
+                  EL6695 EtherCAT Bridge terminal (Primary)
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=73:
+                </td>
+                <td width="75%">Term 73 (EK1122)
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EK1122 2 port EtherCAT junction
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=28:
+                </td>
+                <td width="75%">EL6695_01_12
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                              <b>
+                      Disabled
+                    </b>        </td>
+                <td colspan="2">
+                  EL6695 EtherCAT Bridge terminal (Primary)
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=74:
+                </td>
+                <td width="75%">Term 74 (EK1122)
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EK1122 2 port EtherCAT junction
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=29:
+                </td>
+                <td width="75%">EL6695_01_13
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                              <b>
+                      Disabled
+                    </b>        </td>
+                <td colspan="2">
+                  EL6695 EtherCAT Bridge terminal (Primary)
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=75:
+                </td>
+                <td width="75%">Term 75 (EK1122)
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EK1122 2 port EtherCAT junction
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=30:
+                </td>
+                <td width="75%">EL6695_01_14
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                              <b>
+                      Disabled
+                    </b>        </td>
+                <td colspan="2">
+                  EL6695 EtherCAT Bridge terminal (Primary)
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=76:
+                </td>
+                <td width="75%">Term 76 (EL9011)
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL9011 End Terminal
+                </td>
+              </tr>
+            </table>
+          </li>
+
+    </ul>
+  </details>
+</li>
+
+
+
+    <li>
+  <details open>
+    <summary>
+          <table width="100%">
+    <tr>
+      <td width="10%">
+        ID=31:
+      </td>
+      <td width="75%">EK1100_02_00
+      </td>
+      <td>        </td>
+    </tr>
+    <tr>
+      <td>
+                </td>
+      <td colspan="2">
+        EK1100 EtherCAT Coupler (2A E-Bus)
+      </td>
+    </tr>
+  </table>
+    </summary>
+    <ul>
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=32:
+                </td>
+                <td width="75%">EL3064_02_01
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL3064 4Ch. Ana. Input 0-10V
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=33:
+                </td>
+                <td width="75%">EL9070_02_02
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL9070 Shield terminal
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=34:
+                </td>
+                <td width="75%">ES1008_02_03
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL1008 8Ch. Dig. Input 24V, 3ms
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=35:
+                </td>
+                <td width="75%">ES9184_02_04
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL9184 Potential Connection, 8 x 24V, 8 x Ground
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=36:
+                </td>
+                <td width="75%">ES2008_02_05
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL2008 8Ch. Dig. Output 24V, 0.5A
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=37:
+                </td>
+                <td width="75%">EL2798_02_06
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL2798 8Ch. Dig. Output 24V AC/DC, 2A, potential-free
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=203:
+                </td>
+                <td width="75%">EL3064_02_07
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL3064 4Ch. Ana. Input 0-10V
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=204:
+                </td>
+                <td width="75%">EL2794_02_08
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL2794 4Ch. Dig. Output 24V AC/DC, 2A, short-circuit-proof
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=205:
+                </td>
+                <td width="75%">EL1004_02_09
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL1004 4Ch. Dig. Input 24V, 3ms
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=80:
+                </td>
+                <td width="75%">EL9505_02_10
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL9505 Power supply terminal 5V
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=78:
+                </td>
+                <td width="75%">EL1124_02_11
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL1124 4Ch. Dig. Input 5V, 10µs, Sensor Power
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=79:
+                </td>
+                <td width="75%">EL9011_02_12
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL9011 End Terminal
+                </td>
+              </tr>
+            </table>
+          </li>
+
+    </ul>
+  </details>
+</li>
+
+
+
+    <li>
+  <details open>
+    <summary>
+          <table width="100%">
+    <tr>
+      <td width="10%">
+        ID=38:
+      </td>
+      <td width="75%">EK1100_03_00
+      </td>
+      <td>        </td>
+    </tr>
+    <tr>
+      <td>
+                </td>
+      <td colspan="2">
+        EK1100 EtherCAT Coupler (2A E-Bus)
+      </td>
+    </tr>
+  </table>
+    </summary>
+    <ul>
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=39:
+                </td>
+                <td width="75%">ES1004_03_01
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL1004 4Ch. Dig. Input 24V, 3ms
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=40:
+                </td>
+                <td width="75%">ES2004_03_02
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL2004 4Ch. Dig. Output 24V, 0.5A
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=41:
+                </td>
+                <td width="75%">ES2004_03_03
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL2004 4Ch. Dig. Output 24V, 0.5A
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=77:
+                </td>
+                <td width="75%">EL1004_03_04
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL1004 4Ch. Dig. Input 24V, 3ms
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=43:
+                </td>
+                <td width="75%">EL3064_03_05
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL3064 4Ch. Ana. Input 0-10V
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=44:
+                </td>
+                <td width="75%">EL9070_03_06
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL9070 Shield terminal
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=45:
+                </td>
+                <td width="75%">ES1008_03_07
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL1008 8Ch. Dig. Input 24V, 3ms
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=46:
+                </td>
+                <td width="75%">ES9184_03_08
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL9184 Potential Connection, 8 x 24V, 8 x Ground
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=47:
+                </td>
+                <td width="75%">ES2008_03_09
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL2008 8Ch. Dig. Output 24V, 0.5A
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=42:
+                </td>
+                <td width="75%">EL2798_03_10
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL2798 8Ch. Dig. Output 24V AC/DC, 2A, potential-free
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=48:
+                </td>
+                <td width="75%">EL9011_03_11
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL9011 End Terminal
+                </td>
+              </tr>
+            </table>
+          </li>
+
+    </ul>
+  </details>
+</li>
+
+
+
+    <li>
+  <details open>
+    <summary>
+          <table width="100%">
+    <tr>
+      <td width="10%">
+        ID=51:
+      </td>
+      <td width="75%">EK1100_05_01
+      </td>
+      <td>        </td>
+    </tr>
+    <tr>
+      <td>
+                </td>
+      <td colspan="2">
+        EK1100 EtherCAT Coupler (2A E-Bus)
+      </td>
+    </tr>
+  </table>
+    </summary>
+    <ul>
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=52:
+                </td>
+                <td width="75%">ES1004_05_02
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL1004 4Ch. Dig. Input 24V, 3ms
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=53:
+                </td>
+                <td width="75%">ES2202_05_03
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL2202 2Ch. Dig. Output 24V, 0.5A
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=54:
+                </td>
+                <td width="75%">ES2202_05_04
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL2202 2Ch. Dig. Output 24V, 0.5A
+                </td>
+              </tr>
+            </table>
+          </li>
+
+
+          <li>
+                <table width="100%">
+              <tr>
+                <td width="10%">
+                  ID=55:
+                </td>
+                <td width="75%">Term 55 (EL9011)
+                </td>
+                <td>        </td>
+              </tr>
+              <tr>
+                <td>
+                          </td>
+                <td colspan="2">
+                  EL9011 End Terminal
+                </td>
+              </tr>
+            </table>
+          </li>
+
+    </ul>
+  </details>
+</li>
+
+
+  </ul></section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="plc-kfe-vac_nc.html" class="btn btn-neutral float-left" title="NC Settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="plc-kfe-vac_boxes.html" class="btn btn-neutral float-right" title="Boxes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, SLAC National Accelerator Laboratory.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

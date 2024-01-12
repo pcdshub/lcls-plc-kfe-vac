@@ -1,0 +1,38 @@
+plc
+---
+
+.. toctree::
+    :maxdepth: 2
+    :caption: plc-kfe-vac
+
+    plc-kfe-vac_pragmas
+    plc-kfe-vac_nc
+    plc-kfe-vac_ethercat
+    plc-kfe-vac_boxes
+    plc-kfe-vac_links
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: plc_kfe_vac
+
+    plc-kfe-vac_plc_kfe_vac_summary
+    plc-kfe-vac_plc_kfe_vac_epics
+    plc-kfe-vac_plc_kfe_vac_source
+
+.. toctree::
+    :maxdepth: 2
+    :caption: plc_kfe_vac_sim
+
+    plc-kfe-vac_plc_kfe_vac_sim_summary
+    plc-kfe-vac_plc_kfe_vac_sim_epics
+    plc-kfe-vac_plc_kfe_vac_sim_source
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

@@ -39,7 +39,7 @@ fb_EM1K0_GMD_VGC_1(i_stUSG := fb_RTDSK0_GCC_1.IG, i_stDSG := fb_EM1K0_GMD_GCC_10
                    i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K0, io_fbFFHWO := g_FastFaultOutputK0,
                 fbArbiter := g_fbArbiter1,  i_sDevName := 'EM1K0:GMD:VGC:1');
 
-fb_AT1K0_GAS_VGC_1(i_stUSG := fb_PCPM3B_PIP_1.q_IG, i_stDSG := fb_AT1K0_GAS_GCC_10_reader.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE,
+fb_AT1K0_GAS_VGC_1(i_stUSG := fb_SL1K0_PIP_1.q_IG, i_stDSG := fb_AT1K0_GAS_GCC_10_reader.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE,
                 i_xExt_OK := (NOT fb_AT1K0_GAS_GCC_10_reader.bError), i_xOverrideMode := xSystemOverrideMode,
                 i_xReset := xReset_PMPS_FFO_K0, io_fbFFHWO := g_FastFaultOutputK0, fbArbiter := g_fbArbiter1, i_sDevName := 'AT1K0:GAS:VGC:1' );
 
@@ -83,7 +83,7 @@ fb_MR1K4_SOMS_VGC_1(i_stUSG := fb_TV3K0_PIP_1.q_IG, i_stDSG := fb_MR1K4_SOMS_GCC
                 i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K4, io_fbFFHWO := g_FastFaultOutputK4,
                 fbArbiter := g_fbArbiter1, i_sDevName := 'MR1K4:SOMS:VGC:1');
 
-fb_IM1K0_XTES_VGC_1(i_stUSG := fb_IM1K0_XTES_GCC_1.IG, i_stDSG := fb_PCPM3B_PIP_1.q_IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE,
+fb_IM1K0_XTES_VGC_1(i_stUSG :=fb_EM1K0_GMD_GCC_70_reader.IG , i_stDSG := fb_SL1K0_PIP_1.q_IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE,
                 i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K0,
                 io_fbFFHWO := g_FastFaultOutputK0, fbArbiter := g_fbArbiter1, i_sDevName :='IM1K0:XTES:VGC:1');
 
@@ -132,9 +132,5 @@ fb_PA1K0_GPI_1(PG=>);
 
 ]]></ST>
     </Implementation>
-    <LineIds Name="PRG_SXR_VAC">
-      <LineId Id="3" Count="123" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

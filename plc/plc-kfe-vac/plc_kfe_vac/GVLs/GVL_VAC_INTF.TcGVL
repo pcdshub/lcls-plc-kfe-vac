@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <GVL Name="GVL_VAC_INTF" Id="{bdd53724-11cd-4a04-8f7d-c6faba7ad570}">
     <Declaration><![CDATA[VAR_GLOBAL
 
@@ -28,6 +28,7 @@
     // EM1K0-GMD Vacuum Interface
     n_EM1K0_VAC_counter         :   UDINT;
     fb_EM1K0_GMD_GCC_10_reader  :   FB_TGCC_ADS;
+    fb_EM1K0_GMD_GCC_70_reader  :   FB_TGCC_ADS;
 
 
     // AT1K0-GAS Vacuum Interface

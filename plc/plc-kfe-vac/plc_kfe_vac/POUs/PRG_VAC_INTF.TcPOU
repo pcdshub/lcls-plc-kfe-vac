@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_VAC_INTF" Id="{53a728aa-6dbf-4df3-9e27-18c0d8781c72}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_VAC_INTF
 (*
@@ -41,6 +41,13 @@ fb_EM1K0_GMD_GCC_10_reader(
     sNetId      :=  '172.21.92.59.1.1',
     nPort       :=  851,
     sVarName    :=  'GVL_GMD.fb_EM1K0_GMD_GCC_10',
+    iWatchdog   :=  n_EM1K0_VAC_counter
+);
+
+fb_EM1K0_GMD_GCC_70_reader(
+    sNetId      :=  '172.21.92.59.1.1',
+    nPort       :=  851,
+    sVarName    :=  'GVL_GMD.fb_EM1K0_GMD_GCC_70',
     iWatchdog   :=  n_EM1K0_VAC_counter
 );
 

@@ -34,6 +34,10 @@ fb_TMO_ILK_Lower(
 
 fb_PC1K1_INTF_GCC_1(rTREATY_SIGNAL_PRESS := 5E-6, rNO_SIGNAL_PRESS := 760);
 
+// Interface to TXI's K3 vacuum system
+
+fb_PC1K3_INTF_PIP_1(rTREATY_SIGNAL_PRESS := 5E-6, rNO_SIGNAL_PRESS := 760);
+
 
 // EM1K0-GMD Vacuum Interface
 

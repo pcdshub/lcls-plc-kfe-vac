@@ -23,12 +23,12 @@
     // RIX Interface
     {attribute 'pytmc' := ' pv: PC1K1:INTF:GCC:1 '}
     fb_PC1K1_INTF_GCC_1 : FB_EXT_TREATY_GAUGE;
-	
-	 // TXI Interface
+
+     // TXI Interface
     {attribute 'pytmc' := ' pv: PC1K1:INTF:PIP:1 '}
-	{attribute 'TcLinkTo' := 	'.i_xEXT_Press_OK		:=	TIIB[=+-ES1008_02_03]^Channel 3^Input;
+    {attribute 'TcLinkTo' := 	'.i_xEXT_Press_OK		:=	TIIB[=+-ES1008_02_03]^Channel 3^Input;
     '}
-	
+
     fb_PC1K3_INTF_PIP_1 : FB_EXT_TREATY_GAUGE;
 
 

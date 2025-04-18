@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
@@ -5,22 +7,18 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DUTs &mdash; pcdshub/lcls-plc-kfe-vac  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/tree.css?v=837a00b9" />
       <link rel="stylesheet" type="text/css" href="_static/width.css?v=ab210c7a" />
 
   
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="_static/jquery.js?v=5d32c60e"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=5929fcd5"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="_static/docs-versions-menu.js?v=3d6a1aea"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/docs-versions-menu.js?v=3d6a1aea"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -375,9 +373,16 @@
     <span class="n">fb_TMO_ILK_Lower</span>                        <span class="p">:</span>       <span class="n">FB_EXT_ILK</span><span class="p">;</span>
 
 
-    <span class="o">//</span> <span class="n">AD</span> <span class="n">Interface</span>
+    <span class="o">//</span> <span class="n">RIX</span> <span class="n">Interface</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39; pv: PC1K1:INTF:GCC:1 &#39;</span><span class="p">}</span>
     <span class="n">fb_PC1K1_INTF_GCC_1</span> <span class="p">:</span> <span class="n">FB_EXT_TREATY_GAUGE</span><span class="p">;</span>
+
+     <span class="o">//</span> <span class="n">TXI</span> <span class="n">Interface</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39; pv: PC1K1:INTF:PIP:1 &#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xEXT_Press_OK               :=      TIIB[=+-ES1008_02_03]^Channel 3^Input;</span>
+    <span class="s1">&#39;}</span>
+
+    <span class="n">fb_PC1K3_INTF_PIP_1</span> <span class="p">:</span> <span class="n">FB_EXT_TREATY_GAUGE</span><span class="p">;</span>
 
 
     <span class="o">//</span> <span class="n">EM1K0</span><span class="o">-</span><span class="n">GMD</span> <span class="n">Vacuum</span> <span class="n">Interface</span>
@@ -628,7 +633,7 @@
 <span class="n">END_VAR</span>
 <span class="n">VAR</span>
 
-    <span class="o">//</span> <span class="n">Input</span> <span class="kn">from</span> <span class="nn">AD</span><span class="s1">&#39;s system indicating pressure belopw setpoint.</span>
+    <span class="o">//</span> <span class="n">Input</span> <span class="kn">from</span><span class="w"> </span><span class="nn">AD</span><span class="s1">&#39;s system indicating pressure belopw setpoint.</span>
     <span class="n">i_xEXT_Press_OK</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
 <span class="n">END_VAR</span>
@@ -884,7 +889,7 @@
                 <span class="n">i_xEPS_OK</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">i_xPMPS_OK</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">i_xExt_OK</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">i_xOverrideMode</span> <span class="o">:=</span> <span class="n">xSystemOverrideMode</span><span class="p">,</span>
                 <span class="n">i_xReset</span> <span class="o">:=</span> <span class="n">xReset_PMPS_FFO_K2</span><span class="p">,</span> <span class="n">io_fbFFHWO</span> <span class="o">:=</span> <span class="n">g_FastFaultOutputK2</span><span class="p">,</span> <span class="n">fbArbiter</span> <span class="o">:=</span> <span class="n">g_fbArbiter1</span><span class="p">,</span> <span class="n">i_sDevName</span> <span class="o">:=</span> <span class="s1">&#39;SP1K1:MONO:VGC:2&#39;</span><span class="p">);</span>
 
-<span class="n">fb_IM1K3_PPM_VGC_1</span><span class="p">(</span><span class="n">i_stUSG</span> <span class="o">:=</span> <span class="n">fb_MR2K3_TXI_PIP_1</span><span class="o">.</span><span class="n">q_IG</span><span class="p">,</span> <span class="n">i_stDSG</span> <span class="o">:=</span> <span class="p">,</span> <span class="n">i_xDis_DPIlk</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">,</span> <span class="n">i_xEPS_OK</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">i_xPMPS_OK</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+<span class="n">fb_IM1K3_PPM_VGC_1</span><span class="p">(</span><span class="n">i_stUSG</span> <span class="o">:=</span> <span class="n">fb_MR2K3_TXI_PIP_1</span><span class="o">.</span><span class="n">q_IG</span><span class="p">,</span> <span class="n">i_stDSG</span> <span class="o">:=</span> <span class="n">fb_PC1K3_INTF_PIP_1</span><span class="o">.</span><span class="n">IG</span> <span class="p">,</span> <span class="n">i_xDis_DPIlk</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">,</span> <span class="n">i_xEPS_OK</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">i_xPMPS_OK</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
                 <span class="n">i_xExt_OK</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">i_xOverrideMode</span> <span class="o">:=</span> <span class="n">xSystemOverrideMode</span><span class="p">,</span> <span class="n">i_xReset</span> <span class="o">:=</span> <span class="n">xReset_PMPS_FFO_K3</span><span class="p">,</span> <span class="n">io_fbFFHWO</span> <span class="o">:=</span> <span class="n">g_FastFaultOutputK3</span><span class="p">,</span>
                 <span class="n">fbArbiter</span> <span class="o">:=</span> <span class="n">g_fbArbiter1</span><span class="p">,</span> <span class="n">i_sDevName</span> <span class="o">:=</span> <span class="s1">&#39;IM1K3:PPM:VGC:1&#39;</span><span class="p">);</span>
 
@@ -980,6 +985,10 @@
 
 <span class="n">fb_PC1K1_INTF_GCC_1</span><span class="p">(</span><span class="n">rTREATY_SIGNAL_PRESS</span> <span class="o">:=</span> <span class="mf">5E-6</span><span class="p">,</span> <span class="n">rNO_SIGNAL_PRESS</span> <span class="o">:=</span> <span class="mi">760</span><span class="p">);</span>
 
+<span class="o">//</span> <span class="n">Interface</span> <span class="n">to</span> <span class="n">TXI</span><span class="s1">&#39;s K3 vacuum system</span>
+
+<span class="n">fb_PC1K3_INTF_PIP_1</span><span class="p">(</span><span class="n">rTREATY_SIGNAL_PRESS</span> <span class="o">:=</span> <span class="mf">5E-6</span><span class="p">,</span> <span class="n">rNO_SIGNAL_PRESS</span> <span class="o">:=</span> <span class="mi">760</span><span class="p">);</span>
+
 
 <span class="o">//</span> <span class="n">EM1K0</span><span class="o">-</span><span class="n">GMD</span> <span class="n">Vacuum</span> <span class="n">Interface</span>
 
@@ -1067,7 +1076,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, SLAC National Accelerator Laboratory.</p>
+    <p>&#169; Copyright 2025, SLAC National Accelerator Laboratory.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

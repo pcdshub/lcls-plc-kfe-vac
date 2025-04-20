@@ -71,7 +71,7 @@ fb_SP1K1_MONO_VGC_2(i_stUSG := fb_SP1K1_MONO_PIP_1.q_IG, i_stDSG := fb_PC1K1_INT
                 i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode,
                 i_xReset := xReset_PMPS_FFO_K2, io_fbFFHWO := g_FastFaultOutputK2, fbArbiter := g_fbArbiter1, i_sDevName := 'SP1K1:MONO:VGC:2');
 
-fb_IM1K3_PPM_VGC_1(i_stUSG := fb_MR2K3_TXI_PIP_1.q_IG, i_stDSG := , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE,
+fb_IM1K3_PPM_VGC_1(i_stUSG := fb_MR2K3_TXI_PIP_1.q_IG, i_stDSG := fb_PC1K3_INTF_PIP_1.IG , i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE,
                 i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode, i_xReset := xReset_PMPS_FFO_K3, io_fbFFHWO := g_FastFaultOutputK3,
                 fbArbiter := g_fbArbiter1, i_sDevName := 'IM1K3:PPM:VGC:1');
 

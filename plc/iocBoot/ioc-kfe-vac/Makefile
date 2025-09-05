@@ -1,4 +1,4 @@
-IOC_TOP = /cds/group/pcds/epics/ioc/common/ads-ioc/R0.6.1
+IOC_TOP = /cds/group/pcds/epics/ioc/common/ads-ioc/R0.8.0
 IOC_INSTANCE_PATH := $(shell pwd)
 
 PROJECT_NAME = plc-kfe-vac
